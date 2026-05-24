@@ -12,11 +12,16 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
+
+function getYouTubeId(url: string): string | null {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([a-zA-Z0-9_-]{11})/);
+  return match ? match[1] : null;
+}
 ---
 
 <Layout>
   <main class="max-w-3xl mx-auto px-6 py-12">
-    {article.data.featuredImage && (
+    {article.data.featuredImage && (!article.data.youtube || article.data.youtube.length === 0) && (
       <img
         src={article.data.featuredImage}
         alt={article.data.title}
@@ -28,6 +33,24 @@ const { Content } = await render(article);
       {new Date(article.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
       {article.data.author && ` · ${article.data.author}`}
     </p>
+    {article.data.youtube && article.data.youtube.length > 0 && (
+      <div class="space-y-6 mb-10">
+        {article.data.youtube.map((url: string) => {
+          const id = getYouTubeId(url);
+          return id ? (
+            <div class="aspect-video">
+              <iframe
+                src={`https://www.youtube.com/embed/${id}`}
+                title={article.data.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="w-full h-full rounded"
+              />
+            </div>
+          ) : null;
+        })}
+      </div>
+    )}
     <div class="prose prose-lg max-w-none">
       <Content />
     </div>
