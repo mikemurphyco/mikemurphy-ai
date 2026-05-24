@@ -1,6 +1,6 @@
 ---
 title: "Neon Postgres: How To Enable pgvector Extension For RAG Systems (Vector Database)"
-description: "In this tutorial, you will learn how to enable the pgvector extension to convert your Neon Postgres database into a vector database. This allows you to store and earch vector embeddings, which are necessary components when building Retrieval Augmented Generation (RAG) systems. The tutorial uses the Neon SQL editor for all the necessary steps.Neon Postgres: How To Enable pgvector Extension For RAG Systems (Vector Database)"
+description: "In this tutorial, you will learn how to enable the pgvector extension to convert your Neon Postgres database into a vector database. This allows you to store and earch vector embeddings, which are necessary components when building Retrieval Augmented Generation (RAG) systems. The tutorial uses the Neon SQL editor for all the necessary steps."
 pubDate: "2025-10-22T08:30:17"
 updatedDate: "2025-10-21T21:41:39"
 draft: false
@@ -25,7 +25,7 @@ search:
   include: true
   boost: 1.0
 migration:
-  dryRun: true
+  dryRun: false
   prioritySample: true
   review: false
   eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"

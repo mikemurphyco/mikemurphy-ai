@@ -24,7 +24,7 @@ search:
   include: true
   boost: 1.0
 migration:
-  dryRun: true
+  dryRun: false
   prioritySample: true
   review: false
   eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
