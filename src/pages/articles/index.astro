@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const articles = await getCollection('articles', ({ data }) => {
+  return data.draft !== true && data.visibility !== 'hidden';
+});
+
+const sorted = articles.sort((a, b) =>
+  new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+---
+
+<Layout>
+  <main class="max-w-3xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold mb-8">Articles</h1>
+    <ul class="space-y-8">
+      {sorted.map((article) => (
+        <li class="flex gap-4">
+          {article.data.featuredImage && (
+            <img
+              src={article.data.featuredImage}
+              alt={article.data.title}
+              class="w-24 h-24 object-cover rounded shrink-0"
+            />
+          )}
+          <div>
+            <a href={`/articles/${article.data.slug}`} class="text-xl font-semibold hover:underline">
+              {article.data.title}
+            </a>
+            <p class="text-sm text-gray-500 mt-1">
+              {new Date(article.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </p>
+            {article.data.description && (
+              <p class="text-gray-700 mt-1 text-sm">{article.data.description}</p>
+            )}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Layout>

@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((article) => ({
+    params: { slug: article.data.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<Layout>
+  <main class="max-w-3xl mx-auto px-6 py-12">
+    {article.data.featuredImage && (
+      <img
+        src={article.data.featuredImage}
+        alt={article.data.title}
+        class="w-full rounded mb-8 object-cover max-h-80"
+      />
+    )}
+    <h1 class="text-3xl font-bold mb-2">{article.data.title}</h1>
+    <p class="text-sm text-gray-500 mb-8">
+      {new Date(article.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+      {article.data.author && ` · ${article.data.author}`}
+    </p>
+    <div class="prose prose-lg max-w-none">
+      <Content />
+    </div>
+  </main>
+</Layout>
