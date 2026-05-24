@@ -1,11 +1,101 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import { getCollection } from 'astro:content';
+import ArticleCard from '../components/ArticleCard.astro';
 import Layout from '../layouts/Layout.astro';
+import {
+  SITE_DESCRIPTION,
+  getTopicMap,
+  isDiscoverableArticle,
+  isPublicArticle,
+  slugifyTerm,
+  sortArticlesByDate,
+} from '../lib/articles';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allArticles = await getCollection('articles', isDiscoverableArticle);
+const articles = sortArticlesByDate(allArticles);
+const publicArticles = sortArticlesByDate(allArticles.filter(isPublicArticle));
+const featuredArticles = publicArticles.slice(0, 6);
+const latestArticles = articles.slice(0, 8);
+const topics = getTopicMap(articles).slice(0, 12);
+const aiCount = articles.filter((article) => article.data.contentEra === 'ai').length;
+const archiveCount = articles.filter((article) => article.data.contentEra === 'legacy').length;
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="AI, Automation, and Creative Tech" description={SITE_DESCRIPTION} canonical="/">
+  <main>
+    <section class="border-b border-slate-200 bg-white">
+      <div class="mx-auto grid max-w-6xl gap-10 px-6 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">mikemurphy.ai</p>
+          <h1 class="mt-4 max-w-3xl text-4xl font-bold leading-tight text-slate-950 sm:text-5xl">
+            Practical field notes for building with AI and creative technology.
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+            Tutorials, workflows, and experiments from Mike Murphy on AI tools, automation,
+            After Effects, podcasting, media production, and the long useful archive behind it all.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="/articles/" class="rounded-md bg-slate-950 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800">
+              Browse articles
+            </a>
+            <a href="/search/" class="rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:border-slate-500">
+              Search the archive
+            </a>
+          </div>
+        </div>
+        <dl class="grid grid-cols-3 gap-3">
+          <div class="rounded-md border border-slate-200 bg-slate-50 p-4">
+            <dt class="text-xs font-medium uppercase tracking-wide text-slate-500">Articles</dt>
+            <dd class="mt-2 text-3xl font-bold text-slate-950">{articles.length}</dd>
+          </div>
+          <div class="rounded-md border border-slate-200 bg-slate-50 p-4">
+            <dt class="text-xs font-medium uppercase tracking-wide text-slate-500">AI</dt>
+            <dd class="mt-2 text-3xl font-bold text-slate-950">{aiCount}</dd>
+          </div>
+          <div class="rounded-md border border-slate-200 bg-slate-50 p-4">
+            <dt class="text-xs font-medium uppercase tracking-wide text-slate-500">Archive</dt>
+            <dd class="mt-2 text-3xl font-bold text-slate-950">{archiveCount}</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="mx-auto grid max-w-6xl gap-10 px-6 py-12 lg:grid-cols-[1fr_18rem]">
+      <div>
+        <div class="flex items-end justify-between gap-4 border-b border-slate-200 pb-4">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Start here</p>
+            <h2 class="mt-2 text-2xl font-bold text-slate-950">Featured AI-era articles</h2>
+          </div>
+          <a href="/articles/" class="text-sm font-semibold text-slate-700 hover:text-slate-950">View all</a>
+        </div>
+        <div>
+          {featuredArticles.map((article) => <ArticleCard article={article} />)}
+        </div>
+      </div>
+      <aside>
+        <h2 class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Topic hubs</h2>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {topics.map((topic) => (
+            <a
+              href={`/topics/${slugifyTerm(topic.name)}/`}
+              class="rounded-full border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:border-slate-500"
+            >
+              {topic.name} <span class="text-slate-400">{topic.articles.length}</span>
+            </a>
+          ))}
+        </div>
+        <h2 class="mt-10 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Latest</h2>
+        <ol class="mt-4 space-y-4">
+          {latestArticles.map((article) => (
+            <li>
+              <a href={`/articles/${article.data.slug}/`} class="font-semibold leading-snug text-slate-900 hover:underline">
+                {article.data.title}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </aside>
+    </section>
+  </main>
 </Layout>

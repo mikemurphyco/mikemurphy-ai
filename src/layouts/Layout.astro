@@ -1,5 +1,24 @@
 ---
 import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import { SITE_DESCRIPTION, SITE_TITLE, absoluteUrl } from '../lib/articles';
+
+interface Props {
+	title?: string;
+	description?: string;
+	canonical?: string;
+	noHeader?: boolean;
+}
+
+const {
+	title = SITE_TITLE,
+	description = SITE_DESCRIPTION,
+	canonical = Astro.url.pathname,
+	noHeader = false,
+} = Astro.props;
+
+const pageTitle = title === SITE_TITLE ? SITE_TITLE : `${title} | ${SITE_TITLE}`;
+const canonicalUrl = canonical.startsWith('http') ? canonical : absoluteUrl(canonical);
 ---
 
 <!doctype html>
@@ -10,9 +29,16 @@ import '../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{pageTitle}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:type" content="website" />
 	</head>
-	<body>
+	<body class="bg-slate-50 text-slate-900 antialiased">
+		{!noHeader && <SiteHeader />}
 		<slot />
 	</body>
 </html>

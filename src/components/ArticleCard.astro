@@ -1,0 +1,49 @@
+---
+import type { Article } from '../lib/articles';
+import { articleUrl, formatDate, getArticleTopicTerms } from '../lib/articles';
+
+interface Props {
+  article: Article;
+  showImage?: boolean;
+}
+
+const { article, showImage = true } = Astro.props;
+const terms = getArticleTopicTerms(article).slice(0, 3);
+---
+
+<article class="group grid gap-4 border-b border-slate-200 py-6 sm:grid-cols-[9rem_1fr]">
+  {showImage && article.data.featuredImage ? (
+    <a href={articleUrl(article)} class="block overflow-hidden rounded-md bg-slate-100">
+      <img
+        src={article.data.featuredImage}
+        alt=""
+        loading="lazy"
+        class="aspect-[4/3] h-full w-full object-cover transition duration-200 group-hover:scale-105"
+      />
+    </a>
+  ) : (
+    <div class="hidden rounded-md bg-slate-100 sm:block" aria-hidden="true"></div>
+  )}
+  <div class="min-w-0">
+    <p class="text-sm text-slate-500">
+      {formatDate(article.data.pubDate)}
+      <span class="mx-2 text-slate-300">/</span>
+      {article.data.contentEra === 'ai' ? 'AI Era' : 'Archive'}
+    </p>
+    <h2 class="mt-2 text-xl font-semibold leading-snug text-slate-950">
+      <a href={articleUrl(article)} class="hover:underline">{article.data.title}</a>
+    </h2>
+    {article.data.description && (
+      <p class="mt-2 line-clamp-2 text-sm leading-6 text-slate-600">{article.data.description}</p>
+    )}
+    {terms.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {terms.map((term) => (
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
+            {term}
+          </span>
+        ))}
+      </div>
+    )}
+  </div>
+</article>
