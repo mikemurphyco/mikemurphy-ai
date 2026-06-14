@@ -2,18 +2,29 @@ import { getCollection } from 'astro:content';
 import {
   SITE_URL,
   absoluteUrl,
-  articleUrl,
+  contentUrl,
   getTopicMap,
   isDiscoverableArticle,
+  isPublishedIssue,
+  issueUrl,
   sortArticlesByDate,
+  sortIssuesByDate,
 } from '../lib/articles';
 
 export async function GET() {
   const articles = sortArticlesByDate(await getCollection('articles', isDiscoverableArticle));
+  const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIssue));
   const topics = getTopicMap(articles);
   const urls = [
     { loc: absoluteUrl('/'), priority: '1.0' },
+    { loc: absoluteUrl('/tutorials/'), priority: '1.0' },
+    { loc: absoluteUrl('/ai-unplugged/'), priority: '0.9' },
+    { loc: absoluteUrl('/ai-unplugged/issues/'), priority: '0.8' },
+    { loc: absoluteUrl('/resources/'), priority: '0.7' },
     { loc: absoluteUrl('/articles/'), priority: '0.9' },
+    { loc: absoluteUrl('/podcast/'), priority: '0.6' },
+    { loc: absoluteUrl('/about/'), priority: '0.6' },
+    { loc: absoluteUrl('/contact/'), priority: '0.5' },
     { loc: absoluteUrl('/topics/'), priority: '0.8' },
     { loc: absoluteUrl('/search/'), priority: '0.6' },
     ...topics.map((topic) => ({
@@ -21,9 +32,14 @@ export async function GET() {
       priority: topic.articles.length >= 20 ? '0.8' : '0.7',
     })),
     ...articles.map((article) => ({
-      loc: absoluteUrl(articleUrl(article)),
+      loc: absoluteUrl(contentUrl(article)),
       lastmod: new Date(article.data.updatedDate ?? article.data.pubDate).toISOString(),
       priority: article.data.contentEra === 'ai' ? '0.8' : '0.6',
+    })),
+    ...issues.map((issue) => ({
+      loc: absoluteUrl(issueUrl(issue)),
+      lastmod: new Date(issue.data.updatedAt ?? issue.data.publishedAt).toISOString(),
+      priority: issue.data.isFlagshipIssue ? '0.8' : '0.7',
     })),
   ];
 

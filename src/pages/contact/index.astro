@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Contact" description="Contact Mike Murphy for questions, consulting, sponsorships, and replies." canonical="/contact/">
+  <main class="mm-container py-12">
+    <p class="mm-eyebrow">Contact</p>
+    <h1 class="mm-h1 mt-3">A few good ways to reach me.</h1>
+    <p class="mm-lede mt-5 max-w-3xl">
+      Questions, consulting, sponsorships, and thoughtful replies all belong here.
+    </p>
+    <section class="mt-10 grid gap-5 md:grid-cols-3">
+      {[
+        ['Just say hi', 'Send a short note, tutorial question, or useful correction.'],
+        ['Work with me', 'AI workflows, creator systems, automation, and practical implementation help.'],
+        ['Follow along', 'Subscribe to AI Unplugged and get to know the work through the writing.'],
+      ].map(([title, description]) => (
+        <article class="mm-card p-5">
+          <h2 class="font-mono text-xl font-bold uppercase tracking-normal">{title}</h2>
+          <p class="mt-3 text-sm leading-6 text-[var(--mm-muted)]">{description}</p>
+        </article>
+      ))}
+    </section>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="mailto:hello@mikemurphy.ai" class="mm-button">Email Mike</a>
+      <a href="/ai-unplugged/" class="mm-button mm-button-secondary">AI Unplugged</a>
+    </div>
+  </main>
+</Layout>

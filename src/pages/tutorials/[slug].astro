@@ -1,0 +1,74 @@
+---
+import { getCollection, render } from 'astro:content';
+import SubscribeBand from '../../components/ai-unplugged/SubscribeBand.astro';
+import Layout from '../../layouts/Layout.astro';
+import { formatDate, getArticleTopicTerms, isDiscoverableArticle, isTutorial, slugifyTerm, tutorialUrl } from '../../lib/articles';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', (article) => isDiscoverableArticle(article) && isTutorial(article));
+  return articles.map((article) => ({
+    params: { slug: article.data.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const terms = getArticleTopicTerms(article);
+
+function getYouTubeId(url: string): string | null {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([a-zA-Z0-9_-]{11})/);
+  return match ? match[1] : null;
+}
+---
+
+<Layout title={article.data.title} description={article.data.description} canonical={tutorialUrl(article)}>
+  <main>
+    <article class="mm-container grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
+      <div>
+        <a href="/tutorials/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">Back to tutorials</a>
+        <h1 class="mm-h1 mt-5">{article.data.title}</h1>
+        <p class="mt-4 font-mono text-sm font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
+          {formatDate(article.data.pubDate)} · {article.data.author}
+        </p>
+        {article.data.description && <p class="mm-lede mt-5">{article.data.description}</p>}
+
+        {article.data.youtube && article.data.youtube.length > 0 ? (
+          <div class="mt-8 space-y-6">
+            {article.data.youtube.map((url: string) => {
+              const id = getYouTubeId(url);
+              return id ? (
+                <div class="mm-card aspect-video overflow-hidden">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${id}`}
+                    title={article.data.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    class="h-full w-full"
+                  />
+                </div>
+              ) : null;
+            })}
+          </div>
+        ) : article.data.featuredImage && (
+          <img src={article.data.featuredImage} alt="" class="mm-card mt-8 aspect-video w-full object-cover" />
+        )}
+
+        <div class="mm-prose prose prose-lg mt-10">
+          <Content />
+        </div>
+      </div>
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <div class="mm-card p-5">
+          <p class="mm-eyebrow">Topics</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {terms.slice(0, 10).map((term) => (
+              <a href={`/topics/${slugifyTerm(term)}/`} class="mm-pill hover:border-[var(--mm-navy)]">{term}</a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </article>
+    <SubscribeBand compact />
+  </main>
+</Layout>

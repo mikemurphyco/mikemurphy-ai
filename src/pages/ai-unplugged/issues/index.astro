@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import IssueCard from '../../../components/ai-unplugged/IssueCard.astro';
+import Layout from '../../../layouts/Layout.astro';
+import { isPublishedIssue, sortIssuesByDate } from '../../../lib/articles';
+
+const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIssue));
+---
+
+<Layout title="AI Unplugged Issues" description="Browse the AI Unplugged issue archive." canonical="/ai-unplugged/issues/">
+  <main class="mm-container py-12">
+    <a href="/ai-unplugged/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">Back to AI Unplugged</a>
+    <header class="mt-5 border-b border-[var(--mm-border)] pb-8">
+      <p class="mm-eyebrow">AI Unplugged · all issues</p>
+      <h1 class="mm-h1 mt-3">Issue archive</h1>
+      <p class="mm-lede mt-5 max-w-3xl">
+        Native Astro pages for every issue, with Beehiiv as the sender and source tracker.
+      </p>
+    </header>
+    <section class="mt-8 grid gap-5">
+      {issues.map((issue) => <IssueCard issue={issue} />)}
+    </section>
+  </main>
+</Layout>

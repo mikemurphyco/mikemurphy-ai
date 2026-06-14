@@ -1,10 +1,10 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import { articleUrl, formatDate, getArticleTopicTerms, isDiscoverableArticle, slugifyTerm } from '../../lib/articles';
+import { articleUrl, formatDate, getArticleTopicTerms, isDiscoverableArticle, isStandardArticle, slugifyTerm } from '../../lib/articles';
 
 export async function getStaticPaths() {
-  const articles = await getCollection('articles', isDiscoverableArticle);
+  const articles = await getCollection('articles', (article) => isDiscoverableArticle(article) && isStandardArticle(article));
   return articles.map((article) => ({
     params: { slug: article.data.slug },
     props: { article },

@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="About" description="About Mike Murphy and the work behind mikemurphy.ai." canonical="/about/">
+  <main class="mm-container grid gap-12 py-16 lg:grid-cols-[24rem_1fr] lg:items-start">
+    <aside class="mx-auto w-full max-w-sm lg:order-none">
+      <div class="mm-polaroid -rotate-2">
+        <div class="mm-polaroid-photo">
+          <img src="/assets/brand/avatar-mike-orange-1200.png" alt="Mike Murphy" />
+        </div>
+        <p>Mike</p>
+      </div>
+    </aside>
+    <section>
+      <p class="mm-eyebrow">About</p>
+      <h1 class="mm-h1 mt-3">Hi, I'm Mike Murphy.</h1>
+      <p class="mm-lede mt-5">
+        I make practical tutorials for people who want to use AI tools, automation, and creative tech without turning every project into a giant mystery.
+      </p>
+      <div class="mm-prose prose prose-lg mt-8">
+        <p>
+          Tutorials are the flagship here because teaching is the clearest way to turn curiosity into something useful. AI Unplugged is the weekly pulse: what I am trying, what is working, and what feels worth remembering.
+        </p>
+        <p>
+          This site is my AI knowledge hub and workshop notebook. On the surface it is a website. Under the hood, it is becoming the machine I use to build, publish, learn, and share what survives real use.
+        </p>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/tutorials/" class="mm-button">Browse tutorials</a>
+        <a href="/contact/" class="mm-button mm-button-secondary">Get in touch</a>
+      </div>
+    </section>
+  </main>
+</Layout>

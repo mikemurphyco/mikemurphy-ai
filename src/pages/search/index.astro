@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import {
-  articleUrl,
+  contentUrl,
   formatDate,
   getArticleTerms,
   isDiscoverableArticle,
@@ -17,7 +17,7 @@ const index = articles.map((article) => ({
   title: article.data.title,
   description: article.data.description,
   date: formatDate(article.data.pubDate),
-  url: articleUrl(article),
+  url: contentUrl(article),
   era: article.data.contentEra === 'ai' ? 'AI Era' : 'Archive',
   terms: getArticleTerms(article),
   haystack: [

@@ -1,13 +1,263 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/assets/brand/fonts/IBMPlexSans-VariableFont.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/assets/brand/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/assets/brand/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Murphydoodle";
+  src: url("/assets/brand/fonts/Murphydoodle-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --mm-cream: #f1ece2;
+  --mm-chalk: #fcfaf6;
+  --mm-navy: #001e3a;
+  --mm-orange: #ff6434;
+  --mm-orange-deep: #e8501c;
+  --mm-yellow: #f5c842;
+  --mm-teal: #1ecebe;
+  --mm-muted: rgba(0, 30, 58, 0.64);
+  --mm-border: rgba(0, 30, 58, 0.18);
+  --mm-shadow-cut: 4px 4px 0 var(--mm-navy);
+}
+
 @layer base {
   html {
     color-scheme: light;
+    background: var(--mm-cream);
   }
 
   body {
-    font-family:
-      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    min-height: 100%;
+    background: var(--mm-cream);
+    color: var(--mm-navy);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+      sans-serif;
+    letter-spacing: 0;
+  }
+
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+
+  ::selection {
+    background: var(--mm-yellow);
+    color: var(--mm-navy);
+  }
+}
+
+@layer components {
+  .mm-container {
+    margin-inline: auto;
+    width: min(100% - 2rem, 72rem);
+  }
+
+  .mm-eyebrow {
+    color: var(--mm-orange);
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .mm-display {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .mm-h1 {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: clamp(2.35rem, 5vw, 4.25rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .mm-h2 {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: clamp(1.85rem, 3vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+
+  .mm-lede {
+    color: var(--mm-muted);
+    font-size: clamp(1.08rem, 1.8vw, 1.35rem);
+    line-height: 1.55;
+  }
+
+  .mm-card {
+    background: var(--mm-chalk);
+    border: 1px solid var(--mm-navy);
+    border-radius: 4px;
+    box-shadow: var(--mm-shadow-cut);
+  }
+
+  .mm-polaroid {
+    background: var(--mm-chalk);
+    border: 1px solid rgba(0, 30, 58, 0.16);
+    box-shadow: 6px 12px 0 rgba(0, 30, 58, 0.55);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 14px 28px;
+    width: min(100%, 248px);
+  }
+
+  .mm-polaroid-photo {
+    aspect-ratio: 1;
+    background: var(--mm-orange);
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .mm-polaroid-photo img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .mm-polaroid p {
+    color: var(--mm-navy);
+    font-family: "Murphydoodle", "Bradley Hand", "Marker Felt", "Comic Sans MS", cursive;
+    font-size: 44px;
+    line-height: 1;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .mm-resource-row {
+    align-items: center;
+    background: var(--mm-chalk);
+    border: 1px solid var(--mm-navy);
+    border-radius: 4px;
+    box-shadow: var(--mm-shadow-cut);
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    padding: 1.5rem;
+  }
+
+  .mm-resource-mark {
+    align-items: center;
+    border: 1px solid var(--mm-navy);
+    border-radius: 4px;
+    display: inline-flex;
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 1.55rem;
+    font-weight: 700;
+    height: 4.25rem;
+    justify-content: center;
+    width: 4.25rem;
+  }
+
+  @media (max-width: 760px) {
+    .mm-resource-row {
+      grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .mm-resource-row > a {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+  }
+
+  .mm-button {
+    align-items: center;
+    background: var(--mm-orange);
+    border: 1px solid var(--mm-navy);
+    border-radius: 4px;
+    box-shadow: var(--mm-shadow-cut);
+    color: var(--mm-navy);
+    display: inline-flex;
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0.08em;
+    min-height: 2.75rem;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+    transition:
+      background 160ms ease,
+      transform 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .mm-button:hover {
+    background: var(--mm-yellow);
+    box-shadow: 2px 2px 0 var(--mm-navy);
+    transform: translate(2px, 2px);
+  }
+
+  .mm-button-secondary {
+    background: var(--mm-chalk);
+  }
+
+  .mm-pill {
+    align-items: center;
+    background: var(--mm-chalk);
+    border: 1px solid var(--mm-border);
+    border-radius: 999px;
+    color: var(--mm-navy);
+    display: inline-flex;
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.7rem;
+    text-transform: uppercase;
+  }
+
+  .mm-prose {
+    --tw-prose-body: var(--mm-navy);
+    --tw-prose-headings: var(--mm-navy);
+    --tw-prose-links: var(--mm-orange-deep);
+    --tw-prose-bold: var(--mm-navy);
+    --tw-prose-quotes: var(--mm-navy);
+    --tw-prose-quote-borders: var(--mm-orange);
+    max-width: none;
+  }
+
+  .mm-prose h2,
+  .mm-prose h3 {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: 0;
+    text-transform: uppercase;
   }
 }

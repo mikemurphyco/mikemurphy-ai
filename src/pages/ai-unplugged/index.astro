@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+import IssueCard from '../../components/ai-unplugged/IssueCard.astro';
+import SubscribeBand from '../../components/ai-unplugged/SubscribeBand.astro';
+import Layout from '../../layouts/Layout.astro';
+import { isPublishedIssue, sortIssuesByDate } from '../../lib/articles';
+
+const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIssue));
+const latestIssue = issues[0];
+---
+
+<Layout title="AI Unplugged" description="Mike Murphy's practical weekly AI newsletter, rendered natively in Astro and sent with Beehiiv." canonical="/ai-unplugged/">
+  <main>
+    <section class="border-b border-[var(--mm-border)]">
+      <div class="mm-container grid gap-10 py-14 lg:grid-cols-[1fr_28rem] lg:items-center">
+        <div>
+          <p class="mm-eyebrow">Newsletter · native Astro archive</p>
+          <h1 class="mm-display mt-5">AI Unplugged</h1>
+          <p class="mm-lede mt-6 max-w-3xl">
+            A practical weekly note about the AI tools, terms, tutorials, and workflow shifts worth keeping. Beehiiv sends it. This site owns the archive.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="/ai-unplugged/issues/" class="mm-button">Browse issues</a>
+            <a href="/tutorials/" class="mm-button mm-button-secondary">See tutorials</a>
+          </div>
+        </div>
+        <div class="mm-card bg-[var(--mm-chalk)] p-6">
+          <p class="mm-eyebrow">Subscribe</p>
+          <form class="mt-4 grid gap-3" action="https://aiunplug.io" method="get">
+            <input
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              class="min-h-12 rounded border border-[var(--mm-navy)] bg-white px-3 text-base outline-none focus:ring-2 focus:ring-[var(--mm-yellow)]"
+            />
+            <button class="mm-button" type="submit">Subscribe to AI Unplugged</button>
+          </form>
+          <p class="mt-4 text-sm leading-6 text-[var(--mm-muted)]">Weekly, useful, and reply-friendly.</p>
+        </div>
+      </div>
+    </section>
+
+    {latestIssue && (
+      <section class="mm-container py-12">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="mm-eyebrow">Latest</p>
+            <h2 class="mm-h2 mt-2">Read the newest issue</h2>
+          </div>
+          <a href="/ai-unplugged/issues/" class="font-mono text-sm font-bold uppercase tracking-[0.1em] text-[var(--mm-orange-deep)] hover:underline">All issues</a>
+        </div>
+        <div class="mt-6">
+          <IssueCard issue={latestIssue} />
+        </div>
+      </section>
+    )}
+
+    <section class="bg-[var(--mm-navy)] py-12 text-[var(--mm-cream)]">
+      <div class="mm-container grid gap-6 md:grid-cols-5">
+        {['AI News', 'AI Tool', 'AI Term', 'AI Tutorial', 'Quote'].map((section) => (
+          <div class="rounded border border-[rgba(252,250,246,0.28)] p-4">
+            <p class="font-mono text-sm font-bold uppercase tracking-[0.1em]">{section}</p>
+            <p class="mt-3 text-sm leading-6 text-[rgba(252,250,246,0.74)]">A recurring section in every issue, ready for future section pages.</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>

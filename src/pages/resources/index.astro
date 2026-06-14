@@ -1,0 +1,191 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const resources = [
+  {
+    name: 'Astro',
+    mark: 'As',
+    type: 'Tool',
+    cost: 'Free',
+    color: 'bg-[var(--mm-yellow)]',
+    url: 'https://astro.build/',
+    description: 'The static-site framework powering mikemurphy.ai. Fast pages, content collections, and fewer moving parts.',
+  },
+  {
+    name: 'Cloudflare Pages',
+    mark: 'Cf',
+    type: 'Tool',
+    cost: 'Free + Paid',
+    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
+    url: 'https://pages.cloudflare.com/',
+    description: 'Hosting, deploys, redirects, DNS, and the boring-but-important launch plumbing.',
+  },
+  {
+    name: 'OpenAI Codex',
+    mark: 'Cx',
+    type: 'Tool',
+    cost: 'Paid',
+    color: 'bg-[var(--mm-navy)] text-[var(--mm-cream)]',
+    url: 'https://openai.com/codex/',
+    description: 'Terminal-native coding help for real project edits, migration work, and launch checklists.',
+  },
+  {
+    name: 'Claude Code',
+    mark: 'Cl',
+    type: 'Tool',
+    cost: 'Paid',
+    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
+    url: 'https://www.anthropic.com/claude-code',
+    description: 'A daily driver for code, writing drafts, research loops, and thinking through build decisions.',
+  },
+  {
+    name: 'Obsidian',
+    mark: 'Ob',
+    type: 'Tool',
+    cost: 'Free + Paid',
+    color: 'bg-[var(--mm-teal)]',
+    url: 'https://obsidian.md/',
+    description: 'The note system behind my content factory, tutorials, newsletters, and reusable working context.',
+  },
+  {
+    name: 'Shlink',
+    mark: 'Sh',
+    type: 'Tool',
+    cost: 'Free',
+    color: 'bg-[var(--mm-chalk)]',
+    url: 'https://shlink.io/',
+    description: 'Self-hosted short links and campaign tracking for tutorials, newsletters, and resource links.',
+  },
+  {
+    name: 'Launch Checklist',
+    mark: 'LC',
+    type: 'Download',
+    cost: 'Coming Soon',
+    color: 'bg-[var(--mm-yellow)]',
+    url: '/resources/',
+    description: 'The practical checklist from this Astro launch: redirects, sitemap, DNS, smoke tests, and rollback.',
+  },
+  {
+    name: 'Favorite Books',
+    mark: 'Bk',
+    type: 'Book',
+    cost: 'List',
+    color: 'bg-[var(--mm-chalk)]',
+    url: '/resources/books/',
+    description: 'A future side-quest shelf for useful books that shape how I build, teach, and think.',
+  },
+  {
+    name: 'Studio Gear',
+    mark: 'G',
+    type: 'Misc',
+    cost: 'List',
+    color: 'bg-[var(--mm-navy)] text-[var(--mm-cream)]',
+    url: '/resources/gear/',
+    description: 'A future favorite-things page for the gear and small tools that keep the content machine running.',
+  },
+];
+
+const availableFilters = ['All', ...new Set(resources.map((resource) => resource.type))];
+const groups = ['Tool', 'Download', 'Book', 'Misc'];
+---
+
+<Layout title="Resources" description="Tools, prompts, books, downloads, and Mike Murphy's AI factory resources." canonical="/resources/">
+  <main class="mm-container py-12">
+    <header class="grid gap-8 border-b border-[var(--mm-border)] pb-10 lg:grid-cols-[1fr_24rem] lg:items-end">
+      <div>
+        <p class="mm-eyebrow">Resources</p>
+        <h1 class="mm-h1 mt-3">Resource Shelf</h1>
+        <p class="mm-lede mt-5 max-w-3xl">
+          The tools, checklists, books, and side-quest lists that support the tutorials and the AI Knowledge Hub.
+        </p>
+      </div>
+      <div class="mm-card p-5">
+        <p class="mm-eyebrow">Launch shelf</p>
+        <p class="mt-3 text-sm leading-6 text-[var(--mm-muted)]">
+          This starts with the essentials and grows as tutorials turn repeatable workflows into reusable resources.
+        </p>
+      </div>
+    </header>
+
+    <section class="py-8">
+      <div class="flex flex-wrap gap-3" aria-label="Resource filters">
+        {availableFilters.map((filter) => (
+          <button
+            class:list={[
+              'mm-pill px-4 py-2',
+              filter === 'All' && 'border-[var(--mm-navy)] bg-[var(--mm-navy)] text-[var(--mm-cream)]',
+            ]}
+            type="button"
+            data-resource-filter={filter.toLowerCase()}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+    </section>
+
+    <section class="space-y-14">
+      {groups.map((group) => {
+        const groupResources = resources.filter((resource) => resource.type === group);
+        if (groupResources.length === 0) return null;
+
+        return (
+          <section data-resource-group={group.toLowerCase()}>
+            <div class="mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-[var(--mm-border)] pb-3">
+              <div>
+                <h2 class="mm-h2">{group}s</h2>
+                <p class="mt-3 max-w-3xl text-lg leading-8 text-[var(--mm-muted)]">
+                  {group === 'Tool' && 'CLI tools, frameworks, services, and apps that show up in the AI factory.'}
+                  {group === 'Book' && 'Useful reference shelves and reading lists that can live off the main nav.'}
+                  {group === 'Download' && 'Templates, checklists, presets, and files that support tutorials.'}
+                  {group === 'Misc' && "The side-quest shelf: gear, favorite things, and useful pages that don't need main-nav weight."}
+                </p>
+              </div>
+              <p class="font-mono text-sm font-bold uppercase tracking-[0.16em] text-[var(--mm-muted)]">
+                {groupResources.length || 'Soon'} items
+              </p>
+            </div>
+
+            <div class="grid gap-5">
+              {groupResources.map((resource) => (
+                <article class="mm-resource-row" data-resource-type={resource.type.toLowerCase()}>
+                  <span class:list={['mm-resource-mark', resource.color]}>{resource.mark}</span>
+                  <div class="min-w-0">
+                    <p class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">{resource.cost}</p>
+                    <h3 class="mt-1 font-mono text-2xl font-bold uppercase leading-tight">{resource.name}</h3>
+                    <p class="mt-2 max-w-3xl text-lg leading-7 text-[var(--mm-muted)]">{resource.description}</p>
+                  </div>
+                  <a href={resource.url} class="font-mono text-sm font-bold uppercase tracking-[0.1em] text-[var(--mm-orange-deep)] hover:underline">
+                    Visit ->
+                  </a>
+                </article>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </section>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('[data-resource-filter]');
+    const groups = document.querySelectorAll('[data-resource-group]');
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-resource-filter');
+
+        buttons.forEach((item) => {
+          item.classList.toggle('bg-[var(--mm-navy)]', item === button);
+          item.classList.toggle('text-[var(--mm-cream)]', item === button);
+          item.classList.toggle('border-[var(--mm-navy)]', item === button);
+        });
+
+        groups.forEach((group) => {
+          const show = filter === 'all' || group.getAttribute('data-resource-group') === filter;
+          group.toggleAttribute('hidden', !show);
+        });
+      });
+    });
+  </script>
+</Layout>

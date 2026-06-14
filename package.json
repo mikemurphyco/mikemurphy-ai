@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "redirects": "node scripts/generate-redirects.mjs",
+    "qa:launch": "node scripts/qa-launch.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

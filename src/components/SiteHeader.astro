@@ -1,13 +1,58 @@
 ---
+const navItems = [
+  { href: '/tutorials/', label: 'Tutorials' },
+  { href: '/ai-unplugged/', label: 'AI Unplugged' },
+  { href: '/search/', label: 'Search' },
+  { href: '/resources/', label: 'Resources' },
+  { href: '/about/', label: 'About' },
+];
+
+const currentPath = Astro.url.pathname;
 ---
 
-<header class="border-b border-slate-200 bg-white/90 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
-    <a href="/" class="text-base font-semibold tracking-wide text-slate-950">Mike Murphy</a>
-    <nav class="flex items-center gap-4 text-sm font-medium text-slate-600">
-      <a class="hover:text-slate-950" href="/articles/">Articles</a>
-      <a class="hover:text-slate-950" href="/topics/">Topics</a>
-      <a class="hover:text-slate-950" href="/search/">Search</a>
+<header class="sticky top-0 z-20 border-b border-[var(--mm-border)] bg-[color-mix(in_srgb,var(--mm-cream)_94%,transparent)] backdrop-blur">
+  <div class="mm-container flex items-center justify-between gap-5 py-3">
+    <a href="/" class="flex shrink-0 items-center gap-3 text-[var(--mm-navy)]" aria-label="Mike Murphy home">
+      <img src="/assets/brand/loop-navy-128.svg" alt="" class="size-11" />
+      <span class="leading-none">
+        <span class="block font-mono text-lg font-bold uppercase tracking-normal">Mike Murphy</span>
+        <span class="block font-mono text-xs font-bold uppercase tracking-[0.16em] text-[var(--mm-orange-deep)]">AI Handyman</span>
+      </span>
+    </a>
+    <nav class="hidden items-stretch gap-5 text-nowrap font-mono text-[0.72rem] font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)] md:flex">
+      {navItems.map((item) => {
+        const active = item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
+        return (
+          <a
+            class:list={[
+              'border-b-2 border-transparent px-1 py-4 transition hover:text-[var(--mm-navy)]',
+              active && 'border-[var(--mm-orange)] text-[var(--mm-orange-deep)]',
+            ]}
+            href={item.href}
+            aria-current={active ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+      <a href="/ai-unplugged/" class="mm-button -my-1 ml-2 px-5">Subscribe</a>
     </nav>
   </div>
+  <nav class="mm-container flex gap-2 overflow-x-auto pb-3 font-mono text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--mm-muted)] md:hidden">
+    {navItems.map((item) => {
+      const active = item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
+      return (
+        <a
+          class:list={[
+            'rounded-full border border-[var(--mm-border)] bg-[var(--mm-chalk)] px-3 py-2',
+            active && 'border-[var(--mm-navy)] bg-[var(--mm-navy)] text-[var(--mm-cream)]',
+          ]}
+          href={item.href}
+          aria-current={active ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      );
+    })}
+  </nav>
 </header>

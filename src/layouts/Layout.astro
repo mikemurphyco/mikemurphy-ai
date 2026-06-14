@@ -37,9 +37,27 @@ const canonicalUrl = canonical.startsWith('http') ? canonical : absoluteUrl(cano
 		<meta property="og:url" content={canonicalUrl} />
 		<meta property="og:type" content="website" />
 	</head>
-	<body class="bg-slate-50 text-slate-900 antialiased">
+	<body class="antialiased">
 		{!noHeader && <SiteHeader />}
 		<slot />
+		<footer class="border-t border-[var(--mm-border)] bg-[var(--mm-chalk)]">
+			<div class="mm-container grid gap-8 py-10 md:grid-cols-[1fr_auto] md:items-start">
+				<div>
+					<a href="/" class="font-mono text-lg font-bold uppercase tracking-normal text-[var(--mm-navy)]">Mike Murphy</a>
+					<p class="mt-3 max-w-xl text-sm leading-6 text-[var(--mm-muted)]">
+						Practical tutorials, AI workflows, and honest notes from the messy middle of learning in public.
+					</p>
+				</div>
+				<nav class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm font-semibold md:text-right">
+					<a href="/tutorials/" class="hover:underline">Tutorials</a>
+					<a href="/ai-unplugged/" class="hover:underline">AI Unplugged</a>
+					<a href="/articles/" class="hover:underline">Articles</a>
+					<a href="/resources/" class="hover:underline">Resources</a>
+					<a href="/podcast/" class="hover:underline">Podcast</a>
+					<a href="/contact/" class="hover:underline">Contact</a>
+				</nav>
+			</div>
+		</footer>
 	</body>
 </html>
 

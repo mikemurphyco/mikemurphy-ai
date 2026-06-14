@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { formatDate, getArticleTopicTerms, isDiscoverableArticle, isPodcastEpisode, podcastUrl, slugifyTerm } from '../../lib/articles';
+
+export async function getStaticPaths() {
+  const episodes = await getCollection('articles', (article) => isDiscoverableArticle(article) && isPodcastEpisode(article));
+  return episodes.map((article) => ({
+    params: { slug: article.data.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const terms = getArticleTopicTerms(article);
+---
+
+<Layout title={article.data.title} description={article.data.description} canonical={podcastUrl(article)}>
+  <main>
+    <article class="mm-container grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
+      <div>
+        <a href="/podcast/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">Back to podcast</a>
+        <h1 class="mm-h1 mt-5">{article.data.title}</h1>
+        <p class="mt-4 font-mono text-sm font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
+          {formatDate(article.data.pubDate)} · {article.data.author}
+        </p>
+        {article.data.description && <p class="mm-lede mt-5">{article.data.description}</p>}
+        {article.data.featuredImage && (
+          <img src={article.data.featuredImage} alt="" class="mm-card mt-8 aspect-video w-full object-cover" />
+        )}
+        <div class="mm-prose prose prose-lg mt-10">
+          <Content />
+        </div>
+      </div>
+      <aside class="lg:sticky lg:top-24 lg:h-fit">
+        <div class="mm-card p-5">
+          <p class="mm-eyebrow">Episode</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {terms.slice(0, 10).map((term) => (
+              <a href={`/topics/${slugifyTerm(term)}/`} class="mm-pill hover:border-[var(--mm-navy)]">{term}</a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </article>
+  </main>
+</Layout>
