@@ -1,455 +1,399 @@
 ---
-title: How To Create SSH Aliases on Mac to Connect to Your Hostinger VPS
-description: Learn how to create SSH aliases on Mac so you can connect to your Hostinger VPS with shorter, memorable terminal commands.
-pubDate: 2026-06-11T06:30:12
-updatedDate: 2026-06-10T23:07:44
+title: "How To Create SSH Aliases on Mac to Connect to Your Hostinger VPS"
+description: "Learn how to create SSH aliases on Mac so you can connect to your Hostinger VPS with shorter, memorable terminal commands."
+pubDate: "2026-06-11T06:30:12"
+updatedDate: "2026-06-10T23:07:44"
 draft: false
-type: post
-slug: sshalias
-permalink: /sshalias/
-legacyPermalink: https://www.mikemurphy.co/sshalias/
-canonicalUrl: https://mikemurphy.ai/tutorials/sshalias/
-contentEra: ai
-visibility: public
-author: Mike Murphy
-featuredImage: '"/public/assets/media/2026/06/SSH ALIAS.png"'
-featuredImageSource: '"https://www.mikemurphy.co/wp-content/uploads/2026/06/SSH-ALIAS.png"'
+type: "post"
+slug: "sshalias"
+permalink: "/sshalias/"
+legacyPermalink: "https://www.mikemurphy.co/sshalias/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/sshalias/"
+contentEra: "ai"
+visibility: "public"
+author: "Mike Murphy"
+featuredImage: "/assets/media/2026/06/ssh_alias.png"
+featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/06/SSH-ALIAS.png"
 categories:
-  - Hostinger VPS
-  - MacOS Terminal
-  - Tutorials
+  - "Hostinger VPS"
+  - "MacOS Terminal"
+  - "Tutorials"
 tags: []
-topics: []
+topics:
+  - hostinger-vps
+  - ssh
+  - macos-terminal
+  - ssh-config
+  - developer-workflow
 search:
   include: true
-  boost: 1
+  boost: 1.0
 migration:
   dryRun: false
   prioritySample: false
-  review: true
-  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
-  source: wordpress-rest-recent-gap
+  review: false
+  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  source: "wordpress-rest-recent-gap"
 wp:
   id: "215674"
-  postType: post
+  postType: "post"
   rawWordCount: 75
 seo:
-  legacyTitle: How To Create SSH Aliases on Mac to Connect to Your Hostinger VPS - Mike Murphy Co
-  legacyH1: How To Create SSH Aliases on Mac to Connect to Your Hostinger VPS
-  legacyCanonical: https://www.mikemurphy.co/sshalias/
-  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+  legacyTitle: "How To Create SSH Aliases on Mac to Connect to Your Hostinger VPS - Mike Murphy Co"
+  legacyH1: "How To Create SSH Aliases on Mac to Connect to Your Hostinger VPS"
+  legacyCanonical: "https://www.mikemurphy.co/sshalias/"
+  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   liveWordCount: 4106
 youtube:
-  - https://youtu.be/wknMMBZRHag
+  - "https://youtu.be/wknMMBZRHag"
 ---
-I use SSH aliases to shorten long VPS connection commands into memorable shortcuts in my Mac terminal. This tutorial walks through the basic idea, where SSH config lives, and why aliases make repeated Hostinger VPS work faster.
 
-The full step-by-step notes are being cleaned up as part of the Astro migration. The canonical route is in place so the launch map, redirects, and search index are ready for the finished tutorial.
+https://youtu.be/wknMMBZRHag
 
-Original WordPress URL: <https://www.mikemurphy.co/sshalias/>
+# How To Create SSH Aliases on Mac to Connect to Your Hostinger VPS
 
+If you connect to your Hostinger VPS from the Mac terminal, you may be typing a long SSH command every time:
 
-# Hostinger VPS: How To Use a Custom Domain To Open n8n (Cloudflare Setup)
+```bash
+ssh root@123.456.789.000
+```
 
-Still opening n8n with a long Hostinger server URL or a raw VPS IP address? There is a much cleaner way to do it.
+Or, if you use an SSH key, maybe something even longer:
 
-In this tutorial, you will point a custom subdomain from Cloudflare to your Hostinger VPS so you can open n8n at a URL like `flow.yourdomain.com`.
+```bash
+ssh -i ~/.ssh/my_key root@123.456.789.000
+```
 
-This is an updated version of my earlier custom domains tutorial. The big correction is simple: you do not need to point your main domain to your VPS. You only need to point the subdomains you want to use for apps and services.
+That works, but it gets old fast.
+
+In this tutorial, you will create an SSH config file on your Mac so you can connect to your VPS with a short alias instead:
+
+```bash
+ssh myvps
+```
+
+No extra tools. No shell scripting. No `.zshrc` edits. Just the built-in SSH config file that macOS already knows how to use.
 
 ## What You Will Build
 
 By the end, you will have:
 
-- A custom n8n URL like `flow.yourdomain.com`
-- A Cloudflare `A` record pointing that subdomain to your Hostinger VPS
-- An updated `docker-compose.yml` file for the n8n container
-- HTTPS working through Cloudflare and Traefik
-- An optional wildcard DNS record for future subdomains
-- A clear mental model for how Cloudflare, your VPS, Traefik, and Docker fit together
+- An SSH config file at `~/.ssh/config`
+- A short SSH alias for your Hostinger VPS
+- Your VPS IP address, username, and private key path saved in one place
+- A faster command for connecting from Terminal, iTerm2, Warp, or any other Mac terminal app
+- A reusable pattern for adding more VPS connections later
 
 ## Why This Matters
 
-When you self-host n8n on a VPS, the server has a public IP address. That IP address works, but it is not friendly, memorable, or professional.
+The more often you work on a VPS, the more annoying long SSH commands become.
 
-A custom domain gives you a clean URL. Subdomains make that even more useful because one domain can create as many app URLs as you need:
+An SSH alias gives you one memorable shortcut. Instead of remembering the IP address, username, port, and private key path, you save those details once in `~/.ssh/config`.
 
-- `flow.yourdomain.com` for n8n
-- `docs.yourdomain.com` for documentation
-- `chat.yourdomain.com` for a chat app
-- `status.yourdomain.com` for a status page
+Then you connect with:
 
-Cloudflare is the DNS manager. It sends traffic for your subdomain to your VPS IP address.
+```bash
+ssh myvps
+```
 
-Traefik is the traffic director on the VPS. Once the request reaches the server, Traefik looks at the hostname and sends the request to the correct Docker app, such as n8n on port `5678`.
+If your VPS IP address changes later, you update one config file. The alias stays the same.
+
+This is one of those developer workflow tricks that has been around forever, but beginner VPS tutorials often skip it. Once you set it up, it feels obvious.
 
 ## Before You Start
 
 You will need:
 
-- A Hostinger VPS
-- n8n installed in Docker Compose
-- A domain you own
-- The domain managed in Cloudflare
-- Access to Hostinger hPanel
-- Access to your Cloudflare dashboard
+- A Mac
+- Terminal access
+- A Hostinger VPS or any server you connect to with SSH
+- Your VPS IP address
+- Your SSH username, usually `root` on a default Hostinger VPS
+- Your private SSH key path, if you use SSH keys
 
-This walkthrough uses Cloudflare, but the same basic idea works with other registrars or DNS providers. The buttons may be different, but the DNS record you are creating is still an `A` record that points a subdomain to your VPS IP address.
+If you do not use SSH keys yet, you can still create an alias with only `Host`, `HostName`, and `User`. But if you already have SSH keys set up, adding `IdentityFile` makes the alias more reliable.
 
-## Important Update: You Do Not Need To Point Your Root Domain
+## The Important File: `~/.ssh/config`
 
-In an older tutorial, I showed pointing the main domain name to the VPS IP address. That can work, but it is not required.
+The SSH config file is a plain text file on your Mac.
 
-You can keep your root domain, like `yourdomain.com`, pointed at a completely different website. It does not need to be connected to your VPS at all.
-
-For this setup, the only thing you need to point to your Hostinger VPS is the subdomain you want to use for n8n:
+It lives here:
 
 ```text
-flow.yourdomain.com
+~/.ssh/config
 ```
 
-Custom domains and subdomains are for opening apps, services, websites, and tools running on your VPS. They are not for opening Hostinger hPanel itself.
+That path means:
 
-## Step 1: Find Your VPS IP Address In Hostinger
+- `~` is your Mac user home folder
+- `.ssh` is the hidden SSH folder
+- `config` is the file where SSH shortcuts live
 
-Log into Hostinger hPanel and open your VPS dashboard.
+This is not your `.zshrc` file. This is not your `.bashrc` file. You do not need to edit your shell settings.
 
-On the VPS overview page, look for the public IPv4 address. In Hostinger, it appears near the root access information.
-
-Copy that IP address. You will paste it into Cloudflare in a later step.
-
-What success looks like: you have your VPS IPv4 address copied, something like:
+For this tutorial, the only file we care about is:
 
 ```text
-123.123.123.123
+~/.ssh/config
 ```
 
-That number is the address Cloudflare will use when someone visits your custom n8n URL.
+## Step 1: Check Your `.ssh` Folder
 
-## Step 2: Open The n8n Docker Compose File
+Open Terminal on your Mac and run:
 
-Inside Hostinger hPanel, go to **Docker Manager** and open your n8n project.
-
-Open the YAML editor for the `docker-compose.yml` file.
-
-You are looking for two areas:
-
-- The Traefik labels
-- The environment variables
-
-In the Traefik labels, you should see a router rule that looks similar to this:
-
-```yaml
-- traefik.http.routers.n8n.rule=Host(`${SUBDOMAIN}.${DOMAIN_NAME}`)
+```bash
+ls ~/.ssh/
 ```
 
-That line tells Traefik which hostname should route to n8n.
+This shows the files inside your SSH folder.
 
-Then look for the environment variables near the bottom of the file:
+If you see a file named `config`, great. You already have the file and can add a new host block to it.
 
-```yaml
-environment:
-  - DOMAIN_NAME=srv1712662.hstgr.cloud
-  - SUBDOMAIN=n8n
+If you do not see `config`, that is fine. You will create it in the next step.
+
+If the `.ssh` folder does not exist, create it:
+
+```bash
+mkdir -p ~/.ssh
 ```
 
-Your default values may be different. The important part is the pattern.
+What success looks like: your Mac has a `~/.ssh/` folder, and you are ready to open or create the config file.
 
-`DOMAIN_NAME` is the domain you own. `SUBDOMAIN` is the word before the domain.
+## Step 2: Open Or Create The SSH Config File
 
-Together, they create the full URL:
+Open the config file with nano:
+
+```bash
+nano ~/.ssh/config
+```
+
+If the file already exists, nano opens it.
+
+If the file does not exist, nano creates a new blank file.
+
+You can use another plain text editor if you prefer, such as VS Code, Cursor, Zed, or BBEdit. Just make sure the file is named exactly:
 
 ```text
-SUBDOMAIN.DOMAIN_NAME
+config
 ```
 
-So this:
+Do not save it as `config.txt`.
 
-```yaml
-DOMAIN_NAME=yourdomain.com
-SUBDOMAIN=flow
+## Step 3: Add Your First SSH Alias
+
+Add a host block like this:
+
+```ssh-config
+Host myvps
+  HostName 123.456.789.000
+  User root
+  IdentityFile ~/.ssh/your_key_name
 ```
 
-Becomes this:
+Replace the placeholder values with your real VPS details.
 
-```text
-flow.yourdomain.com
+| Line | What It Does |
+| --- | --- |
+| `Host myvps` | The short alias you will type in Terminal |
+| `HostName 123.456.789.000` | Your VPS IP address or domain name |
+| `User root` | The SSH username for your VPS |
+| `IdentityFile ~/.ssh/your_key_name` | The private SSH key your Mac should use |
+
+The alias can be almost anything that makes sense to you:
+
+```ssh-config
+Host hostinger-vps
+  HostName 123.456.789.000
+  User root
+  IdentityFile ~/.ssh/hostinger_vps
 ```
 
-## Step 3: Update DOMAIN_NAME And SUBDOMAIN
+Then your connection command becomes:
 
-In `docker-compose.yml`, replace the default Hostinger server name with your own domain.
+```bash
+ssh hostinger-vps
+```
+
+What success looks like: your config file has one `Host` block with your alias, VPS IP address, username, and private key path.
+
+## Step 4: Add More VPS Aliases
+
+You can add more than one host block to the same config file.
 
 For example:
 
-```yaml
-environment:
-  - DOMAIN_NAME=yourdomain.com
-  - SUBDOMAIN=flow
+```ssh-config
+Host myvps
+  HostName 123.456.789.000
+  User root
+  IdentityFile ~/.ssh/your_key_name
+
+Host stagingvps
+  HostName 98.765.432.100
+  User ubuntu
+  IdentityFile ~/.ssh/staging_key
 ```
 
-Use only the root domain in `DOMAIN_NAME`.
+Each `Host` block is separate.
 
-Do not include `https://`, `www`, or the subdomain.
+That means you can have different aliases for different servers:
 
-Use only the prefix in `SUBDOMAIN`.
+- `ssh myvps`
+- `ssh stagingvps`
+- `ssh production-vps`
+- `ssh client-vps`
 
-Good examples:
+This is where the config file becomes really useful. The connection details stay organized in one place, and your daily commands stay short.
 
-```yaml
-DOMAIN_NAME=yourdomain.com
-SUBDOMAIN=flow
-```
+## Step 5: Save And Exit Nano
 
-```yaml
-DOMAIN_NAME=yourdomain.com
-SUBDOMAIN=automation
-```
+If you are using nano:
 
-Avoid this:
+1. Press `Control + O` to save
+2. Press `Enter` to confirm the filename
+3. Press `Control + X` to exit
 
-```yaml
-DOMAIN_NAME=https://flow.yourdomain.com
-SUBDOMAIN=flow.yourdomain.com
-```
+After you exit, you will be back at the regular terminal prompt.
 
-If your Docker Compose file includes SSL email and timezone variables, update those while you are already in the file:
+## Step 6: Set The Correct File Permissions
 
-```yaml
-environment:
-  - DOMAIN_NAME=yourdomain.com
-  - SUBDOMAIN=flow
-  - SSL_EMAIL=you@example.com
-  - GENERIC_TIMEZONE=America/New_York
-```
+SSH is picky about file permissions.
 
-Use your real email address for the SSL certificate. Use your own timezone.
-
-When you are done, save the file or click **Deploy** in Hostinger.
-
-What success looks like: your Docker Compose file now has your real domain and the subdomain you want to use for n8n.
-
-## Step 4: Add The Cloudflare A Record
-
-Now Cloudflare needs to know where `flow.yourdomain.com` should go.
-
-Log into Cloudflare and choose the domain you are using.
-
-Go to **DNS** and then **Records**. Click **Add record**.
-
-Use these settings:
-
-| Field        | Value                         |
-| ------------ | ----------------------------- |
-| Type         | `A`                           |
-| Name         | `flow`                        |
-| IPv4 address | Your Hostinger VPS IP address |
-| Proxy status | Proxied, orange cloud         |
-| TTL          | Auto                          |
-
-The `Name` field should match your `SUBDOMAIN` value from Docker Compose.
-
-If Docker Compose says:
-
-```yaml
-SUBDOMAIN=flow
-```
-
-Then the Cloudflare record name should be:
-
-```text
-flow
-```
-
-Click **Save**.
-
-What success looks like: Cloudflare now has an `A` record for your n8n subdomain pointing to your Hostinger VPS IP address.
-
-## Step 5: Fix The Cloudflare SSL Error
-
-If you open the new URL and see an invalid SSL certificate error, Cloudflare may be set to **Full (strict)**.
-
-In Cloudflare:
-
-1. Go to **SSL/TLS**
-2. Open **Overview**
-3. Click **Configure**
-4. Change the encryption mode from **Full (strict)** to **Full**
-5. Save the change
-
-Then refresh your n8n URL:
-
-```text
-https://flow.yourdomain.com
-```
-
-What success looks like: n8n opens in the browser and the address bar shows a secure HTTPS connection.
-
-## Step 6: Add A Wildcard Record For Future Subdomains
-
-This step is optional, but it can save time if you plan to run more apps on the same VPS.
-
-Instead of creating a separate Cloudflare `A` record every time you add a new subdomain, you can create one wildcard record.
-
-In Cloudflare, add another DNS record:
-
-| Field        | Value                         |
-| ------------ | ----------------------------- |
-| Type         | `A`                           |
-| Name         | `*`                           |
-| IPv4 address | Your Hostinger VPS IP address |
-| Proxy status | Proxied, orange cloud         |
-| TTL          | Auto                          |
-
-That `*` means any subdomain can point to your VPS:
-
-```text
-flow.yourdomain.com
-docs.yourdomain.com
-chat.yourdomain.com
-anything.yourdomain.com
-```
-
-Cloudflare sends those subdomains to the VPS. Traefik still decides which Docker container should receive the request.
-
-You can keep both records:
-
-- A specific record like `flow`
-- A wildcard record like `*`
-
-The specific record handles the exact subdomain. The wildcard catches anything else.
-
-## Step 7: Map More Than One URL To n8n
-
-If you want n8n to open from more than one domain or subdomain, update the Traefik router rule in `docker-compose.yml`.
-
-The default rule may look like this:
-
-```yaml
-- traefik.http.routers.n8n.rule=Host(`${SUBDOMAIN}.${DOMAIN_NAME}`)
-```
-
-You can add more hostnames with `||`, which means "or":
-
-```yaml
-- traefik.http.routers.n8n.rule=Host(`${SUBDOMAIN}.${DOMAIN_NAME}`) || Host(`flow.myotherdomain.com`) || Host(`automation.myseconddomain.com`)
-```
-
-That tells Traefik to send any of those hostnames to n8n.
-
-Every extra hostname still needs a DNS record pointing to your VPS IP address unless it is covered by a wildcard record.
-
-What success looks like: more than one custom URL can open the same n8n instance.
-
-## Step 8: Restart And Test n8n
-
-If Hostinger redeployed the container when you saved the YAML file, you may not need to run anything manually.
-
-If you are using the terminal, restart the Docker Compose project:
+Run:
 
 ```bash
-cd ~/docker/n8n
-docker compose down && docker compose up -d
+chmod 600 ~/.ssh/config
 ```
 
-Then open your browser and visit your new URL:
+This makes the config file readable and writable only by your Mac user.
+
+You can also make sure the `.ssh` folder itself has the right permissions:
+
+```bash
+chmod 700 ~/.ssh
+```
+
+Do not skip this if SSH complains about permissions. A config file with loose permissions can cause confusing errors.
+
+What success looks like: SSH accepts the config file without warning about bad permissions.
+
+## Step 7: Test Your SSH Alias
+
+Now connect using the alias:
+
+```bash
+ssh myvps
+```
+
+Or, if you used a different alias:
+
+```bash
+ssh hostinger-vps
+```
+
+If this is your first time connecting to that server from this Mac, SSH may ask you to confirm the server fingerprint. Type:
 
 ```text
-https://flow.yourdomain.com
+yes
 ```
 
-If n8n loads, you are done.
+If everything is set up correctly, you will connect to your Hostinger VPS without typing the IP address, username, or key path.
 
-If it does not load right away, wait a minute and refresh. DNS and SSL changes can take a little time to settle.
+What success looks like: `ssh myvps` connects to the same VPS as your old long SSH command.
 
 ## Troubleshooting
 
-| Problem                                                      | Likely Cause                                                 | Fix                                                          |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| The custom URL does not load                                 | Cloudflare DNS record is missing or wrong                    | Make sure the `A` record points your subdomain to the VPS IPv4 address |
-| n8n opens at the old Hostinger URL but not the custom domain | Docker Compose still has the old `DOMAIN_NAME` or `SUBDOMAIN` | Update the environment variables and redeploy the Docker project |
-| Cloudflare shows an invalid SSL certificate error            | SSL/TLS mode is set to **Full (strict)**                     | Change Cloudflare SSL/TLS encryption mode to **Full**        |
-| The wrong app opens                                          | Traefik is routing the hostname to another container         | Check the Traefik router rule for the n8n service            |
-| Chrome warns that the site may be dangerous when using `n8n` as the subdomain | The browser may flag that hostname pattern                   | Try a different subdomain like `flow` or `automation`        |
-| A second domain does not open n8n                            | DNS exists, but Traefik is not listening for that hostname   | Add another `Host(...)` rule with `||` in the Traefik router label |
-| A wildcard subdomain does not work                           | Cloudflare points the request to the VPS, but Traefik has no matching rule | Add the subdomain to the correct Docker Compose Traefik rule |
-| The page works, but HTTPS is not ready immediately           | DNS or certificate setup is still settling                   | Wait a minute, then refresh and test again                   |
+| Problem | Likely Cause | Fix |
+| --- | --- | --- |
+| `ssh myvps` says the host cannot be resolved | The `Host` alias does not match what you typed | Check the exact alias after `Host` in `~/.ssh/config` |
+| SSH still asks for a password | The wrong key is being used or no key is configured | Check the `IdentityFile` path and confirm the key exists in `~/.ssh/` |
+| SSH says permissions are too open | The config file or `.ssh` folder permissions are too loose | Run `chmod 600 ~/.ssh/config` and `chmod 700 ~/.ssh` |
+| The connection goes to the wrong server | The `HostName` value is wrong | Replace `HostName` with the correct VPS IP address |
+| The alias works in one terminal app but not another | The terminal app may be using a different user or environment | Confirm both apps are running as the same Mac user |
+| Nano created an empty file | You opened the file but did not save before exiting | Reopen `nano ~/.ssh/config`, add the host block, then save with `Control + O` |
 
 ## Commands Reference
 
-Restart the n8n Docker Compose project:
+Check your SSH folder:
 
 ```bash
-cd ~/docker/n8n
-docker compose down && docker compose up -d
+ls ~/.ssh/
 ```
 
-Check running containers:
+Create the SSH folder if needed:
 
 ```bash
-docker ps
+mkdir -p ~/.ssh
 ```
 
-View Traefik logs:
+Open or create the SSH config file:
 
 ```bash
-docker logs traefik
+nano ~/.ssh/config
 ```
 
-## Docker Compose Reference
+Set config file permissions:
 
-Basic environment variables:
-
-```yaml
-environment:
-  - DOMAIN_NAME=yourdomain.com
-  - SUBDOMAIN=flow
+```bash
+chmod 600 ~/.ssh/config
 ```
 
-Optional SSL email and timezone:
+Set `.ssh` folder permissions:
 
-```yaml
-environment:
-  - DOMAIN_NAME=yourdomain.com
-  - SUBDOMAIN=flow
-  - SSL_EMAIL=you@example.com
-  - GENERIC_TIMEZONE=America/New_York
+```bash
+chmod 700 ~/.ssh
 ```
 
-Basic Traefik router rule:
+Connect with your alias:
 
-```yaml
-- traefik.http.routers.n8n.rule=Host(`${SUBDOMAIN}.${DOMAIN_NAME}`)
+```bash
+ssh myvps
 ```
 
-Multiple hostnames for the same n8n instance:
+## Complete SSH Config Example
 
-```yaml
-- traefik.http.routers.n8n.rule=Host(`${SUBDOMAIN}.${DOMAIN_NAME}`) || Host(`flow.myotherdomain.com`)
+Here is a clean starter config for two VPS connections:
+
+```ssh-config
+Host myvps
+  HostName 123.456.789.000
+  User root
+  IdentityFile ~/.ssh/your_key_name
+
+Host stagingvps
+  HostName 98.765.432.100
+  User ubuntu
+  IdentityFile ~/.ssh/staging_key
+```
+
+After saving that file, you can connect with:
+
+```bash
+ssh myvps
+ssh stagingvps
 ```
 
 ## What This Unlocks Next
 
-Once you understand this pattern, every new self-hosted tool becomes easier to publish.
+SSH aliases make VPS work feel a lot less clunky.
 
-Cloudflare points the subdomain to your VPS. Traefik routes that hostname to the right Docker container. Your browser opens a clean, memorable URL with HTTPS.
+Instead of remembering long commands, IP addresses, usernames, and key paths, you give each server a short name and let your Mac handle the details.
 
-That is the basic pattern for running multiple apps on one Hostinger VPS with custom domains:
+That means:
 
-```text
-subdomain -> Cloudflare A record -> VPS IP -> Traefik -> Docker app
+- No more memorizing VPS IP addresses
+- No more typing private key paths every time
+- Multiple servers organized in one config file
+- Faster terminal workflow when working with Hostinger VPS, Docker, Claude Code, or any other remote server setup
+
+Once you have it set up, connecting to your VPS is as simple as:
+
+```bash
+ssh myvps
 ```
 
-For n8n, that means no more raw IP addresses and no more long default Hostinger server names. Just a clean URL like:
+## Watch The Video
 
-```text
-https://flow.yourdomain.com
-```
+Watch the full walkthrough here:
 
-## Links
-
-- Hostinger VPS: https://www.hostg.xyz/SHIDN
-- Coupon code: `DISCOUNT7`
-- Earlier custom domains tutorial: https://youtu.be/2XJbZIi5JBs
-- Cloudflare dashboard: https://dash.cloudflare.com
-- Hostinger hPanel: https://hpanel.hostinger.com
+https://youtu.be/wknMMBZRHag
