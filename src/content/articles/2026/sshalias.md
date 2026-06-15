@@ -20,18 +20,18 @@ categories:
   - "Tutorials"
 tags: []
 topics:
-  - hostinger-vps
-  - ssh
-  - macos-terminal
-  - ssh-config
-  - developer-workflow
+  - "hostinger-vps"
+  - "ssh"
+  - "macos-terminal"
+  - "ssh-config"
+  - "developer-workflow"
 search:
   include: true
   boost: 1.0
 migration:
   dryRun: false
   prioritySample: false
-  review: false
+  review: true
   eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
   source: "wordpress-rest-recent-gap"
 wp:
@@ -192,12 +192,12 @@ Host myvps
 
 Replace the placeholder values with your real VPS details.
 
-| Line | What It Does |
-| --- | --- |
-| `Host myvps` | The short alias you will type in Terminal |
-| `HostName 123.456.789.000` | Your VPS IP address or domain name |
-| `User root` | The SSH username for your VPS |
-| `IdentityFile ~/.ssh/your_key_name` | The private SSH key your Mac should use |
+| Line                                | What It Does                              |
+| ----------------------------------- | ----------------------------------------- |
+| `Host myvps`                        | The short alias you will type in Terminal |
+| `HostName 123.456.789.000`          | Your VPS IP address or domain name        |
+| `User root`                         | The SSH username for your VPS             |
+| `IdentityFile ~/.ssh/your_key_name` | The private SSH key your Mac should use   |
 
 The alias can be almost anything that makes sense to you:
 
@@ -303,14 +303,14 @@ What success looks like: `ssh myvps` connects to the same VPS as your old long S
 
 ## Troubleshooting
 
-| Problem | Likely Cause | Fix |
-| --- | --- | --- |
-| `ssh myvps` says the host cannot be resolved | The `Host` alias does not match what you typed | Check the exact alias after `Host` in `~/.ssh/config` |
-| SSH still asks for a password | The wrong key is being used or no key is configured | Check the `IdentityFile` path and confirm the key exists in `~/.ssh/` |
-| SSH says permissions are too open | The config file or `.ssh` folder permissions are too loose | Run `chmod 600 ~/.ssh/config` and `chmod 700 ~/.ssh` |
-| The connection goes to the wrong server | The `HostName` value is wrong | Replace `HostName` with the correct VPS IP address |
-| The alias works in one terminal app but not another | The terminal app may be using a different user or environment | Confirm both apps are running as the same Mac user |
-| Nano created an empty file | You opened the file but did not save before exiting | Reopen `nano ~/.ssh/config`, add the host block, then save with `Control + O` |
+| Problem                                             | Likely Cause                                                  | Fix                                                                           |
+| --------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `ssh myvps` says the host cannot be resolved        | The `Host` alias does not match what you typed                | Check the exact alias after `Host` in `~/.ssh/config`                         |
+| SSH still asks for a password                       | The wrong key is being used or no key is configured           | Check the `IdentityFile` path and confirm the key exists in `~/.ssh/`         |
+| SSH says permissions are too open                   | The config file or `.ssh` folder permissions are too loose    | Run `chmod 600 ~/.ssh/config` and `chmod 700 ~/.ssh`                          |
+| The connection goes to the wrong server             | The `HostName` value is wrong                                 | Replace `HostName` with the correct VPS IP address                            |
+| The alias works in one terminal app but not another | The terminal app may be using a different user or environment | Confirm both apps are running as the same Mac user                            |
+| Nano created an empty file                          | You opened the file but did not save before exiting           | Reopen `nano ~/.ssh/config`, add the host block, then save with `Control + O` |
 
 ## Commands Reference
 
