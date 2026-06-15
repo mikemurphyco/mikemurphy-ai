@@ -5,110 +5,196 @@ const resources = [
   {
     name: 'Astro',
     mark: 'As',
-    type: 'Tool',
+    group: 'Builder Stack',
     cost: 'Free',
+    relationship: 'Used Here',
     color: 'bg-[var(--mm-yellow)]',
     url: 'https://astro.build/',
-    description: 'The static-site framework powering mikemurphy.ai. Fast pages, content collections, and fewer moving parts.',
+    tags: ['Framework', 'Static Site'],
+    description:
+      'The framework behind mikemurphy.ai. I use it for fast pages, Markdown content collections, clean routes, and a site that feels easier to maintain than WordPress for this AI-builder hub.',
+  },
+  {
+    name: 'Cloudflare Domains',
+    mark: 'Cd',
+    group: 'Builder Stack',
+    cost: 'Paid',
+    relationship: 'Used Here',
+    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
+    url: 'https://www.cloudflare.com/products/registrar/',
+    tags: ['Domains', 'DNS'],
+    description:
+      'Where I manage DNS for the new site. It keeps the domain, DNS records, redirects, and Cloudflare services close together, which makes launch plumbing less scattered.',
   },
   {
     name: 'Cloudflare Pages',
-    mark: 'Cf',
-    type: 'Tool',
+    mark: 'Cp',
+    group: 'Builder Stack',
     cost: 'Free + Paid',
+    relationship: 'Used Here',
     color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
     url: 'https://pages.cloudflare.com/',
-    description: 'Hosting, deploys, redirects, DNS, and the boring-but-important launch plumbing.',
+    tags: ['Hosting', 'Deploys'],
+    description:
+      'The hosting layer for mikemurphy.ai. GitHub main deploys to Cloudflare Pages, so publishing is mostly edit, build, commit, push, and verify.',
   },
   {
-    name: 'OpenAI Codex',
-    mark: 'Cx',
-    type: 'Tool',
-    cost: 'Paid',
-    color: 'bg-[var(--mm-navy)] text-[var(--mm-cream)]',
-    url: 'https://openai.com/codex/',
-    description: 'Terminal-native coding help for real project edits, migration work, and launch checklists.',
-  },
-  {
-    name: 'Claude Code',
-    mark: 'Cl',
-    type: 'Tool',
-    cost: 'Paid',
-    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
-    url: 'https://www.anthropic.com/claude-code',
-    description: 'A daily driver for code, writing drafts, research loops, and thinking through build decisions.',
-  },
-  {
-    name: 'Obsidian',
-    mark: 'Ob',
-    type: 'Tool',
+    name: 'GitHub',
+    mark: 'Gh',
+    group: 'Builder Stack',
     cost: 'Free + Paid',
-    color: 'bg-[var(--mm-teal)]',
-    url: 'https://obsidian.md/',
-    description: 'The note system behind my content factory, tutorials, newsletters, and reusable working context.',
+    relationship: 'Used Here',
+    color: 'bg-[var(--mm-chalk)]',
+    url: 'https://github.com/',
+    tags: ['Codebase', 'Version Control'],
+    description:
+      'The source of truth for the Astro codebase. It gives me history, rollback confidence, pull-request workflows, and the deploy trigger for Cloudflare.',
+  },
+  {
+    name: 'Hostinger VPS',
+    mark: 'Hv',
+    group: 'Infrastructure',
+    cost: 'Paid',
+    relationship: 'Affiliate',
+    color: 'bg-[var(--mm-navy)] text-[var(--mm-cream)]',
+    url: 'https://mikemurphy.co/vps',
+    tags: ['VPS', 'Self-Hosting'],
+    description:
+      'My practical VPS choice for tutorials around n8n, Docker, Traefik, SSH, firewalls, and self-hosted AI workflows. It is the server playground behind a lot of the newer tutorials.',
   },
   {
     name: 'Shlink',
     mark: 'Sh',
-    type: 'Tool',
+    group: 'Infrastructure',
     cost: 'Free',
-    color: 'bg-[var(--mm-chalk)]',
+    relationship: 'Planned',
+    color: 'bg-[var(--mm-teal)]',
     url: 'https://shlink.io/',
-    description: 'Self-hosted short links and campaign tracking for tutorials, newsletters, and resource links.',
+    tags: ['Short Links', 'Analytics'],
+    description:
+      'The planned short-link system for go.mikemurphy.co. The goal is cleaner resource links, better campaign tracking, and less dependence on older Pretty Links.',
   },
   {
-    name: 'Launch Checklist',
-    mark: 'LC',
-    type: 'Download',
-    cost: 'Coming Soon',
-    color: 'bg-[var(--mm-yellow)]',
-    url: '/resources/',
-    description: 'The practical checklist from this Astro launch: redirects, sitemap, DNS, smoke tests, and rollback.',
-  },
-  {
-    name: 'Favorite Books',
-    mark: 'Bk',
-    type: 'Book',
-    cost: 'List',
-    color: 'bg-[var(--mm-chalk)]',
-    url: '/resources/books/',
-    description: 'A future side-quest shelf for useful books that shape how I build, teach, and think.',
-  },
-  {
-    name: 'Studio Gear',
-    mark: 'G',
-    type: 'Misc',
-    cost: 'List',
+    name: 'OpenAI Codex',
+    mark: 'Cx',
+    group: 'AI Workbench',
+    cost: 'Paid',
+    relationship: 'Used Here',
     color: 'bg-[var(--mm-navy)] text-[var(--mm-cream)]',
-    url: '/resources/gear/',
-    description: 'A future favorite-things page for the gear and small tools that keep the content machine running.',
+    url: 'https://openai.com/codex/',
+    tags: ['CLI', 'Code'],
+    description:
+      'My terminal-native coding partner for real project edits, migration cleanup, QA loops, and launch checklists. Good when I want the work to happen inside the repo.',
+  },
+  {
+    name: 'Claude Code',
+    mark: 'Cl',
+    group: 'AI Workbench',
+    cost: 'Paid',
+    relationship: 'Used Daily',
+    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
+    url: 'https://www.anthropic.com/claude-code',
+    tags: ['CLI', 'Writing + Code'],
+    description:
+      'A daily driver for code, writing drafts, research loops, and thinking through build decisions. It is one of the tools that changed how I work with notes and projects.',
+  },
+  {
+    name: 'Obsidian',
+    mark: 'Ob',
+    group: 'AI Workbench',
+    cost: 'Free + Paid',
+    relationship: 'Used Daily',
+    color: 'bg-[var(--mm-teal)]',
+    url: 'https://obsidian.md/',
+    tags: ['Notes', 'Knowledge Base'],
+    description:
+      'My drafting and thinking space. Obsidian is where tutorial ideas, newsletter notes, commands, research, and reusable working context start before they become publishable Astro content.',
+  },
+  {
+    name: 'n8n',
+    mark: 'n8',
+    group: 'AI Workbench',
+    cost: 'Free + Paid',
+    relationship: 'Used Often',
+    color: 'bg-[var(--mm-yellow)]',
+    url: 'https://n8n.io/',
+    tags: ['Automation', 'Workflows'],
+    description:
+      'The automation workbench I use and teach for connecting AI tools, APIs, notifications, forms, databases, and self-hosted services without turning every idea into a custom app.',
+  },
+  {
+    name: 'ElevenLabs',
+    mark: 'El',
+    group: 'Content Stack',
+    cost: 'Free + Paid',
+    relationship: 'Affiliate',
+    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
+    url: 'https://mikemurphy.co/elevenlabs',
+    tags: ['Voice', 'Audio'],
+    description:
+      'The AI audio tool I use for voice experiments, text-to-speech, sound effects, and music tutorials. It belongs here because it is part of the practical creator-AI toolkit.',
+  },
+  {
+    name: 'Beehiiv',
+    mark: 'Bv',
+    group: 'Content Stack',
+    cost: 'Free + Paid',
+    relationship: 'Used Here',
+    color: 'bg-[var(--mm-chalk)]',
+    url: 'https://www.beehiiv.com/',
+    tags: ['Newsletter', 'Publishing'],
+    description:
+      'The sending engine for AI Unplugged. Astro owns the public archive, while Beehiiv handles subscribers, email delivery, and the newsletter side of the operation.',
   },
 ];
 
-const availableFilters = ['All', ...new Set(resources.map((resource) => resource.type))];
-const groups = ['Tool', 'Download', 'Book', 'Misc'];
+const groups = ['Builder Stack', 'Infrastructure', 'AI Workbench', 'Content Stack'];
+const availableFilters = ['All', ...groups];
+const totalResources = resources.length;
+const affiliateCount = resources.filter((resource) => resource.relationship === 'Affiliate').length;
 ---
 
-<Layout title="Resources" description="Tools, prompts, books, downloads, and Mike Murphy's AI factory resources." canonical="/resources/">
-  <main class="mm-container py-12">
-    <header class="grid gap-8 border-b border-[var(--mm-border)] pb-10 lg:grid-cols-[1fr_24rem] lg:items-end">
-      <div>
-        <p class="mm-eyebrow">Resources</p>
-        <h1 class="mm-h1 mt-3">Resource Shelf</h1>
-        <p class="mm-lede mt-5 max-w-3xl">
-          The tools, checklists, books, and side-quest lists that support the tutorials and the AI Knowledge Hub.
-        </p>
+<Layout
+  title="Resources"
+  description="The tools, services, and AI-builder stack Mike Murphy actually uses to build mikemurphy.ai, tutorials, automations, and creator workflows."
+  canonical="/resources/"
+>
+  <main>
+    <section class="border-b border-[var(--mm-border)]">
+      <div class="mm-container grid gap-8 py-12 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-end">
+        <div>
+          <p class="mm-eyebrow">Resources</p>
+          <h1 class="mm-h1 mt-3">Tools I Actually Use</h1>
+          <p class="mm-lede mt-5 max-w-3xl">
+            A field guide to the software, services, and infrastructure behind mikemurphy.ai, AI Unplugged, and the tutorials I am building in public.
+          </p>
+        </div>
+        <aside class="mm-card p-5">
+          <p class="mm-eyebrow">Affiliate note</p>
+          <p class="mt-3 text-sm leading-6 text-[var(--mm-muted)]">
+            Some links on this page are affiliate links. If you buy through one, I may earn a commission at no extra cost to you. I only list tools I use, have used, or genuinely recommend.
+          </p>
+        </aside>
       </div>
-      <div class="mm-card p-5">
-        <p class="mm-eyebrow">Launch shelf</p>
-        <p class="mt-3 text-sm leading-6 text-[var(--mm-muted)]">
-          This starts with the essentials and grows as tutorials turn repeatable workflows into reusable resources.
-        </p>
-      </div>
-    </header>
+    </section>
 
-    <section class="py-8">
-      <div class="flex flex-wrap gap-3" aria-label="Resource filters">
+    <section class="mm-container py-10">
+      <div class="grid gap-4 md:grid-cols-3">
+        <div class="border-t border-[var(--mm-border)] pt-4">
+          <p class="mm-eyebrow">Current shelf</p>
+          <p class="mt-2 font-mono text-3xl font-bold">{totalResources}</p>
+        </div>
+        <div class="border-t border-[var(--mm-border)] pt-4">
+          <p class="mm-eyebrow">Affiliate links</p>
+          <p class="mt-2 font-mono text-3xl font-bold">{affiliateCount}</p>
+        </div>
+        <div class="border-t border-[var(--mm-border)] pt-4">
+          <p class="mm-eyebrow">Focus</p>
+          <p class="mt-2 font-mono text-3xl font-bold">AI Builder</p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-3" aria-label="Resource filters">
         {availableFilters.map((filter) => (
           <button
             class:list={[
@@ -124,35 +210,40 @@ const groups = ['Tool', 'Download', 'Book', 'Misc'];
       </div>
     </section>
 
-    <section class="space-y-14">
+    <section class="mm-container space-y-14 pb-14">
       {groups.map((group) => {
-        const groupResources = resources.filter((resource) => resource.type === group);
-        if (groupResources.length === 0) return null;
+        const groupResources = resources.filter((resource) => resource.group === group);
 
         return (
           <section data-resource-group={group.toLowerCase()}>
-            <div class="mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-[var(--mm-border)] pb-3">
+            <div class="mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-[var(--mm-navy)] pb-3">
               <div>
-                <h2 class="mm-h2">{group}s</h2>
+                <h2 class="mm-h2">{group}</h2>
                 <p class="mt-3 max-w-3xl text-lg leading-8 text-[var(--mm-muted)]">
-                  {group === 'Tool' && 'CLI tools, frameworks, services, and apps that show up in the AI factory.'}
-                  {group === 'Book' && 'Useful reference shelves and reading lists that can live off the main nav.'}
-                  {group === 'Download' && 'Templates, checklists, presets, and files that support tutorials.'}
-                  {group === 'Misc' && "The side-quest shelf: gear, favorite things, and useful pages that don't need main-nav weight."}
+                  {group === 'Builder Stack' && 'The visible and invisible pieces used to build, ship, and maintain this Astro site.'}
+                  {group === 'Infrastructure' && 'Servers, short links, and self-hosted pieces that support tutorials and practical AI workflows.'}
+                  {group === 'AI Workbench' && 'The AI coding, notes, and automation tools that stay open while I build and teach.'}
+                  {group === 'Content Stack' && 'Publishing, audio, and newsletter tools that help turn experiments into useful resources.'}
                 </p>
               </div>
               <p class="font-mono text-sm font-bold uppercase tracking-[0.16em] text-[var(--mm-muted)]">
-                {groupResources.length || 'Soon'} items
+                {groupResources.length} items
               </p>
             </div>
 
             <div class="grid gap-5">
               {groupResources.map((resource) => (
-                <article class="mm-resource-row" data-resource-type={resource.type.toLowerCase()}>
+                <article class="mm-resource-row" data-resource-type={resource.group.toLowerCase()}>
                   <span class:list={['mm-resource-mark', resource.color]}>{resource.mark}</span>
                   <div class="min-w-0">
-                    <p class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">{resource.cost}</p>
-                    <h3 class="mt-1 font-mono text-2xl font-bold uppercase leading-tight">{resource.name}</h3>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="mm-pill">{resource.cost}</span>
+                      <span class:list={['mm-pill', resource.relationship === 'Affiliate' && 'border-[var(--mm-orange)]']}>
+                        {resource.relationship}
+                      </span>
+                      {resource.tags.map((tag) => <span class="mm-pill">{tag}</span>)}
+                    </div>
+                    <h3 class="mt-3 font-mono text-2xl font-bold uppercase leading-tight">{resource.name}</h3>
                     <p class="mt-2 max-w-3xl text-lg leading-7 text-[var(--mm-muted)]">{resource.description}</p>
                   </div>
                   <a href={resource.url} class="font-mono text-sm font-bold uppercase tracking-[0.1em] text-[var(--mm-orange-deep)] hover:underline">
@@ -164,6 +255,23 @@ const groups = ['Tool', 'Download', 'Book', 'Misc'];
           </section>
         );
       })}
+
+      <section class="grid gap-5 border-t border-[var(--mm-border)] pt-10 md:grid-cols-2">
+        <article class="mm-card p-5">
+          <p class="mm-eyebrow">Future shelf</p>
+          <h2 class="mt-3 font-mono text-2xl font-bold uppercase leading-tight">Books belong nearby, not mixed in.</h2>
+          <p class="mt-3 text-sm leading-6 text-[var(--mm-muted)]">
+            A separate books page makes sense for reading lists, reference shelves, and ideas that shape how I build and teach without turning this page into a general personal library.
+          </p>
+        </article>
+        <article class="mm-card p-5">
+          <p class="mm-eyebrow">Future shelf</p>
+          <h2 class="mt-3 font-mono text-2xl font-bold uppercase leading-tight">Favorite things can be its own side quest.</h2>
+          <p class="mt-3 text-sm leading-6 text-[var(--mm-muted)]">
+            Gear, pens, notebooks, health tools, and studio odds and ends are useful, but they should live on a separate page when they are ready so the main Resources page stays AI-builder focused.
+          </p>
+        </article>
+      </section>
     </section>
   </main>
 
