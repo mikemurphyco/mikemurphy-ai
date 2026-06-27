@@ -229,6 +229,19 @@
     background: var(--mm-chalk);
   }
 
+  .mm-button-nav {
+    background: var(--mm-orange);
+    color: var(--mm-chalk);
+    font-size: 0.75rem;
+    min-height: auto;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .mm-button-nav:hover {
+    background: var(--mm-orange-deep);
+    color: var(--mm-chalk);
+  }
+
   .mm-pill {
     align-items: center;
     background: var(--mm-chalk);

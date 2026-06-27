@@ -40,22 +40,47 @@ const canonicalUrl = canonical.startsWith('http') ? canonical : absoluteUrl(cano
 	<body class="antialiased">
 		{!noHeader && <SiteHeader />}
 		<slot />
-		<footer class="border-t border-[var(--mm-border)] bg-[var(--mm-chalk)]">
-			<div class="mm-container grid gap-8 py-10 md:grid-cols-[1fr_auto] md:items-start">
+		<footer class="border-t border-[var(--mm-navy)] bg-[var(--mm-navy)] text-[var(--mm-cream)]">
+			<div class="mm-container grid gap-10 py-12 md:grid-cols-[1.35fr_0.8fr_0.8fr]">
 				<div>
-					<a href="/" class="font-mono text-lg font-bold uppercase tracking-normal text-[var(--mm-navy)]">Mike Murphy</a>
-					<p class="mt-3 max-w-xl text-sm leading-6 text-[var(--mm-muted)]">
+					<a href="/" class="flex items-center gap-3" aria-label="Mike Murphy home">
+						<img src="/assets/brand/loop-navy-128.svg" alt="" class="size-11 rounded-full bg-[var(--mm-cream)] p-1.5" />
+						<span>
+							<span class="block font-mono text-lg font-bold uppercase">Mike Murphy</span>
+							<span class="block font-mono text-xs font-bold uppercase tracking-[0.16em] text-[var(--mm-orange)]">AI Handyman</span>
+						</span>
+					</a>
+					<p class="mt-5 max-w-md text-sm leading-6 text-[color-mix(in_srgb,var(--mm-cream)_72%,transparent)]">
 						Practical tutorials, AI workflows, and honest notes from the messy middle of learning in public.
 					</p>
+					<p class="mt-5 font-mono text-xs font-bold uppercase tracking-[0.14em]">
+						Learn <span class="text-[var(--mm-orange)]">·</span> Build <span class="text-[var(--mm-orange)]">·</span> Move Forward
+					</p>
 				</div>
-				<nav class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm font-semibold md:text-right">
-					<a href="/tutorials/" class="hover:underline">Tutorials</a>
-					<a href="/ai-unplugged/" class="hover:underline">AI Unplugged</a>
-					<a href="/articles/" class="hover:underline">Articles</a>
-					<a href="/resources/" class="hover:underline">Resources</a>
-					<a href="/podcast/" class="hover:underline">Podcast</a>
-					<a href="/contact/" class="hover:underline">Contact</a>
+				<nav aria-label="Explore">
+					<p class="font-mono text-xs font-bold uppercase tracking-[0.14em] text-[var(--mm-orange)]">Explore</p>
+					<div class="mt-4 grid gap-3 text-sm font-semibold">
+						<a href="/tutorials/" class="hover:text-[var(--mm-orange)]">Tutorials</a>
+						<a href="/articles/" class="hover:text-[var(--mm-orange)]">Articles</a>
+						<a href="/topics/" class="hover:text-[var(--mm-orange)]">Topics</a>
+						<a href="/resources/" class="hover:text-[var(--mm-orange)]">Resources</a>
+					</div>
 				</nav>
+				<nav aria-label="Connect">
+					<p class="font-mono text-xs font-bold uppercase tracking-[0.14em] text-[var(--mm-orange)]">Connect</p>
+					<div class="mt-4 grid gap-3 text-sm font-semibold">
+						<a href="/ai-unplugged/" class="hover:text-[var(--mm-orange)]">AI Unplugged</a>
+						<a href="/podcast/" class="hover:text-[var(--mm-orange)]">Podcast</a>
+						<a href="/about/" class="hover:text-[var(--mm-orange)]">About Mike</a>
+						<a href="/contact/" class="hover:text-[var(--mm-orange)]">Contact</a>
+					</div>
+				</nav>
+			</div>
+			<div class="border-t border-[color-mix(in_srgb,var(--mm-cream)_18%,transparent)]">
+				<div class="mm-container flex flex-wrap items-center justify-between gap-3 py-5 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-[color-mix(in_srgb,var(--mm-cream)_62%,transparent)]">
+					<p>© {new Date().getFullYear()} Mike Murphy</p>
+					<p>Built with Astro · Served by Cloudflare</p>
+				</div>
 			</div>
 		</footer>
 	</body>

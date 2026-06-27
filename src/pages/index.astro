@@ -78,10 +78,10 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
         </div>
         <a href="/tutorials/" class="font-mono text-sm font-bold uppercase tracking-[0.1em] text-[var(--mm-orange-deep)] hover:underline">View all</a>
       </div>
-      <div class="mt-8 grid gap-6 lg:grid-cols-3">
-        {latestTutorials[0] && <div class="lg:col-span-2"><TutorialCard tutorial={latestTutorials[0]} featured /></div>}
-        <div class="grid gap-6">
-          {latestTutorials.slice(1, 3).map((tutorial) => <TutorialCard tutorial={tutorial} />)}
+      <div class="mt-8 grid gap-6">
+        {latestTutorials[0] && <TutorialCard tutorial={latestTutorials[0]} featured />}
+        <div class="grid gap-6 md:grid-cols-3">
+          {latestTutorials.slice(1).map((tutorial) => <TutorialCard tutorial={tutorial} />)}
         </div>
       </div>
     </section>

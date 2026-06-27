@@ -112,9 +112,12 @@ export function getTopicMap(articles: Article[]) {
   const topics = new Map<string, { name: string; slug: string; articles: Article[] }>();
 
   for (const article of articles) {
+    const articleTopicSlugs = new Set<string>();
+
     for (const term of getArticleTopicTerms(article)) {
       const slug = slugifyTerm(term);
-      if (!slug) continue;
+      if (!slug || articleTopicSlugs.has(slug)) continue;
+      articleTopicSlugs.add(slug);
 
       const existing = topics.get(slug);
       if (existing) {
