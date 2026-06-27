@@ -11,9 +11,15 @@ const { tutorial, featured = false } = Astro.props;
 const terms = getArticleTopicTerms(tutorial).slice(0, 3);
 ---
 
-<article class="mm-card group h-full overflow-hidden">
+<article class:list={['mm-card group h-full overflow-hidden', featured && 'lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.95fr)] lg:items-stretch']}>
   {tutorial.data.featuredImage && (
-    <a href={tutorialUrl(tutorial)} class="block aspect-video overflow-hidden bg-[var(--mm-navy)]">
+    <a
+      href={tutorialUrl(tutorial)}
+      class:list={[
+        'block aspect-video overflow-hidden bg-[var(--mm-navy)]',
+        featured && 'lg:aspect-auto lg:min-h-[22rem]',
+      ]}
+    >
       <img
         src={tutorial.data.featuredImage}
         alt=""
@@ -22,11 +28,11 @@ const terms = getArticleTopicTerms(tutorial).slice(0, 3);
       />
     </a>
   )}
-  <div class="flex min-h-full flex-col p-5">
+  <div class:list={['flex min-h-full flex-col p-5', featured && 'lg:justify-center lg:p-8 xl:p-10']}>
     <p class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
       {formatDate(tutorial.data.pubDate)}
     </p>
-    <h2 class:list={['mt-3 font-mono font-bold uppercase leading-tight tracking-normal text-[var(--mm-navy)]', featured ? 'text-2xl md:text-3xl' : 'text-xl']}>
+    <h2 class:list={['mt-3 font-mono font-bold uppercase leading-tight tracking-normal text-[var(--mm-navy)]', featured ? 'text-2xl md:text-3xl lg:text-4xl' : 'text-xl']}>
       <a href={tutorialUrl(tutorial)} class="hover:underline">{tutorial.data.title}</a>
     </h2>
     {tutorial.data.description && (
