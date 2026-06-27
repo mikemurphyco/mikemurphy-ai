@@ -17,7 +17,7 @@ import {
 
 const allArticles = await getCollection('articles', isDiscoverableArticle);
 const tutorials = sortTutorialsByDate(allArticles);
-const latestTutorials = tutorials.slice(0, 4);
+const latestTutorials = tutorials.slice(0, 6);
 const latestArticles = sortArticlesByDate(allArticles.filter(isStandardArticle)).slice(0, 3);
 const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIssue));
 const latestIssue = issues[0];
@@ -78,11 +78,8 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
         </div>
         <a href="/tutorials/" class="font-mono text-sm font-bold uppercase tracking-[0.1em] text-[var(--mm-orange-deep)] hover:underline">View all</a>
       </div>
-      <div class="mt-8 grid gap-6">
-        {latestTutorials[0] && <TutorialCard tutorial={latestTutorials[0]} featured />}
-        <div class="grid gap-6 md:grid-cols-3">
-          {latestTutorials.slice(1).map((tutorial) => <TutorialCard tutorial={tutorial} />)}
-        </div>
+      <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {latestTutorials.map((tutorial) => <TutorialCard tutorial={tutorial} />)}
       </div>
     </section>
 
