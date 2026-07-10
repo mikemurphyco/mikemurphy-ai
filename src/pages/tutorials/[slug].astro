@@ -22,7 +22,7 @@ function getYouTubeId(url: string): string | null {
 }
 ---
 
-<Layout title={article.data.title} description={article.data.description} canonical={tutorialUrl(article)}>
+<Layout title={article.data.title} description={article.data.description} canonical={tutorialUrl(article)} image={article.data.featuredImage || undefined}>
   <main>
     <article class="mm-container grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <div>

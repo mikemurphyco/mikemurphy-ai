@@ -16,7 +16,7 @@ const { Content } = await render(issue);
 const paddedIssue = String(issue.data.issue).padStart(3, '0');
 ---
 
-<Layout title={issue.data.subject} description={issue.data.summary} canonical={issueUrl(issue)}>
+<Layout title={issue.data.subject} description={issue.data.summary} canonical={issueUrl(issue)} image={issue.data.og?.image}>
   <main class="mm-container grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
     <article>
       <a href="/ai-unplugged/issues/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">Back to issues</a>

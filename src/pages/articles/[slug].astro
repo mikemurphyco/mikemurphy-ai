@@ -21,7 +21,7 @@ function getYouTubeId(url: string): string | null {
 }
 ---
 
-<Layout title={article.data.title} description={article.data.description} canonical={articleUrl(article)}>
+<Layout title={article.data.title} description={article.data.description} canonical={articleUrl(article)} image={article.data.featuredImage || undefined}>
   <main>
     <article class="mm-container max-w-3xl py-12">
       <a href="/articles/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">Back to articles</a>
