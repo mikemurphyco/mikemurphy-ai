@@ -1,0 +1,213 @@
+---
+interface Props {
+  /** Pagefind `type` filter value (e.g. "Tutorial", "Article", "Issue"). Omit to search everything. */
+  filterType?: string;
+  label?: string;
+  placeholder?: string;
+}
+
+const { filterType, label = 'Search', placeholder = 'Search…' } = Astro.props;
+const inputId = `inline-search-${filterType?.toLowerCase() ?? 'all'}`;
+---
+
+<div class="mm-inline-search" data-filter-type={filterType}>
+  <form role="search" class="grid max-w-xl gap-2" onsubmit="return false">
+    <label for={inputId} class="mm-eyebrow">{label}</label>
+    <input
+      id={inputId}
+      type="search"
+      placeholder={placeholder}
+      autocomplete="off"
+      class="min-h-12 w-full rounded-[var(--radius-md)] border border-[var(--mm-navy)] bg-[var(--mm-cream)] px-3.5 text-base shadow-[2px_2px_0_var(--color-shadow-ink)] outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--mm-orange)]"
+    />
+  </form>
+  <div class="mm-inline-search-results mt-6 hidden" role="region" aria-live="polite" aria-label="Search results"></div>
+</div>
+
+<script>
+  // Pagefind's index only exists in the built site (`npm run build` runs the
+  // postbuild indexer), so the module is imported lazily on first focus and
+  // dev mode degrades to a hint instead of an error.
+  type Pagefind = {
+    init: () => void;
+    debouncedSearch: (
+      term: string,
+      options?: { filters?: Record<string, string> },
+      debounceMs?: number,
+    ) => Promise<{ results: { data: () => Promise<PagefindDoc> }[] } | null>;
+  };
+  type PagefindDoc = {
+    url: string;
+    excerpt: string;
+    meta: { title?: string; date?: string };
+  };
+
+  const PAGE_SIZE = 10;
+
+  const formatDate = (iso: string) =>
+    new Date(iso).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      timeZone: 'UTC',
+    });
+
+  document.querySelectorAll<HTMLElement>('.mm-inline-search').forEach((root) => {
+    const input = root.querySelector<HTMLInputElement>('input[type="search"]');
+    const resultsEl = root.querySelector<HTMLElement>('.mm-inline-search-results');
+    if (!input || !resultsEl) return;
+
+    const filterType = root.dataset.filterType;
+    const hideTargets = document.querySelectorAll<HTMLElement>('[data-inline-search-hide]');
+    let pagefind: Pagefind | null = null;
+    let loadFailed = false;
+
+    const setSearching = (active: boolean) => {
+      resultsEl.classList.toggle('hidden', !active);
+      hideTargets.forEach((el) => el.classList.toggle('hidden', active));
+    };
+
+    const loadPagefind = async () => {
+      if (pagefind || loadFailed) return;
+      try {
+        // Path passed as a variable so Rollup doesn't try to resolve it at
+        // build time — the file only exists after the postbuild indexer runs.
+        const pagefindPath = '/pagefind/pagefind.js';
+        pagefind = (await import(/* @vite-ignore */ pagefindPath)) as Pagefind;
+        pagefind.init();
+      } catch {
+        loadFailed = true;
+      }
+    };
+
+    input.addEventListener('focus', loadPagefind, { once: true });
+
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        input.value = '';
+        setSearching(false);
+      }
+    });
+
+    input.addEventListener('input', async () => {
+      const term = input.value.trim();
+      if (!term) {
+        setSearching(false);
+        return;
+      }
+
+      await loadPagefind();
+      if (!pagefind) {
+        resultsEl.innerHTML =
+          '<p class="mm-inline-search-note">Search runs on the built site — run <code>npm run build && npm run preview</code> to try it locally.</p>';
+        setSearching(true);
+        return;
+      }
+
+      const search = await pagefind.debouncedSearch(
+        term,
+        filterType ? { filters: { type: filterType } } : {},
+        300,
+      );
+      if (search === null) return; // superseded by newer keystrokes
+      if (term !== input.value.trim()) return;
+
+      const total = search.results.length;
+      const docs = await Promise.all(search.results.slice(0, PAGE_SIZE).map((r) => r.data()));
+      const noun = filterType ? `${filterType.toLowerCase()}${total === 1 ? '' : 's'}` : `result${total === 1 ? '' : 's'}`;
+      const allLink = `<a class="mm-inline-search-all" href="/search?q=${encodeURIComponent(term)}">Search everything &rarr;</a>`;
+
+      resultsEl.innerHTML = `
+        <p class="mm-inline-search-count">${total} ${noun}${total > PAGE_SIZE ? ` &middot; showing ${PAGE_SIZE}` : ''} ${allLink}</p>
+        <ol class="mm-inline-search-list">
+          ${docs
+            .map(
+              (doc) => `
+            <li class="mm-inline-search-result">
+              <a href="${doc.url}" class="mm-inline-search-title">${doc.meta.title ?? doc.url}</a>
+              ${doc.meta.date ? `<span class="mm-inline-search-date">${formatDate(doc.meta.date)}</span>` : ''}
+              <p class="mm-inline-search-excerpt">${doc.excerpt}</p>
+            </li>`,
+            )
+            .join('')}
+        </ol>`;
+      setSearching(true);
+    });
+  });
+</script>
+
+<style is:global>
+  /* Global because result markup is injected at runtime, outside Astro's
+     scoped-style hashing. Everything is namespaced under .mm-inline-search. */
+  .mm-inline-search-count {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-4);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono-label);
+    font-weight: 700;
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .mm-inline-search-all {
+    color: var(--mm-orange-deep);
+  }
+
+  .mm-inline-search-all:hover {
+    text-decoration: underline;
+  }
+
+  .mm-inline-search-list {
+    margin-top: var(--space-2);
+    list-style: none;
+    padding: 0;
+  }
+
+  .mm-inline-search-result {
+    border-top: 1px solid var(--color-border-default);
+    padding-block: var(--space-5);
+  }
+
+  .mm-inline-search-title {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
+  }
+
+  .mm-inline-search-title:hover {
+    color: var(--mm-orange-deep);
+  }
+
+  .mm-inline-search-date {
+    margin-left: var(--space-3);
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono-label);
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .mm-inline-search-excerpt {
+    margin-top: var(--space-2);
+    max-width: 64ch;
+    color: var(--color-text-muted);
+  }
+
+  .mm-inline-search-excerpt mark {
+    background: var(--mm-yellow);
+    color: var(--mm-navy);
+  }
+
+  .mm-inline-search-note {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono-label);
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+</style>

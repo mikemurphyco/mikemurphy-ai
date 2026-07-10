@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import InlineSearch from '../../components/InlineSearch.astro';
 import SubscribeBand from '../../components/ai-unplugged/SubscribeBand.astro';
 import TutorialCard from '../../components/tutorials/TutorialCard.astro';
 import Layout from '../../layouts/Layout.astro';
@@ -36,11 +37,14 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
     </section>
 
     <section class="mm-container py-10">
-      <div class="flex flex-wrap gap-2">
-        {topics.map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--mm-navy)]">{topic.name}</a>)}
-      </div>
-      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {tutorials.map((tutorial) => <TutorialCard tutorial={tutorial} />)}
+      <InlineSearch filterType="Tutorial" label="Search tutorials" placeholder={`Search ${tutorials.length} tutorials…`} />
+      <div data-inline-search-hide class="mt-8">
+        <div class="flex flex-wrap gap-2">
+          {topics.map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--mm-navy)]">{topic.name}</a>)}
+        </div>
+        <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {tutorials.map((tutorial) => <TutorialCard tutorial={tutorial} />)}
+        </div>
       </div>
     </section>
 

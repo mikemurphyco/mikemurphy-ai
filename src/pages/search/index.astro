@@ -29,6 +29,25 @@ import Layout from '../../layouts/Layout.astro';
         showImages: false,
         pageSize: 10,
       });
+
+      // Accept ?q= handoffs (e.g. from inline search on /tutorials/).
+      // PagefindUI renders its input synchronously on construction, but poll a
+      // few frames to stay safe if that ever changes.
+      const query = new URLSearchParams(window.location.search).get('q');
+      if (query) {
+        let attempts = 0;
+        const fill = () => {
+          const input = document.querySelector('#search input[type="text"], #search input[type="search"]');
+          if (input) {
+            input.value = query;
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+            input.focus();
+          } else if (attempts++ < 20) {
+            requestAnimationFrame(fill);
+          }
+        };
+        fill();
+      }
     });
   </script>
 </Layout>
