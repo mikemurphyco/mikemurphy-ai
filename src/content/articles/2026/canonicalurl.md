@@ -25,20 +25,12 @@ topics:
   - seo
   - canonical-url
   - domain-management
-tools:
-  - "Cloudflare"
-  - "Chrome DevTools"
-difficulty: "beginner"
-estimatedTime: "5 minutes"
-videoUrl: "https://youtu.be/7-PSkvYGZd0"
-youtubeId: "7-PSkvYGZd0"
-resourceGuide: ""
+youtube:
+  - "https://youtu.be/7-PSkvYGZd0"
 search:
   include: true
   boost: 1.0
 ---
-
-# Cloudflare: How To Redirect www to Your Root Domain (Step-by-Step)
 
 If you own a website, `www.yourdomain.com` and `yourdomain.com` probably feel like the same address.
 
