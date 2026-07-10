@@ -40,7 +40,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🗞️******AI News of The Week: OpenAI ****Sora 2 Broke The Internet!**
 
@@ -73,7 +73,7 @@ isDraft: false
 
 - **API**: planned for developers.
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8790bf5c-41d7-4166-a147-5345e5e5318c/CleanShot_2025-10-01_at_21.21.18_2x.png?t=1759368096)](https://apps.apple.com/us/app/sora-by-openai/id6744034028?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-26-sora-2-is-here-almost)[
+[![](/assets/media/2025/10/issue-026-1.png)](https://apps.apple.com/us/app/sora-by-openai/id6744034028?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-26-sora-2-is-here-almost)[
 
 Open AI Sora 2
 

@@ -75,7 +75,7 @@ A quick, low-effort test you run to confirm a system, prompt, or output is worki
 
 ### 🧰 AI Tool of The Week: Claude Routines
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4fb4c54f-bc35-43cc-a108-a1ae9dcedabf/CleanShot_2026-04-16_at_21.41.17_2x.png?t=1776390102)
+![](/assets/media/2026/04/issue-054-1.png)
 
 Claude Routines
 

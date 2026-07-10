@@ -71,7 +71,7 @@ isDraft: false
 
 ### 🧰 AI Tool of The Week: OpenRouter
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/90016bcd-c6fd-4745-97fa-c481804ef8c3/CleanShot_2025-12-04_at_19.59.55_2x.png?t=1764896416)[
+![](/assets/media/2025/12/issue-035-1.png)[
 
 OpenRouter.ai
 

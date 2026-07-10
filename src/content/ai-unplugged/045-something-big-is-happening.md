@@ -78,7 +78,7 @@ isDraft: false
 
 ### 🧰 AI Tool of The Week: Vercel
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b58a4501-5903-41c8-956b-2b951acdd9e0/CleanShot_2026-02-12_at_18.32.04_2x.png?t=1770939148)[
+![](/assets/media/2026/02/issue-045-1.png)[
 
 Vercel
 

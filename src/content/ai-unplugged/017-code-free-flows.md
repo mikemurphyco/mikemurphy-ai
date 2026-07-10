@@ -37,7 +37,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🗞️** AI News of The Week:**OpenAI Launches “Study Mode
 
@@ -48,7 +48,7 @@ p.s. I am very excited for my vision and I’m off to the races learning Python,
 
 👉 [Check out Open AI blog post here](https://openai.com/index/chatgpt-study-mode?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-17-code-free-flows)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3fdddfda-c1af-4ccb-bedf-e9565422ddfc/chatgpt_study-mode.png?t=1754010188)[
+![](/assets/media/2025/08/issue-017-1.png)[
 
 ChatGPT ‘Study Mode’
 
@@ -77,7 +77,7 @@ Use this [link](https://hostinger.com?REFERRALCODE=BYS0JAIWCIJP&utm_source=aiunp
 
 **Check it out here:**[Claude Code](https://www.anthropic.com/claude-code?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-17-code-free-flows)
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0e694f18-a1cf-4d53-baca-2a3a3256ea5a/claude_code.png?t=1754012128)](https://www.anthropic.com/claude-code?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-17-code-free-flows)[
+[![](/assets/media/2025/08/issue-017-2.png)](https://www.anthropic.com/claude-code?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-17-code-free-flows)[
 
 Claude Code
 

@@ -80,7 +80,7 @@ isDraft: false
 
 ### 🧰 AI Tool of The Week: Weavy AI
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8706b4d7-dbfd-4717-95bb-8e95abcc13fd/CleanShot_2026-02-19_at_12.55.14_2x.png?t=1771523729)](https://www.weavy.ai/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-46-openai-openclaw)
+[![](/assets/media/2026/02/issue-046-1.png)](https://www.weavy.ai/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-46-openai-openclaw)
 
 [Weavy AI](https://www.weavy.ai/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-46-openai-openclaw)
 

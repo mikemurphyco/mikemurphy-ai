@@ -34,7 +34,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/bd4e6204-02d5-49da-9a04-42849990324b/ai-unplugged-beehiiv-banner_navy.png?t=1781344860)
+![](/assets/media/2026/05/issue-060-1.png)
 
 ### 🗞️ AI News of The Week: YouTube's AI Labels Get Smarter
 
@@ -83,7 +83,7 @@ A repository (or "repo") is a storage location for code, files, and their full v
 
 ### 🧰 AI Tool of The Week: Immich
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c60fc6e8-6807-458e-8cb8-b2a505b2a7d8/CleanShot_2026-05-28_at_15.55.42_2x.png?t=1779998155)
+![](/assets/media/2026/05/issue-060-2.png)
 
 [Immich](https://immich.app/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-60-youtube-s-ai-labels-get-smarter)
 

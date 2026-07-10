@@ -84,7 +84,7 @@ isDraft: false
 
 ### 🧰 AI Tool of The Week: FireCrawl
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1172617d-c407-4e71-9cdd-880368df402e/CleanShot_2026-01-08_at_21.35.01_2x.png?t=1767926127)](https://www.firecrawl.dev/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-40-chatgpt-health)[
+[![](/assets/media/2026/01/issue-040-1.png)](https://www.firecrawl.dev/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-40-chatgpt-health)[
 
 Check Out Firecrawl
 

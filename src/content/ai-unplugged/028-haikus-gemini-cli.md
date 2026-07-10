@@ -35,7 +35,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🗞️******AI News of The Week: Anthropic Announces Claude Haiku 4.5**
 
@@ -89,11 +89,11 @@ Fine-tuning is like teaching a person who is fluent in many languages how to mas
 
  I made a web app called ‘Mike’s Toolbox’ that allows me to add tools and utilities I use and it organizes and categorizes everything automatically. It is fully functional and took less than 2 minutes.
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b93e5c0c-9789-488b-898d-b624c6a19303/Mike_s_Toolbox.png?t=1760634675)](https://gemini.google/overview/canvas/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-28-haikus-gemini-cli)[
+[![](/assets/media/2025/10/issue-028-1.png)](https://gemini.google/overview/canvas/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-28-haikus-gemini-cli)[
 
 Mike’s Toolbox made by Gemini Canvas
 
-](https://gemini.google/overview/canvas/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-28-haikus-gemini-cli)[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/99106cb4-8845-49e0-b798-edd097292cb1/CleanShot_2025-10-16_at_13.07.44_2x.png?t=1760634476)](https://gemini.google/overview/canvas/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-28-haikus-gemini-cli)[
+](https://gemini.google/overview/canvas/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-28-haikus-gemini-cli)[![](/assets/media/2025/10/issue-028-2.png)](https://gemini.google/overview/canvas/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-28-haikus-gemini-cli)[
 
 Gemini Canvas
 

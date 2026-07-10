@@ -35,7 +35,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🗞️******AI News of The Week: OpenAI ****Agent Toolkit**
 
@@ -54,7 +54,7 @@ isDraft: false
 
 - **Pricing:** Included with standard API model pricing; Workflows API and agent deployment to ChatGPT coming soon.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5c8e160c-7d45-4780-899a-684f6282b24d/CleanShot_2025-10-08_at_22.19.46_2x.png?t=1759976396)
+![](/assets/media/2025/10/issue-027-1.png)
 
 [AgentKit by OpenAI](https://platform.openai.com/docs/guides/agent-builder?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-27-openai-strikes-again)
 
@@ -84,7 +84,7 @@ isDraft: false
 
  OpenRouter provides a single, OpenAI‑compatible interface to hundreds of AI models from major providers. It focuses on reliability, price/performance, and governance so you can swap models, fail over when a provider is down, and enforce data policies without changing your app’s core integration.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/86f85085-96e7-4a12-a96a-fa47db0fba1e/CleanShot_2025-10-08_at_22.47.08_2x.png?t=1759978041)
+![](/assets/media/2025/10/issue-027-2.png)
 
 [OpenRouter](https://openrouter.ai/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-27-openai-strikes-again)
 

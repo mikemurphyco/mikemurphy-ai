@@ -36,13 +36,13 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🗞️******AI News of The Week:****Learn Your Way**
 
 [Google announced](https://blog.google/outreach-initiatives/education/learn-your-way/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-25-i-learned-it-my-way)[Learn Your Way](https://blog.google/outreach-initiatives/education/learn-your-way/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-25-i-learned-it-my-way), an AI tool that turns textbooks into interactive learning experiences.
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8b13b560-74b5-4d11-be03-d5b9f62bc087/CleanShot_2025-09-25_at_14.52.52_2x.png?t=1758826388)](https://blog.google/outreach-initiatives/education/learn-your-way/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-25-i-learned-it-my-way)[
+[![](/assets/media/2025/09/issue-025-1.png)](https://blog.google/outreach-initiatives/education/learn-your-way/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-25-i-learned-it-my-way)[
 
 Learn Your Way
 
@@ -56,7 +56,7 @@ Learn Your Way
 
 **Vector databases** are specialized data storage systems designed to efficiently store, index, and search high-dimensional vector embeddings…numerical representations of data like text, images, or audio. Vector databases essentially act as the "memory system" for RAG applications, making them crucial for building AI systems that can access and reason over large knowledge bases.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b782391a-ccb3-4a5f-b448-0ffc9ee37797/20250925_1448_Retro_Comic_Database_simple_compose_01k6137jmhffarhcf0xzqhavx9.png?t=1758826474)
+![](/assets/media/2025/09/issue-025-2.png)
 
 Vector Database
 
@@ -86,7 +86,7 @@ Vector Database
 
  Create personalized, illustrated stories about anything with read-aloud narration. Just describe the story you want, add files and photos if you like, and Gemini will create a unique 10-page storybook.
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a979571-d42f-4117-bddf-6c31590dc950/CleanShot_2025-09-25_at_14.42.00_2x.png?t=1758825736)](https://labs.google.com/mixboard/welcome?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-25-i-learned-it-my-way)[
+[![](/assets/media/2025/09/issue-025-3.png)](https://labs.google.com/mixboard/welcome?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-25-i-learned-it-my-way)[
 
 Google Labs Mixboard
 

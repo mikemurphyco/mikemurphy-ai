@@ -31,7 +31,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🗞️******AI News of The Week:****OpenAI Jobs Platform (coming soon)**
 
@@ -63,7 +63,7 @@ just take the first step."*”*
 
 [Ideogram](https://ideogram.ai/t/explore?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-22-jobs-embeddings-postman) is an AI-powered tool that generates images from text prompts and uploaded references into new images, artwork, logos, posters, and graphics almost instantly. Ideogram is one of the best generative AI tools when it comes to adding Text to designs.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/43d4ef5c-29de-4f63-bc48-3326fadad914/CleanShot_2025-09-04_at_17.33.58_2x.png?t=1757021662)
+![](/assets/media/2025/09/issue-022-1.png)
 
 [Ideogram is great for posters, design & text](https://ideogram.ai/t/explore?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-22-jobs-embeddings-postman)
 

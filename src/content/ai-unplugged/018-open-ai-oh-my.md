@@ -33,7 +33,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🗞️** AI News of The Week:**OpenAI’s Big Week!
 
@@ -43,7 +43,7 @@ isDraft: false
 - **GPT-5 is Here** – A highly anticipated release. GPT-4 was beyond impressive and GPT-5 is officially entering ‘crazy town’. Super smart and fast and apparently very impressive at coding. This is OpenAI’s unveils most advanced model yet, promising major leaps in reasoning, memory, and multimodal capabilities. It’s available now on all plans and it’s a big deal.
 [Check out the OpenAI Blog →](https://openai.com/index/introducing-gpt-5/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-18-open-ai-oh-my)
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ea81bbbc-8d8d-4b92-8a8f-5004235b17b2/gpt-5.png?t=1754605668)](https://openai.com/index/introducing-gpt-5/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-18-open-ai-oh-my)[
+[![](/assets/media/2025/08/issue-018-1.png)](https://openai.com/index/introducing-gpt-5/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-18-open-ai-oh-my)[
 
 ChatGPT-5
 
@@ -81,7 +81,7 @@ For creators, this means:
 
  👉 [Try ElevenMusic here (affiliate link)](https://try.elevenlabs.io/kuhb3vjoi7gw?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-18-open-ai-oh-my)
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/da769560-49bc-4854-973e-ffb25aec3a32/CleanShot_2025-08-07_at_18.42.27_2x.png?t=1754606560)](https://try.elevenlabs.io/kuhb3vjoi7gw?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-18-open-ai-oh-my)[
+[![](/assets/media/2025/08/issue-018-2.png)](https://try.elevenlabs.io/kuhb3vjoi7gw?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-18-open-ai-oh-my)[
 
 ElevenMusic
 

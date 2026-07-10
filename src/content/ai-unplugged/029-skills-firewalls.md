@@ -43,7 +43,7 @@ Anthropic just launched [**Claude Agent Skills**](https://www.anthropic.com/news
 **Hot Take (observation by Mike):**
 I believe Claude Skills are powerful and useful, but they are confusing as heck to understand because they overlap with many of the other great Claude tools (MCP, Agents, Projects, ClaudeCode.md file, etc. When I figure out how to actually use them, I’ll let you know, but the internet is all abuzz about Claude Skills!
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/80b30a6a-5848-47cb-995d-892e5c77352b/image.png?t=1761257621)
+![](/assets/media/2025/10/issue-029-1.png)
 
 Skills are reusable knowledge bases that make Claude more effective at domain-specific work without you having to repeat yourself.
 
@@ -100,7 +100,7 @@ So far, I’m impressed. I really don’t need more browsers in my life, but I d
 
  👉 [Check out ChatGPT Atlas](https://chatgpt.com/atlas?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-29-skills-firewalls)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5d923813-5a6e-417f-ae4c-a90a781a7118/CleanShot_2025-10-23_at_18.18.25_2x.png?t=1761257923)[
+![](/assets/media/2025/10/issue-029-2.png)[
 
 ChatGPT Atlas
 

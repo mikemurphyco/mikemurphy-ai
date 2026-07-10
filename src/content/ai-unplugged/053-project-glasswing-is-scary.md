@@ -91,7 +91,7 @@ Think of a thermostat. Turn it down low and the room stays the same comfortable 
 
 ### 🧰 AI Tool of The Week: DeFuddle
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/afc63c71-6c70-4bdb-bc88-1e97ffa8d005/CleanShot_2026-04-09_at_18.01.50_2x.png?t=1775772122)
+![](/assets/media/2026/04/issue-053-1.png)
 
 [Defuddle](https://defuddle.md/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-53-project-glasswing-is-scary)
 

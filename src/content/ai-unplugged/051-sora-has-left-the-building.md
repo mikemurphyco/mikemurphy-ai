@@ -38,7 +38,7 @@ isDraft: false
 
 ### 🗞️ AI News of The Week: OpenAI Shuts Down Sora
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ebf7f23a-f40e-479f-bf66-8266f9eb217f/CleanShot_2026-03-26_at_13.16.53_2x.png?t=1774545427)](https://openai.com/sora/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-51-sora-has-left-the-building)
+[![](/assets/media/2026/03/issue-051-1.png)](https://openai.com/sora/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-51-sora-has-left-the-building)
 
 [OpenAI Sora](https://openai.com/sora/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-51-sora-has-left-the-building)
 
@@ -93,7 +93,7 @@ Running a 500-step test that checks every feature of your app
 
 ### 🧰 AI Tool of The Week: Claude Dispatch
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/535c2d0e-e477-4af0-a669-683eaef9f1e5/CleanShot_2026-03-26_at_13.21.53_2x.png?t=1774545728)
+![](/assets/media/2026/03/issue-051-2.png)
 
 [Claude Dispatch](https://support.claude.com/en/articles/13947068-assign-tasks-to-claude-from-anywhere-in-cowork?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-51-sora-has-left-the-building)
 

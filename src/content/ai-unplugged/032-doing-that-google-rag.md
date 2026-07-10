@@ -70,7 +70,7 @@ Not just coding or summarizing or making cool looping textures in After Effectsâ
 
  Turn natural language prompts into fully functional, deployable, AI-native applications in true prompt-to-product fashion.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fe133e3e-1397-4456-9db5-24b2117d6b45/CleanShot_2025-11-13_at_17.08.28_2x.png?t=1763071733)[
+![](/assets/media/2025/11/issue-032-1.png)[
 
 VS Code
 

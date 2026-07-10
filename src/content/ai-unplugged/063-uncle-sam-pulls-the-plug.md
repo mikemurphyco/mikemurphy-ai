@@ -77,7 +77,7 @@ Idempotent is like an elevator button. If you push it once, the elevator comes. 
 
 ### 🧰 AI Tool of The Week: CloudFlare Pages
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f78154c2-b9e9-40a5-91cc-4d8c5641132e/CleanShot_2026-06-18_at_11.25.02_2x.png?t=1781796317)
+![](/assets/media/2026/06/issue-063-1.png)
 
 [CloudFlare Pages](https://pages.cloudflare.com/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-63-uncle-sam-pulls-the-plug)
 

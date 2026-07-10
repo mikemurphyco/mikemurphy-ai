@@ -38,7 +38,7 @@ isDraft: false
 
 ### 🗞️ AI News of The Week: Introducing ChatGPT Images 2.0
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/83996865-c19b-4cef-9922-abac1c781bd2/CleanShot_2026-04-23_at_14.12.24_2x.png?t=1776967961)
+![](/assets/media/2026/04/issue-055-1.png)
 
 [ChatGPT Images 2.0](https://openai.com/index/introducing-chatgpt-images-2-0/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-55-chatgpt-images-2-0)
 
@@ -96,7 +96,7 @@ Tool calling is when an AI model decides on its own to use an external tool, lik
 
 ### 🧰 AI Tool of The Week: Paper (Design)
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/68817d89-1f20-46e3-a66a-204a962ebb59/CleanShot_2026-04-23_at_07.05.42_2x.png?t=1776942359)](https://paper.design/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-55-chatgpt-images-2-0)
+[![](/assets/media/2026/04/issue-055-2.png)](https://paper.design/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-55-chatgpt-images-2-0)
 
 [Paper](https://paper.design/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-55-chatgpt-images-2-0)
 

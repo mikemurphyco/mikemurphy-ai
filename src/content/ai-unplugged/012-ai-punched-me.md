@@ -28,7 +28,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🧠 AI Term of The Week: API
 
@@ -49,7 +49,7 @@ they get punched in the face.”
 
 – Mike Tyson
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6d6d2783-d3fc-4591-8340-801f01d272b7/BABY_MIKE_FACE_PUNCH.gif?t=1750958061)[
+![](/assets/media/2025/06/issue-012-1.gif)[
 
 FacePunch Effect (RunDiffusion)
 
@@ -60,7 +60,7 @@ FacePunch Effect (RunDiffusion)
 [MidJourney](https://midjourney.com?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-12-ai-punched-me) is one of the best AI tools for creating **amazing art from text prompts**…but it’s not just for still images anymore.
 MidJourney just announced [V1 Video Model ](https://www.midjourney.com/updates?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-12-ai-punched-me)and it’s taking the internet by storm. It’s easy and awesome. Super smooth motion and at this time you can extend animations up to 21 seconds long.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fd5b90ae-1f26-45a3-af9a-566f0cf8efae/CleanShot_2025-06-26_at_13.21.11_2x.png?t=1750958483)
+![](/assets/media/2025/06/issue-012-2.png)
 
 **You can now:**
 

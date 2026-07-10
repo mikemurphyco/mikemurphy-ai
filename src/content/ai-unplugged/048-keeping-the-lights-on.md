@@ -38,7 +38,7 @@ isDraft: false
 
 ### 🗞️ AI News of The Week: White House Rate Payer Protection Pledge
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c09760eb-5186-4cff-9bf0-25179993fa9f/CleanShot_2026-03-05_at_16.20.20_2x.png?t=1772745633)](https://www.whitehouse.gov/articles/2026/03/president-trump-secures-historic-commitment-to-keep-electricity-costs-down-amid-data-center-boom/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-48-keeping-the-lights-on)
+[![](/assets/media/2026/03/issue-048-1.png)](https://www.whitehouse.gov/articles/2026/03/president-trump-secures-historic-commitment-to-keep-electricity-costs-down-amid-data-center-boom/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-48-keeping-the-lights-on)
 
  The White House Administration has secured a historic commitment from tech companies to keep electricity costs down as AI data centers push power demand to new highs.
 
@@ -89,7 +89,7 @@ isDraft: false
 
 ### 🧰 AI Tool of The Week: CrewAI
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/80a68905-ef12-41ac-9437-2662a9c81d09/CleanShot_2026-03-05_at_16.11.30_2x.png?t=1772745107)
+![](/assets/media/2026/03/issue-048-2.png)
 
 [CrewAI](https://crewai.com/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-48-keeping-the-lights-on)
 

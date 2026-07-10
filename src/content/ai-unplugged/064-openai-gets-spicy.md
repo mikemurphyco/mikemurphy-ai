@@ -78,7 +78,7 @@ TUI is like using a secret codebook. You read a list of words, type the letters 
 
 ### 🧰 AI Tool of The Week: Coolify
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d3619b6d-da1f-4e74-9433-3fd95fccfcba/CleanShot_2026-06-25_at_17.42.45_2x.png?t=1782423801)
+![](/assets/media/2026/06/issue-064-1.png)
 
 **What is Coolify?**
 Coolify is an open-source, self-hostable platform for deploying apps, databases, and services on your own server, a free alternative to Heroku, Netlify, and Vercel.

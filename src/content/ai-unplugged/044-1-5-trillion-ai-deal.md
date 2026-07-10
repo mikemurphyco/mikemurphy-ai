@@ -88,7 +88,7 @@ isDraft: false
 
 ### 🧰 AI Tool of The Week: ChatGPT Codex
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3ce00527-1c9b-4caa-a7e1-c8159657056c/CleanShot_2026-02-05_at_16.01.37_2x.png?t=1770325336)](https://openai.com/codex/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-44-1-5-trillion-ai-deal)[
+[![](/assets/media/2026/02/issue-044-1.png)](https://openai.com/codex/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-44-1-5-trillion-ai-deal)[
 
 Open AI Codex
 

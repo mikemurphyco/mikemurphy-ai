@@ -38,7 +38,7 @@ isDraft: false
 
 ### 🗞️ AI News of The Week: Claude Constitution
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4363b0a6-67a6-497d-9429-5e1b5144e5eb/CleanShot_2026-01-22_at_15.59.59_2x.png?t=1769115615)[
+![](/assets/media/2026/01/issue-042-1.png)[
 
 Read Blog Post
 
@@ -92,7 +92,7 @@ Read Blog Post
 
 ### 🧰 AI Tool of The Week: Hume AI
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b297756b-eded-4b46-a6b4-b8dd3bcb3ca0/CleanShot_2026-01-22_at_16.00.49_2x.png?t=1769115677)[
+![](/assets/media/2026/01/issue-042-2.png)[
 
 Hume
 

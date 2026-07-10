@@ -42,7 +42,7 @@ isDraft: false
 
 ### 🗞️ AI News of The Week: Google Announces Stitch “Vibe Designing”
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3204d4cb-8a56-4e17-a273-43a8d638c418/CleanShot_2026-03-19_at_13.08.01_2x.png?t=1773940096)
+![](/assets/media/2026/03/issue-050-1.png)
 
 [Google Stitch](https://stitch.withgoogle.com/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-50-half-century)
 
@@ -102,7 +102,7 @@ An AI orchestrator in n8n that delegates to specialized agents based on the type
 
 ### 🧰 AI Tool of The Week: ElevenLabs Flows
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fed3c04d-09a4-432d-9e17-dabd493f9b61/CleanShot_2026-03-19_at_12.48.13_2x.png?t=1773938919)
+![](/assets/media/2026/03/issue-050-2.png)
 
 [Eleven Labs Flows](https://elevenlabs.io/flows?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-50-half-century)
 

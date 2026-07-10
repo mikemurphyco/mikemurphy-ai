@@ -31,7 +31,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🗞️******AI News of The Week:****How people are using ChatGPT**
 
@@ -55,7 +55,7 @@ isDraft: false
 
 Model Context Protocol (MCP): A standard created by [Anthropic](https://www.anthropic.com/news/model-context-protocol?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-24-claude-code-rules) (Claude) for connecting AI to Your Apps.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/141fcd5d-4017-4b11-89d5-fb0ecde7db79/3aabd8804251c0364cbde9d2e4be6dc8e8c2faec-2880x1620.jpg?t=1758236781)
+![](/assets/media/2025/09/issue-024-1.jpg)
 
 MCP is like a universal adapter that lets AI assistants connect directly to your favorite apps and data sources. Instead of copying and pasting information between tools, AI can now access your Google Drive, calendar, databases, and other services directly—while maintaining security controls.
 
@@ -79,7 +79,7 @@ to go for the great.*”*
 
  Create personalized, illustrated stories about anything with read-aloud narration. Just describe the story you want, add files and photos if you like, and Gemini will create a unique 10-page storybook.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/31e8af8c-2df6-4342-994c-4d6ddf62454f/CleanShot_2025-09-18_at_18.50.27_2x.png?t=1758235868)[
+![](/assets/media/2025/09/issue-024-2.png)[
 
 Gemini Storybook
 

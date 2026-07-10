@@ -34,7 +34,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/422c4bf4-3d9d-411e-a1da-1f4adf3da495/Beehiiv_Banner_Scribble_sourcecode.jpg?t=1744225194)
+![](/assets/media/2025/04/issue-001-1.jpg)
 
 ### 🗞️******AI News of The Week:**
 
@@ -46,7 +46,7 @@ It’s standing out for how well it can modify or change parts of images you upl
 
  👉 Try it out [here](https://nanobanana.ai/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-21-doing-that-rag) or on [Google Studio](https://aistudio.google.com?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-21-doing-that-rag)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4d5d1644-5d27-4d59-8b0a-438370904839/Nano_Banana.jpeg?t=1756404276)
+![](/assets/media/2025/08/issue-021-1.jpeg)
 
 Nano Banana Lighthouse
 

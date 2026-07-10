@@ -88,7 +88,7 @@ Distillation attacks work by feeding a powerful model's outputs (like Claude's) 
 
 ### 🧰 AI Tool of The Week: Cosmos
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/95de3b2b-6e40-444f-b68c-a1455819dfe2/CleanShot_2026-02-26_at_17.43.20_2x.png?t=1772145814)
+![](/assets/media/2026/02/issue-047-1.png)
 
 [Cosmos](https://www.cosmos.so/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-47-caught-red-handed)
 

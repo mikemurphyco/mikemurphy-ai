@@ -34,7 +34,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/bd4e6204-02d5-49da-9a04-42849990324b/ai-unplugged-beehiiv-banner_navy.png?t=1781345221)
+![](/assets/media/2026/05/issue-059-1.png)
 
 ### 🗞️ AI News of The Week:
 OpenAI co-founder Andrej Karpathy joins Anthropic
@@ -84,7 +84,7 @@ Definition: GUI stands for Graphical User Interface. It's the visual layer of bu
 
 ### 🧰 AI Tool of The Week: Open WebUI
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/13321491-b5c9-4633-be26-269f863317df/CleanShot_2026-05-21_at_13.22.20_2x.png?t=1779384159)](https://openwebui.com/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-59-prune-in-june)
+[![](/assets/media/2026/05/issue-059-2.png)](https://openwebui.com/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-59-prune-in-june)
 
 [Open WebUI](https://openwebui.com/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-59-prune-in-june)
 

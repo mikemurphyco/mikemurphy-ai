@@ -38,7 +38,7 @@ isDraft: false
 
 ### 🗞️******AI News of The Week:****Leading AI, Business, and Media Figures Call for Superintelligence Ban**
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/03edbe70-01f4-4a13-84b2-8f95825af327/image.png?t=1761870940)](https://theaitrack.com/superintelligence-ban-october-2025/https://theaitrack.com/superintelligence-ban-october-2025/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-30-happy-halloween)[
+[![](/assets/media/2025/10/issue-030-1.png)](https://theaitrack.com/superintelligence-ban-october-2025/https://theaitrack.com/superintelligence-ban-october-2025/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-30-happy-halloween)[
 
 Source: The AI Track
 

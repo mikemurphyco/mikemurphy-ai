@@ -108,7 +108,7 @@ I am a big fan of Gemini and at first glance, Gemini 3.0 Pro seems to be worth t
 
  👉 [Check out Antigravity by Google](https://antigravity.google/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-33-antigravity-gemini-3)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4bb9d39b-d278-4e8c-b245-ff2c85961e2b/CleanShot_2025-11-20_at_11.22.47_2x.png?t=1763659394)
+![](/assets/media/2025/11/issue-033-1.png)
 
 [Antigravity by Google](https://antigravity.google/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-33-antigravity-gemini-3)
 

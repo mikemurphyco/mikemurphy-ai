@@ -34,7 +34,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/bd4e6204-02d5-49da-9a04-42849990324b/ai-unplugged-beehiiv-banner_navy.png?t=1781344860)
+![](/assets/media/2026/05/issue-060-1.png)
 
 ### 🗞️ AI News of The Week: Anthropic Files to Go Public
 
@@ -88,7 +88,7 @@ Imagine your brain could only solve math problems by mailing them to a genius in
 
 ### 🧰 AI Tool of The Week: LM Studio
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/36d0c95a-e0a2-4071-9462-b18bbbe283fc/CleanShot_2026-06-04_at_14.42.51_2x.png?t=1780598588)
+![](/assets/media/2026/06/issue-061-1.png)
 
 [LM Studio](https://lmstudio.ai/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-61-living-on-the-edge)
 

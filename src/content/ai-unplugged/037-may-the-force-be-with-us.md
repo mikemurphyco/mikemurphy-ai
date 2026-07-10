@@ -36,7 +36,7 @@ isDraft: false
 
 🗞️******AI News of The Week:****US ****Tech Force Launches**
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8a108b04-be3f-4aa3-8fcb-9375e0431890/US_TECH_FORCE.png?t=1766111466)[
+![](/assets/media/2025/12/issue-037-1.png)[
 
 US Tech Force
 

@@ -81,7 +81,7 @@ AI SEO is the practice of optimizing your content so it gets surfaced, cited, an
 
 ### 🧰 AI Tool of The Week: Astro
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e44aecb5-148c-4551-84d5-e48307cfb231/CleanShot_2026-05-14_at_20.04.36_2x.png?t=1778803494)](https://astro.build/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-58-openai-daybreak)
+[![](/assets/media/2026/05/issue-058-1.png)](https://astro.build/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-58-openai-daybreak)
 
 [Astro](https://astro.build/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-58-openai-daybreak)
 

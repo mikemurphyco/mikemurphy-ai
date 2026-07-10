@@ -31,7 +31,7 @@ agentReadable:
 isDraft: false
 ---
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/23cb78f7-8739-4b09-adca-4130e7e7b713/image.png?t=1766715553)
+![](/assets/media/2025/12/issue-038-1.png)
 
  🗞️******AI News of The Week:****Your Year with ChatGPT**
 
@@ -49,13 +49,13 @@ isDraft: false
 
 **Here are some excerpts from my ChatGPT Rewind:**
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9de3faef-9d7c-42d0-82ea-2bd725a7eb32/CleanShot_2025-12-25_at_13.10.16_2x.png?t=1766686226)
+![](/assets/media/2025/12/issue-038-2.png)
 
 My Chat GPT Poem
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/709a41f7-bf6c-4531-b4d5-8a8a720b28ca/CleanShot_2025-12-25_at_12.47.11_2x.png?t=1766686402)
+![](/assets/media/2025/12/issue-038-3.png)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9d7873a7-0dbb-4612-928b-e3f502cbea3a/CleanShot_2025-12-25_at_12.46.46_2x.png?t=1766686362)
+![](/assets/media/2025/12/issue-038-4.png)
 
  🧠******AI Term of The Week:****Catastrophic Forgetting **
 

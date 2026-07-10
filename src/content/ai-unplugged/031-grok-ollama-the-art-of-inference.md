@@ -79,7 +79,7 @@ isDraft: false
 
  👉 Try it at [ollama.com](https://ollama.com?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-31-grok-ollama-the-art-of-inference)
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/edb6e331-b4bb-4707-b91c-84005a5aeadf/llama.png?t=1762465761)](https://ollama.com?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-31-grok-ollama-the-art-of-inference)[
+[![](/assets/media/2025/11/issue-031-1.png)](https://ollama.com?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-31-grok-ollama-the-art-of-inference)[
 
 Ollama Local AI Models
 

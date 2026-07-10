@@ -83,7 +83,7 @@ The process of coordinating multiple AI agents so they can work together, in seq
 
 ### 🧰 AI Tool of The Week: Your AI Scroll
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e169e3b4-627e-40b6-823c-3ee1dfa6133c/CleanShot_2026-04-02_at_21.06.14_2x.png?t=1775178391)
+![](/assets/media/2026/04/issue-052-1.png)
 
 Your AI Scroll
 

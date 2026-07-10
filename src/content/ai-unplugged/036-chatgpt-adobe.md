@@ -52,7 +52,7 @@ isDraft: false
 
 🧠******AI Term of The Week:****x402 (Micropayments)**
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/68e55273-f66a-4500-a05c-8fc0127555a0/CleanShot_2025-12-11_at_19.32.17_2x.png?t=1765499547)
+![](/assets/media/2025/12/issue-036-1.png)
 
 [https://www.x402.org/](https://www.x402.org/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-36-chatgpt-adobe)
 
@@ -79,7 +79,7 @@ As AI agents become more common, they'll need a way to transact automatically. x
 
 ### 🧰 AI Tool of The Week: Replit
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/042b45e1-e3cc-4e26-8fed-3d99bdd7d8d6/CleanShot_2025-12-11_at_19.38.10_2x.png?t=1765499926)](https://replit.com?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-36-chatgpt-adobe)[
+[![](/assets/media/2025/12/issue-036-2.png)](https://replit.com?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-36-chatgpt-adobe)[
 
 Replit
 

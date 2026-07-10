@@ -85,7 +85,7 @@ Connectors are the tools and plugins that AI agents like Claude, Codex, and othe
 
 ### 🧰 AI Tool of The Week: Conductor Build
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b3f11e6d-4dde-4311-af66-af566cab974f/CleanShot_2026-05-07_at_17.49.31_2x.png?t=1778190582)](https://www.conductor.build/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-57-plugin-to-power)
+[![](/assets/media/2026/05/issue-057-1.png)](https://www.conductor.build/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-57-plugin-to-power)
 
 [Conductor. Build](https://www.conductor.build/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-57-plugin-to-power)
 

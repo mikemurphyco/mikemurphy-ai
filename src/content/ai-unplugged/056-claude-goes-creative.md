@@ -36,7 +36,7 @@ isDraft: false
 
 ### 🗞️ AI News of The Week: Claude For Creative Work
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/93d7a0a1-4292-48d9-95ec-2e69db11819e/CleanShot_2026-04-30_at_20.21.08_2x.png?t=1777594885)
+![](/assets/media/2026/05/issue-056-1.png)
 
  Anthropic just opened a new front for Claude by releasing a set of creative connectors so Claude can now interact with tools like **Adobe Creative Cloud**, Blender, Autodesk, Ableton and more. That’s right…you can now use Claude Code to do things in After Effects, Photoshop, Premiere, Lightroom and more.
 
@@ -75,7 +75,7 @@ I’m not gonna lie, I was excited for this one. Being able to prompt in Claude 
 
 ### 🧰 AI Tool of The Week: Google AI Edge Eloquent
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/729e519b-38c9-4df8-b39c-65ebfb81481f/CleanShot_2026-04-30_at_20.37.26_2x.png?t=1777595860)
+![](/assets/media/2026/05/issue-056-2.png)
 
 [Download on iOS App Store](https://apps.apple.com/us/app/google-ai-edge-eloquent/id6756505519?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-56-claude-goes-creative)
 

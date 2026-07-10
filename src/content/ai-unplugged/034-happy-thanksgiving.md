@@ -38,7 +38,7 @@ isDraft: false
 
 ### 🗞️******AI News of The Week:**The Genesis Mission (Executive Order, Nov 2025)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8a45ad4e-631c-424b-a856-fc36d4a5ce7f/genesis-mission.png?t=1764280860)
+![](/assets/media/2025/11/issue-034-1.png)
 
 [The Genesis Mission](https://www.whitehouse.gov/presidential-actions/2025/11/launching-the-genesis-mission/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-34-happy-thanksgiving)
 
@@ -78,7 +78,7 @@ Function Calling is the bridge between language and action. It’s how you turn 
 
 ### 🧰 AI Tool of The Week: Hostinger VPS (Black Friday Deal)
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/08297ea6-4952-46f3-8832-62cbef99b150/VPS.png?t=1764282334)](https://hostinger.com?REFERRALCODE=BYS0JAIWCIJP&utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-34-happy-thanksgiving)[
+[![](/assets/media/2025/11/issue-034-2.png)](https://hostinger.com?REFERRALCODE=BYS0JAIWCIJP&utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-34-happy-thanksgiving)[
 
 Hostinger VPS
 

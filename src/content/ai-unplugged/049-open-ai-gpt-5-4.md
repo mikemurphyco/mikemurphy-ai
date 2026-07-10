@@ -78,7 +78,7 @@ In AI, **latency** is the delay between when you hit "Enter" on a prompt and whe
 
 ### 🧰 AI Tool of The Week: OpenCode AI
 
-[![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1c01cec7-bc9e-47d5-9c7b-ab9cb1e7f926/CleanShot_2026-03-12_at_14.32.56_2x.png?t=1773343992)](https://opencode.ai/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-49-open-ai-gpt-5-4)
+[![](/assets/media/2026/03/issue-049-1.png)](https://opencode.ai/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-49-open-ai-gpt-5-4)
 
 [OpenCode AI](https://opencode.ai/?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-49-open-ai-gpt-5-4)
 

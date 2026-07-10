@@ -37,7 +37,7 @@ isDraft: false
 
  Accelerating science writing and collaboration with AI.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6563e102-8796-418c-a54a-8461d4d7e29d/CleanShot_2026-01-29_at_17.41.02_2x.png?t=1769726484)
+![](/assets/media/2026/01/issue-043-1.png)
 
  OpenAI has launched Prism, a new AI tool designed specifically for scientific writing and research collaboration. It’s like Claude Code but for scientists and academics who need to be able to trust the research and data more than they can with vanilla ChatGPT.
 
