@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import IssueCard from '../../../components/ai-unplugged/IssueCard.astro';
+import InlineSearch from '../../../components/InlineSearch.astro';
 import Layout from '../../../layouts/Layout.astro';
 import { isPublishedIssue, sortIssuesByDate } from '../../../lib/articles';
 
@@ -17,7 +18,10 @@ const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIs
         Native Astro pages for every issue, with Beehiiv as the sender and source tracker.
       </p>
     </header>
-    <section class="mt-8 grid gap-5">
+    <div class="mt-8">
+      <InlineSearch filterType="Issue" label="Search issues" placeholder={`Search ${issues.length} issues…`} />
+    </div>
+    <section class="mt-8 grid gap-5" data-inline-search-hide>
       {issues.map((issue) => <IssueCard issue={issue} />)}
     </section>
   </main>

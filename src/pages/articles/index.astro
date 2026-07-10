@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import ArticleCard from '../../components/ArticleCard.astro';
+import InlineSearch from '../../components/InlineSearch.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getTopicMap, isDiscoverableArticle, isStandardArticle, sortArticlesByDate } from '../../lib/articles';
 
@@ -47,7 +48,11 @@ const archiveCount = sorted.filter((article) => article.data.contentEra === 'leg
       </div>
     </header>
 
-    <section class="mt-4">
+    <div class="mt-8">
+      <InlineSearch filterType="Article" label="Search articles" placeholder={`Search ${sorted.length} articles…`} />
+    </div>
+
+    <section class="mt-4" data-inline-search-hide>
       {sorted.map((article) => <ArticleCard article={article} />)}
     </section>
   </main>

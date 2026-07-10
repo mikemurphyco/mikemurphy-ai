@@ -2,15 +2,17 @@
 interface Props {
   /** Pagefind `type` filter value (e.g. "Tutorial", "Article", "Issue"). Omit to search everything. */
   filterType?: string;
+  /** Singular noun for the result count line; defaults to the lowercased filterType or "result". */
+  noun?: string;
   label?: string;
   placeholder?: string;
 }
 
-const { filterType, label = 'Search', placeholder = 'Search…' } = Astro.props;
+const { filterType, noun, label = 'Search', placeholder = 'Search…' } = Astro.props;
 const inputId = `inline-search-${filterType?.toLowerCase() ?? 'all'}`;
 ---
 
-<div class="mm-inline-search" data-filter-type={filterType}>
+<div class="mm-inline-search" data-filter-type={filterType} data-noun={noun}>
   <form role="search" class="grid max-w-xl gap-2" onsubmit="return false">
     <label for={inputId} class="mm-eyebrow">{label}</label>
     <input
@@ -58,6 +60,7 @@ const inputId = `inline-search-${filterType?.toLowerCase() ?? 'all'}`;
     if (!input || !resultsEl) return;
 
     const filterType = root.dataset.filterType;
+    const noun = root.dataset.noun ?? filterType?.toLowerCase() ?? 'result';
     const hideTargets = document.querySelectorAll<HTMLElement>('[data-inline-search-hide]');
     let pagefind: Pagefind | null = null;
     let loadFailed = false;
@@ -114,11 +117,11 @@ const inputId = `inline-search-${filterType?.toLowerCase() ?? 'all'}`;
 
       const total = search.results.length;
       const docs = await Promise.all(search.results.slice(0, PAGE_SIZE).map((r) => r.data()));
-      const noun = filterType ? `${filterType.toLowerCase()}${total === 1 ? '' : 's'}` : `result${total === 1 ? '' : 's'}`;
+      const countNoun = `${noun}${total === 1 ? '' : 's'}`;
       const allLink = `<a class="mm-inline-search-all" href="/search?q=${encodeURIComponent(term)}">Search everything &rarr;</a>`;
 
       resultsEl.innerHTML = `
-        <p class="mm-inline-search-count">${total} ${noun}${total > PAGE_SIZE ? ` &middot; showing ${PAGE_SIZE}` : ''} ${allLink}</p>
+        <p class="mm-inline-search-count">${total} ${countNoun}${total > PAGE_SIZE ? ` &middot; showing ${PAGE_SIZE}` : ''} ${allLink}</p>
         <ol class="mm-inline-search-list">
           ${docs
             .map(

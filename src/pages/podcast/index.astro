@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import ArticleCard from '../../components/ArticleCard.astro';
+import InlineSearch from '../../components/InlineSearch.astro';
 import Layout from '../../layouts/Layout.astro';
 import { isDiscoverableArticle, isPodcastEpisode, sortArticlesByDate } from '../../lib/articles';
 
@@ -27,7 +28,10 @@ const aiEpisodes = episodes.filter((episode) => episode.data.contentEra === 'ai'
         <dd class="mt-2 text-4xl font-bold">{aiEpisodes}</dd>
       </div>
     </dl>
-    <section class="mt-6">
+    <div class="mt-8">
+      <InlineSearch filterType="Podcast" noun="episode" label="Search episodes" placeholder={`Search ${episodes.length} episodes…`} />
+    </div>
+    <section class="mt-6" data-inline-search-hide>
       {episodes.map((episode) => <ArticleCard article={episode} />)}
     </section>
   </main>
