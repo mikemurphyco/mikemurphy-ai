@@ -1,22 +1,22 @@
 ---
-title: "Cloudflare: How To Redirect www to Your Root Domain (Step-by-Step)"
-description: "Learn how to create a 301 redirect in Cloudflare so www traffic automatically forwards to your root domain."
-pubDate: "2026-07-01"
+title: "Cloudflare: How To Redirect www to Your Root Domain (Canonical URL)"
+description: Learn how to create a 301 redirect in Cloudflare so www traffic automatically forwards to your root domain (canonical URL)
+pubDate: 2026-07-01
 updatedDate:
 draft: false
-type: "tutorial"
-slug: "canonicalurl"
-permalink: "/canonicalurl/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/canonicalurl/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: ""
+type: tutorial
+slug: canonicalurl
+permalink: /canonicalurl/
+canonicalUrl: https://mikemurphy.ai/tutorials/canonicalurl/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/07/bulk_redirects_canonical_url.jpg
 featuredImageSource: ""
 categories:
-  - "Cloudflare"
-  - "SEO"
-  - "Tutorials"
+  - Cloudflare
+  - SEO
+  - Tutorials
 tags: []
 topics:
   - cloudflare
@@ -26,10 +26,10 @@ topics:
   - canonical-url
   - domain-management
 youtube:
-  - "https://youtu.be/7-PSkvYGZd0"
+  - https://youtu.be/7-PSkvYGZd0
 search:
   include: true
-  boost: 1.0
+  boost: 1
 ---
 
 If you own a website, `www.yourdomain.com` and `yourdomain.com` probably feel like the same address.
