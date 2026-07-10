@@ -124,19 +124,20 @@
   --mm-border: var(--color-border-default);
   --mm-shadow-cut: var(--shadow-cut);
 
-  /* Shiki code palette — navy terminal ground, chalk ink.
+  /* Shiki code palette — chalk ground, navy ink, matching the
+     .code-block spec in mike-design-system ui_kits/website/site.css.
      No teal here: the teal budget is one element per screen. */
-  --astro-code-foreground: var(--mm-chalk);
-  --astro-code-background: var(--mm-navy);
-  --astro-code-token-constant: #9fd0f5;
-  --astro-code-token-string: #f5d9b8;
-  --astro-code-token-comment: rgba(252, 250, 246, 0.55);
-  --astro-code-token-keyword: #ff8a5f;
-  --astro-code-token-parameter: #f0e9dc;
-  --astro-code-token-function: #ffc79e;
-  --astro-code-token-string-expression: #f5d9b8;
-  --astro-code-token-punctuation: rgba(252, 250, 246, 0.75);
-  --astro-code-token-link: #ff8a5f;
+  --astro-code-foreground: var(--mm-navy);
+  --astro-code-background: var(--mm-chalk);
+  --astro-code-token-constant: #1d5fa0;
+  --astro-code-token-string: #7a4a21;
+  --astro-code-token-comment: rgba(0, 30, 58, 0.55);
+  --astro-code-token-keyword: var(--mm-orange-deep);
+  --astro-code-token-parameter: #33506b;
+  --astro-code-token-function: #b54513;
+  --astro-code-token-string-expression: #7a4a21;
+  --astro-code-token-punctuation: rgba(0, 30, 58, 0.7);
+  --astro-code-token-link: var(--mm-orange-deep);
 }
 
 @layer base {
