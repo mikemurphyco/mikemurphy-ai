@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import IssueCard from '../../components/ai-unplugged/IssueCard.astro';
-import SubscribeBand from '../../components/ai-unplugged/SubscribeBand.astro';
 import Layout from '../../layouts/Layout.astro';
 import { isPublishedIssue, sortIssuesByDate } from '../../lib/articles';
 
@@ -26,12 +25,16 @@ const latestIssue = issues[0];
         </div>
         <div class="mm-card bg-[var(--mm-chalk)] p-6">
           <p class="mm-eyebrow">Subscribe</p>
-          <form class="mt-4 grid gap-3" action="https://aiunplug.io" method="get">
+          <form class="mt-4 grid gap-3" action="https://aiunplug.io/subscribe" method="get">
+            <label for="ai-unplugged-hero-email" class="sr-only">Email address</label>
             <input
+              id="ai-unplugged-hero-email"
               name="email"
               type="email"
+              required
               placeholder="you@example.com"
-              class="min-h-12 rounded border border-[var(--mm-navy)] bg-white px-3 text-base outline-none focus:ring-2 focus:ring-[var(--mm-yellow)]"
+              autocomplete="email"
+              class="min-h-12 rounded-[var(--radius-md)] border border-[var(--mm-navy)] bg-[var(--mm-cream)] px-3 text-base shadow-[2px_2px_0_var(--mm-navy)] outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--mm-orange)]"
             />
             <button class="mm-button" type="submit">Subscribe to AI Unplugged</button>
           </form>
