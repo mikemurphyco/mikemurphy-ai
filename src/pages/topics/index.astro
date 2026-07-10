@@ -8,20 +8,20 @@ const topics = getTopicMap(articles);
 ---
 
 <Layout title="Topics" description="Browse Mike Murphy articles by topic, category, tool, and workflow." canonical="/topics/">
-  <main class="mx-auto max-w-6xl px-6 py-12">
+  <main class="mm-container py-12">
     <header class="max-w-3xl">
-      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Hubs</p>
-      <h1 class="mt-3 text-4xl font-bold text-slate-950">Topics</h1>
-      <p class="mt-3 text-lg leading-8 text-slate-600">
+      <p class="mm-eyebrow">Hubs</p>
+      <h1 class="mm-h1 mt-3">Topics</h1>
+      <p class="mm-lede mt-5">
         Static topic hubs generated from the imported corpus, designed for browsing and clean internal linking.
       </p>
     </header>
 
     <section class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {topics.map((topic) => (
-        <a href={`/topics/${topic.slug}/`} class="rounded-md border border-slate-200 bg-white p-5 hover:border-slate-400">
-          <span class="text-lg font-semibold text-slate-950">{topic.name}</span>
-          <span class="mt-2 block text-sm text-slate-500">{topic.articles.length} articles</span>
+        <a href={`/topics/${topic.slug}/`} class="mm-card block p-5 transition-transform duration-150 hover:-translate-y-0.5">
+          <span class="font-mono text-lg font-bold uppercase leading-tight">{topic.name}</span>
+          <span class="mt-2 block font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-muted)]">{topic.articles.length} articles</span>
         </a>
       ))}
     </section>
