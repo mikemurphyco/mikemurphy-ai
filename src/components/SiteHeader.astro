@@ -8,6 +8,10 @@ const navItems = [
 ];
 
 const currentPath = Astro.url.pathname;
+
+function isActive(href: string) {
+  return href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+}
 ---
 
 <header class="sticky top-0 z-20 border-b border-[var(--mm-border)] bg-[color-mix(in_srgb,var(--mm-cream)_94%,transparent)] backdrop-blur">
@@ -19,40 +23,66 @@ const currentPath = Astro.url.pathname;
         <span class="block font-mono text-xs font-bold uppercase tracking-[0.16em] text-[var(--mm-orange-deep)]">AI Handyman</span>
       </span>
     </a>
-    <nav class="hidden items-stretch gap-5 text-nowrap font-mono text-[0.72rem] font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)] md:flex">
-      {navItems.map((item) => {
-        const active = item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
-        return (
-          <a
-            class:list={[
-              'border-b-2 border-transparent px-1 py-4 transition hover:text-[var(--mm-navy)]',
-              active && 'border-[var(--mm-orange)] text-[var(--mm-orange-deep)]',
-            ]}
-            href={item.href}
-            aria-current={active ? 'page' : undefined}
-          >
-            {item.label}
-          </a>
-        );
-      })}
-      <a href="/ai-unplugged/" class="mm-button mm-button-nav ml-2">Subscribe</a>
-    </nav>
-  </div>
-  <nav class="mm-container flex gap-2 overflow-x-auto pb-3 font-mono text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--mm-muted)] md:hidden">
-    {navItems.map((item) => {
-      const active = item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
-      return (
+    <nav class="hidden items-stretch gap-5 text-nowrap font-mono text-[0.72rem] font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)] md:flex" aria-label="Main">
+      {navItems.map((item) => (
         <a
           class:list={[
-            'rounded-full border border-[var(--mm-border)] bg-[var(--mm-chalk)] px-3 py-2',
-            active && 'border-[var(--mm-navy)] bg-[var(--mm-navy)] text-[var(--mm-cream)]',
+            'border-b-2 border-transparent px-1 py-4 transition hover:text-[var(--mm-navy)]',
+            isActive(item.href) && 'border-[var(--mm-orange)] text-[var(--mm-orange-deep)]',
           ]}
           href={item.href}
-          aria-current={active ? 'page' : undefined}
+          aria-current={isActive(item.href) ? 'page' : undefined}
         >
           {item.label}
         </a>
-      );
-    })}
+      ))}
+      <a href="/ai-unplugged/" class="mm-button mm-button-nav ml-2">Subscribe</a>
+    </nav>
+    <button
+      type="button"
+      id="mm-nav-toggle"
+      class="rounded-[var(--radius-md)] border border-[var(--mm-border)] px-3 py-2 font-mono text-[0.72rem] font-bold uppercase tracking-[0.14em] text-[var(--mm-navy)] md:hidden"
+      aria-expanded="false"
+      aria-controls="mm-mobile-nav"
+    >
+      Menu
+    </button>
+  </div>
+  <nav id="mm-mobile-nav" hidden class="border-t border-[var(--mm-border)] md:hidden" aria-label="Main">
+    <div class="mm-container py-2">
+      {navItems.map((item) => (
+        <a
+          class:list={[
+            'block border-b border-[var(--mm-border)] py-3 font-mono text-sm font-bold uppercase tracking-[0.12em]',
+            isActive(item.href) ? 'text-[var(--mm-orange-deep)]' : 'text-[var(--mm-navy)]',
+          ]}
+          href={item.href}
+          aria-current={isActive(item.href) ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="/ai-unplugged/" class="mm-button mm-button-nav my-4 w-full">Subscribe</a>
+    </div>
   </nav>
 </header>
+
+<script>
+  const toggle = document.getElementById('mm-nav-toggle');
+  const panel = document.getElementById('mm-mobile-nav');
+
+  function setOpen(open: boolean) {
+    if (!toggle || !panel) return;
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? 'Close' : 'Menu';
+  }
+
+  toggle?.addEventListener('click', () => setOpen(panel?.hidden ?? false));
+  panel?.addEventListener('click', (event) => {
+    if (event.target instanceof Element && event.target.closest('a')) setOpen(false);
+  });
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && panel && !panel.hidden) setOpen(false);
+  });
+</script>
