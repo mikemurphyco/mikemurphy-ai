@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# generated redirect exports (uploaded to Cloudflare, not needed by the build)
+cloudflare/*.csv
+
 # macOS-specific files
 .DS_Store
 
