@@ -1,123 +1,119 @@
 ---
-import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import {
-  contentUrl,
-  formatDate,
-  getArticleTerms,
-  isDiscoverableArticle,
-  sortArticlesByDate,
-} from '../../lib/articles';
-
-const articles = sortArticlesByDate(await getCollection('articles', (article) => {
-  return isDiscoverableArticle(article) && article.data.search?.include !== false;
-}));
-
-const index = articles.map((article) => ({
-  title: article.data.title,
-  description: article.data.description,
-  date: formatDate(article.data.pubDate),
-  url: contentUrl(article),
-  era: article.data.contentEra === 'ai' ? 'AI Era' : 'Archive',
-  terms: getArticleTerms(article),
-  haystack: [
-    article.data.title,
-    article.data.description,
-    article.data.contentEra,
-    ...getArticleTerms(article),
-  ]
-    .filter(Boolean)
-    .join(' ')
-    .toLowerCase(),
-}));
-
-const searchJson = JSON.stringify(index).replace(/</g, '\\u003c');
 ---
 
-<Layout title="Search" description="Search the Mike Murphy archive across AI, automation, creative tech, podcasting, and production tutorials." canonical="/search/">
-  <main class="mx-auto max-w-5xl px-6 py-12">
-    <header class="max-w-3xl">
-      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Search</p>
-      <h1 class="mt-3 text-4xl font-bold text-slate-950">Search the archive</h1>
-      <p class="mt-3 text-lg leading-8 text-slate-600">
-        Search article titles, descriptions, categories, and tags across the Astro content collection.
+<Layout
+  title="Search"
+  description="Full-text search across tutorials, articles, podcast episodes, and AI Unplugged issues."
+  canonical="/search/"
+>
+  <main class="mm-container max-w-4xl py-12">
+    <header>
+      <p class="mm-eyebrow">Search</p>
+      <h1 class="mm-h1 mt-3">Search the archive</h1>
+      <p class="mm-lede mt-4 max-w-2xl">
+        Full-text search across tutorials, articles, podcast episodes, and AI Unplugged issues. Filter by type to narrow it down.
       </p>
     </header>
 
-    <section class="mt-8">
-      <label for="search-input" class="sr-only">Search query</label>
-      <input
-        id="search-input"
-        type="search"
-        placeholder="Search AI, Claude Code, After Effects, podcasting..."
-        class="w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-slate-950 focus:ring-2"
-        autocomplete="off"
-      />
-      <p id="search-count" class="mt-3 text-sm text-slate-500">{articles.length} searchable articles</p>
-    </section>
-
-    <section id="search-results" class="mt-6 divide-y divide-slate-200"></section>
+    <div id="search" class="mt-8"></div>
   </main>
 
-  <script type="application/json" id="search-data" set:html={searchJson} />
-  <script>
-    const input = document.querySelector('#search-input');
-    const results = document.querySelector('#search-results');
-    const count = document.querySelector('#search-count');
-    const data = JSON.parse(document.querySelector('#search-data')?.textContent || '[]');
-
-    function escapeHtml(value) {
-      return String(value)
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#039;');
-    }
-
-    function render(items, query = '') {
-      const visible = items.slice(0, 60);
-      count.textContent = query
-        ? `${items.length} result${items.length === 1 ? '' : 's'} for "${query}"`
-        : `${data.length} searchable articles`;
-
-      results.innerHTML = visible
-        .map((item) => {
-          const terms = item.terms
-            .slice(0, 4)
-            .map((term) => `<span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600">${escapeHtml(term)}</span>`)
-            .join('');
-
-          return `
-            <article class="py-5">
-              <p class="text-sm text-slate-500">${escapeHtml(item.date)} <span class="mx-2 text-slate-300">/</span> ${escapeHtml(item.era)}</p>
-              <h2 class="mt-2 text-xl font-semibold leading-snug text-slate-950">
-                <a href="${escapeHtml(item.url)}" class="hover:underline">${escapeHtml(item.title)}</a>
-              </h2>
-              ${item.description ? `<p class="mt-2 text-sm leading-6 text-slate-600">${escapeHtml(item.description)}</p>` : ''}
-              ${terms ? `<div class="mt-3 flex flex-wrap gap-2">${terms}</div>` : ''}
-            </article>
-          `;
-        })
-        .join('');
-    }
-
-    function search(query) {
-      const terms = query
-        .toLowerCase()
-        .split(/\s+/)
-        .map((term) => term.trim())
-        .filter(Boolean);
-
-      if (terms.length === 0) return data.slice(0, 30);
-      return data.filter((item) => terms.every((term) => item.haystack.includes(term)));
-    }
-
-    input?.addEventListener('input', () => {
-      const query = input.value.trim();
-      render(search(query), query);
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      new PagefindUI({
+        element: '#search',
+        showSubResults: true,
+        showImages: false,
+        pageSize: 10,
+      });
     });
-
-    render(data.slice(0, 30));
   </script>
 </Layout>
+
+<style is:global>
+  /* Pagefind UI mapped onto the mm token system. Global because
+     Pagefind injects its DOM at runtime, outside Astro's scoping. */
+  #search {
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-primary: var(--mm-navy);
+    --pagefind-ui-text: var(--color-text-primary);
+    --pagefind-ui-background: var(--mm-chalk);
+    --pagefind-ui-border: var(--color-border-strong);
+    --pagefind-ui-tag: var(--mm-cream);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: var(--radius-md);
+    --pagefind-ui-font: var(--font-sans);
+  }
+
+  #search .pagefind-ui__search-input {
+    background: var(--mm-cream);
+    box-shadow: 2px 2px 0 var(--color-shadow-ink);
+    font-weight: 400;
+  }
+
+  #search .pagefind-ui__search-input:focus-visible {
+    outline: 2px solid var(--mm-orange);
+    outline-offset: 2px;
+  }
+
+  #search .pagefind-ui__search-clear {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono-label);
+    font-weight: 700;
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+  }
+
+  #search .pagefind-ui__message,
+  #search .pagefind-ui__filter-name,
+  #search .pagefind-ui__filter-value {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+  }
+
+  #search .pagefind-ui__filter-value {
+    font-weight: 400;
+  }
+
+  #search .pagefind-ui__result {
+    border-top: 1px solid var(--color-border-default);
+    padding-block: var(--space-6);
+  }
+
+  #search .pagefind-ui__result-title .pagefind-ui__result-link {
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+
+  #search .pagefind-ui__result-title .pagefind-ui__result-link:hover {
+    color: var(--mm-orange-deep);
+  }
+
+  #search .pagefind-ui__result-excerpt {
+    color: var(--color-text-muted);
+  }
+
+  #search .pagefind-ui__result-excerpt mark {
+    background: var(--mm-yellow);
+    color: var(--mm-navy);
+  }
+
+  #search .pagefind-ui__button {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-strong);
+    box-shadow: var(--shadow-cut);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+  }
+
+  #search .pagefind-ui__button:hover {
+    background: var(--mm-cream);
+  }
+</style>

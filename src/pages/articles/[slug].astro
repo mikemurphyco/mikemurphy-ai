@@ -15,6 +15,18 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 const terms = getArticleTopicTerms(article);
 
+const searchable = article.data.search?.include !== false;
+const pagefindAttrs = searchable
+  ? {
+      'data-pagefind-body': true,
+      'data-pagefind-filter': 'type[data-type]',
+      'data-type': 'Article',
+      'data-pagefind-meta': 'date[data-date]',
+      'data-pagefind-sort': 'date[data-date]',
+      'data-date': new Date(article.data.pubDate).toISOString().slice(0, 10),
+    }
+  : {};
+
 function getYouTubeId(url: string): string | null {
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([a-zA-Z0-9_-]{11})/);
   return match ? match[1] : null;
@@ -23,8 +35,8 @@ function getYouTubeId(url: string): string | null {
 
 <Layout title={article.data.title} description={article.data.description} canonical={articleUrl(article)} image={article.data.featuredImage || undefined}>
   <main>
-    <article class="mm-container max-w-3xl py-12">
-      <a href="/articles/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">Back to articles</a>
+    <article class="mm-container max-w-3xl py-12" {...pagefindAttrs}>
+      <a href="/articles/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to articles</a>
       <h1 class="mm-h1 mt-5">{article.data.title}</h1>
       <p class="mt-4 font-mono text-sm font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
         {formatDate(article.data.pubDate)}

@@ -14,12 +14,21 @@ export async function getStaticPaths() {
 const { issue } = Astro.props;
 const { Content } = await render(issue);
 const paddedIssue = String(issue.data.issue).padStart(3, '0');
+
+const pagefindAttrs = {
+  'data-pagefind-body': true,
+  'data-pagefind-filter': 'type[data-type]',
+  'data-type': 'Issue',
+  'data-pagefind-meta': 'date[data-date]',
+  'data-pagefind-sort': 'date[data-date]',
+  'data-date': new Date(issue.data.sentAt).toISOString().slice(0, 10),
+};
 ---
 
 <Layout title={issue.data.subject} description={issue.data.summary} canonical={issueUrl(issue)} image={issue.data.og?.image}>
   <main class="mm-container grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
-    <article>
-      <a href="/ai-unplugged/issues/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">Back to issues</a>
+    <article {...pagefindAttrs}>
+      <a href="/ai-unplugged/issues/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to issues</a>
       <header class="mt-5 border-b border-[var(--mm-border)] pb-8">
         <p class="mm-eyebrow">AI Unplugged · sent {formatDate(issue.data.sentAt)} · Issue {paddedIssue}</p>
         <h1 class="mm-h1 mt-4">{issue.data.subject}</h1>
