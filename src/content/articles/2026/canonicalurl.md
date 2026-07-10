@@ -4,7 +4,7 @@ description: Learn how to create a 301 redirect in Cloudflare so www traffic aut
 pubDate: 2026-07-01
 updatedDate:
 draft: false
-type: tutorial
+type: post
 slug: canonicalurl
 permalink: /canonicalurl/
 canonicalUrl: https://mikemurphy.ai/tutorials/canonicalurl/
