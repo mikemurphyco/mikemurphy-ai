@@ -25,14 +25,14 @@ const paddedIssue = String(issue.data.issue).padStart(3, '0');
         <h1 class="mm-h1 mt-4">{issue.data.subject}</h1>
         <p class="mm-lede mt-5">{issue.data.lede}</p>
       </header>
-      <div class="mm-prose prose prose-lg mt-10">
+      <div class="mm-prose prose mt-10">
         <Content />
       </div>
     </article>
     <aside class="lg:sticky lg:top-24 lg:h-fit">
       <div class="mm-card p-5">
         <p class="mm-eyebrow">Issue Details</p>
-        <dl class="mt-4 grid gap-3 text-sm text-[var(--mm-slate)]">
+        <dl class="mt-4 grid gap-3 text-sm text-[var(--color-text-muted)]">
           <div>
             <dt class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--mm-navy)]">Issue</dt>
             <dd class="mt-1">#{paddedIssue}</dd>
@@ -45,7 +45,7 @@ const paddedIssue = String(issue.data.issue).padStart(3, '0');
         {issue.data.source.url && (
           <a
             href={issue.data.source.url}
-            class="mm-button mm-button--secondary mt-5 w-full justify-center text-center"
+            class="mm-button mm-button-secondary mt-5 w-full justify-center text-center"
             target="_blank"
             rel="noopener noreferrer"
           >

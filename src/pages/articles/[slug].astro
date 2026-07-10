@@ -22,51 +22,44 @@ function getYouTubeId(url: string): string | null {
 ---
 
 <Layout title={article.data.title} description={article.data.description} canonical={articleUrl(article)}>
-  <main class="max-w-3xl mx-auto px-6 py-12">
-    {article.data.featuredImage && (!article.data.youtube || article.data.youtube.length === 0) && (
-      <img
-        src={article.data.featuredImage}
-        alt={article.data.title}
-        class="w-full rounded mb-8 object-cover max-h-80"
-      />
-    )}
-    <h1 class="text-3xl font-bold mb-2">{article.data.title}</h1>
-    <p class="text-sm text-gray-500 mb-8">
-      {formatDate(article.data.pubDate)}
-      {article.data.author && ` · ${article.data.author}`}
-    </p>
-    {terms.length > 0 && (
-      <div class="mb-8 flex flex-wrap gap-2">
-        {terms.slice(0, 8).map((term) => (
-          <a
-            href={`/topics/${slugifyTerm(term)}/`}
-            class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 hover:bg-slate-200"
-          >
-            {term}
-          </a>
-        ))}
+  <main>
+    <article class="mm-container max-w-3xl py-12">
+      <a href="/articles/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">Back to articles</a>
+      <h1 class="mm-h1 mt-5">{article.data.title}</h1>
+      <p class="mt-4 font-mono text-sm font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
+        {formatDate(article.data.pubDate)}
+        {article.data.author && ` · ${article.data.author}`}
+      </p>
+      {terms.length > 0 && (
+        <div class="mt-6 flex flex-wrap gap-2">
+          {terms.slice(0, 8).map((term) => (
+            <a href={`/topics/${slugifyTerm(term)}/`} class="mm-pill hover:border-[var(--mm-navy)]">{term}</a>
+          ))}
+        </div>
+      )}
+      {article.data.youtube && article.data.youtube.length > 0 ? (
+        <div class="mt-8 space-y-6">
+          {article.data.youtube.map((url: string) => {
+            const id = getYouTubeId(url);
+            return id ? (
+              <div class="mm-card aspect-video overflow-hidden">
+                <iframe
+                  src={`https://www.youtube.com/embed/${id}`}
+                  title={article.data.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  class="h-full w-full"
+                />
+              </div>
+            ) : null;
+          })}
+        </div>
+      ) : article.data.featuredImage && (
+        <img src={article.data.featuredImage} alt="" class="mm-card mt-8 w-full object-cover max-h-80" />
+      )}
+      <div class="mm-prose prose mt-10">
+        <Content />
       </div>
-    )}
-    {article.data.youtube && article.data.youtube.length > 0 && (
-      <div class="space-y-6 mb-10">
-        {article.data.youtube.map((url: string) => {
-          const id = getYouTubeId(url);
-          return id ? (
-            <div class="aspect-video">
-              <iframe
-                src={`https://www.youtube.com/embed/${id}`}
-                title={article.data.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                class="w-full h-full rounded"
-              />
-            </div>
-          ) : null;
-        })}
-      </div>
-    )}
-    <div class="prose prose-lg max-w-none">
-      <Content />
-    </div>
+    </article>
   </main>
 </Layout>

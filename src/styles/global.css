@@ -123,6 +123,20 @@
   --mm-muted: var(--color-text-muted);
   --mm-border: var(--color-border-default);
   --mm-shadow-cut: var(--shadow-cut);
+
+  /* Shiki code palette — navy terminal ground, chalk ink.
+     No teal here: the teal budget is one element per screen. */
+  --astro-code-foreground: var(--mm-chalk);
+  --astro-code-background: var(--mm-navy);
+  --astro-code-token-constant: #9fd0f5;
+  --astro-code-token-string: #f5d9b8;
+  --astro-code-token-comment: rgba(252, 250, 246, 0.55);
+  --astro-code-token-keyword: #ff8a5f;
+  --astro-code-token-parameter: #f0e9dc;
+  --astro-code-token-function: #ffc79e;
+  --astro-code-token-string-expression: #f5d9b8;
+  --astro-code-token-punctuation: rgba(252, 250, 246, 0.75);
+  --astro-code-token-link: #ff8a5f;
 }
 
 @layer base {
@@ -159,9 +173,9 @@
   .mm-eyebrow {
     color: var(--color-action-primary);
     font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-size: var(--fs-eyebrow);
     font-weight: 700;
-    letter-spacing: var(--ls-label);
+    letter-spacing: var(--ls-eyebrow);
     text-transform: uppercase;
   }
 
@@ -335,20 +349,137 @@
     text-transform: uppercase;
   }
 
-  .mm-prose {
-    --tw-prose-body: var(--mm-navy);
-    --tw-prose-headings: var(--mm-navy);
-    --tw-prose-links: var(--mm-orange-deep);
-    --tw-prose-bold: var(--mm-navy);
-    --tw-prose-quotes: var(--mm-navy);
-    --tw-prose-quote-borders: var(--mm-orange);
-    max-width: none;
-  }
+}
 
-  .mm-prose h2,
-  .mm-prose h3 {
-    font-family: var(--font-mono);
-    letter-spacing: var(--ls-tight);
-    text-transform: uppercase;
-  }
+/* ── Editorial prose ─────────────────────────────────────────
+   Kept OUTSIDE @layer on purpose: the typography plugin's `prose`
+   styles live in a cascade layer, and unlayered CSS always wins
+   over layered CSS — this guarantees the mm overrides apply. */
+.mm-prose {
+  --tw-prose-body: var(--color-text-primary);
+  --tw-prose-headings: var(--color-text-primary);
+  --tw-prose-links: var(--color-action-primary-hover);
+  --tw-prose-bold: var(--color-text-primary);
+  --tw-prose-quotes: var(--color-text-primary);
+  --tw-prose-quote-borders: var(--mm-orange);
+  --tw-prose-bullets: var(--color-text-primary);
+  --tw-prose-counters: var(--color-text-primary);
+  --tw-prose-hr: var(--color-border-default);
+  --tw-prose-code: var(--color-text-primary);
+  --tw-prose-th-borders: var(--color-border-default);
+  --tw-prose-td-borders: var(--color-border-default);
+  --tw-prose-captions: var(--color-text-muted);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  max-width: none;
+}
+
+/* Measure lives on the text elements, not the container, so code
+   blocks, images, and embeds can use the full column width. */
+.mm-prose p,
+.mm-prose ul,
+.mm-prose ol,
+.mm-prose blockquote {
+  max-width: 64ch;
+}
+
+.mm-prose p {
+  margin: 0 0 var(--space-4);
+}
+
+.mm-prose h2,
+.mm-prose h3,
+.mm-prose h4 {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+}
+
+.mm-prose h2 {
+  font-size: 24px;
+  line-height: 1.15;
+  margin: var(--space-8) 0 var(--space-3);
+}
+
+.mm-prose h3 {
+  font-size: 18px;
+  line-height: var(--lh-snug);
+  margin: var(--space-6) 0 var(--space-2);
+}
+
+.mm-prose h4 {
+  font-size: var(--fs-body);
+  margin: var(--space-6) 0 var(--space-2);
+}
+
+.mm-prose :is(h2, h3, h4):first-child {
+  margin-top: 0;
+}
+
+.mm-prose code {
+  background: rgba(0, 30, 58, 0.06);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 2px 8px;
+}
+
+.mm-prose code::before,
+.mm-prose code::after {
+  content: none;
+}
+
+.mm-prose blockquote {
+  border-left: 3px solid var(--mm-orange);
+  font-style: normal;
+  padding-left: var(--space-4);
+}
+
+.mm-prose blockquote p::before,
+.mm-prose blockquote p::after {
+  content: none;
+}
+
+.mm-prose li {
+  margin: var(--space-2) 0;
+}
+
+.mm-prose thead th {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-label);
+  font-weight: 700;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+
+.mm-prose hr {
+  margin: var(--space-12) 0;
+}
+
+.mm-prose figcaption {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-label);
+}
+
+/* Code frame: navy terminal on cream paper — canon code block.
+   Shiki's css-variables theme paints the inside via --astro-code-*. */
+.mm-prose pre {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-cut);
+  font-size: var(--fs-code);
+  line-height: var(--lh-code);
+  margin: var(--space-6) 0;
+  overflow-x: auto;
+  padding: var(--space-4);
+}
+
+.mm-prose pre code {
+  background: none;
+  border-radius: 0;
+  font-size: 1em;
+  padding: 0;
 }

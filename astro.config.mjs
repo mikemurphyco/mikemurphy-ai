@@ -11,5 +11,11 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
+  markdown: {
+    // Shiki emits var(--astro-code-*) references instead of hex colors,
+    // so the code palette lives in global.css with the brand tokens.
+    shikiConfig: { theme: 'css-variables' }
+  },
+
   integrations: [mdx()]
 });
