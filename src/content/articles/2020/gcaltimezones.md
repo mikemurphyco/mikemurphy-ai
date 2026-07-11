@@ -8,7 +8,7 @@ type: "post"
 slug: "gcaltimezones"
 permalink: "/gcaltimezones/"
 legacyPermalink: "https://www.mikemurphy.co/gcaltimezones/"
-canonicalUrl: "https://mikemurphy.ai/articles/gcaltimezones/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/gcaltimezones/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/GCAL_
 categories: 
   - "Blog"
   - "Google"
+  - "Tutorials"
 tags: 
   - "Google"
   - "how-to"

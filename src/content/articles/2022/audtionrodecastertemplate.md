@@ -8,7 +8,7 @@ type: "post"
 slug: "audtionrodecastertemplate"
 permalink: "/audtionrodecastertemplate/"
 legacyPermalink: "https://www.mikemurphy.co/audtionrodecastertemplate/"
-canonicalUrl: "https://mikemurphy.ai/articles/audtionrodecastertemplate/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/audtionrodecastertemplate/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2022/04/Audit
 categories: 
   - "Audition"
   - "Blog"
+  - "Tutorials"
 tags: 
   - "adobe"
   - "podcasting"

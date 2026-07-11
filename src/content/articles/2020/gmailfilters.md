@@ -8,7 +8,7 @@ type: "post"
 slug: "gmailfilters"
 permalink: "/gmailfilters/"
 legacyPermalink: "https://www.mikemurphy.co/gmailfilters/"
-canonicalUrl: "https://mikemurphy.ai/articles/gmailfilters/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/gmailfilters/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/GMAIL
 categories: 
   - "Blog"
   - "Google"
+  - "Tutorials"
 tags: 
   - "Gmail"
   - "how-to"

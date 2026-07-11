@@ -8,13 +8,14 @@ type: "post"
 slug: "googleplay"
 permalink: "/googleplay/"
 legacyPermalink: "https://www.mikemurphy.co/googleplay/"
-canonicalUrl: "https://mikemurphy.ai/articles/googleplay/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/googleplay/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
 featuredImage: "/assets/media/2015/11/Screen-Shot-2015-11-02-at-8.05.12-AM.png"
 featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.05.12-AM.png"
-categories: []
+categories: 
+  - "Tutorials"
 tags: 
   - "Blog"
   - "Google"

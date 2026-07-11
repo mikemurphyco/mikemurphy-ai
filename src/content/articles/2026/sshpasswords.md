@@ -8,7 +8,7 @@ type: "post"
 slug: "sshpasswords"
 permalink: "/sshpasswords/"
 legacyPermalink: "https://www.mikemurphy.co/sshpasswords/"
-canonicalUrl: "https://mikemurphy.ai/articles/sshpasswords/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/sshpasswords/"
 contentEra: "ai"
 visibility: "public"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/04/SSH-P
 categories: 
   - "AI"
   - "Hostinger VPS"
+  - "Tutorials"
 tags: 
   - "security"
   - "ssh"

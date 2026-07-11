@@ -8,7 +8,7 @@ type: "post"
 slug: "openclawhttps"
 permalink: "/openclawhttps/"
 legacyPermalink: "https://www.mikemurphy.co/openclawhttps/"
-canonicalUrl: "https://mikemurphy.ai/articles/openclawhttps/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/openclawhttps/"
 contentEra: "ai"
 visibility: "public"
 author: "Mike Murphy"
@@ -18,6 +18,7 @@ categories:
   - "Docker"
   - "Hostinger VPS"
   - "OpenClaw"
+  - "Tutorials"
 tags: []
 topics: []
 search:

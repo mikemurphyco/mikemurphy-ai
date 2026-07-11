@@ -8,13 +8,14 @@ type: "post"
 slug: "auditiontemplates"
 permalink: "/auditiontemplates/"
 legacyPermalink: "https://www.mikemurphy.co/auditiontemplates/"
-canonicalUrl: "https://mikemurphy.ai/articles/auditiontemplates/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/auditiontemplates/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
 featuredImage: "/assets/media/2016/03/AUDITION_TEMPLATES.jpg"
 featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2016/03/AUDITION_TEMPLATES.jpg"
-categories: []
+categories: 
+  - "Tutorials"
 tags: 
   - "audtion"
   - "Blog"

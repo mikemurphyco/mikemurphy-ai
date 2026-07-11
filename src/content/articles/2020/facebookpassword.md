@@ -8,7 +8,7 @@ type: "post"
 slug: "facebookpassword"
 permalink: "/facebookpassword/"
 legacyPermalink: "https://www.mikemurphy.co/facebookpassword/"
-canonicalUrl: "https://mikemurphy.ai/articles/facebookpassword/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/facebookpassword/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/FB_HE
 categories: 
   - "Blog"
   - "Facebook"
+  - "Tutorials"
 tags: 
   - "facebook"
   - "how-to"

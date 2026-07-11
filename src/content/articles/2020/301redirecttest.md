@@ -8,7 +8,7 @@ type: "post"
 slug: "301redirecttest"
 permalink: "/301redirecttest/"
 legacyPermalink: "https://www.mikemurphy.co/301redirecttest/"
-canonicalUrl: "https://mikemurphy.ai/articles/301redirecttest/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/301redirecttest/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/301_H
 categories: 
   - "Blog"
   - "Podcasting"
+  - "Tutorials"
 tags: 
   - "how-to"
   - "podcast"

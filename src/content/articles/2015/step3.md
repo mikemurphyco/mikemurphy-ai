@@ -8,13 +8,14 @@ type: "post"
 slug: "step3"
 permalink: "/step3/"
 legacyPermalink: "https://www.mikemurphy.co/step3/"
-canonicalUrl: "https://mikemurphy.ai/articles/step3/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/step3/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
 featuredImage: "/assets/media/2018/05/ABOUT_FB.jpg"
 featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2018/05/ABOUT_FB.jpg"
-categories: []
+categories: 
+  - "Tutorials"
 tags: 
   - "Blog"
 topics: []

@@ -8,7 +8,7 @@ type: "post"
 slug: "artboardtemplate"
 permalink: "/artboardtemplate/"
 legacyPermalink: "https://www.mikemurphy.co/artboardtemplate/"
-canonicalUrl: "https://mikemurphy.ai/articles/artboardtemplate/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/artboardtemplate/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/PS_AR
 categories: 
   - "Blog"
   - "Photoshop"
+  - "Tutorials"
 tags: 
   - "Content Creation"
   - "how-to"

@@ -8,7 +8,7 @@ type: "post"
 slug: "n8nsafeupdates"
 permalink: "/n8nsafeupdates/"
 legacyPermalink: "https://www.mikemurphy.co/n8nsafeupdates/"
-canonicalUrl: "https://mikemurphy.ai/articles/n8nsafeupdates/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/n8nsafeupdates/"
 contentEra: "ai"
 visibility: "public"
 author: "Mike Murphy"
@@ -19,6 +19,7 @@ categories:
   - "Docker"
   - "Hostinger VPS"
   - "n8n"
+  - "Tutorials"
 tags: []
 topics: []
 search:

@@ -8,7 +8,7 @@ type: "post"
 slug: "publishnewepisodes"
 permalink: "/publishnewepisodes/"
 legacyPermalink: "https://www.mikemurphy.co/publishnewepisodes/"
-canonicalUrl: "https://mikemurphy.ai/articles/publishnewepisodes/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/publishnewepisodes/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2020/01/Help.
 categories: 
   - "Blog"
   - "Podcasting"
+  - "Tutorials"
 tags: 
   - "how-to"
   - "podcast"

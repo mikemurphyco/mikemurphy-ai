@@ -10,7 +10,7 @@ type: "post"
 slug: "movepodcast"
 permalink: "/movepodcast/"
 legacyPermalink: "https://www.mikemurphy.co/movepodcast/"
-canonicalUrl: "https://mikemurphy.ai/articles/movepodcast/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/movepodcast/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -19,6 +19,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2022/04/SC-TO
 categories: 
   - "Blog"
   - "Podcasting"
+  - "Tutorials"
 tags: 
   - "buzzsprout"
   - "podcasting"

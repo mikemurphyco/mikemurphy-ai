@@ -8,7 +8,7 @@ type: "post"
 slug: "importpstoae"
 permalink: "/importpstoae/"
 legacyPermalink: "https://www.mikemurphy.co/importpstoae/"
-canonicalUrl: "https://mikemurphy.ai/articles/importpstoae/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/importpstoae/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/10/PS-TO
 categories: 
   - "Adobe After Effects"
   - "Photoshop"
+  - "Tutorials"
 tags: []
 topics: []
 search:

@@ -8,13 +8,14 @@ type: "post"
 slug: "adobeauditionnewfile"
 permalink: "/adobeauditionnewfile/"
 legacyPermalink: "https://www.mikemurphy.co/adobeauditionnewfile/"
-canonicalUrl: "https://mikemurphy.ai/articles/adobeauditionnewfile/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/adobeauditionnewfile/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
 featuredImage: "/assets/media/2016/02/AUDITION_THUMB.jpg"
 featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2016/02/AUDITION_THUMB.jpg"
-categories: []
+categories: 
+  - "Tutorials"
 tags: 
   - "Blog"
 topics: []

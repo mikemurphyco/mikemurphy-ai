@@ -11,7 +11,7 @@ type: "post"
 slug: "how-to-recover-deleted-apps-on-iphone"
 permalink: "/how-to-recover-deleted-apps-on-iphone/"
 legacyPermalink: "https://www.mikemurphy.co/how-to-recover-deleted-apps-on-iphone/"
-canonicalUrl: "https://mikemurphy.ai/articles/how-to-recover-deleted-apps-on-iphone/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/how-to-recover-deleted-apps-on-iphone/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -19,6 +19,7 @@ featuredImage: "/assets/media/2017/07/DELETED_WIDE_02.jpg"
 featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2017/07/DELETED_WIDE_02.jpg"
 categories: 
   - "Macs & iOS"
+  - "Tutorials"
 tags: 
   - "Tutorials"
 topics: []

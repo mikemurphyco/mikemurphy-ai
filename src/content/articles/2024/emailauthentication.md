@@ -8,7 +8,7 @@ type: "post"
 slug: "emailauthentication"
 permalink: "/emailauthentication/"
 legacyPermalink: "https://www.mikemurphy.co/emailauthentication/"
-canonicalUrl: "https://mikemurphy.ai/articles/emailauthentication/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/emailauthentication/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -18,6 +18,7 @@ categories:
   - "Blog"
   - "Google"
   - "Tech & Productivity"
+  - "Tutorials"
 tags: []
 topics: []
 search:

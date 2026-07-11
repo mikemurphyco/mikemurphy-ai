@@ -8,7 +8,7 @@ type: "post"
 slug: "applenoteschecklists"
 permalink: "/applenoteschecklists/"
 legacyPermalink: "https://www.mikemurphy.co/applenoteschecklists/"
-canonicalUrl: "https://mikemurphy.ai/articles/applenoteschecklists/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/applenoteschecklists/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2020/03/CHECK
 categories: 
   - "Blog"
   - "Macs & iOS"
+  - "Tutorials"
 tags: 
   - "apple"
   - "how-to"

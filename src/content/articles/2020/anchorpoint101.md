@@ -8,7 +8,7 @@ type: "post"
 slug: "anchorpoint101"
 permalink: "/anchorpoint101/"
 legacyPermalink: "https://www.mikemurphy.co/anchorpoint101/"
-canonicalUrl: "https://mikemurphy.ai/articles/anchorpoint101/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/anchorpoint101/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2020/08/E_ANC
 categories: 
   - "Adobe After Effects"
   - "Blog"
+  - "Tutorials"
 tags: 
   - "adobe"
   - "after effects"

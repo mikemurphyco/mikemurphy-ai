@@ -8,7 +8,7 @@ type: "post"
 slug: "rippledelete"
 permalink: "/rippledelete/"
 legacyPermalink: "https://www.mikemurphy.co/rippledelete/"
-canonicalUrl: "https://mikemurphy.ai/articles/rippledelete/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/rippledelete/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/RIPPL
 categories: 
   - "Blog"
   - "Screenflow"
+  - "Tutorials"
 tags: 
   - "how-to"
   - "screenflow"

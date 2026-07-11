@@ -8,7 +8,7 @@ type: "post"
 slug: "safebrowsercheck"
 permalink: "/safebrowsercheck/"
 legacyPermalink: "https://www.mikemurphy.co/safebrowsercheck/"
-canonicalUrl: "https://mikemurphy.ai/articles/safebrowsercheck/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/safebrowsercheck/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/CHROM
 categories: 
   - "Blog"
   - "Google"
+  - "Tutorials"
 tags: 
   - "Cybersecurity"
   - "Google"

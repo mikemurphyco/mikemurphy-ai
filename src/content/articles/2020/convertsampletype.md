@@ -8,7 +8,7 @@ type: "post"
 slug: "convertsampletype"
 permalink: "/convertsampletype/"
 legacyPermalink: "https://www.mikemurphy.co/convertsampletype/"
-canonicalUrl: "https://mikemurphy.ai/articles/convertsampletype/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/convertsampletype/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/CONVE
 categories: 
   - "Audition"
   - "Blog"
+  - "Tutorials"
 tags: 
   - "adobe"
   - "how-to"

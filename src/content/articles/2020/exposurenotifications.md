@@ -8,7 +8,7 @@ type: "post"
 slug: "exposurenotifications"
 permalink: "/exposurenotifications/"
 legacyPermalink: "https://www.mikemurphy.co/exposurenotifications/"
-canonicalUrl: "https://mikemurphy.ai/articles/exposurenotifications/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/exposurenotifications/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/EXPOS
 categories: 
   - "Blog"
   - "Macs & iOS"
+  - "Tutorials"
 tags: 
   - "Covid-19"
   - "how-to"

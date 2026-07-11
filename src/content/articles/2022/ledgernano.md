@@ -8,7 +8,7 @@ type: "post"
 slug: "ledgernano"
 permalink: "/ledgernano/"
 legacyPermalink: "https://www.mikemurphy.co/ledgernano/"
-canonicalUrl: "https://mikemurphy.ai/articles/ledgernano/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/ledgernano/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -18,6 +18,7 @@ categories:
   - "Blog"
   - "Crypto"
   - "Gear"
+  - "Tutorials"
 tags: 
   - "crypto"
 topics: []

@@ -8,7 +8,7 @@ type: "post"
 slug: "postman"
 permalink: "/postman/"
 legacyPermalink: "https://www.mikemurphy.co/postman/"
-canonicalUrl: "https://mikemurphy.ai/articles/postman/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/postman/"
 contentEra: "ai"
 visibility: "public"
 author: "Mike Murphy"
@@ -18,6 +18,7 @@ categories:
   - "AI"
   - "API"
   - "Postman"
+  - "Tutorials"
 tags: []
 topics: []
 search:

@@ -8,7 +8,7 @@ type: "post"
 slug: "llmwiki"
 permalink: "/llmwiki/"
 legacyPermalink: "https://www.mikemurphy.co/llmwiki/"
-canonicalUrl: "https://mikemurphy.ai/articles/llmwiki/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/llmwiki/"
 contentEra: "ai"
 visibility: "public"
 author: "Mike Murphy"
@@ -18,6 +18,7 @@ categories:
   - "AI"
   - "Claude Code"
   - "Obsidian"
+  - "Tutorials"
 tags: []
 topics: []
 search:

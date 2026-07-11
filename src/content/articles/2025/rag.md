@@ -8,7 +8,7 @@ type: "post"
 slug: "rag"
 permalink: "/rag/"
 legacyPermalink: "https://www.mikemurphy.co/rag/"
-canonicalUrl: "https://mikemurphy.ai/articles/rag/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/rag/"
 contentEra: "ai"
 visibility: "public"
 author: "Mike Murphy"
@@ -19,6 +19,7 @@ categories:
   - "Ollama"
   - "Python"
   - "RAG"
+  - "Tutorials"
 tags: []
 topics: []
 search:

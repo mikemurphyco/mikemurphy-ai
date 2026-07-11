@@ -8,7 +8,7 @@ type: "post"
 slug: "screenflowemojis"
 permalink: "/screenflowemojis/"
 legacyPermalink: "https://www.mikemurphy.co/screenflowemojis/"
-canonicalUrl: "https://mikemurphy.ai/articles/screenflowemojis/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/screenflowemojis/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2021/03/Scree
 categories: 
   - "Blog"
   - "Screenflow"
+  - "Tutorials"
 tags: 
   - "Emoji"
   - "how-to"

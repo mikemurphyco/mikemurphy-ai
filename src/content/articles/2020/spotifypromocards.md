@@ -8,7 +8,7 @@ type: "post"
 slug: "spotifypromocards"
 permalink: "/spotifypromocards/"
 legacyPermalink: "https://www.mikemurphy.co/spotifypromocards/"
-canonicalUrl: "https://mikemurphy.ai/articles/spotifypromocards/"
+canonicalUrl: "https://mikemurphy.ai/tutorials/spotifypromocards/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
@@ -17,6 +17,7 @@ featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/SPOTI
 categories: 
   - "Blog"
   - "Podcasting"
+  - "Tutorials"
 tags: 
   - "how-to"
   - "podcasting"
