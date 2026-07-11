@@ -1,3 +1,16 @@
+/**
+ * MIGRATION-ONLY — do not run casually.
+ *
+ * One-shot Obsidian → Astro bulk importer for the AI Unplugged archive.
+ * DESTRUCTIVE: deletes all .md/.mdx in src/content/ai-unplugged/, then
+ * regenerates every issue from the MikeOS newsletter folder.
+ *
+ * Not the weekly publish path. Prefer Beehiiv → Astro publish / manual edits.
+ * Kept in the repo as historical migration tooling.
+ *
+ * Usage: npm run import:ai-unplugged
+ * Optional: node scripts/import-ai-unplugged-from-obsidian.mjs [sourceDir] [outputDir]
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 
