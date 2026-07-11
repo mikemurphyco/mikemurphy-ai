@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import SocialLinks from '../../components/SocialLinks.astro';
 ---
 
 <Layout title="About" description="About Mike Murphy and the work behind mikemurphy.ai." canonical="/about/">
@@ -29,6 +30,10 @@ import Layout from '../../layouts/Layout.astro';
       <div class="mt-8 flex flex-wrap gap-4">
         <a href="/tutorials/" class="mm-button">Browse tutorials</a>
         <a href="/contact/" class="mm-button mm-button-secondary">Get in touch</a>
+      </div>
+      <div class="mt-10">
+        <p class="font-mono text-xs font-bold uppercase tracking-[0.14em] text-[var(--mm-orange)]">Find me</p>
+        <SocialLinks class="mt-4" />
       </div>
     </section>
   </main>

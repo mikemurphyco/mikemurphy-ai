@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, absoluteUrl } from '../lib/articles';
 
 interface Props {
@@ -70,6 +71,7 @@ const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
 					<p class="mt-5 font-mono text-xs font-bold uppercase tracking-[0.14em]">
 						Learn <span class="text-[var(--mm-orange)]">·</span> Build <span class="text-[var(--mm-orange)]">·</span> Move Forward
 					</p>
+					<SocialLinks variant="footer" class="mt-6" />
 				</div>
 				<nav aria-label="Explore">
 					<p class="font-mono text-xs font-bold uppercase tracking-[0.14em] text-[var(--mm-orange)]">Explore</p>
