@@ -139,6 +139,26 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-07-11 — Sticky header fix + content-lane cleanup
+
+**Commits:** `62b19d2`, `bed7a92`, `eb5b377`
+
+**Shipped:**
+- [x] Sticky header actually sticks now — `body` had `height: 100%`, which caps the body box at one viewport; `position: sticky` can never leave its parent's box, so the header un-stuck after one screen of scroll. Fix: `min-height: 100%` in `Layout.astro`
+- [x] Moved 42 how-to posts from the Articles lane to Tutorials (lanes now 395 tutorials / 162 podcast / 37 articles). Legacy WordPress categories (`Blog` + topic, no `Tutorials`) were stranding them — including 7 recent AI-era tutorials (rag, telegram, postman, n8nsafeupdates, llmwiki, openclawhttps, sshpasswords)
+- [x] Regenerated `public/_redirects` via `scripts/generate-redirects.mjs` — old `/articles/<slug>/` URLs 301 to `/tutorials/<slug>/`
+- [x] Tutorial cards no longer show a redundant `TUTORIALS` pill — `TutorialCard.astro` filters it before the 3-term slice, so all three slots go to descriptive topics
+
+**Decisions:**
+- Lane routing recap: one collection (`src/content/articles`), lane derived from `categories` in `src/lib/articles.ts` — `Tutorials` → `/tutorials/`, `Episodes` (or `epNN` slug) → `/podcast/`, else `/articles/`. New tutorials MUST include `"Tutorials"` in categories at publish time
+- Changing a post's lane = update `categories` + `canonicalUrl`, then re-run `node scripts/generate-redirects.mjs`. Never hand-edit `public/_redirects` (generated file)
+- Kept in Articles on judgment: essays, announcements, gear guides/reviews, course pages, workflow overviews (and the corn-on-the-cob recipe)
+
+**For a future post:**
+- "The CSS bug that broke my sticky header" — sticky is confined to its parent's box; `height` vs `min-height` on body
+- "Auditing 595 migrated WordPress posts with a 60-line Node script" — lane counts, canonical checks, duplicate-slug detection
+- Category-driven routing in Astro: one collection, three URL lanes
+
 ### 2026-07-11 — Socials + agent surfaces
 
 **Commits**
