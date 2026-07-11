@@ -7,7 +7,9 @@ interface Props {
 }
 
 const { tutorial } = Astro.props;
-const terms = getArticleTopicTerms(tutorial).slice(0, 3);
+const terms = getArticleTopicTerms(tutorial)
+  .filter((term) => term.toLowerCase() !== 'tutorials')
+  .slice(0, 3);
 ---
 
 <article class="mm-card group h-full overflow-hidden">
