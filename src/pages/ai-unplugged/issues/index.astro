@@ -17,6 +17,14 @@ const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIs
       <p class="mm-lede mt-5 max-w-3xl">
         Native Astro pages for every issue, with Beehiiv as the sender and source tracker.
       </p>
+      <p class="mt-5 flex flex-wrap gap-4">
+        <a href="/ai-unplugged/rss.xml" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange)] hover:text-[var(--mm-orange-deep)]">
+          RSS feed →
+        </a>
+        <a href="/ai-unplugged/agent.json" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange)] hover:text-[var(--mm-orange-deep)]">
+          Agent JSON →
+        </a>
+      </p>
     </header>
     <div class="mt-8">
       <InlineSearch filterType="Issue" label="Search issues" placeholder={`Search ${issues.length} issues…`} />

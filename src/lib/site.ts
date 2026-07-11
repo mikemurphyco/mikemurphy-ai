@@ -1,5 +1,16 @@
 export const SITE_EMAIL = 'hello@mikemurphy.ai';
 
+export const SITE_FEEDS = [
+  {
+    title: 'Mike Murphy Tutorials',
+    href: '/tutorials/rss.xml',
+  },
+  {
+    title: 'AI Unplugged',
+    href: '/ai-unplugged/rss.xml',
+  },
+] as const;
+
 export const SITE_SOCIAL = [
   { id: 'youtube', label: 'YouTube', href: 'https://youtube.com/mikemurphyco' },
   {

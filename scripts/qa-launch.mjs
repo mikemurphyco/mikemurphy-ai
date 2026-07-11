@@ -24,6 +24,10 @@ const requiredRoutes = [
   '/search/',
   '/sitemap.xml',
   '/robots.txt',
+  '/llms.txt',
+  '/tutorials/rss.xml',
+  '/ai-unplugged/rss.xml',
+  '/ai-unplugged/agent.json',
 ];
 
 const redirectSamples = new Map([

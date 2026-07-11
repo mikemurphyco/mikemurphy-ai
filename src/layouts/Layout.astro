@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, absoluteUrl } from '../lib/articles';
+import { SITE_FEEDS } from '../lib/site';
 
 interface Props {
 	title?: string;
@@ -39,6 +40,14 @@ const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
 		<title>{pageTitle}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalUrl} />
+		{SITE_FEEDS.map((feed) => (
+			<link
+				rel="alternate"
+				type="application/rss+xml"
+				title={feed.title}
+				href={absoluteUrl(feed.href)}
+			/>
+		))}
 		<meta property="og:site_name" content={SITE_TITLE} />
 		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={description} />
