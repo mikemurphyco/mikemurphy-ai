@@ -39,7 +39,7 @@ function getYouTubeId(url: string): string | null {
     <article class="mm-container grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <div {...pagefindAttrs}>
         <a href="/tutorials/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to tutorials</a>
-        <h1 class="mm-h1 mt-5">{article.data.title}</h1>
+        <h1 class="mm-h1--article mt-5">{article.data.title}</h1>
         <p class="mt-4 font-mono text-sm font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
           {formatDate(article.data.pubDate)} · {article.data.author}
         </p>

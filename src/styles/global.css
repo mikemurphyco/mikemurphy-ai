@@ -198,6 +198,15 @@
     text-transform: uppercase;
   }
 
+  .mm-h1--article {
+    font-family: var(--font-mono);
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    font-weight: 700;
+    letter-spacing: var(--ls-normal);
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+
   .mm-h2 {
     font-family: var(--font-mono);
     font-size: clamp(1.85rem, 3vw, 2.6rem);
