@@ -104,6 +104,12 @@ const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
 			<div class="border-t border-[color-mix(in_srgb,var(--mm-cream)_18%,transparent)]">
 				<div class="mm-container flex flex-wrap items-center justify-between gap-3 py-5 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-[color-mix(in_srgb,var(--mm-cream)_62%,transparent)]">
 					<p>© {new Date().getFullYear()} Mike Murphy</p>
+					<nav aria-label="Legal" class="flex flex-wrap gap-x-5 gap-y-2">
+						<a href="/privacy-policy/" class="hover:text-[var(--mm-orange)]">Privacy Policy</a>
+						<a href="/terms-of-service/" class="hover:text-[var(--mm-orange)]">Terms of Service</a>
+						<a href="/disclaimer/" class="hover:text-[var(--mm-orange)]">Disclaimer</a>
+						<a href="/accessibility-statement/" class="hover:text-[var(--mm-orange)]">Accessibility</a>
+					</nav>
 					<p>Built with Astro · Served by Cloudflare</p>
 				</div>
 			</div>
