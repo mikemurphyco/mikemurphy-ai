@@ -60,6 +60,17 @@ const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
 		<meta name="twitter:title" content={pageTitle} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={imageUrl} />
+		{import.meta.env.PROD && (
+			<>
+				<script async is:inline src="https://www.googletagmanager.com/gtag/js?id=G-CGTD41XG4M"></script>
+				<script is:inline>
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){ window.dataLayer.push(arguments); }
+					gtag('js', new Date());
+					gtag('config', 'G-CGTD41XG4M');
+				</script>
+			</>
+		)}
 	</head>
 	<body class="antialiased">
 		{!noHeader && <SiteHeader />}
