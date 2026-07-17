@@ -141,6 +141,15 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-07-17 — Fix mid-word wrap on `.mm-display` headings
+
+**Shipped:**
+- [x] Fixed the homepage hero headline wrapping "KNOWLEDGE" mid-word into "KNOWL" / "EDGE" at certain viewport widths — looked like a kerning bug (it isn't; `.mm-display` uses IBM Plex Mono, a monospace font with no letter-to-letter kerning at all) but was actually the browser's default line-break behavior splitting a long word instead of wrapping it whole.
+- [x] Added `word-break: keep-all` + `overflow-wrap: normal` to `.mm-display` in `src/styles/global.css` — long words now always wrap as whole units. Only two usages site-wide (`/` hero, `/ai-unplugged/` hero), both short headlines, so no regression risk.
+
+**Files:**
+- `src/styles/global.css` — `.mm-display` rule
+
 ### 2026-07-17 — MurphBot polish, CI, and iOS animation fix
 
 **Shipped:**

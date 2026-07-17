@@ -210,7 +210,9 @@ html[data-theme='dark'] {
     font-weight: 700;
     letter-spacing: var(--ls-normal);
     line-height: 0.95;
+    overflow-wrap: normal;
     text-transform: uppercase;
+    word-break: keep-all;
   }
 
   .mm-h1 {
