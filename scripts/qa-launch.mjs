@@ -48,7 +48,8 @@ const redirectSamples = new Map([
   ['/1passworddevtools/', '/tutorials/1passworddevtools/'],
   ['/ep1/', '/podcast/ep1/'],
   ['/ep65/', '/podcast/ep65/'],
-  ['/adobeauditionnewfile/', '/articles/adobeauditionnewfile/'],
+  ['/adobeauditionnewfile/', '/tutorials/adobeauditionnewfile/'],
+  ['/articles/adobeauditionnewfile/', '/tutorials/adobeauditionnewfile/'],
   ['/aiunplugged/', '/ai-unplugged/'],
   ['/ai-unplugged/issues/1/', '/ai-unplugged/issues/001/'],
 ]);
@@ -113,7 +114,7 @@ function nestedBoolean(fm, parent, key) {
 }
 
 function routeFile(route) {
-  if (route.endsWith('.xml') || route.endsWith('.txt')) {
+  if (route.endsWith('.xml') || route.endsWith('.txt') || route.endsWith('.json')) {
     return join(distRoot, route.slice(1));
   }
 
