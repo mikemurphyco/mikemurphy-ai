@@ -139,13 +139,23 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-07-17 — Theme toggle: icon-only (no labeled button)
+
+**Shipped:**
+- [x] Replaced the bordered Dark/Light CTA with a quiet icon-only control so it no longer competes with Subscribe
+- [x] Moon icon in light mode; line-style sun icon in dark mode
+- [x] Transparent chrome, muted color, orange hover — utility affordance, not a second button
+
+**Decisions:**
+- Theme control stays next to Subscribe in the header, but must read as chrome, not a CTA
+
 ### 2026-07-17 — Light / Dark mode (Phase 3)
 
 **Shipped:**
 - [x] Light is default; dark is opt-in via header toggle
 - [x] Early inline script reads `localStorage.mm-theme` before paint (no flash)
 - [x] `html[data-theme="dark"]` remaps semantic tokens per design-system §10 (navy surface, chalk ink, chalk cut-shadow)
-- [x] `ThemeToggle.astro` in header (desktop + mobile)
+- [x] `ThemeToggle.astro` in header (desktop + mobile) — later simplified to icon-only
 - [x] Ink/paper hardcodes moved to semantic tokens across pages/cards/search
 - [x] Intentionally left alone: footer navy band, orange SubscribeBand, inverse navy sections, light code blocks
 
