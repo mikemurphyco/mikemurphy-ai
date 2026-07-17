@@ -399,7 +399,7 @@ html[data-theme='dark'] {
     border-radius: var(--radius-md);
     box-shadow: 4px 4px 0 var(--mm-navy);
     color: var(--mm-navy);
-    display: inline-flex;
+    display: flex;
     font-family: var(--font-mono);
     font-size: var(--fs-mono-label);
     font-weight: 700;

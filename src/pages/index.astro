@@ -29,44 +29,50 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
 <Layout title="AI Knowledge Hub" description={SITE_DESCRIPTION} canonical="/">
   <main>
     <section class="border-b border-[var(--mm-border)] bg-[var(--color-bg-page)]">
-      <div class="mm-container grid min-h-[calc(100svh-5rem)] gap-10 py-14 lg:grid-cols-[1.05fr_0.8fr] lg:items-center">
-        <div>
-          <p class="mm-eyebrow">mikemurphy.ai · tutorials, newsletter, and field notes</p>
-          <h1 class="mm-display mt-5 max-w-5xl">AI Knowledge Hub</h1>
-          <p class="mm-lede mt-6 max-w-3xl">
-            A practical publication for learning AI tools, automation, and creative tech through clear tutorials, searchable notes, and weekly AI Unplugged issues.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="/tutorials/" class="mm-button">Browse tutorials</a>
-            <a href="/search/" class="mm-button mm-button-secondary">Search the archive</a>
-            <a href="/ai-unplugged/" class="mm-button mm-button-secondary">Read AI Unplugged</a>
+      <div class="mm-container py-14">
+        {/* Design-system hero row: copy + CTAs | art. Stats/topics sit below so
+            items-center isn't measuring against the taller meta block. */}
+        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.8fr] lg:items-center">
+          <div>
+            <p class="mm-eyebrow">mikemurphy.ai · tutorials, newsletter, and field notes</p>
+            <h1 class="mm-display mt-5 max-w-5xl">AI Knowledge Hub</h1>
+            <p class="mm-lede mt-6 max-w-3xl">
+              A practical publication for learning AI tools, automation, and creative tech through clear tutorials, searchable notes, and weekly AI Unplugged issues.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="/tutorials/" class="mm-button">Browse tutorials</a>
+              <a href="/search/" class="mm-button mm-button-secondary">Search the archive</a>
+              <a href="/ai-unplugged/" class="mm-button mm-button-secondary">Read AI Unplugged</a>
+            </div>
           </div>
-          <dl class="mt-8 grid max-w-2xl grid-cols-3 gap-3">
-            <div class="border-t border-[var(--mm-border)] pt-3">
-              <dt class="mm-eyebrow">Tutorials</dt>
-              <dd class="mt-1 font-mono text-3xl font-bold">{tutorials.length}</dd>
+          <div class="mx-auto flex w-full justify-center lg:justify-self-center">
+            <div class="flex w-[min(100%,248px)] flex-col items-center">
+              <div class="mm-polaroid rotate-2">
+                <div class="mm-polaroid-photo">
+                  <img src="/assets/brand/avatar-mike-orange-1200.png" alt="Mike Murphy" />
+                </div>
+                <p>Mike</p>
+              </div>
+              <p class="mm-badge-ai-handyman mt-8">AI Handyman</p>
             </div>
-            <div class="border-t border-[var(--mm-border)] pt-3">
-              <dt class="mm-eyebrow">AI era</dt>
-              <dd class="mt-1 font-mono text-3xl font-bold">{aiTutorials}</dd>
-            </div>
-            <div class="border-t border-[var(--mm-border)] pt-3">
-              <dt class="mm-eyebrow">Issues</dt>
-              <dd class="mt-1 font-mono text-3xl font-bold">{issues.length}</dd>
-            </div>
-          </dl>
-          <div class="mt-8 flex flex-wrap gap-2">
-            {topics.slice(0, 5).map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>)}
           </div>
         </div>
-        <div class="mx-auto flex w-full flex-col items-center lg:translate-x-16 xl:translate-x-20">
-          <div class="mm-polaroid rotate-2">
-            <div class="mm-polaroid-photo">
-              <img src="/assets/brand/avatar-mike-orange-1200.png" alt="Mike Murphy" />
-            </div>
-            <p>Mike</p>
+        <dl class="mt-10 grid max-w-2xl grid-cols-3 gap-3">
+          <div class="border-t border-[var(--mm-border)] pt-3">
+            <dt class="mm-eyebrow">Tutorials</dt>
+            <dd class="mt-1 font-mono text-3xl font-bold">{tutorials.length}</dd>
           </div>
-          <p class="mm-badge-ai-handyman mt-8">AI Handyman</p>
+          <div class="border-t border-[var(--mm-border)] pt-3">
+            <dt class="mm-eyebrow">AI era</dt>
+            <dd class="mt-1 font-mono text-3xl font-bold">{aiTutorials}</dd>
+          </div>
+          <div class="border-t border-[var(--mm-border)] pt-3">
+            <dt class="mm-eyebrow">Issues</dt>
+            <dd class="mt-1 font-mono text-3xl font-bold">{issues.length}</dd>
+          </div>
+        </dl>
+        <div class="mt-8 flex flex-wrap gap-2">
+          {topics.slice(0, 5).map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>)}
         </div>
       </div>
     </section>
