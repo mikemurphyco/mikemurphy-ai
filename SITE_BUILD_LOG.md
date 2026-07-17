@@ -139,6 +139,14 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-07-16 — Legal policy pages
+
+**Commits:** `462ddb4`
+
+**Shipped:**
+- [x] Four legal pages, styled to match the site's editorial prose system: `/privacy-policy/`, `/terms-of-service/`, `/disclaimer/`, `/accessibility-statement/`
+- [x] Linked from the footer's legal nav (`src/layouts/Layout.astro`)
+
 ### 2026-07-11 — Sticky header fix + content-lane cleanup
 
 **Commits:** `62b19d2`, `bed7a92`, `eb5b377`

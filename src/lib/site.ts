@@ -12,7 +12,7 @@ export const SITE_FEEDS = [
 ] as const;
 
 export const SITE_SOCIAL = [
-  { id: 'youtube', label: 'YouTube', href: 'https://youtube.com/mikemurphyco' },
+  { id: 'youtube', label: 'YouTube', href: 'https://youtube.com/@mikemurphy-ai' },
   {
     id: 'podcast',
     label: 'Podcast',
