@@ -151,10 +151,12 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 - [x] Verified in both themes with a Playwright screenshot pass (light + dark), plus a production `npm run build` to confirm `dist/404.html` and the SVG land correctly for Cloudflare's static 404 handling
 - [x] Seeded `mike-design-system/assets/characters/murphbot/` (svg + png + README) as the character's home for reuse, with a note that it's slated to become an animated Remotion component in `mike-video-factory`
 - [x] Cleaned up the now-empty `handoff/` staging folder (was untracked, nothing lost)
+- [x] **Fix:** first deploy served Cloudflare's generic "page can't be found" screen instead of `dist/404.html` — this site deploys as Cloudflare **Workers static assets** (`[assets]` in `wrangler.toml`), which does not serve `404.html` on a miss unless told to. Added `not_found_handling = "404-page"` to `wrangler.toml`. Verified locally with `npx wrangler dev` (not just `astro dev`/`astro preview`, which don't reproduce Workers' asset-routing behavior).
 
 **Decisions:**
 - 404 page content is a first-class Astro page wired into the design system, not a pasted-in static snippet — keeps chrome, tokens, and dark mode as the single source of truth
 - MurphBot lives as a plain `<img>`-referenced SVG (not inlined) for simplicity; dark-mode contrast handled via `prefers-color-scheme` inside the SVG rather than inlining the whole character into the page
+- Custom-404 changes must be smoke-tested with `wrangler dev`/`wrangler deploy`, since Astro's own dev/preview servers don't exercise Cloudflare's `not_found_handling` behavior
 
 **Files:**
 - `src/pages/404.astro` — new
