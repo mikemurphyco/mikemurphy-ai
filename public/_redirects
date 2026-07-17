@@ -143,6 +143,7 @@
 /articles/decimals/ /tutorials/decimals/ 301
 /articles/deletetimeline/ /tutorials/deletetimeline/ 301
 /articles/diffusionbee/ /tutorials/diffusionbee/ 301
+/articles/directus/ /tutorials/directus/ 301
 /articles/displacementmaps/ /tutorials/displacementmaps/ 301
 /articles/doodle/ /tutorials/doodle/ 301
 /articles/dropdownmenu/ /tutorials/dropdownmenu/ 301
@@ -481,6 +482,7 @@
 /articles/renderworkarea/ /tutorials/renderworkarea/ 301
 /articles/reopenpaths/ /tutorials/reopenpaths/ 301
 /articles/resetpreferences/ /tutorials/resetpreferences/ 301
+/articles/resources/ /resources/ 301
 /articles/responsivedesign/ /tutorials/responsivedesign/ 301
 /articles/revealcomps/ /tutorials/revealcomps/ 301
 /articles/reverseorder/ /tutorials/reverseorder/ 301
@@ -680,6 +682,7 @@
 /decimals/ /tutorials/decimals/ 301
 /deletetimeline/ /tutorials/deletetimeline/ 301
 /diffusionbee/ /tutorials/diffusionbee/ 301
+/directus/ /tutorials/directus/ 301
 /displacementmaps/ /tutorials/displacementmaps/ 301
 /domestikabts/ /articles/domestikabts/ 301
 /doodle/ /tutorials/doodle/ 301
@@ -1041,7 +1044,6 @@
 /renderworkarea/ /tutorials/renderworkarea/ 301
 /reopenpaths/ /tutorials/reopenpaths/ 301
 /resetpreferences/ /tutorials/resetpreferences/ 301
-/resources/ /articles/resources/ 301
 /responsivedesign/ /tutorials/responsivedesign/ 301
 /revealcomps/ /tutorials/revealcomps/ 301
 /reverseorder/ /tutorials/reverseorder/ 301

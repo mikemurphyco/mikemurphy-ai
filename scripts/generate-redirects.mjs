@@ -81,6 +81,7 @@ const articles = walk(articleRoot)
 const redirects = new Map([
   ['/aiunplugged/', '/ai-unplugged/'],
   ['/ai-unplugged/issues/1/', '/ai-unplugged/issues/001/'],
+  ['/articles/resources/', '/resources/'],
 ]);
 
 for (const article of articles) {
