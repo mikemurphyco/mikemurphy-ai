@@ -254,14 +254,20 @@ html[data-theme='dark'] {
   }
 
   .mm-polaroid {
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border-default);
-    box-shadow: var(--shadow-polaroid);
+    /* Polaroid paper stays chalk in both themes — it's a physical print metaphor. */
+    background: var(--mm-chalk);
+    border: 1px solid color-mix(in srgb, var(--mm-navy) 18%, transparent);
+    box-shadow: 6px 12px 0 rgba(0, 30, 58, 0.55);
     display: inline-flex;
     flex-direction: column;
     gap: 6px;
     padding: 14px 14px 28px;
     width: min(100%, 248px);
+  }
+
+  html[data-theme='dark'] .mm-polaroid {
+    border-color: color-mix(in srgb, var(--mm-chalk) 22%, transparent);
+    box-shadow: 6px 12px 0 rgba(0, 0, 0, 0.55);
   }
 
   .mm-polaroid-photo {
@@ -279,7 +285,7 @@ html[data-theme='dark'] {
   }
 
   .mm-polaroid p {
-    color: var(--color-text-primary);
+    color: var(--mm-navy);
     font-family: var(--font-hand);
     font-size: 44px;
     line-height: 1;
@@ -383,6 +389,29 @@ html[data-theme='dark'] {
     letter-spacing: 0.08em;
     padding: 0.35rem 0.7rem;
     text-transform: uppercase;
+  }
+
+  /* AI Handyman ribbon — CSS, not a raster (rasters had baked cream plates). */
+  .mm-badge-ai-handyman {
+    align-items: center;
+    background: var(--mm-orange);
+    border: 1px solid var(--mm-navy);
+    border-radius: var(--radius-md);
+    box-shadow: 4px 4px 0 var(--mm-navy);
+    color: var(--mm-navy);
+    display: inline-flex;
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono-label);
+    font-weight: 700;
+    letter-spacing: var(--ls-label);
+    padding: 8px 14px;
+    text-transform: uppercase;
+  }
+
+  html[data-theme='dark'] .mm-badge-ai-handyman {
+    border-color: var(--mm-chalk);
+    box-shadow: 4px 4px 0 var(--mm-chalk);
+    color: var(--mm-navy);
   }
 
 }

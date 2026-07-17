@@ -145,9 +145,13 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 - [x] Replaced the bordered Dark/Light CTA with a quiet icon-only control so it no longer competes with Subscribe
 - [x] Moon icon in light mode; line-style sun icon in dark mode
 - [x] Transparent chrome, muted color, orange hover — utility affordance, not a second button
+- [x] Home polaroid stays chalk paper in both themes (dark hard shadow, not chalk offset)
+- [x] Home “AI Handyman” badge swapped from opaque PNG (`ai-handyman-badge.png` had a baked cream plate) to CSS `.mm-badge-ai-handyman`
 
 **Decisions:**
 - Theme control stays next to Subscribe in the header, but must read as chrome, not a CTA
+- Polaroid is a physical print metaphor — keep chalk paper even on navy page backgrounds
+- Brand badge ribbons should be CSS (or truly transparent assets), never cream-plated PNGs
 
 ### 2026-07-17 — Light / Dark mode (Phase 3)
 
