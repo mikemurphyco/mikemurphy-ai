@@ -47,11 +47,11 @@ const pagefindAttrs = {
         <p class="mm-eyebrow">Issue Details</p>
         <dl class="mt-4 grid gap-3 text-sm text-[var(--color-text-muted)]">
           <div>
-            <dt class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--mm-navy)]">Issue</dt>
+            <dt class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-primary)]">Issue</dt>
             <dd class="mt-1">#{paddedIssue}</dd>
           </div>
           <div>
-            <dt class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--mm-navy)]">Sent</dt>
+            <dt class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-primary)]">Sent</dt>
             <dd class="mt-1">{formatDate(issue.data.sentAt)}</dd>
           </div>
         </dl>
@@ -91,7 +91,7 @@ const pagefindAttrs = {
           )}
           {agentReadable.keyClaims.length > 0 && (
             <div class="mt-5">
-              <p class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--mm-navy)]">Key claims</p>
+              <p class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-primary)]">Key claims</p>
               <ul class="mt-3 grid gap-2 text-sm leading-6 text-[var(--color-text-muted)]">
                 {agentReadable.keyClaims.map((claim) => (
                   <li class="border-l-2 border-[var(--mm-orange)] pl-3">{claim}</li>
@@ -101,7 +101,7 @@ const pagefindAttrs = {
           )}
           {agentReadable.entities.length > 0 && (
             <div class="mt-5">
-              <p class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--mm-navy)]">Entities</p>
+              <p class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-primary)]">Entities</p>
               <div class="mt-3 flex flex-wrap gap-2">
                 {agentReadable.entities.map((entity) => <span class="mm-pill">{entity}</span>)}
               </div>

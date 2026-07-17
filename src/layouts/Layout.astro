@@ -27,15 +27,29 @@ const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<script is:inline>
+			(function () {
+				try {
+					var theme = localStorage.getItem('mm-theme');
+					document.documentElement.setAttribute(
+						'data-theme',
+						theme === 'dark' || theme === 'light' ? theme : 'light',
+					);
+				} catch (e) {
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			})();
+		</script>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" sizes="32x32" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="theme-color" content="#001E3A" />
+		<meta name="color-scheme" content="light dark" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 		<meta name="description" content={description} />

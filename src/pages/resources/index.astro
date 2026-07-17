@@ -20,7 +20,7 @@ const resources = [
     group: 'Builder Stack',
     cost: 'Paid',
     relationship: 'Used Here',
-    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
+    color: 'bg-[var(--mm-orange)] text-[var(--color-text-primary)]',
     url: 'https://www.cloudflare.com/products/registrar/',
     tags: ['Domains', 'DNS'],
     description:
@@ -32,7 +32,7 @@ const resources = [
     group: 'Builder Stack',
     cost: 'Free + Paid',
     relationship: 'Used Here',
-    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
+    color: 'bg-[var(--mm-orange)] text-[var(--color-text-primary)]',
     url: 'https://pages.cloudflare.com/',
     tags: ['Hosting', 'Deploys'],
     description:
@@ -44,7 +44,7 @@ const resources = [
     group: 'Builder Stack',
     cost: 'Free + Paid',
     relationship: 'Used Here',
-    color: 'bg-[var(--mm-chalk)]',
+    color: 'bg-[var(--color-bg-surface)]',
     url: 'https://github.com/',
     tags: ['Codebase', 'Version Control'],
     description:
@@ -92,7 +92,7 @@ const resources = [
     group: 'AI Workbench',
     cost: 'Paid',
     relationship: 'Used Daily',
-    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
+    color: 'bg-[var(--mm-orange)] text-[var(--color-text-primary)]',
     url: 'https://www.anthropic.com/claude-code',
     tags: ['CLI', 'Writing + Code'],
     description:
@@ -128,7 +128,7 @@ const resources = [
     group: 'Content Stack',
     cost: 'Free + Paid',
     relationship: 'Affiliate',
-    color: 'bg-[var(--mm-orange)] text-[var(--mm-navy)]',
+    color: 'bg-[var(--mm-orange)] text-[var(--color-text-primary)]',
     url: 'https://mikemurphy.co/elevenlabs',
     tags: ['Voice', 'Audio'],
     description:
@@ -140,7 +140,7 @@ const resources = [
     group: 'Content Stack',
     cost: 'Free + Paid',
     relationship: 'Used Here',
-    color: 'bg-[var(--mm-chalk)]',
+    color: 'bg-[var(--color-bg-surface)]',
     url: 'https://www.beehiiv.com/',
     tags: ['Newsletter', 'Publishing'],
     description:
@@ -199,7 +199,7 @@ const affiliateCount = resources.filter((resource) => resource.relationship === 
           <button
             class:list={[
               'mm-pill px-4 py-2',
-              filter === 'All' && 'border-[var(--mm-navy)] bg-[var(--mm-navy)] text-[var(--mm-cream)]',
+              filter === 'All' && 'border-[var(--color-border-strong)] bg-[var(--mm-navy)] text-[var(--mm-cream)]',
             ]}
             type="button"
             data-resource-filter={filter.toLowerCase()}
@@ -216,7 +216,7 @@ const affiliateCount = resources.filter((resource) => resource.relationship === 
 
         return (
           <section data-resource-group={group.toLowerCase()}>
-            <div class="mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-[var(--mm-navy)] pb-3">
+            <div class="mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-[var(--color-border-strong)] pb-3">
               <div>
                 <h2 class="mm-h2">{group}</h2>
                 <p class="mt-3 max-w-3xl text-lg leading-8 text-[var(--mm-muted)]">
@@ -286,7 +286,7 @@ const affiliateCount = resources.filter((resource) => resource.relationship === 
         buttons.forEach((item) => {
           item.classList.toggle('bg-[var(--mm-navy)]', item === button);
           item.classList.toggle('text-[var(--mm-cream)]', item === button);
-          item.classList.toggle('border-[var(--mm-navy)]', item === button);
+          item.classList.toggle('border-[var(--color-border-strong)]', item === button);
         });
 
         groups.forEach((group) => {

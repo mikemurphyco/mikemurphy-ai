@@ -28,7 +28,7 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
 
 <Layout title="AI Knowledge Hub" description={SITE_DESCRIPTION} canonical="/">
   <main>
-    <section class="border-b border-[var(--mm-border)] bg-[var(--mm-cream)]">
+    <section class="border-b border-[var(--mm-border)] bg-[var(--color-bg-page)]">
       <div class="mm-container grid min-h-[calc(100svh-5rem)] gap-10 py-14 lg:grid-cols-[1.05fr_0.8fr] lg:items-center">
         <div>
           <p class="mm-eyebrow">mikemurphy.ai · tutorials, newsletter, and field notes</p>
@@ -56,7 +56,7 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
             </div>
           </dl>
           <div class="mt-8 flex flex-wrap gap-2">
-            {topics.slice(0, 5).map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--mm-navy)]">{topic.name}</a>)}
+            {topics.slice(0, 5).map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>)}
           </div>
         </div>
         <div class="mx-auto w-full lg:justify-self-center">
@@ -113,7 +113,7 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
       <aside class="mm-card h-fit p-5">
         <p class="mm-eyebrow">Topics</p>
         <div class="mt-4 flex flex-wrap gap-2">
-          {topics.map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--mm-navy)]">{topic.name}</a>)}
+          {topics.map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>)}
         </div>
         {latestIssue && (
           <div class="mt-8 border-t border-[var(--mm-border)] pt-5">

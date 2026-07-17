@@ -75,7 +75,7 @@ function getYouTubeId(url: string): string | null {
           <p class="mm-eyebrow">Topics</p>
           <div class="mt-4 flex flex-wrap gap-2">
             {terms.slice(0, 10).map((term) => (
-              <a href={`/topics/${slugifyTerm(term)}/`} class="mm-pill hover:border-[var(--mm-navy)]">{term}</a>
+              <a href={`/topics/${slugifyTerm(term)}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{term}</a>
             ))}
           </div>
         </div>

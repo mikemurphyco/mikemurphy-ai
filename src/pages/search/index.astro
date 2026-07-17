@@ -57,18 +57,19 @@ import Layout from '../../layouts/Layout.astro';
      Pagefind injects its DOM at runtime, outside Astro's scoping. */
   #search {
     --pagefind-ui-scale: 1;
-    --pagefind-ui-primary: var(--mm-navy);
+    --pagefind-ui-primary: var(--color-text-primary);
     --pagefind-ui-text: var(--color-text-primary);
-    --pagefind-ui-background: var(--mm-chalk);
+    --pagefind-ui-background: var(--color-bg-surface);
     --pagefind-ui-border: var(--color-border-strong);
-    --pagefind-ui-tag: var(--mm-cream);
+    --pagefind-ui-tag: var(--color-bg-page);
     --pagefind-ui-border-width: 1px;
     --pagefind-ui-border-radius: var(--radius-md);
     --pagefind-ui-font: var(--font-sans);
   }
 
   #search .pagefind-ui__search-input {
-    background: var(--mm-cream);
+    background: var(--color-bg-page);
+    color: var(--color-text-primary);
     box-shadow: 2px 2px 0 var(--color-shadow-ink);
     font-weight: 400;
   }
@@ -133,6 +134,6 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   #search .pagefind-ui__button:hover {
-    background: var(--mm-cream);
+    background: color-mix(in srgb, var(--color-text-primary) 8%, var(--color-bg-surface));
   }
 </style>

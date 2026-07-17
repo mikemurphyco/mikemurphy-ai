@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from './ThemeToggle.astro';
+
 const navItems = [
   { href: '/tutorials/', label: 'Tutorials' },
   { href: '/ai-unplugged/', label: 'AI Unplugged' },
@@ -14,39 +16,42 @@ function isActive(href: string) {
 }
 ---
 
-<header class="sticky top-0 z-20 border-b border-[var(--mm-border)] bg-[color-mix(in_srgb,var(--mm-cream)_94%,transparent)] backdrop-blur">
+<header class="sticky top-0 z-20 border-b border-[var(--mm-border)] bg-[color-mix(in_srgb,var(--color-bg-page)_94%,transparent)] backdrop-blur">
   <div class="mm-container flex items-center justify-between gap-5 py-3">
-    <a href="/" class="flex shrink-0 items-center gap-3 text-[var(--mm-navy)]" aria-label="Mike Murphy home">
+    <a href="/" class="flex shrink-0 items-center gap-3 text-[var(--color-text-primary)]" aria-label="Mike Murphy home">
       <img src="/assets/brand/loop-orange-128.svg" alt="" class="size-11" />
       <span class="leading-none">
         <span class="block font-mono text-lg font-bold uppercase tracking-normal">Mike Murphy</span>
         <span class="block font-mono text-xs font-bold uppercase tracking-[0.16em] text-[var(--mm-orange-deep)]">AI Handyman</span>
       </span>
     </a>
-    <nav class="hidden items-stretch gap-5 text-nowrap font-mono text-[0.72rem] font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)] md:flex" aria-label="Main">
-      {navItems.map((item) => (
-        <a
-          class:list={[
-            'border-b-2 border-transparent px-1 py-4 transition hover:text-[var(--mm-navy)]',
-            isActive(item.href) && 'border-[var(--mm-orange)] text-[var(--mm-orange-deep)]',
-          ]}
-          href={item.href}
-          aria-current={isActive(item.href) ? 'page' : undefined}
-        >
-          {item.label}
-        </a>
-      ))}
-      <a href="/ai-unplugged/" class="mm-button mm-button-nav ml-2">Subscribe</a>
-    </nav>
-    <button
-      type="button"
-      id="mm-nav-toggle"
-      class="rounded-[var(--radius-md)] border border-[var(--mm-border)] px-3 py-2 font-mono text-[0.72rem] font-bold uppercase tracking-[0.14em] text-[var(--mm-navy)] md:hidden"
-      aria-expanded="false"
-      aria-controls="mm-mobile-nav"
-    >
-      Menu
-    </button>
+    <div class="flex items-center gap-3">
+      <nav class="hidden items-stretch gap-5 text-nowrap font-mono text-[0.72rem] font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)] md:flex" aria-label="Main">
+        {navItems.map((item) => (
+          <a
+            class:list={[
+              'border-b-2 border-transparent px-1 py-4 transition hover:text-[var(--color-text-primary)]',
+              isActive(item.href) && 'border-[var(--mm-orange)] text-[var(--mm-orange-deep)]',
+            ]}
+            href={item.href}
+            aria-current={isActive(item.href) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
+        <a href="/ai-unplugged/" class="mm-button mm-button-nav ml-2">Subscribe</a>
+      </nav>
+      <ThemeToggle />
+      <button
+        type="button"
+        id="mm-nav-toggle"
+        class="rounded-[var(--radius-md)] border border-[var(--mm-border)] px-3 py-2 font-mono text-[0.72rem] font-bold uppercase tracking-[0.14em] text-[var(--color-text-primary)] md:hidden"
+        aria-expanded="false"
+        aria-controls="mm-mobile-nav"
+      >
+        Menu
+      </button>
+    </div>
   </div>
   <nav id="mm-mobile-nav" hidden class="border-t border-[var(--mm-border)] md:hidden" aria-label="Main">
     <div class="mm-container py-2">
@@ -54,7 +59,7 @@ function isActive(href: string) {
         <a
           class:list={[
             'block border-b border-[var(--mm-border)] py-3 font-mono text-sm font-bold uppercase tracking-[0.12em]',
-            isActive(item.href) ? 'text-[var(--mm-orange-deep)]' : 'text-[var(--mm-navy)]',
+            isActive(item.href) ? 'text-[var(--mm-orange-deep)]' : 'text-[var(--color-text-primary)]',
           ]}
           href={item.href}
           aria-current={isActive(item.href) ? 'page' : undefined}

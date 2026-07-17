@@ -45,7 +45,7 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
       <InlineSearch filterType="Tutorial" label="Search tutorials" placeholder={`Search ${tutorials.length} tutorials…`} />
       <div data-inline-search-hide class="mt-8">
         <div class="flex flex-wrap gap-2">
-          {topics.map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--mm-navy)]">{topic.name}</a>)}
+          {topics.map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>)}
         </div>
         <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tutorials.map((tutorial) => <TutorialCard tutorial={tutorial} />)}

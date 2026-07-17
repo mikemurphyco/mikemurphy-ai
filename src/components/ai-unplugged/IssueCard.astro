@@ -14,7 +14,7 @@ const paddedIssue = String(issue.data.issue).padStart(3, '0');
 <article class="mm-card grid gap-4 p-5 sm:grid-cols-[4rem_1fr_auto] sm:items-center">
   <a
     href={issueUrl(issue)}
-    class="grid size-16 place-items-center rounded bg-[var(--mm-orange)] text-center font-mono font-bold text-[var(--mm-navy)]"
+    class="grid size-16 place-items-center rounded bg-[var(--mm-orange)] text-center font-mono font-bold text-[var(--color-text-primary)]"
     aria-label={`Read AI Unplugged issue ${paddedIssue}`}
   >
     <span>
@@ -26,7 +26,7 @@ const paddedIssue = String(issue.data.issue).padStart(3, '0');
     <p class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
       {formatDate(issue.data.publishedAt)}
     </p>
-    <h2 class="mt-2 font-mono text-xl font-bold uppercase leading-tight tracking-normal text-[var(--mm-navy)]">
+    <h2 class="mt-2 font-mono text-xl font-bold uppercase leading-tight tracking-normal text-[var(--color-text-primary)]">
       <a href={issueUrl(issue)} class="hover:underline">{issue.data.subject}</a>
     </h2>
     {!compact && <p class="mt-2 max-w-3xl text-sm leading-6 text-[var(--mm-muted)]">{issue.data.summary}</p>}

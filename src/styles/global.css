@@ -126,7 +126,8 @@
 
   /* Shiki code palette — chalk ground, navy ink, matching the
      .code-block spec in mike-design-system ui_kits/website/site.css.
-     No teal here: the teal budget is one element per screen. */
+     No teal here: the teal budget is one element per screen.
+     Intentionally NOT remapped in dark mode — code stays light paper. */
   --astro-code-foreground: var(--mm-navy);
   --astro-code-background: var(--mm-chalk);
   --astro-code-token-constant: #1d5fa0;
@@ -140,10 +141,33 @@
   --astro-code-token-link: var(--mm-orange-deep);
 }
 
+/* Dark mode — design-system.html §10 navy surface translation.
+   Brand hexes stay fixed. Semantic roles invert. Orange/teal unchanged.
+   Light is the default (no data-theme or data-theme="light"). */
+html[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-bg-page: var(--mm-navy);
+  --color-bg-surface: #0a2a4a;
+  --color-text-primary: var(--mm-chalk);
+  --color-text-muted: rgba(252, 250, 246, 0.6);
+  --color-border-default: rgba(252, 250, 246, 0.16);
+  --color-border-strong: var(--mm-chalk);
+  --color-shadow-ink: var(--mm-chalk);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-polaroid: 6px 12px 0 rgba(252, 250, 246, 0.28);
+}
+
 @layer base {
   html {
     color-scheme: light;
     background: var(--color-bg-page);
+  }
+
+  html[data-theme='dark'] {
+    color-scheme: dark;
   }
 
   body {
@@ -336,7 +360,7 @@
   }
 
   .mm-button-secondary:hover {
-    background: var(--mm-cream);
+    background: color-mix(in srgb, var(--color-text-primary) 8%, var(--color-bg-surface));
   }
 
   /* Small variant — nav CTA and other tight spots */
@@ -438,6 +462,10 @@
   padding: 2px 8px;
 }
 
+html[data-theme='dark'] .mm-prose code {
+  background: rgba(252, 250, 246, 0.1);
+}
+
 .mm-prose code::before,
 .mm-prose code::after {
   content: none;
@@ -476,17 +504,24 @@
   font-size: var(--fs-mono-label);
 }
 
-/* Code frame: navy terminal on cream paper — canon code block.
+/* Code frame stays light paper in both themes (Mike's 2026-07-10 pick).
    Shiki's css-variables theme paints the inside via --astro-code-*. */
 .mm-prose pre {
+  background: var(--astro-code-background);
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-cut);
+  color: var(--astro-code-foreground);
   font-size: var(--fs-code);
   line-height: var(--lh-code);
   margin: var(--space-6) 0;
   overflow-x: auto;
   padding: var(--space-4);
+}
+
+html[data-theme='dark'] .mm-prose pre {
+  border-color: var(--mm-chalk);
+  box-shadow: 4px 4px 0 var(--mm-chalk);
 }
 
 .mm-prose pre code {

@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-07-11
+updated: 2026-07-17
 status: living-doc
 ---
 
@@ -139,6 +139,29 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-07-17 — Light / Dark mode (Phase 3)
+
+**Shipped:**
+- [x] Light is default; dark is opt-in via header toggle
+- [x] Early inline script reads `localStorage.mm-theme` before paint (no flash)
+- [x] `html[data-theme="dark"]` remaps semantic tokens per design-system §10 (navy surface, chalk ink, chalk cut-shadow)
+- [x] `ThemeToggle.astro` in header (desktop + mobile)
+- [x] Ink/paper hardcodes moved to semantic tokens across pages/cards/search
+- [x] Intentionally left alone: footer navy band, orange SubscribeBand, inverse navy sections, light code blocks
+
+**Decisions:**
+- Manual Light/Dark toggle only for v1 (no System auto yet)
+- Brand hexes (`--mm-navy`, `--mm-cream`, etc.) stay fixed; semantic roles invert
+- Orange/teal unchanged in dark mode
+- Code blocks stay chalk/navy paper in both themes
+
+**Files:**
+- `src/styles/global.css` — dark remap + code-frame dark border
+- `src/components/ThemeToggle.astro` — new
+- `src/components/SiteHeader.astro` — toggle + semantic header colors
+- `src/layouts/Layout.astro` — anti-flash theme boot script
+- Cards / indexes / InlineSearch / Pagefind UI → semantic tokens
+
 ### 2026-07-16 — Fix /resources/ shadowed by legacy WordPress article
 
 **Commits:** `3111782`
@@ -226,7 +249,9 @@ From recent `main` history:
 
 | Idea | Status | Why wait |
 |------|--------|----------|
+| System theme (follow OS) | Later | Manual toggle first; avoid surprise dark on first visit |
 | Thin Cmd+K search modal | Later | Third UI; a11y/mobile; needs built Pagefind index |
+| Copy-code button on `pre` | Later | Remaining Phase 3 polish |
 | Full command palette | Much later | Product-sized |
 | Contact form | Later | mailto enough until volume/spam hurts |
 | Cal.com booking | Later | Only if consulting becomes a real funnel |
