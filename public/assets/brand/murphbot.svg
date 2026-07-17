@@ -4,7 +4,7 @@
   <style>
     .mb-body { animation: mb-float 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
     .mb-eyes { animation: mb-blink 4.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    .mb-hand { animation: mb-wave 2.1s ease-in-out infinite; transform-box: fill-box; transform-origin: 204px 40px; }
+    .mb-hand { animation: mb-wave 2.1s ease-in-out infinite; transform-box: view-box; transform-origin: 152px 76px; }
     @keyframes mb-float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
@@ -33,10 +33,12 @@
   <g class="mb-body">
     <line x1="120" y1="118" x2="52" y2="196" class="mb-ink" stroke-width="2.5" stroke-linecap="round" opacity="0.6"></line>
     <line x1="120" y1="118" x2="176" y2="204" class="mb-ink" stroke-width="2" stroke-linecap="round" opacity="0.6"></line>
-    <line x1="152" y1="76" x2="204" y2="40" class="mb-ink" stroke-width="2.5" stroke-linecap="round" opacity="0.6"></line>
     <circle cx="52" cy="196" r="9" class="mb-ink-fill"></circle>
     <circle cx="176" cy="204" r="6.5" class="mb-ink-fill"></circle>
-    <g class="mb-hand"><circle cx="204" cy="40" r="8" class="mb-ink-fill"></circle></g>
+    <g class="mb-hand">
+      <line x1="152" y1="76" x2="204" y2="40" class="mb-ink" stroke-width="2.5" stroke-linecap="round" opacity="0.6"></line>
+      <circle cx="204" cy="40" r="8" class="mb-ink-fill"></circle>
+    </g>
     <line x1="120" y1="52" x2="120" y2="26" class="mb-ink" stroke-width="2.5" stroke-linecap="round" opacity="0.6"></line>
     <circle cx="120" cy="20" r="7" fill="#1ECEBE"></circle>
     <circle cx="120" cy="104" r="52" fill="#FF6434"></circle>
