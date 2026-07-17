@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page Not Found" description="This page doesn't exist. MurphBot checked every node and came back empty-handed.">
+	<main class="mm-container mm-404 grid gap-14 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+		<div>
+			<p class="mm-eyebrow">This is where people get stuck</p>
+			<h1 class="mm-h1 mt-3">Error 404</h1>
+			<p class="mm-lede mt-5">
+				Whatever you were looking for isn't at this address. Maybe I moved it, maybe the link had a typo — either way, MurphBot checked every node and came back empty-handed.
+			</p>
+			<div class="mm-terminal mt-7">
+				<div><span class="mm-muted">$ </span>murphbot --locate "this page"</div>
+				<div class="mm-muted">searching 3 nodes… done</div>
+				<div class="mm-muted">0 results found</div>
+				<div>→ try: <a href="/">mikemurphy.ai/</a></div>
+			</div>
+			<div class="mt-7 flex flex-wrap gap-4">
+				<a href="/" class="mm-button">Take me home</a>
+				<a href="/tutorials/" class="mm-button mm-button-secondary">Browse the tutorials →</a>
+			</div>
+		</div>
+		<div class="flex flex-col items-center gap-5">
+			<img src="/assets/brand/murphbot.svg" alt="MurphBot, a small robot built from the Node mark, waving" width="300" height="330" class="w-[220px] sm:w-[280px]" />
+			<p class="mm-404-caption">MurphBot · Unit 404<br />He looked everywhere.</p>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.mm-404 {
+		min-height: 60vh;
+	}
+
+	.mm-terminal {
+		background: var(--color-bg-surface);
+		border: 1px solid var(--color-border-strong);
+		border-radius: var(--radius-md);
+		box-shadow: var(--shadow-cut);
+		font-family: var(--font-mono);
+		font-size: var(--fs-code);
+		line-height: var(--lh-code);
+		max-width: 520px;
+		padding: 18px 20px;
+	}
+
+	.mm-terminal a {
+		color: var(--color-action-primary);
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.mm-terminal a:hover {
+		color: var(--color-action-primary-hover);
+	}
+
+	.mm-muted {
+		color: var(--color-text-muted);
+	}
+
+	.mm-404-caption {
+		color: var(--color-text-muted);
+		font-family: var(--font-mono);
+		font-size: var(--fs-mono-label);
+		font-weight: 700;
+		letter-spacing: var(--ls-eyebrow);
+		text-align: center;
+		text-transform: uppercase;
+	}
+</style>

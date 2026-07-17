@@ -7,6 +7,8 @@ status: living-doc
 
 # mikemurphy.ai Site Build Log
 
+_Renamed from SITE_BUILD_LOG.md → BUILD_LOG.md (2026-07-17)._
+
 Living note for the Astro rebuild. Use it for memory, future blog seeds, and “what did I ship?” check-ins.
 
 - **Site:** https://mikemurphy.ai
@@ -138,6 +140,26 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-07-17 — MurphBot 404 page
+
+**Shipped:**
+- [x] `src/pages/404.astro` — real Astro page (not a static handoff snippet), built on the shared `Layout` so it gets header/footer/theme-toggle for free; reuses existing `.mm-eyebrow` / `.mm-h1` / `.mm-lede` / `.mm-button` tokens instead of one-off inline CSS
+- [x] MurphBot character (Node-mark robot) as the 404 mascot, terminal-style "0 results found" copy block, Home / Tutorials CTAs
+- [x] `public/assets/brand/murphbot.svg` — restored the float/blink/wave CSS animation that the design handoff's README promised but the shipped SVG was missing; respects `prefers-reduced-motion`
+- [x] Fixed a dark-mode bug: MurphBot's navy limbs/eyes/mouth were invisible against the navy dark background — added a `prefers-color-scheme: dark` swap to chalk inside the SVG's own `<style>` (the `<img>`-embedded SVG can't see the page's `data-theme` toggle, but it does see OS color scheme)
+- [x] Verified in both themes with a Playwright screenshot pass (light + dark), plus a production `npm run build` to confirm `dist/404.html` and the SVG land correctly for Cloudflare's static 404 handling
+- [x] Seeded `mike-design-system/assets/characters/murphbot/` (svg + png + README) as the character's home for reuse, with a note that it's slated to become an animated Remotion component in `mike-video-factory`
+- [x] Cleaned up the now-empty `handoff/` staging folder (was untracked, nothing lost)
+
+**Decisions:**
+- 404 page content is a first-class Astro page wired into the design system, not a pasted-in static snippet — keeps chrome, tokens, and dark mode as the single source of truth
+- MurphBot lives as a plain `<img>`-referenced SVG (not inlined) for simplicity; dark-mode contrast handled via `prefers-color-scheme` inside the SVG rather than inlining the whole character into the page
+
+**Files:**
+- `src/pages/404.astro` — new
+- `public/assets/brand/murphbot.svg` — new
+- `mike-design-system/assets/characters/murphbot/` — new (murphbot.svg, murphbot.png, README.md)
 
 ### 2026-07-17 — Theme toggle: icon-only (no labeled button)
 
