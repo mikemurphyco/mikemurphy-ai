@@ -139,6 +139,20 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-07-16 — Fix /resources/ shadowed by legacy WordPress article
+
+**Commits:** `3111782`
+
+**Shipped:**
+- [x] Deleted `src/content/articles/2022/resources.md` — its frontmatter still carried the old WordPress `permalink: "/resources/"`, which `generate-redirects.mjs` read and wrote as `/resources/ -> /articles/resources/` into `public/_redirects`. That 301'd every visit to the real hand-built page (`src/pages/resources/index.astro`, 12-tool AI-builder stack) away to the messy legacy import before it ever rendered
+- [x] Added `/articles/resources/ -> /resources/` to the generator's manual seed redirects (survives regeneration) so old links still land on the current page
+
+**Decisions:**
+- When a legacy WordPress article's slug collides with a real Astro page route, delete the article rather than let it coexist — `generate-redirects.mjs` reads any article's `permalink`/`legacyPermalink` frontmatter as a redirect *source*, so a stale legacy permalink can silently shadow a real static route
+
+**For a future post:**
+- "The redirect that ate my own page" — how a generated `_redirects` file can outrank a real static route on Cloudflare Pages, and why frontmatter-driven redirects need a collision check against `src/pages/`
+
 ### 2026-07-16 — Legal policy pages
 
 **Commits:** `462ddb4`
