@@ -141,6 +141,27 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-07-17 — MurphBot polish, CI, and iOS animation fix
+
+**Shipped:**
+- [x] Fixed MurphBot's waving hand visibly detaching from its arm: the hand dot and arm `<line>` weren't grouped, and the dot's rotation origin was its own position instead of the shoulder joint, so the dot spun in place while the arm stayed static. Grouped them and pivot from the shoulder (152, 76) so the whole limb swings together.
+- [x] Added a lightweight CI workflow (`.github/workflows/ci.yml`): on every push/PR to `main`, runs `npm ci` → `npm run build` (Astro + Pagefind) → `npm run qa:launch`. No deploy step — Cloudflare's git integration still owns that. First run passed clean in ~46s.
+- [x] Needed the `workflow` OAuth scope added to the local `gh`/git credential before GitHub would accept a push touching `.github/workflows/` — a one-time `gh auth refresh -s workflow` device-code approval.
+- [x] Fixed two pre-existing bugs in `scripts/qa-launch.mjs` surfaced by actually running it clean: `routeFile()` only special-cased `.xml`/`.txt` extensions, so it checked `agent.json` at the wrong dist path and reported it missing; and a stale redirect sample still expected `adobeauditionnewfile`'s old `/articles/` canonical destination instead of its current `/tutorials/` one.
+- [x] Fixed MurphBot not animating on iOS Safari: WebKit doesn't run CSS `@keyframes` declared inside an externally referenced `<img src="*.svg">` — a known platform limitation, not a bug in the SVG. Moved the SVG markup directly into `src/pages/404.astro` instead of loading it via `<img>`. Verified the fix with a real WebKit engine (Playwright), not just Chromium.
+- [x] Now that MurphBot is inlined, dark-mode ink color follows the site's own `--mm-navy`/`--mm-chalk` tokens through the manual light/dark toggle (`html[data-theme='dark']`) instead of the OS-level `prefers-color-scheme` media query used previously — an inlined SVG can see the page's `data-theme` attribute, an `<img>`-referenced one can't.
+
+**Decisions:**
+- `public/assets/brand/murphbot.svg` is no longer wired into the 404 page but stays in place as a standalone brand asset (same role as `murphbot.png` — thumbnails/social), now stale relative to the inlined version if edited further
+- CI is a pre-merge safety net only, not a deploy pipeline — keep Cloudflare's existing git-integration deploy as-is unless something forces a change
+- Custom-404 changes must still be smoke-tested with `wrangler dev` (Workers static-asset routing) *and* a real WebKit engine (iOS animation behavior) — Astro's own dev/preview server and Chromium don't reproduce either issue
+
+**Files:**
+- `.github/workflows/ci.yml` — new
+- `scripts/qa-launch.mjs` — bug fixes
+- `src/pages/404.astro` — MurphBot inlined, arm/hand grouping fix, theme-token colors
+- `public/assets/brand/murphbot.svg` — arm/hand grouping fix (kept in sync while still linked; now standalone)
+
 ### 2026-07-17 — MurphBot 404 page
 
 **Shipped:**
