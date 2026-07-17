@@ -59,14 +59,14 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
             {topics.slice(0, 5).map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>)}
           </div>
         </div>
-        <div class="mx-auto w-full lg:justify-self-center">
-          <div class="mm-polaroid rotate-2 lg:translate-x-16 xl:translate-x-20">
+        <div class="mx-auto flex w-full flex-col items-center lg:translate-x-16 xl:translate-x-20">
+          <div class="mm-polaroid rotate-2">
             <div class="mm-polaroid-photo">
               <img src="/assets/brand/avatar-mike-orange-1200.png" alt="Mike Murphy" />
             </div>
             <p>Mike</p>
           </div>
-          <p class="mm-badge-ai-handyman mx-auto mt-8">AI Handyman</p>
+          <p class="mm-badge-ai-handyman mt-8">AI Handyman</p>
         </div>
       </div>
     </section>

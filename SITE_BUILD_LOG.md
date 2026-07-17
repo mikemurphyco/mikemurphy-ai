@@ -147,6 +147,7 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 - [x] Transparent chrome, muted color, orange hover — utility affordance, not a second button
 - [x] Home polaroid stays chalk paper in both themes (dark hard shadow, not chalk offset)
 - [x] Home “AI Handyman” badge swapped from opaque PNG (`ai-handyman-badge.png` had a baked cream plate) to CSS `.mm-badge-ai-handyman`
+- [x] Badge placement: translate shift moved to a shared column wrapper so polaroid + badge stay stacked (polaroid-only translate was covering the badge)
 
 **Decisions:**
 - Theme control stays next to Subscribe in the header, but must read as chrome, not a CTA
