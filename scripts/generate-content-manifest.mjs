@@ -1,4 +1,4 @@
-import { readdirSync, writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
 const contentRoot = 'src/content';
@@ -17,11 +17,18 @@ function walk(dir, files = []) {
   return files;
 }
 
+function frontmatterSlug(source) {
+  const match = source.match(/^slug:\s*"?([^"\n]+)"?\s*$/m);
+  return match?.[1]?.trim();
+}
+
 const manifest = {};
 
 for (const file of walk(contentRoot)) {
   const filename = file.split('/').pop();
-  const slug = filename.replace(/\.(md|mdx)$/, '');
+  const filenameSlug = filename.replace(/\.(md|mdx)$/, '');
+  const source = readFileSync(file, 'utf8');
+  const slug = frontmatterSlug(source) || filenameSlug;
   manifest[slug] = relative('.', file);
 }
 
