@@ -11,7 +11,7 @@ export async function onRequest(context) {
   const GITHUB_USER = 'mikemurphyco';
   const GITHUB_REPO = 'mikemurphy-ai';
   const GITHUB_BRANCH = 'main';
-  const CONTENT_BASE_PATH = 'src/content';
+  const CONTENT_BASE_PATH = 'src/content/';
 
   const candidates = [
     `${pagePath}.mdx`,
