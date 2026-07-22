@@ -10,10 +10,12 @@ import {
   sortArticlesByDate,
   sortIssuesByDate,
 } from '../lib/articles';
+import { fieldNoteUrl, isPublishedNote, sortNotesByDate } from '../lib/field-notes';
 
 export async function GET() {
   const articles = sortArticlesByDate(await getCollection('articles', isDiscoverableArticle));
   const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIssue));
+  const notes = sortNotesByDate(await getCollection('fieldNotes', isPublishedNote));
   const topics = getTopicMap(articles);
   const urls = [
     { loc: absoluteUrl('/'), priority: '1.0' },
@@ -21,6 +23,7 @@ export async function GET() {
     { loc: absoluteUrl('/ai-unplugged/'), priority: '0.9' },
     { loc: absoluteUrl('/ai-unplugged/issues/'), priority: '0.8' },
     { loc: absoluteUrl('/resources/'), priority: '0.7' },
+    { loc: absoluteUrl('/field-notes/'), priority: '0.7' },
     { loc: absoluteUrl('/articles/'), priority: '0.9' },
     { loc: absoluteUrl('/podcast/'), priority: '0.6' },
     { loc: absoluteUrl('/about/'), priority: '0.6' },
@@ -40,6 +43,13 @@ export async function GET() {
       loc: absoluteUrl(issueUrl(issue)),
       lastmod: new Date(issue.data.updatedAt ?? issue.data.publishedAt).toISOString(),
       priority: issue.data.isFlagshipIssue ? '0.8' : '0.7',
+    })),
+    ...notes.map((note) => ({
+      loc: absoluteUrl(fieldNoteUrl(note)),
+      ...(note.data.datePublished
+        ? { lastmod: new Date(note.data.datePublished).toISOString() }
+        : {}),
+      priority: '0.6',
     })),
   ];
 
