@@ -160,6 +160,40 @@ AI-agent access to structured data. That retired the entire Tailscale-in-CI
 apparatus: `deploy.yml` deleted, deploys stay on Cloudflare Workers Builds as
 before, secrets live in Cloudflare build settings. Net simplification.
 
+**LAUNCHED (same day):** Merged to `main` (d552bf4) and verified live in
+production — `/field-notes/`, per-note pages, `/resources/`, homepage "Fresh
+tips before you go", `/api/field-notes.json`, `/api/resources.json`, per-note
+`.md`, and `llms.txt` all 200 on mikemurphy.ai. First live build pulled **5
+Field Notes + 38 Resources** (with 38 self-hosted logos) from cms.imurph.com.
+
+**Full publish loop verified:** Directus Flow "Publish → Rebuild Site"
+(Event Hook, non-blocking, items.create/update on Field_Notes + Resources) →
+POST to Cloudflare deploy hook → rebuild fetches live Directus → deploy.
+Hook-triggered builds show "Empty commit message" in Cloudflare build history
+(normal — no git commit involved; named commit = code change, empty = Directus
+publish). Read-only `astro-bot` token in Cloudflare build vars; old admin
+inspection token revoked.
+
+**Same-day refinements after first live preview:**
+- Homepage: added "Fresh tips before you go" — the 2 newest Field Notes as
+  cards above the footer (Mike's original concept; auto-rotates on publish);
+  removed the placeholder "Recent from the archive" section + sidebar.
+- Resources categories fully Directus-driven: section blurbs from
+  `resource_categories.section_description`, section order from category
+  `sort` (drag-and-drop), removed hardcoded "Future shelf" boxes. Page shows
+  ALL published resources (shelf filtering reserved for future Books/Studio/
+  Favorites pages).
+- Decision: Resources stays list-only (no per-resource pages) — the row +
+  `recommendation_reason` + Visit link covers it; detail pages become worth
+  it later when they can aggregate related tutorials/notes per tool.
+
+**Deferred / known follow-ups:**
+- Flow fires on every save incl. drafts → add a `status = published`
+  condition in the Flow if build noise bugs us.
+- Swap white logos in Directus for dark/color variants (they vanish on light
+  badges); next publish picks them up automatically.
+- `SETUP-DIRECTUS.md` converted from checklist to how-it-works reference.
+
 **Shipped (code complete, local build green on snapshot fallback):**
 - [x] Content Layer loaders + snapshot fallback: `src/lib/directus.ts`,
   `src/lib/directus-loader.ts` (fetch published items, `::warning::` + snapshot on

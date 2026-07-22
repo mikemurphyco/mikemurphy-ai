@@ -1,18 +1,24 @@
-# Directus → Astro Setup Guide
+# Directus → Astro: How It Works (setup completed 2026-07-22)
 
-Connects Directus (`https://cms.imurph.com`) to the Astro site so publishing a
-Field Note or Resource updates mikemurphy.ai automatically.
+Directus (`https://cms.imurph.com`) is the source of truth for Field Notes and
+Resources on mikemurphy.ai. **Setup is complete and live** — this doc is now the
+reference for how the system works and how to redo any piece of it.
 
-**How it works:** Directus is the source of truth. At build time, Astro fetches
-the published Field Notes and Resources from `cms.imurph.com` using a read-only
-token. Cloudflare builds the site as it always has (push to `main` → build →
-deploy). A Directus Flow pings a Cloudflare "deploy hook" whenever you publish,
-so publishing in Directus is the only step you take.
+**The publishing loop:** At build time, Astro fetches published Field Notes and
+Resources from `cms.imurph.com` using a read-only token (stored as Cloudflare
+build variables). A Directus Flow ("Publish → Rebuild Site") POSTs to a
+Cloudflare deploy hook on every save of those collections, triggering a rebuild.
+Publishing in Directus is the only step you take; the site updates in ~1-2 min.
+
+**Build-history tip:** hook-triggered builds show "Empty commit message" in
+Cloudflare — that's normal. Named commit = code change; empty = Directus publish.
 
 If Directus is ever unreachable during a build, the site builds from the last
 saved snapshot (`src/content/_snapshots/`) with a warning — it never breaks.
+Snapshots refresh on every successful live build; commit them occasionally after
+local live builds so the fallback stays current.
 
-Three steps. Do them in order.
+The three setup steps below are ✅ done — kept for reference/redo.
 
 ---
 
