@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-07-17
+updated: 2026-07-22
 status: living-doc
 ---
 
@@ -25,7 +25,7 @@ Living note for the Astro rebuild. Use it for memory, future blog seeds, and “
 | Layer | Choice | Notes |
 |-------|--------|-------|
 | Framework | Astro 6 | Static output |
-| Content | Content Collections + MDX | `articles`, `aiUnplugged` |
+| Content | Content Collections + MDX | `articles`, `aiUnplugged` (local MD); `fieldNotes`, `resources` (Directus) |
 | Styling | Tailwind 4 + `global.css` tokens | Design System v2026.3 (`--mm-*`) |
 | Search | Pagefind 1.5 | Indexed in `postbuild` |
 | Newsletter send | Beehiiv | Archive owned by Astro |
@@ -140,6 +140,55 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-07-22 — Directus-driven Field Notes & Resources (build-time fetch)
+
+**Context:** Field Notes (new) and Resources (was a hardcoded array) now come from
+Directus as the source of truth; Articles stay local Markdown (hybrid model).
+Astro fetches published items at build time with a committed JSON snapshot
+fallback (deploys from snapshot + warning if Directus is unreachable — never
+hard-fails). Publishing in Directus triggers a rebuild via a Cloudflare deploy
+hook. Not yet live — see `SETUP-DIRECTUS.md` for the 3 remaining manual steps
+(read-only token, Cloudflare build vars, publish Flow).
+
+**Architecture pivot (same day):** Originally designed around Tailscale-only
+Directus, requiring a GitHub Actions runner to join the tailnet (`tag:ci` OAuth +
+ACLs + wrangler deploy). Mike then exposed Directus publicly at
+`https://cms.imurph.com` (Cloudflare-fronted, hardened: 2FA, brute-force
+protection, side-door controls) to use it as intended — including future
+AI-agent access to structured data. That retired the entire Tailscale-in-CI
+apparatus: `deploy.yml` deleted, deploys stay on Cloudflare Workers Builds as
+before, secrets live in Cloudflare build settings. Net simplification.
+
+**Shipped (code complete, local build green on snapshot fallback):**
+- [x] Content Layer loaders + snapshot fallback: `src/lib/directus.ts`,
+  `src/lib/directus-loader.ts` (fetch published items, `::warning::` + snapshot on
+  failure, self-host Resource logos, flatten M2M tags). Snapshots in
+  `src/content/_snapshots/` (committed; currently SAMPLE data until first live build).
+- [x] Collections + Zod schemas for `fieldNotes` + `resources` in `content.config.ts`;
+  helpers in `src/lib/field-notes.ts`.
+- [x] Pages: `/field-notes/` (2 featured boxes + clickable list), `/field-notes/<slug>/`,
+  and rewritten `/resources/` (Directus data, grouped by category, affiliate-link
+  resolution, hex badge colors, logo/initials fallback). Footer nav gains Field Notes.
+- [x] Agent/AI-SEO artifacts: `/api/field-notes.json`, `/api/resources.json`, per-note
+  `/field-notes/<slug>.md`, and `llms.txt` extended with both collections.
+- [x] `src/worker.js` guard so `/field-notes/*.md` are served as static assets
+  (not routed through the Articles GitHub-raw `.md` handler).
+- [x] ~~`.github/workflows/deploy.yml`~~ — built for the Tailscale design, then
+  deleted after the public-CMS pivot (Cloudflare Workers Builds handles deploys).
+
+**Schema notes (reconciled against live Directus):** Directus TODO — add `excerpt`
+to Field_Notes (done 2026-07-22), make `slug` required+unique. Resources page shows
+ALL published resources for now; `shelf` filtering reserved for future Books/Studio/
+Favorites pages (`MAIN_SHELF_TITLE` in `src/lib/directus.ts`).
+
+**Files:**
+- `src/lib/directus.ts`, `src/lib/directus-loader.ts`, `src/lib/field-notes.ts`
+- `src/content.config.ts`, `src/content/_snapshots/*.json`
+- `src/pages/field-notes/index.astro`, `src/pages/field-notes/[slug].astro`,
+  `src/pages/field-notes/[slug].md.ts`, `src/pages/resources/index.astro`
+- `src/pages/api/field-notes.json.ts`, `src/pages/api/resources.json.ts`, `src/pages/llms.txt.ts`
+- `src/worker.js`, `src/layouts/Layout.astro`, `.github/workflows/deploy.yml`, `SETUP-DIRECTUS.md`
 
 ### 2026-07-17 — Fix mid-word wrap on `.mm-display` headings
 

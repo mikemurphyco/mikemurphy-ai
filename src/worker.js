@@ -10,6 +10,14 @@ export default {
       return env.ASSETS.fetch(request);
     }
 
+    // Field Notes .md files are emitted as real static assets at build time
+    // (src/pages/field-notes/[slug].md.ts) from Directus data. Let them win —
+    // do NOT route them through the GitHub-raw lookup below, which only knows
+    // about the local `articles` collection.
+    if (url.pathname.startsWith('/field-notes/')) {
+      return env.ASSETS.fetch(request);
+    }
+
     // /tutorials/<slug>.md, /articles/<slug>.md, and /podcast/<slug>.md all
     // resolve to the same `articles` content collection, filed under a
     // src/content/articles/<year>/<slug>.md path that has no fixed relation

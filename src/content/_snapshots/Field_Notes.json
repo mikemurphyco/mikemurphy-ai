@@ -1,0 +1,212 @@
+{
+  "fetchedAt": "2026-07-22T18:58:46.207Z",
+  "items": [
+    {
+      "id": 4,
+      "status": "published",
+      "sort": null,
+      "title": "cd – Change Directory (and Its Variations)",
+      "slug": "cd-change-directory-variations",
+      "note_type": "snippet",
+      "featured": false,
+      "body": "Everyone learns cd to change directories - but its lesser-known variations can save you a ton of back-and-forth typing.",
+      "related_tutorial_url": null,
+      "date_published": "2026-07-21",
+      "date_added": "2026-07-15",
+      "snippets": [
+        {
+          "label": "cd",
+          "detail": "With no argument, jumps straight to your home directory."
+        },
+        {
+          "label": "cd ..",
+          "detail": "Moves up one directory level, to the parent folder."
+        },
+        {
+          "label": "cd ~",
+          "detail": "Jumps straight to your home directory, no matter where you currently are."
+        },
+        {
+          "label": "cd -",
+          "detail": "Jumps back to the previous directory you were just in — a quick way to toggle between two folders."
+        },
+        {
+          "label": "cd /",
+          "detail": "Jumps straight to the filesystem root."
+        }
+      ],
+      "excerpt": "Beyond basic `cd`, shortcuts like `cd -`, `cd ..`, and `cd ~` jump between directories instantly and cut out repetitive typing.",
+      "tags": [
+        {
+          "tags_id": {
+            "name": "Terminal"
+          }
+        },
+        {
+          "tags_id": {
+            "name": "CLI"
+          }
+        }
+      ],
+      "related_resource": null
+    },
+    {
+      "id": 5,
+      "status": "published",
+      "sort": null,
+      "title": "10 Essential Terminal Commands",
+      "slug": "10-essential-terminal-commands",
+      "note_type": "snippet",
+      "featured": false,
+      "body": "The classics everyone should know cold - these ten commands cover most of what you'll do in a terminal on any given day.",
+      "related_tutorial_url": null,
+      "date_published": "2026-07-16",
+      "date_added": "2026-07-15",
+      "snippets": [
+        {
+          "label": "pwd",
+          "detail": "Prints the full path of the directory you're currently in."
+        },
+        {
+          "label": "ls",
+          "detail": "Lists the files and folders in your current directory."
+        },
+        {
+          "label": "cd",
+          "detail": "Changes your current directory to the one you specify."
+        },
+        {
+          "label": "mkdir",
+          "detail": "Creates a new, empty directory with the name you give it."
+        },
+        {
+          "label": "rm",
+          "detail": "Removes (deletes) files. Add -r to remove whole folders — there's no trash bin, so use it carefully."
+        },
+        {
+          "label": "cp",
+          "detail": "Copies a file (or folder, with -r) to a new location, leaving the original in place."
+        },
+        {
+          "label": "mv",
+          "detail": "Moves a file to a new location, or renames it if the destination is in the same folder."
+        },
+        {
+          "label": "cat",
+          "detail": "Prints a file's entire contents straight to the terminal window."
+        },
+        {
+          "label": "grep",
+          "detail": "Searches for a pattern of text inside files and prints the matching lines."
+        },
+        {
+          "label": "sudo",
+          "detail": "Runs the next command with admin (superuser) privileges — use it when a command says 'permission denied.'"
+        }
+      ],
+      "excerpt": "Ten essential terminal commands covering navigation, files, and processes — the core commands you'll use nearly every day.",
+      "tags": [
+        {
+          "tags_id": {
+            "name": "Terminal"
+          }
+        },
+        {
+          "tags_id": {
+            "name": "CLI"
+          }
+        }
+      ],
+      "related_resource": null
+    },
+    {
+      "id": 2,
+      "status": "published",
+      "sort": null,
+      "title": "pwd – Where Am I?",
+      "slug": "pwd-where-am-i",
+      "note_type": "shortcut",
+      "featured": false,
+      "body": "Not sure which folder you're in? `pwd` prints the full path of your current working directory.",
+      "related_tutorial_url": null,
+      "date_published": "2026-07-20",
+      "date_added": "2026-07-15",
+      "snippets": null,
+      "excerpt": "`pwd` prints the full path of your current directory in the terminal — the fastest way to confirm exactly where you are before running a command.",
+      "tags": [
+        {
+          "tags_id": {
+            "name": "Terminal"
+          }
+        }
+      ],
+      "related_resource": null
+    },
+    {
+      "id": 3,
+      "status": "published",
+      "sort": null,
+      "title": "Terminal Cheat Cards",
+      "slug": "terminal-cheat-cards",
+      "note_type": "snippet",
+      "featured": false,
+      "body": "A handful of everyday terminal commands worth keeping at your fingertips  quick reference, not deep dives.",
+      "related_tutorial_url": null,
+      "date_published": "2026-07-17",
+      "date_added": "2026-07-15",
+      "snippets": [
+        {
+          "label": "ls",
+          "detail": "Lists what's inside the current folder."
+        },
+        {
+          "label": "cd ..",
+          "detail": "Moves up one directory level."
+        },
+        {
+          "label": "mkdir",
+          "detail": "Creates a new directory."
+        },
+        {
+          "label": "clear",
+          "detail": "Wipes the terminal screen so you're looking at a clean slate."
+        },
+        {
+          "label": "history",
+          "detail": "Shows a list of commands you've previously run in this session."
+        }
+      ],
+      "excerpt": "A quick-reference set of everyday terminal commands — ls, cd, pwd, and more — for a fast reminder, not a full tutorial.",
+      "tags": [
+        {
+          "tags_id": {
+            "name": "Terminal"
+          }
+        }
+      ],
+      "related_resource": null
+    },
+    {
+      "id": 6,
+      "status": "published",
+      "sort": null,
+      "title": "How to Initiate a Node.js Project",
+      "slug": "how-to-initiate-a-node-js-project",
+      "note_type": "gotcha",
+      "featured": false,
+      "body": "Before running `npm install` in a brand-new project folder, you need to initialize it first. Run `npm init -y` to generate a default `package.json` file - without it, npm has nowhere to record your dependencies.",
+      "related_tutorial_url": null,
+      "date_published": "2026-07-22",
+      "date_added": "2026-07-15",
+      "snippets": [
+        {
+          "label": "npm init -y",
+          "detail": "Creates a package.json with default values, skipping the interactive prompts, so npm has a place to track your project's dependencies."
+        }
+      ],
+      "excerpt": "Run `npm init -y` before `npm install` in a new project folder — it generates the `package.json` file npm needs to track dependencies.",
+      "tags": [],
+      "related_resource": null
+    }
+  ]
+}
