@@ -6,13 +6,9 @@ import TutorialCard from '../components/tutorials/TutorialCard.astro';
 import Layout from '../layouts/Layout.astro';
 import {
   SITE_DESCRIPTION,
-  contentUrl,
   getTopicMap,
   isDiscoverableArticle,
   isPublishedIssue,
-  isStandardArticle,
-  sortArticlesByDate,
-  sortIssuesByDate,
   sortTutorialsByDate,
 } from '../lib/articles';
 import { fieldNoteUrl, isPublishedNote, noteTypeLabel, sortNotesByDate } from '../lib/field-notes';
@@ -23,9 +19,7 @@ const allArticles = await getCollection('articles', isDiscoverableArticle);
 const freshNotes = sortNotesByDate(await getCollection('fieldNotes', isPublishedNote)).slice(0, 2);
 const tutorials = sortTutorialsByDate(allArticles);
 const latestTutorials = tutorials.slice(0, 6);
-const latestArticles = sortArticlesByDate(allArticles.filter(isStandardArticle)).slice(0, 3);
-const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIssue));
-const latestIssue = issues[0];
+const issues = await getCollection('aiUnplugged', isPublishedIssue);
 const topics = getTopicMap(tutorials).slice(0, 8);
 const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 'ai').length;
 ---
@@ -103,38 +97,6 @@ const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 
     <div data-inline-search-hide>
       <SubscribeBand />
     </div>
-
-    <section class="mm-container grid gap-8 py-14 lg:grid-cols-[1fr_20rem]" data-inline-search-hide>
-      <div>
-        <p class="mm-eyebrow">Articles</p>
-        <h2 class="mm-h2 mt-2">Recent from the archive</h2>
-        <div class="mt-6 grid gap-4">
-          {latestArticles.map((article) => (
-            <article class="border-b border-[var(--mm-border)] pb-4">
-              <p class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
-                {article.data.contentEra === 'ai' ? 'AI Era' : 'Archive'}
-              </p>
-              <h3 class="mt-2 text-xl font-bold leading-tight"><a href={contentUrl(article)} class="hover:underline">{article.data.title}</a></h3>
-              {article.data.description && <p class="mt-2 text-sm leading-6 text-[var(--mm-muted)]">{article.data.description}</p>}
-            </article>
-          ))}
-        </div>
-      </div>
-      <aside class="mm-card h-fit p-5">
-        <p class="mm-eyebrow">Topics</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          {topics.map((topic) => <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>)}
-        </div>
-        {latestIssue && (
-          <div class="mt-8 border-t border-[var(--mm-border)] pt-5">
-            <p class="mm-eyebrow">Latest issue</p>
-            <a href={`/ai-unplugged/issues/${latestIssue.data.slug}/`} class="mt-2 block font-mono text-lg font-bold uppercase leading-tight hover:underline">
-              {latestIssue.data.subject}
-            </a>
-          </div>
-        )}
-      </aside>
-    </section>
 
     {freshNotes.length > 0 && (
       <section class="border-t border-[var(--mm-border)]" data-inline-search-hide>
