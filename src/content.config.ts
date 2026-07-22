@@ -181,6 +181,8 @@ const resources = defineCollection({
     featured: z.boolean().default(false),
     logoPath: z.string().nullable().default(null),
     category: z.string().nullable().default(null),
+    categoryDescription: z.string().nullable().default(null),
+    categorySort: z.number().nullable().default(null),
     shelf: z.string().nullable().default(null),
     tags: z.array(z.string()).default([]),
     dateAdded: z.coerce.date().nullable().default(null),

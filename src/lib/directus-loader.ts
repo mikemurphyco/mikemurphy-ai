@@ -162,6 +162,10 @@ export function resourcesLoader(): Loader {
           featured: Boolean(item.featured),
           logoPath,
           category: item.category?.name ?? null,
+          // Directus field is labeled "Section Description" (key: section_description);
+          // accept either key so a future rename doesn't silently drop blurbs.
+          categoryDescription: item.category?.section_description ?? item.category?.description ?? null,
+          categorySort: typeof item.category?.sort === 'number' ? item.category.sort : null,
           shelf: item.shelf?.title ?? null,
           tags: flattenTags(item.tags),
           dateAdded: item.date_added ?? null,

@@ -73,7 +73,9 @@ const FIELD_SETS: Record<DirectusCollectionName, string> = {
   ].join(','),
   Resources: [
     '*',
-    'category.name',
+    // category.* so optional fields (description, sort) come through when they
+    // exist without erroring when they don't.
+    'category.*',
     'shelf.title',
     'tags.tags_id.name',
   ].join(','),
