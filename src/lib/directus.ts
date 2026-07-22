@@ -1,13 +1,14 @@
 /**
  * Directus is the source of truth for Field Notes and Resources (Articles stay
- * local Markdown). Directus is self-hosted on a Tailscale-only VPS, so this fetch
- * only succeeds when the build runs on a machine/CI node joined to the tailnet.
+ * local Markdown). Directus is self-hosted on the VPS and publicly reachable at
+ * https://cms.imurph.com (Cloudflare-fronted, hardened; content reads require a
+ * read-only token). The build fetches it directly at build time.
  *
- * Every fetch writes a JSON snapshot into src/content/_snapshots/. If the tailnet
- * fetch fails (Directus down, not on the tailnet, e.g. a Cloudflare/PR build), we
- * fall back to the last-good committed snapshot and emit a loud warning — the site
- * never breaks and staleness is never silent. The snapshot is a fallback cache,
- * never the source of truth.
+ * Every successful fetch refreshes a JSON snapshot in src/content/_snapshots/.
+ * If the fetch fails (Directus down, missing credentials — e.g. a PR build), we
+ * fall back to the last-good committed snapshot and emit a loud warning — the
+ * site never breaks and staleness is never silent. The snapshot is a fallback
+ * cache, never the source of truth.
  */
 import fs from 'node:fs';
 import path from 'node:path';

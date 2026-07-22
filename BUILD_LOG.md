@@ -141,15 +141,24 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
-### 2026-07-22 — Directus-driven Field Notes & Resources (build-time fetch over Tailscale)
+### 2026-07-22 — Directus-driven Field Notes & Resources (build-time fetch)
 
 **Context:** Field Notes (new) and Resources (was a hardcoded array) now come from
 Directus as the source of truth; Articles stay local Markdown (hybrid model).
-Directus is Tailscale-only, so the build fetches it at build time from a tailnet-
-joined GitHub Actions runner, with a committed JSON snapshot fallback. Publishing
-in Directus triggers the rebuild. Not yet live — see `SETUP-DIRECTUS.md` for the
-remaining manual wiring (Tailscale ACL, GitHub secrets, disconnect Workers Builds,
-Directus publish Flow).
+Astro fetches published items at build time with a committed JSON snapshot
+fallback (deploys from snapshot + warning if Directus is unreachable — never
+hard-fails). Publishing in Directus triggers a rebuild via a Cloudflare deploy
+hook. Not yet live — see `SETUP-DIRECTUS.md` for the 3 remaining manual steps
+(read-only token, Cloudflare build vars, publish Flow).
+
+**Architecture pivot (same day):** Originally designed around Tailscale-only
+Directus, requiring a GitHub Actions runner to join the tailnet (`tag:ci` OAuth +
+ACLs + wrangler deploy). Mike then exposed Directus publicly at
+`https://cms.imurph.com` (Cloudflare-fronted, hardened: 2FA, brute-force
+protection, side-door controls) to use it as intended — including future
+AI-agent access to structured data. That retired the entire Tailscale-in-CI
+apparatus: `deploy.yml` deleted, deploys stay on Cloudflare Workers Builds as
+before, secrets live in Cloudflare build settings. Net simplification.
 
 **Shipped (code complete, local build green on snapshot fallback):**
 - [x] Content Layer loaders + snapshot fallback: `src/lib/directus.ts`,
@@ -165,8 +174,8 @@ Directus publish Flow).
   `/field-notes/<slug>.md`, and `llms.txt` extended with both collections.
 - [x] `src/worker.js` guard so `/field-notes/*.md` are served as static assets
   (not routed through the Articles GitHub-raw `.md` handler).
-- [x] `.github/workflows/deploy.yml` — Tailscale join → build → commit snapshot →
-  `wrangler deploy`.
+- [x] ~~`.github/workflows/deploy.yml`~~ — built for the Tailscale design, then
+  deleted after the public-CMS pivot (Cloudflare Workers Builds handles deploys).
 
 **Schema notes (reconciled against live Directus):** Directus TODO — add `excerpt`
 to Field_Notes (done 2026-07-22), make `slug` required+unique. Resources page shows
