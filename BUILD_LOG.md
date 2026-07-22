@@ -178,6 +178,15 @@ only served the `articles` collection; build-time now covers strictly more
 `content-manifest.json`. Rollback = revert the commit (worker + manifest come
 back intact).
 
+**Addendum (same day) — trailing-slash form restored:** The retired Worker
+also accepted `<page>/` + `.md` (i.e. `/tutorials/foo/.md`), and a published
+tutorial says both forms work — but the emitted files only covered
+`/tutorials/foo.md`. Astro can't emit a dotfile route (`foo/` param collides
+with `foo`), so `scripts/copy-md-twins.mjs` now runs in `postbuild`: for every
+`<name>.md` with a sibling page directory it copies the file to `<name>/.md`
+(668 twins, gitignored `dist/` only). Both URL forms now 200 as `text/plain`;
+the `/*.md` `_headers` splat already matched the `/.md` paths.
+
 ### 2026-07-22 — Directus-driven Field Notes & Resources (build-time fetch)
 
 **Context:** Field Notes (new) and Resources (was a hardcoded array) now come from

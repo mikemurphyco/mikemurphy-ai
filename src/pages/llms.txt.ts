@@ -49,7 +49,7 @@ export async function GET() {
     '## Machine-readable',
     '',
     'Every tutorial, article, podcast episode, AI Unplugged issue, and field note is also',
-    'available as raw Markdown: drop the trailing slash and append `.md` to its URL',
+    'available as raw Markdown: append `.md` to its URL, with or without the trailing slash',
     `(e.g. ${SITE_URL}/tutorials/<slug>.md). These are static files emitted at build time.`,
     '',
     `- [Resources as Markdown](${absoluteUrl('/resources.md')}): full resource list, one file`,
