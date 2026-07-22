@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'zod';
+import { fieldNotesLoader, resourcesLoader } from './lib/directus-loader';
 
 const articles = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/articles' }),
@@ -126,4 +127,65 @@ const aiUnplugged = defineCollection({
   }),
 });
 
-export const collections = { articles, aiUnplugged };
+// Directus-backed collections (Directus is the source of truth; see
+// src/lib/directus.ts). The loaders normalize Directus field shapes into the
+// flat data these schemas validate.
+const fieldNotes = defineCollection({
+  loader: fieldNotesLoader(),
+  schema: z.object({
+    title: z.string(),
+    slug: z.string(),
+    status: z.enum(['draft', 'published', 'archived']).default('draft'),
+    sort: z.number().nullable().default(null),
+    noteType: z
+      .enum(['tip', 'shortcut', 'did_you_know', 'snippet', 'definition', 'gotcha'])
+      .nullable()
+      .default(null),
+    featured: z.boolean().default(false),
+    excerpt: z.string().default(''),
+    snippets: z
+      .array(z.object({ label: z.string().default(''), detail: z.string().default('') }))
+      .default([]),
+    relatedTutorialUrl: z.string().url().nullable().default(null),
+    relatedResource: z
+      .object({ slug: z.string().nullable(), name: z.string().nullable() })
+      .nullable()
+      .default(null),
+    datePublished: z.coerce.date().nullable().default(null),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+const resources = defineCollection({
+  loader: resourcesLoader(),
+  schema: z.object({
+    name: z.string(),
+    slug: z.string(),
+    status: z.enum(['draft', 'published', 'archived']).default('draft'),
+    sort: z.number().nullable().default(null),
+    initials: z.string().nullable().default(null),
+    badgeColor: z.string().nullable().default(null),
+    description: z.string().nullable().default(null),
+    recommendationReason: z.string().nullable().default(null),
+    pricingModel: z
+      .enum(['free', 'paid', 'free_paid', 'freemium', 'open_source'])
+      .nullable()
+      .default(null),
+    usageStatus: z
+      .enum(['used_daily', 'used_often', 'used_here', 'affiliate', 'planned', 'previously_used', 'testing'])
+      .nullable()
+      .default(null),
+    primaryUrl: z.string().url().nullable().default(null),
+    isAffiliate: z.boolean().default(false),
+    affiliateUrl: z.string().url().nullable().default(null),
+    featured: z.boolean().default(false),
+    logoPath: z.string().nullable().default(null),
+    category: z.string().nullable().default(null),
+    shelf: z.string().nullable().default(null),
+    tags: z.array(z.string()).default([]),
+    dateAdded: z.coerce.date().nullable().default(null),
+    dateLastReviewed: z.coerce.date().nullable().default(null),
+  }),
+});
+
+export const collections = { articles, aiUnplugged, fieldNotes, resources };

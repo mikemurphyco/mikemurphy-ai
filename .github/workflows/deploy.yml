@@ -1,0 +1,80 @@
+name: Build & Deploy
+
+# Deploys mikemurphy.ai to Cloudflare (Worker + static assets via `wrangler deploy`).
+# The build fetches the Directus-backed collections (Field Notes, Resources) over
+# Tailscale, so this runner joins the tailnet as an ephemeral tag:ci node scoped
+# by ACL to the Directus host only. If Directus is unreachable, the build falls
+# back to the committed snapshot and emits a ::warning:: (never hard-fails).
+#
+# Triggers: push to main (code + Articles) and a Directus publish webhook
+# (repository_dispatch: directus-publish). Manual runs available via the Actions UI.
+
+on:
+  push:
+    branches: [main]
+  repository_dispatch:
+    types: [directus-publish]
+  workflow_dispatch: {}
+
+# Never run two deploys at once; cancel an in-flight one if a newer trigger lands.
+concurrency:
+  group: deploy-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write # to commit refreshed snapshots + self-hosted logos back to main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - run: npm ci
+
+      # Join the tailnet as an ephemeral node so the build can reach Directus.
+      - name: Connect to Tailscale
+        uses: tailscale/github-action@v3
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci
+
+      # Build. The Directus loader fetches published items over the tailnet and
+      # refreshes src/content/_snapshots/*.json + public/assets/resources/*.
+      - name: Build
+        env:
+          DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
+          DIRECTUS_TOKEN: ${{ secrets.DIRECTUS_TOKEN }}
+        run: npm run build
+
+      # Commit refreshed snapshots/logos so PR/offline builds have a last-good
+      # fallback and content changes get git history + rollback.
+      - name: Commit content snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/content/_snapshots public/assets/resources
+          if git diff --cached --quiet; then
+            echo "No snapshot changes."
+          else
+            git commit -m "chore(content): refresh Directus snapshot [skip ci]"
+            git push
+          fi
+
+      # Tailnet no longer needed; drop before deploy.
+      - name: Disconnect Tailscale
+        if: always()
+        run: sudo tailscale down || true
+
+      - name: Deploy to Cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy

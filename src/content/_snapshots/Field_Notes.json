@@ -1,0 +1,59 @@
+{
+  "fetchedAt": "2026-07-22T00:00:00.000Z",
+  "items": [
+    {
+      "id": 1,
+      "status": "published",
+      "sort": 1,
+      "title": "Jump to the start of a line in the terminal",
+      "slug": "terminal-jump-to-line-start",
+      "note_type": "shortcut",
+      "featured": true,
+      "excerpt": "Ctrl+A jumps your cursor to the beginning of the line — far faster than holding the left arrow.",
+      "body": "Hitting the left arrow to get back to the start of a long command is a waste of keystrokes.\n\nInstead:\n\n- **Ctrl+A** — jump to the **start** of the line\n- **Ctrl+E** — jump to the **end** of the line\n\nThese are readline shortcuts, so they work in bash, zsh, and most REPLs.",
+      "snippets": [
+        { "label": "Ctrl+A", "detail": "Move cursor to start of line" },
+        { "label": "Ctrl+E", "detail": "Move cursor to end of line" }
+      ],
+      "related_tutorial_url": null,
+      "related_resource": null,
+      "date_published": "2026-07-20",
+      "date_added": "2026-07-18",
+      "tags": [{ "tags_id": { "name": "Terminal" } }, { "tags_id": { "name": "Productivity" } }]
+    },
+    {
+      "id": 2,
+      "status": "published",
+      "sort": 2,
+      "title": "What “idempotent” actually means",
+      "slug": "idempotent-definition",
+      "note_type": "definition",
+      "featured": true,
+      "excerpt": "An operation is idempotent if running it many times has the same effect as running it once.",
+      "body": "You'll see **idempotent** all over infra and automation docs.\n\nIt just means: running the thing repeatedly lands you in the same state as running it once. `mkdir -p foo` is idempotent — run it ten times, you still just have one `foo`. A plain `mkdir foo` is **not**: the second run errors.\n\nThis is why good automation aims to be idempotent — you can re-run it safely.",
+      "snippets": [],
+      "related_tutorial_url": null,
+      "related_resource": null,
+      "date_published": "2026-07-19",
+      "date_added": "2026-07-17",
+      "tags": [{ "tags_id": { "name": "Concepts" } }, { "tags_id": { "name": "Automation" } }]
+    },
+    {
+      "id": 3,
+      "status": "published",
+      "sort": 3,
+      "title": "Docker won't free disk space until you prune",
+      "slug": "docker-prune-disk-space",
+      "note_type": "gotcha",
+      "featured": false,
+      "excerpt": "Stopped containers, old images, and dangling volumes keep eating disk until you explicitly prune them.",
+      "body": "If your VPS is mysteriously running out of disk, Docker is a prime suspect.\n\nStopped containers and old image layers stick around. Reclaim space with:\n\n```bash\ndocker system prune -a --volumes\n```\n\nBe careful: `--volumes` also removes unused volumes, so make sure nothing you need is only living in a dangling volume.",
+      "snippets": [],
+      "related_tutorial_url": null,
+      "related_resource": null,
+      "date_published": "2026-07-15",
+      "date_added": "2026-07-14",
+      "tags": [{ "tags_id": { "name": "Docker" } }, { "tags_id": { "name": "VPS" } }]
+    }
+  ]
+}
