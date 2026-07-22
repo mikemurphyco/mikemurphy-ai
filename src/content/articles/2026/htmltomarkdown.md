@@ -10,7 +10,7 @@ canonicalUrl: https://mikemurphy.ai/tutorials/htmltomarkdown/
 contentEra: ai
 visibility: public
 author: Mike Murphy
-featuredImage: assets/media/2026/07/html_markdown_cloudflare_workers.jpg
+featuredImage: /assets/media/2026/07/html_markdown_cloudflare_workers.jpg
 featuredImageSource: ""
 categories:
   - Tutorials
