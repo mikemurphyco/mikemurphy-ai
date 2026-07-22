@@ -4,7 +4,7 @@ import { isPublishedNote, noteTypeLabel } from '../../lib/field-notes';
 
 // Static Markdown version of each Field Note at /field-notes/<slug>.md, emitted at
 // build time from the Directus body (not converted from rendered HTML at runtime).
-// The site worker lets these fall through to static assets; see src/worker.js.
+// Served directly as a static asset — the deployment has no Worker script.
 export async function getStaticPaths() {
   const notes = await getCollection('fieldNotes', isPublishedNote);
   return notes.map((note) => ({ params: { slug: note.data.slug }, props: { note } }));

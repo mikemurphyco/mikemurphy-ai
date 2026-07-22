@@ -93,6 +93,8 @@ Not an AI-SEO cheat code. These make the site followable and easy for tools/agen
 | AI Unplugged RSS | `/ai-unplugged/rss.xml` | Open-web follow path next to Beehiiv |
 | Agent index | `/ai-unplugged/agent.json` | Issues with summary / claims / entities |
 | Per-issue JSON | `/ai-unplugged/issues/{slug}.json` | One issue, structured |
+| Markdown mirrors | `{any content URL minus trailing slash}.md` | Raw Markdown of every tutorial / article / podcast episode / issue / field note — static files emitted at build time |
+| Resources Markdown | `/resources.md` | Full resource list as one Markdown file |
 | llms.txt | `/llms.txt` | Short hub map for machines |
 | Sitemap | `/sitemap.xml` | Standard discovery |
 | robots.txt | `/robots.txt` | Allow + sitemap |
@@ -140,6 +142,41 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-07-22 — Markdown emission migration: runtime Worker → build-time files
+
+**Context:** `.md` URLs (agent-readable Markdown mirrors of content pages) were
+served by a runtime Cloudflare Worker (`src/worker.js`) that intercepted every
+`.md` request, looked the slug up in a generated manifest
+(`scripts/generate-content-manifest.mjs`, `prebuild` step), fetched the raw
+file from GitHub raw, and stripped frontmatter/MDX on the fly. Per the
+markdown-emission-migration plan, replaced with **real `.md` files emitted at
+build time** — straight from content-collection source, no HTML round trip, no
+Worker invocation, free edge-cached static assets.
+
+**Added** (all modeled on the existing `field-notes/[slug].md.ts`):
+- `src/pages/tutorials/[slug].md.ts` (397 files), `articles/[slug].md.ts` (36),
+  `podcast/[slug].md.ts` (162) — same `getStaticPaths` filters as their
+  `.astro` siblings, so `.md` coverage matches HTML routes 1:1
+- `src/pages/ai-unplugged/issues/[slug].md.ts` (67) — links its companion
+  `.json` agent doc in frontmatter
+- `src/pages/resources.md.ts` — single grouped index (resources have no detail pages)
+- `src/lib/markdown-endpoint.ts` — shared frontmatter builder (title,
+  description, date, author, canonical, tags) + response helper
+- `public/_headers` — `/*.md → Content-Type: text/plain` so browsers render
+  inline instead of downloading (`text/markdown` triggers downloads)
+- `llms.txt` now documents the "append `.md`" convention + links `/resources.md`
+
+**Removed (Worker fully retired):** `src/worker.js`, the manifest script +
+`prebuild` step, and `main` from `wrangler.toml` — the deployment is now pure
+static assets, zero Worker invocations. No coverage regression: the old Worker
+only served the `articles` collection; build-time now covers strictly more
+(662 emitted `.md` files + resources index). URL contract unchanged.
+
+**Verified locally:** `wrangler dev` serves all `.md` routes 200 as
+`text/plain`, HTML routes unaffected, `dist/` contains no
+`content-manifest.json`. Rollback = revert the commit (worker + manifest come
+back intact).
 
 ### 2026-07-22 — Directus-driven Field Notes & Resources (build-time fetch)
 

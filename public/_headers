@@ -1,0 +1,6 @@
+# Serve emitted .md files as text/plain so browsers render them inline
+# instead of downloading (text/markdown triggers a download in most browsers).
+# Agents don't care either way; humans clicking a .md link do.
+# The * splat matches across path segments, so this covers every depth.
+/*.md
+  Content-Type: text/plain; charset=utf-8

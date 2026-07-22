@@ -1,8 +1,9 @@
+# Pure static-assets deployment — no Worker script. The runtime HTML→Markdown
+# converter (src/worker.js) was retired in favor of real .md files emitted at
+# build time by the src/pages/**/[slug].md.ts endpoints. See BUILD_LOG.md.
 name = "mikemurphy-ai"
-main = "src/worker.js"
 compatibility_date = "2024-01-01"
 
 [assets]
 directory = "./dist"
-binding = "ASSETS"
 not_found_handling = "404-page"
