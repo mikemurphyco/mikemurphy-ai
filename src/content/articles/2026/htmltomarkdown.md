@@ -2,7 +2,7 @@
 title: How To Turn Astro HTML Web Pages Into Markdown Using Cloudflare Workers
 description: Serve any page on your Astro site as clean markdown just by adding .md to the URL, using one free Cloudflare Pages Function that pulls straight from GitHub.
 pubDate: 2026-07-21
-draft: true
+draft: false
 type: tutorial
 slug: htmltomarkdown
 permalink: /htmltomarkdown/
