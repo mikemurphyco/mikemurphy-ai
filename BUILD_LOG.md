@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-07-22
+updated: 2026-07-23
 status: living-doc
 ---
 
@@ -142,6 +142,36 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-07-23 — Legacy-domain redirect validation + controlled 404 fallback
+
+**Context:** Completed the post-migration audit for `mikemurphy.co` before
+retiring its SiteGround hosting. The old domain is being kept registered as a
+legacy redirect domain. Detailed operational notes, individual decisions, and
+remaining shutdown steps live in [POST_LAUNCH.md](./POST_LAUNCH.md).
+
+**Completed:**
+- Validated all **1,103 logical routes** in the main Cloudflare migration
+  manifest: 1,103 passed, 0 failed.
+- Reviewed and fixed all **16 Shlinks** tagged `Needs Update`, including the
+  Apple Podcasts and Domestika destinations.
+- Confirmed targeted Cloudflare Bulk Redirects remain responsible for known
+  migrated URLs; no broad redirect to the homepage was added.
+- Deployed a separate Cloudflare Worker named `mikemurphy-co-404` on
+  `mikemurphy.co/*` and `www.mikemurphy.co/*`. Matching Bulk Redirects execute
+  first; only unmatched URLs reach the Worker and receive a true `404 Not
+  Found` response with `X-Robots-Tag: noindex`.
+- Live-tested apex, `www`, HTTP, and HTTPS: known URLs redirect once to their
+  intended `mikemurphy.ai` pages and return `200`; random unknown URLs return
+  `404`.
+
+**Important distinction:** This is a small, independent Worker for the retired
+`.co` domain. It is unrelated to the Astro Markdown runtime Worker removed on
+2026-07-22; `mikemurphy.ai` remains a pure static-assets deployment.
+
+**Next:** Keep SiteGround active for observation as long as desired, download
+a final files-and-database backup, cancel hosting only when ready, and keep the
+`mikemurphy.co` registration active and renewing.
 
 ### 2026-07-22 — Markdown emission migration: runtime Worker → build-time files
 
