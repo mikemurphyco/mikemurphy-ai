@@ -561,3 +561,18 @@ html[data-theme='dark'] .mm-prose pre {
   font-size: 1em;
   padding: 0;
 }
+
+/* Wide tables scroll within the column instead of stretching the page
+   (same reason pre has overflow-x: auto — keeps mobile at viewport width). */
+.mm-prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Unbreakable tokens in body text (long URLs, expressions, file paths) wrap
+   instead of painting past the viewport and forcing mobile Safari to zoom out. */
+.mm-prose p,
+.mm-prose li {
+  overflow-wrap: anywhere;
+}
