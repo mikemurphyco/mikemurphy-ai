@@ -123,9 +123,7 @@ The course for content creators who want to confidently create animated content 
 - Transparency & GIFs ([YouTube](https://youtu.be/KgBvEWH0WXQ))
 - Review & Practice  ([YouTube](https://youtu.be/Wk93-Yy_b04))
 
-## Frequently Asked Questions
-
-***This course is perfect for:***
+## Who is this course for?
 
 - **Podcasters & Audio Creators** who want to promote their episodes by creating cool audiograms and shareable content that stands out on social media
 
@@ -137,69 +135,5 @@ The course for content creators who want to confidently create animated content 
 
 - **Social Media Creators** looking to make their content stand out with eye-catching animations and effects
 
-Leave a comment on [YouTube](https://youtube.com/mikemurphyco) or head to my [Contact Page](https://www.mikemurphy.co/contact/) and send me an email.
 
-Of course it helps, but no prior After Effects experience is required!
 
-This course starts from the ground up and guides you through After Effects step-by-step. From opening the software for the first time to creating professional animations, you'll learn everything essential to bring your content ideas to life.
-
-Most After Effects courses overwhelm you with features that you'll rarely use and often just leave you more confused than when you started. The ***After Effects User Guide*** is laser-focused on teaching you what matters most:
-
-- Focuses solely on the essential tools and workflows you need each time you open After Effects
-- Breaks down complex concepts into simple, clear steps
-- Addresses the common frustrations that stop most beginners or dabblers from using After Effects
-- Cuts through the complexity to get you creating faster
-
-### The course is designed to be as clear, concise and to-the point as possible – fluff-free! I pride myself as being a ruthless editor and do my best to only include what is absolutely essential and cut the rest. As Ernest Hemingway once said, *“You know you’re writing (teaching) well when you’re throwing good stuff into the wastebasket.”*
-
-**Length of Course:**
-
-**Unit 1:** 43 minutes **Unit 2:** 1 hour + 10 minutes **Unit 3:** 1 hour + 49 minutes **Unit 4:** 1 hour + 32 minutes **Unit 5:** 1 hour + 3 minutes
-
-**Total Duration: **6 hours + 20 minutes
-
-### Absolutely! By the end of this course, you will have the essential skills to start creating:
-
-- Professional course graphics and animations using Shape Layers, Masks & Track Mattes
-
-- Eye-catching social media content with effects and presets
-
-- Animated text and graphics for your videos
-
-- Engaging audiograms for your podcast episodes
-
-### Yes! The course is fully mobile-responsive and accessible on all devices, so you can learn on your desktop, laptop, tablet, or even your phone.
-
-### Absolutely! By the end of this course, you will have the essential skills to start creating:
-
-- Professional course graphics and animations using Shape Layers, Masks & Track Mattes
-
-- Eye-catching social media content with effects and presets
-
-- Animated text and graphics for your videos
-
-- Engaging audiograms for your podcast episodes
-
-## Included With Every Class
-
-Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed finibus nisi, sed dictum eros.Quisque aliquet velit sit amet sem interdum faucibus. In feugiat aliquet mollis etiam tincidunt ligula.Luctus lectus non quisque turpis bibendum posuere. Morbi tortor nibh, fringilla sed pretium sit amet. In non pulvinar purus. Curabitur nisi odio, blandit et elit at, suscipit pharetra efficitur elit. Nisl massa, ultrices vitae ornare sit amet, ultricies eget orci. Sed vitae nulla et justo pellentesque congue nec eu risus.Ac feugiat ante. Donec ultricies lobortis eros, nec auctor nisl semper ultricies. Aliquam sodales nulla dolor.Quis blandit erat. Donec laoreet libero non metus volutpat consequat in vel metus. Sed non augue id felis pellentesque.Semper leo et sapien lobortis facilisis aliquam feugiat ut diam non tempus et malesuada.
-
-#### Get In Touch or Create an Account
-
-## Ready to Get Started?
-
-Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-###### [Team](#)          [Case Studies](#)          [Publications](#)
-
-facebooktwitterinstagram
-
-##### 7 Day Premium Account Free Trial
-
-## All Access Pass
-
-## All Access Pass
-
-## All Access Pass
-
-Vivamus suscipit tortor eget felis porttitor volutpat. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta
