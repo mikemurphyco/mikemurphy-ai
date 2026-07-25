@@ -168,14 +168,16 @@ const contentActive = contentItems.some((item) => isActive(item.href));
     z-index: 30;
   }
 
+  /* Shares .mm-container's measure so the lockup lines up with the page's
+     H1 and the CTA lines up with the content's right edge. The canon quotes
+     1160px + 32px padding, but the site's container is the real constraint. */
   .mm-header__inner {
     align-items: center;
     display: flex;
     gap: var(--space-12);
     height: 84px;
     margin-inline: auto;
-    max-width: 1160px;
-    padding-inline: var(--space-8);
+    width: min(100% - 2rem, 72rem);
   }
 
   /* ── Brand lockup ─────────────────────────────────────────── */
@@ -563,11 +565,13 @@ const contentActive = contentItems.some((item) => isActive(item.href));
   }
 
   /* ── Breakpoint ───────────────────────────────────────────── */
-  @media (max-width: 819px) {
+  /* Hands over to the sheet at 1023px, not the 819px the handoff specified:
+     lockup + nav + utility need ~881px, so a lower breakpoint left the
+     desktop header overflowing and scrolling the page horizontally. */
+  @media (max-width: 1023px) {
     .mm-header__inner {
       gap: var(--space-4);
       height: 64px;
-      padding-inline: 20px;
     }
 
     .mm-lockup__mark {
@@ -633,7 +637,7 @@ const contentActive = contentItems.some((item) => isActive(item.href));
 
   trigger?.addEventListener('click', (event) => {
     event.stopPropagation();
-    setMenuOpen(menu?.hidden ?? false);
+    setMenuOpen(menu ? menu.hidden === true : false);
   });
 
   // Click anywhere outside closes.
@@ -712,7 +716,7 @@ const contentActive = contentItems.some((item) => isActive(item.href));
   });
 
   // Leaving mobile width with the sheet open would strand the scroll lock.
-  window.matchMedia('(min-width: 820px)').addEventListener('change', (event) => {
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', (event) => {
     if (event.matches && sheet && !sheet.hidden) setSheetOpen(false);
   });
 </script>
