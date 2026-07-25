@@ -382,13 +382,18 @@ const contentActive = contentItems.some((item) => isActive(item.href));
   }
 
   /* ── Utility cluster ──────────────────────────────────────── */
+  /* The divider needs equal air on both sides. This cluster is a sibling of
+     .mm-nav (it has to be — it holds the hamburger, which stays visible when
+     .mm-nav is hidden on mobile), so the header's 48px gap governs its left
+     edge instead of the nav's 28px. Cancelling that gap and padding by 28px
+     centres the hairline between ABOUT and the search button. */
   .mm-utility {
     align-items: center;
     border-left: 1px solid var(--color-border-default);
     display: flex;
     flex: none;
     gap: var(--space-3);
-    margin-left: 28px;
+    margin-left: calc(28px - var(--space-12));
     padding-left: 28px;
   }
 
