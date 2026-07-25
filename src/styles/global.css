@@ -44,10 +44,14 @@
   --mm-orange-deep: #e8501c;
   --mm-yellow: #f5c842;
   --mm-teal: #1ecebe;
+  /* Navy lifted one step — dark-mode elevated surfaces (menus, popovers).
+     Light mode has no separate raised value; chalk already is the lift. */
+  --mm-navy-raised: #06263f;
 
   /* Semantic */
   --color-bg-page: var(--mm-cream);
   --color-bg-surface: var(--mm-chalk);
+  --color-bg-raised: var(--mm-chalk);
   --color-text-primary: var(--mm-navy);
   --color-text-muted: rgba(0, 30, 58, 0.62);
   --color-action-primary: var(--mm-orange);
@@ -149,6 +153,7 @@ html[data-theme='dark'] {
 
   --color-bg-page: var(--mm-navy);
   --color-bg-surface: #0a2a4a;
+  --color-bg-raised: var(--mm-navy-raised);
   --color-text-primary: var(--mm-chalk);
   --color-text-muted: rgba(252, 250, 246, 0.6);
   --color-border-default: rgba(252, 250, 246, 0.16);

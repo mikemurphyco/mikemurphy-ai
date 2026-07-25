@@ -115,9 +115,16 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ### Design system
 - Tokens in `global.css` (`--mm-cream`, `--mm-navy`, `--mm-orange`, …)
+- `--color-bg-raised` for elevated surfaces (chalk in light, `--mm-navy-raised` in dark)
 - Shared utilities: `mm-container`, `mm-button`, `mm-card`, `mm-polaroid`, `mm-prose`
 - IBM Plex Sans / Mono + Murphydoodle
 - Light Shiki code blocks (chalk ground, navy ink)
+
+### Navigation
+- 84px sticky header; blurred cream/navy at 88%, no cut-shadow (canon: none on chrome)
+- CONTENT dropdown: Tutorials / Articles / Field Notes / Podcast + “Browse all topics”
+- Search is an icon button (→ `/search/`), beside the theme toggle and Subscribe
+- Full-screen navy sheet below 820px; dropdown and sheet are keyboard-navigable
 
 ### Search (Pagefind)
 - Full-body index via `data-pagefind-body` on content templates
@@ -142,6 +149,64 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-07-25 — Navigation redesign: CONTENT dropdown, search icon, mobile sheet
+
+**Context:** Claude Design produced a high-fidelity nav redesign; the handoff
+(prototype + spec) was delivered in `design_handoff_navigation/` and has been
+implemented and removed. The old header carried five flat links including a
+`Search` text link, and the growing content types (Articles, Field Notes,
+Podcast) had no home in the nav at all.
+
+**Shipped:**
+- `SiteHeader.astro` rebuilt. Flat nav → **CONTENT dropdown** (Tutorials /
+  Articles / Field Notes / Podcast, each with a one-line description) plus
+  AI Unplugged, Resources, About. Footer row links to `/topics/`.
+- **Search demoted** from a nav text link to a 38px bordered icon button in the
+  utility cluster beside the theme toggle. Still routes to `/search/`.
+- **Header height 76px → 84px** and the Loop mark 44px → 42px with a tighter
+  two-line wordmark, rebalancing the top-left lockup against the taller bar.
+- **Mobile (< 820px):** full-screen navy sheet replacing the inline accordion.
+  CONTENT / MORE sections, full-width Subscribe, theme toggle, locked tagline
+  footer. Search + hamburger are 44px hit targets.
+- Tailwind utility soup in the header replaced with a scoped `<style>` block on
+  semantic tokens — the header is now readable as one component.
+
+**Decisions:**
+- **Dropdown hover is a neutral wash** (`--color-text-primary` at 5% / 7% dark),
+  not a translucent orange fill. Orange over navy muddies to brown; this was
+  settled during design review and is worth not re-litigating.
+- **Loop mark stays orange in both themes** (matches BRAND-CANON v2026.4, where
+  the lockup mark is always `--mm-orange` regardless of scheme). The mobile
+  sheet is the one exception — it uses the chalk Loop on the navy ground.
+- **New token `--mm-navy-raised` (`#06263F`)** for dark-mode elevated surfaces,
+  exposed semantically as `--color-bg-raised`. The dropdown needed to sit above
+  `--color-bg-surface` in dark mode and there was no token for that lift. In
+  light mode it aliases chalk, so components can consume it unconditionally.
+- **Dropdown is click-to-open, not hover-open** — hover menus are hostile on
+  trackpads and impossible on touch.
+- **Sheet has its own theme toggle** that delegates to `#mm-theme-toggle` via
+  `.click()`. The header toggle sits behind the overlay, and duplicating the
+  localStorage logic would have created a second source of truth.
+- Kept the single orange. A lightened variant for small text on navy was tried
+  during design and rejected; orange is only used on 12px **bold** labels there
+  (≈5.2:1, passes AA).
+
+**Accessibility:** `aria-expanded` / `aria-haspopup` on the trigger, arrow-key
+navigation in the dropdown, Escape closes both surfaces and restores focus, a
+Tab focus trap in the sheet, `focus-visible` rings throughout, and a
+`prefers-reduced-motion` block. Body scroll locks while the sheet is open and
+releases if the viewport crosses back to desktop.
+
+**Verified:** `npm run build` clean; header screenshotted in light and dark at
+1280px and 390px, dropdown open in both themes, and the sheet's theme toggle
+confirmed to write `localStorage.mm-theme` and release the scroll lock on close.
+
+**Docs:** `DESIGN.md` and `BRAND-CANON.md` in the `mike-design-system` repo were
+updated in the same pass (nav-header spec, dropdown component, the new raised
+token, and a v2026.5 canon entry). Those edits are left uncommitted for review.
+
+**For a future post:** why a content dropdown beat adding a sixth flat nav link.
 
 ### 2026-07-23 — Legacy-domain redirect validation + controlled 404 fallback
 
