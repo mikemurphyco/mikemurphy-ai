@@ -108,7 +108,7 @@ const contentActive = contentItems.some((item) => isActive(item.href));
 <div id="mm-sheet" class="mm-sheet" hidden>
   <div class="mm-sheet__top">
     <a href="/" class="mm-lockup mm-lockup--sheet" aria-label="Mike Murphy home">
-      <img src="/assets/brand/loop-chalk-128.svg" alt="" class="mm-lockup__mark" width="30" height="30" />
+      <img src="/assets/brand/loop-orange-128.svg" alt="" class="mm-lockup__mark" width="30" height="30" />
       <span class="mm-lockup__words">
         <span class="mm-lockup__name">Mike Murphy</span>
         <span class="mm-lockup__eyebrow">AI Handyman</span>
@@ -527,7 +527,10 @@ const contentActive = contentItems.some((item) => isActive(item.href));
   }
 
   /* Sheet-local theme toggle — the header's ThemeToggle sits behind the
-     overlay, so the sheet carries its own control and delegates to it. */
+     overlay, so the sheet carries its own control and delegates to it.
+     The sheet is navy in BOTH themes, so toggling changes nothing else
+     visible while it's open; without state styling here the button reads
+     as broken. The glyph alone is too small to register as feedback. */
   .mm-sheet__theme {
     background: transparent;
     border: 1px solid color-mix(in srgb, var(--mm-chalk) 30%, transparent);
@@ -541,6 +544,25 @@ const contentActive = contentItems.some((item) => isActive(item.href));
     height: 46px;
     place-items: center;
     width: 46px;
+    transition:
+      background var(--dur-fast) var(--ease-out),
+      border-color var(--dur-fast) var(--ease-out),
+      color var(--dur-fast) var(--ease-out),
+      transform var(--dur-fast) var(--ease-out);
+  }
+
+  /* Dark active: the control fills in, so the two states are unmistakable.
+     Chalk rather than orange — Subscribe owns the one orange action in this
+     view, and a second orange control would compete with it. */
+  html[data-theme='dark'] .mm-sheet__theme {
+    background: var(--mm-chalk);
+    border-color: var(--mm-chalk);
+    color: var(--mm-navy);
+  }
+
+  /* Touch devices have no hover, so the press state carries the feedback. */
+  .mm-sheet__theme:active {
+    transform: scale(0.92);
   }
 
   .mm-sheet__theme:focus-visible {
@@ -554,6 +576,14 @@ const contentActive = contentItems.some((item) => isActive(item.href));
 
   html[data-theme='dark'] .mm-sheet__theme-glyph::before {
     content: '☀';
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mm-sheet__theme,
+    .mm-sheet__theme:active {
+      transition: none;
+      transform: none;
+    }
   }
 
   .mm-sheet__tagline {
