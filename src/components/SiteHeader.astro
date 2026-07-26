@@ -528,9 +528,10 @@ const contentActive = contentItems.some((item) => isActive(item.href));
 
   /* Sheet-local theme toggle — the header's ThemeToggle sits behind the
      overlay, so the sheet carries its own control and delegates to it.
-     The sheet is navy in BOTH themes, so toggling changes nothing else
-     visible while it's open; without state styling here the button reads
-     as broken. The glyph alone is too small to register as feedback. */
+     Deliberately styled the same in both themes: the sheet is navy either
+     way, so a filled "active" state drew attention to a control whose
+     effect only shows once the sheet closes. The ☾/☀ glyph carries the
+     state; the press animation confirms the tap. */
   .mm-sheet__theme {
     background: transparent;
     border: 1px solid color-mix(in srgb, var(--mm-chalk) 30%, transparent);
@@ -549,15 +550,6 @@ const contentActive = contentItems.some((item) => isActive(item.href));
       border-color var(--dur-fast) var(--ease-out),
       color var(--dur-fast) var(--ease-out),
       transform var(--dur-fast) var(--ease-out);
-  }
-
-  /* Dark active: the control fills in, so the two states are unmistakable.
-     Chalk rather than orange — Subscribe owns the one orange action in this
-     view, and a second orange control would compete with it. */
-  html[data-theme='dark'] .mm-sheet__theme {
-    background: var(--mm-chalk);
-    border-color: var(--mm-chalk);
-    color: var(--mm-navy);
   }
 
   /* Touch devices have no hover, so the press state carries the feedback. */
