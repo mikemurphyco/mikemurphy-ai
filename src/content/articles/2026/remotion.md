@@ -25,7 +25,7 @@ topics:
   - vs-code
   - nodejs
 youtube:
-  - https://youtu.be/k86dnTyXLMw
+  - https://youtu.be/PP9kekHoXRk
 search:
   include: true
   boost: 1
