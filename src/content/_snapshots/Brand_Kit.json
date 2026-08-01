@@ -1,0 +1,125 @@
+{
+  "fetchedAt": "2026-08-01T16:53:47.390Z",
+  "items": [
+    {
+      "id": 1,
+      "date_updated": null,
+      "intro": "Everything you need if you're having me on a podcast, featuring me in an article, or working with me on a collaboration. Grab the assets, copy the bio, and you're set. If you need something that isn't here, just email me.",
+      "short_bio": "Mike Murphy is the AI Handyman — a creator and podcaster making short, practical AI tutorials for the people the AI industry forgets. He's been teaching on YouTube since 2015, with 1,850+ tutorials, 45,000+ subscribers, a weekly newsletter, and the Mike Murphy Unplugged podcast.",
+      "long_bio": "Mike Murphy is the AI Handyman. Since 2015 he's published more than 1,850 tutorials on YouTube, teaching everyday technology to the people the industry tends to forget — the curious, the busy, and the slightly overwhelmed. These days he focuses on practical AI: short screencasts that show what a tool actually does, where people get stuck, and the shortcut he found after wrestling with the confusing part himself. Alongside YouTube, Mike writes a weekly newsletter and hosts the Mike Murphy Unplugged podcast from mikemurphy.ai. His approach is simple: calm, honest, hands-on — no hype, no jargon, just one curious human showing another how to move forward.",
+      "boilerplate": "Mike Murphy | AI Handyman — short, practical AI tutorials for the people the AI industry forgets. mikemurphy.ai",
+      "contact_intro": "Podcast invites, press, and collaborations all go to the same inbox. I read everything.",
+      "youtube_since": "2015",
+      "tutorial_count": "1,850+",
+      "subscriber_count": "45,000+",
+      "assets": [
+        {
+          "directus_files_id": {
+            "id": "391bbec3-4912-4471-9cef-26e7422ec860",
+            "filename_download": "headshot-mike.png",
+            "type": "image/png"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "41329249-089e-420d-9024-329e963781ad",
+            "filename_download": "avatar-mike-orange.png",
+            "type": "image/png"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "d5192771-995a-4936-948b-92720e3570d0",
+            "filename_download": "avatar-mike-transparent.png",
+            "type": "image/png"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "1cfa6cc2-65b6-4119-b359-f192e5edde75",
+            "filename_download": "lockup-primary.png",
+            "type": "image/png"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "c17ea1ae-d3f7-4eb6-9a9d-88be145286c9",
+            "filename_download": "lockup-ai.png",
+            "type": "image/png"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "346540a9-a34e-4b99-9da1-5e70063c9843",
+            "filename_download": "loop-orange.svg",
+            "type": "image/svg+xml"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "cf788fa8-2120-47b6-9e3a-11b0dee60dfc",
+            "filename_download": "loop-navy.svg",
+            "type": "image/svg+xml"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "b8f608dc-b38b-4477-bffd-71723317d57d",
+            "filename_download": "loop-cream.svg",
+            "type": "image/svg+xml"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "6f7e46d4-a163-4416-af2c-92a733501046",
+            "filename_download": "m-mark-navy.png",
+            "type": "image/png"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "48d7192d-833a-4219-b0d9-576b3b013687",
+            "filename_download": "m-mark-orange-navy.png",
+            "type": "image/png"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "01c35006-e986-4338-853e-e2b37a73af76",
+            "filename_download": "m-mark-cream.png",
+            "type": "image/png"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "5a94d74e-b881-440d-bb92-056c3817e8aa",
+            "filename_download": "mike-murphy-media-kit-one-page.pdf",
+            "type": "application/pdf"
+          }
+        },
+        {
+          "directus_files_id": {
+            "id": "ab2ffd98-07d3-4408-b521-7ac5850f473a",
+            "filename_download": "mike-murphy-media-kit.zip",
+            "type": "application/zip"
+          }
+        }
+      ],
+      "assetPaths": {
+        "headshot": "/assets/brand-kit/headshot-mike.png",
+        "avatarOrange": "/assets/brand-kit/avatar-mike-orange.png",
+        "avatarTransparent": "/assets/brand-kit/avatar-mike-transparent.png",
+        "primaryLockup": "/assets/brand-kit/lockup-primary.png",
+        "aiLockup": "/assets/brand-kit/lockup-ai.png",
+        "loopOrange": "/assets/brand-kit/loop-orange.svg",
+        "loopNavy": "/assets/brand-kit/loop-navy.svg",
+        "loopCream": "/assets/brand-kit/loop-cream.svg",
+        "mMarkNavy": "/assets/brand-kit/m-mark-navy.png",
+        "mMarkOrangeNavy": "/assets/brand-kit/m-mark-orange-navy.png",
+        "mMarkCream": "/assets/brand-kit/m-mark-cream.png",
+        "onePagePdf": "/assets/brand-kit/mike-murphy-media-kit-one-page.pdf",
+        "allAssetsZip": "/assets/brand-kit/mike-murphy-media-kit.zip"
+      }
+    }
+  ]
+}

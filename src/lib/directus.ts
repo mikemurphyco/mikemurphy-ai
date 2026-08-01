@@ -1,6 +1,6 @@
 /**
- * Directus is the source of truth for Field Notes and Resources (Articles stay
- * local Markdown). Directus is self-hosted on the VPS and publicly reachable at
+ * Directus is the source of truth for Field Notes, Resources, and the Brand Kit
+ * singleton (Articles stay local Markdown). Directus is self-hosted on the VPS and publicly reachable at
  * https://cms.imurph.com (Cloudflare-fronted, hardened; content reads require a
  * read-only token). The build fetches it directly at build time.
  *
@@ -24,7 +24,7 @@ const SNAPSHOT_DIR = path.resolve('src/content/_snapshots');
  */
 export const MAIN_SHELF_TITLE = 'Resources';
 
-export type DirectusCollectionName = 'Field_Notes' | 'Resources';
+export type DirectusCollectionName = 'Field_Notes' | 'Resources' | 'Brand_Kit';
 
 function env(name: string): string | undefined {
   const value = process.env[name];
@@ -79,7 +79,15 @@ const FIELD_SETS: Record<DirectusCollectionName, string> = {
     'shelf.title',
     'tags.tags_id.name',
   ].join(','),
+  Brand_Kit: [
+    '*',
+    'assets.directus_files_id.id',
+    'assets.directus_files_id.filename_download',
+    'assets.directus_files_id.type',
+  ].join(','),
 };
+
+const SINGLETONS = new Set<DirectusCollectionName>(['Brand_Kit']);
 
 async function fetchCollection(
   collection: DirectusCollectionName,
@@ -87,10 +95,12 @@ async function fetchCollection(
   token: string,
 ): Promise<any[]> {
   const url = new URL(`/items/${collection}`, baseUrl);
-  url.searchParams.set('filter[status][_eq]', 'published');
   url.searchParams.set('fields', FIELD_SETS[collection]);
-  url.searchParams.set('sort', 'sort');
-  url.searchParams.set('limit', '-1');
+  if (!SINGLETONS.has(collection)) {
+    url.searchParams.set('filter[status][_eq]', 'published');
+    url.searchParams.set('sort', 'sort');
+    url.searchParams.set('limit', '-1');
+  }
 
   const res = await fetch(url, {
     headers: { Authorization: `Bearer ${token}` },
@@ -99,8 +109,9 @@ async function fetchCollection(
   if (!res.ok) {
     throw new Error(`Directus ${collection} responded ${res.status} ${res.statusText}`);
   }
-  const json = (await res.json()) as { data?: any[] };
-  return json.data ?? [];
+  const json = (await res.json()) as { data?: any[] | Record<string, unknown> };
+  if (Array.isArray(json.data)) return json.data;
+  return json.data ? [json.data] : [];
 }
 
 /**

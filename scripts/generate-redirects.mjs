@@ -82,6 +82,7 @@ const redirects = new Map([
   ['/aiunplugged/', '/ai-unplugged/'],
   ['/ai-unplugged/issues/1/', '/ai-unplugged/issues/001/'],
   ['/articles/resources/', '/resources/'],
+  ['/brand-kit/', '/media-kit/'],
 ]);
 
 for (const article of articles) {

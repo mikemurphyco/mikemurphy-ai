@@ -27,6 +27,7 @@ export async function GET() {
     { loc: absoluteUrl('/articles/'), priority: '0.9' },
     { loc: absoluteUrl('/podcast/'), priority: '0.6' },
     { loc: absoluteUrl('/about/'), priority: '0.6' },
+    { loc: absoluteUrl('/media-kit/'), priority: '0.5' },
     { loc: absoluteUrl('/contact/'), priority: '0.5' },
     { loc: absoluteUrl('/topics/'), priority: '0.8' },
     { loc: absoluteUrl('/search/'), priority: '0.6' },

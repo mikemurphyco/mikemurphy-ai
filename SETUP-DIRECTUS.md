@@ -1,11 +1,12 @@
-# Directus → Astro: How It Works (setup completed 2026-07-22)
+# Directus → Astro: How It Works (setup completed 2026-08-01)
 
-Directus (`https://cms.imurph.com`) is the source of truth for Field Notes and
-Resources on mikemurphy.ai. **Setup is complete and live** — this doc is now the
-reference for how the system works and how to redo any piece of it.
+Directus (`https://cms.imurph.com`) is the source of truth for Field Notes,
+Resources, and the Brand Kit singleton on mikemurphy.ai. **Setup is complete and
+live.** This doc is the reference for how the system works and how to redo any
+piece of it.
 
 **The publishing loop:** At build time, Astro fetches published Field Notes and
-Resources from `cms.imurph.com` using a read-only token (stored as Cloudflare
+Resources and Brand Kit from `cms.imurph.com` using a read-only token (stored as Cloudflare
 build variables). A Directus Flow ("Publish → Rebuild Site") POSTs to a
 Cloudflare deploy hook on every save of those collections, triggering a rebuild.
 Publishing in Directus is the only step you take; the site updates in ~1-2 min.
@@ -53,7 +54,7 @@ Also finish the two data-model fixes if not done yet:
   (name: `directus-publish`). Copy the hook URL.
 - [ ] In Directus: **Settings → Flows → Create Flow**:
   - Trigger: **Event Hook**, non-blocking, on `items.create` + `items.update`,
-    collections `Field_Notes` + `Resources`.
+    collections `Field_Notes` + `Resources` + `Brand_Kit`.
   - Operation: **Webhook / Request URL** → Method **POST** → paste the deploy
     hook URL. No headers or body needed.
   - (Optional) add a condition so it only fires when `status` = `published`.
@@ -62,7 +63,7 @@ Also finish the two data-model fixes if not done yet:
 
 ## Day-to-day publishing after setup
 
-1. Write / edit in Directus → set status to **Published**.
+1. Write / edit in Directus → set status to **Published** (Field Notes and Resources), or save the Brand Kit singleton.
 2. Done. The Flow pings Cloudflare, the site rebuilds with live data, changes are
    live in a few minutes.
 
@@ -78,3 +79,37 @@ Also finish the two data-model fixes if not done yet:
   ```
   A local live build also refreshes the snapshots — commit them occasionally so
   the fallback stays fresh.
+
+---
+
+## Brand Kit singleton
+
+Create `Brand_Kit` as a Directus **singleton**. Astro owns the page layout and
+brand design; this singleton owns the copy, statistics, and replaceable files.
+
+### Text fields
+
+| Key | Interface | Notes |
+| --- | --- | --- |
+| `intro` | Textarea | Hero introduction |
+| `short_bio` | Textarea | Short copy-and-paste bio |
+| `long_bio` | Textarea | Long copy-and-paste bio |
+| `boilerplate` | Textarea | One-line boilerplate |
+| `contact_intro` | Textarea | Contact card introduction |
+| `youtube_since` | Input | Display value, e.g. `2015` |
+| `tutorial_count` | Input | Display value, e.g. `1,850+` |
+| `subscriber_count` | Input | Display value, e.g. `45,000+` |
+
+Enable the standard `date_updated` field so the build can retain update metadata.
+
+### File field
+
+Create `assets` using the Directus **Files** interface (multiple files). Astro
+matches each file by its stable download filename, so replacements should retain
+the filenames committed under `public/assets/brand-kit/`.
+
+Grant `Astro Read-Only` read access to `Brand_Kit`, `Brand_Kit_files`, and
+`directus_files`. Add `Brand_Kit` create/update events to the existing “Publish
+→ Rebuild Site” Flow. A successful live build downloads the Directus files into
+`public/assets/brand-kit/` and refreshes the committed snapshot; an offline build
+uses that snapshot and the already-downloaded assets.
