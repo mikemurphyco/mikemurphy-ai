@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-07-23
+updated: 2026-08-01
 status: living-doc
 ---
 
@@ -25,7 +25,7 @@ Living note for the Astro rebuild. Use it for memory, future blog seeds, and “
 | Layer | Choice | Notes |
 |-------|--------|-------|
 | Framework | Astro 6 | Static output |
-| Content | Content Collections + MDX | `articles`, `aiUnplugged` (local MD); `fieldNotes`, `resources` (Directus) |
+| Content | Content Collections + MDX | `articles`, `aiUnplugged` (local MD); `fieldNotes`, `resources`, Brand Kit copy/assets (Directus) |
 | Styling | Tailwind 4 + `global.css` tokens | Design System v2026.3 (`--mm-*`) |
 | Search | Pagefind 1.5 | Indexed in `postbuild` |
 | Newsletter send | Beehiiv | Archive owned by Astro |
@@ -61,6 +61,8 @@ src/lib/articles.ts                # content helpers, SITE_URL
 src/lib/site.ts                    # email, socials, feeds
 src/lib/agent.ts                   # agentReadable helpers
 src/lib/rss.ts                     # RSS XML builder
+src/lib/brand-kit.ts               # Directus Brand Kit loader + snapshot fallback
+src/pages/media-kit/index.astro    # Brand & Media Kit page
 public/assets/                     # media + brand
 ```
 
@@ -79,6 +81,7 @@ public/assets/                     # media + brand
 | About | `/about/` | Story + socials |
 | Contact | `/contact/` | Intent routing + mailto (no form) |
 | Resources | `/resources/` | Resource guides |
+| Media Kit | `/media-kit/` | Bios, press assets, logos, headshots, one-page PDF |
 | Topics | `/topics/` | Topic index |
 
 ---
@@ -149,6 +152,55 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-08-01 — Directus-powered Brand & Media Kit
+
+**Context:** Built a public press and collaboration page from the Claude Design
+handoff in `Brand and media kit setup/`. The goal was to keep the page design in
+Astro while making frequently changing bios, audience numbers, and downloadable
+assets maintainable in Directus. The public-facing navigation label is **Media
+Kit**; the page heading remains **Brand & Media Kit**.
+
+**Shipped in code:**
+- New canonical page at `/media-kit/`, with `/brand-kit/` redirecting to it.
+- Added **Media Kit** to the footer and `/media-kit/` to the sitemap.
+- Included short and long bios, boilerplate, logo/mark downloads, headshots,
+  avatar files, the one-page PDF, and a complete ZIP. Per design review, the
+  page does **not** include a color-swatches section.
+- Added `src/lib/brand-kit.ts` and expanded `src/lib/directus.ts` to load the
+  singleton at build time, self-host its files under `public/assets/brand-kit/`,
+  and fall back to `src/content/_snapshots/Brand_Kit.json` when Directus is
+  unavailable.
+- Kept asset filenames stable so files can be replaced in Directus without
+  changing Astro templates or public download URLs.
+
+**Directus:**
+- Created and populated the `Brand_Kit` singleton with `intro`, `short_bio`,
+  `long_bio`, `boilerplate`, `contact_intro`, `youtube_since`,
+  `tutorial_count`, `subscriber_count`, and the multi-file `assets` field.
+- Uploaded 13 assets: 11 image/SVG brand files, the one-page PDF, and the ZIP.
+- Granted the `Astro Read-Only` policy read access to `Brand_Kit`,
+  `Brand_Kit_files`, and the existing `directus_files` collection. No write,
+  update, or delete permissions were added.
+- Added `Brand_Kit` to the existing **Publish → Rebuild Site** Flow for
+  `items.create` and `items.update`. Saving the singleton now calls the same
+  Cloudflare deploy hook used by Field Notes and Resources.
+
+**Verified:** Authenticated Directus API returned HTTP 200 with all 13 assets;
+`npm run build` completed with 794 pages; `npm run qa:launch` passed; and
+`git diff --check` passed.
+
+**Git/deployment:** The implementation was committed as `d8d8d8c`
+(`Add Directus-powered media kit`) and merged into `main` on 2026-08-01. An
+earlier Directus-triggered deployment returned 404 because Cloudflare rebuilt
+`main` before the feature branch had been merged; the Directus Flow itself was
+working correctly. Cloudflare deploys automatically after the `main` update.
+After this initial code deployment, future singleton saves in Directus rebuild
+the page automatically.
+
+**Source-folder housekeeping:** `Brand and media kit setup/` is an untracked
+design/source folder and is not required by the site. It can be moved outside
+the repository without affecting builds.
 
 ### 2026-07-25 — Navigation redesign: CONTENT dropdown, search icon, mobile sheet
 
