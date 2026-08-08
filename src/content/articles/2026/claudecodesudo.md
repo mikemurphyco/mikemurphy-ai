@@ -43,10 +43,9 @@ seo:
 youtube: 
   - "https://youtu.be/jaqQQ8LEdqA"
 ---
-<https://youtu.be/jaqQQ8LEdqA>
+## Description
 
-**Description:  
-**Running Claude Code as root on your VPS is a real security risk. In this tutorial, I'll walk you through creating a non-root user on your Hostinger VPS, setting up SSH access, and installing Claude Code safely so it runs with proper guardrails from day one. If you're already running Claude Code on your VPS as root, this is the video to watch before you go any further.
+Running Claude Code as root on your VPS is a real security risk. In this tutorial, I'll walk you through creating a non-root user on your Hostinger VPS, setting up SSH access, and installing Claude Code safely so it runs with proper guardrails from day one. If you're already running Claude Code on your VPS as root, this is the video to watch before you go any further.
 
 **What You Will Learn:**
 

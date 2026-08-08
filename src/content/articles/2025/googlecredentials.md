@@ -1,53 +1,53 @@
 ---
-title: "How To Set Up Google Credentials For N8n | Step-By-Step Guide Using Google Cloud Console"
-description: "In this tutorial, you will learn how to set up Google credentials in n8n for Drive, Docs, Gmail, Calendar, and Sheets using OAuth2 credentials created in Google Cloud Console. This allows your automations to securely read, write, and manage Google data directly within your n8n workflows."
-pubDate: "2025-11-04T06:00:11"
-updatedDate: "2026-01-29T07:12:25"
+title: Set Up Google Credentials for n8n in Google Cloud
+description: In this tutorial, you will learn how to set up Google credentials in n8n for Drive, Docs, Gmail, Calendar, and Sheets using OAuth2 credentials created in Google Cloud Console. This allows your automations to securely read, write, and manage Google data directly within your n8n workflows.
+pubDate: 2025-11-04T06:00:11
+updatedDate: 2026-01-29T07:12:25
 draft: false
-type: "post"
-slug: "googlecredentials"
-permalink: "/googlecredentials/"
-legacyPermalink: "https://www.mikemurphy.co/googlecredentials/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/googlecredentials/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2025/11/GOOGLE-CREDS.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2025/11/GOOGLE-CREDS.jpg"
-categories: 
-  - "AI"
-  - "Automation"
-  - "Google Cloud"
-  - "Hostinger VPS"
-  - "n8n"
-  - "Tutorials"
+type: post
+slug: googlecredentials
+permalink: /googlecredentials/
+legacyPermalink: https://www.mikemurphy.co/googlecredentials/
+canonicalUrl: https://mikemurphy.ai/tutorials/googlecredentials/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2025/11/GOOGLE-CREDS.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2025/11/GOOGLE-CREDS.jpg
+categories:
+  - AI
+  - Automation
+  - Google Cloud
+  - Hostinger VPS
+  - n8n
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: true
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215112"
-  postType: "post"
+  postType: post
   rawWordCount: 671
 seo:
-  legacyTitle: "How To Set Up Google Credentials For N8n | Step-By-Step Guide Using Google Cloud Console - Mike Murphy Co"
-  legacyH1: "How To Set Up Google Credentials For N8n | Step-By-Step Guide Using Google Cloud Console"
-  legacyCanonical: "https://www.mikemurphy.co/googlecredentials/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How To Set Up Google Credentials For N8n | Step-By-Step Guide Using Google Cloud Console - Mike Murphy Co
+  legacyH1: How To Set Up Google Credentials For N8n | Step-By-Step Guide Using Google Cloud Console
+  legacyCanonical: https://www.mikemurphy.co/googlecredentials/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 693
-youtube: 
-  - "https://youtu.be/Y4iDC5z3GFg"
+youtube:
+  - https://youtu.be/Y4iDC5z3GFg
 ---
 <https://youtu.be/Y4iDC5z3GFg>
 
-## How To Set Up Google Credentials For N8n \| Step-By-Step Guide Using Google Cloud Console
+## Set Up Google Credentials for n8n in Google Cloud
 
  
 

@@ -42,9 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/j-XErWms1gM"
 ---
-<https://youtu.be/j-XErWms1gM>
+## Description
 
-**Description:**  
 In this tutorial, you will learn how to add Trusted Directories (Folders) to prevent Claude Code from asking 'Do You Trust Files?' when launching from a trusted directory.
 
 **Code Snippets:**  

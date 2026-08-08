@@ -42,11 +42,7 @@ seo:
 youtube: 
   - "https://youtu.be/QdAtrdBHjBY"
 ---
-<https://youtu.be/QdAtrdBHjBY>
-
- 
-
-**Description:**
+## Description
 
 Before you wipe your computer or move to a new machine, make sure your Claude Code settings are safe. In this tutorial, I'll walk you through how to take inventory of your current Claude Code setup, create a full backup of your settings and custom skills, and do a clean uninstall on both Mac and Windows.
 

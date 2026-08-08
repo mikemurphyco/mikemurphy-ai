@@ -43,9 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/mZQ8Fy1Akkk"
 ---
-<https://youtu.be/mZQ8Fy1Akkk>
+## Description
 
-**Description:**  
 In this tutorial, I will show you how to install Claude Code on your Hostinger VPS and how to get started using it as your super-genius developer on your VPS.
 
 **📌 Links:**  

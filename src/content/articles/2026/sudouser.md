@@ -42,10 +42,7 @@ seo:
 youtube: 
   - "https://youtu.be/00mrjyTB_Lk"
 ---
-<https://youtu.be/00mrjyTB_Lk>
-
-**Description:  
-**
+## Description
 
 Logging into your VPS as root every time is one of the biggest security risks you can make.
 

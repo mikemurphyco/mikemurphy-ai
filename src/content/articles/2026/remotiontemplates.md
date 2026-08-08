@@ -1,5 +1,5 @@
 ---
-title: "Remotion: How To Open & Use Templates (Step-by-Step)"
+title: "Remotion: How To Open & Use Templates"
 description: Browse Remotion's full template catalog, install any template with one command, and run multiple templates side by side in the same project.
 pubDate: 2026-08-05
 draft: true
@@ -29,6 +29,7 @@ search:
   include: true
   boost: 1
 ---
+## Description
 
 Remotion does not just give you one starting point. It gives you a whole catalog of them, and every single one is one command away. Instead of building from a blank canvas, you can install a template that already has animation, layout, and structure built in, then customize it from there.
 

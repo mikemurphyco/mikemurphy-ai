@@ -1,54 +1,54 @@
 ---
-title: "How to Create a Telegram Bot with BotFather + Connect to n8n for Instant Notifications"
-description: "In this tutorial, you will learn how to create your own Telegram bot using BotFather and connect it to n8n for automated notifications and workflows! This step-by-step tutorial covers everything from bot creation to getting those tricky chat IDs."
-pubDate: "2025-09-10T06:00:48"
-updatedDate: "2025-09-09T19:48:05"
+title: Connect a Telegram Bot to n8n for Notifications
+description: In this tutorial, you will learn how to create your own Telegram bot using BotFather and connect it to n8n for automated notifications and workflows! This step-by-step tutorial covers everything from bot creation to getting those tricky chat IDs.
+pubDate: 2025-09-10T06:00:48
+updatedDate: 2025-09-09T19:48:05
 draft: false
-type: "post"
-slug: "telegram"
-permalink: "/telegram/"
-legacyPermalink: "https://www.mikemurphy.co/telegram/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/telegram/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2025/09/TELEGRAM.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2025/09/TELEGRAM.jpg"
-categories: 
-  - "AI"
-  - "Automation"
-  - "n8n"
-  - "Telegram"
-  - "Tutorials"
-tags: 
-  - "n8n"
-  - "telegram"
+type: post
+slug: telegram
+permalink: /telegram/
+legacyPermalink: https://www.mikemurphy.co/telegram/
+canonicalUrl: https://mikemurphy.ai/tutorials/telegram/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2025/09/TELEGRAM.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2025/09/TELEGRAM.jpg
+categories:
+  - AI
+  - Automation
+  - n8n
+  - Telegram
+  - Tutorials
+tags:
+  - n8n
+  - telegram
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: true
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "214930"
-  postType: "post"
+  postType: post
   rawWordCount: 507
 seo:
-  legacyTitle: "How to Create a Telegram Bot with BotFather + Connect to n8n for Instant Notifications - Mike Murphy Co"
-  legacyH1: "How to Create a Telegram Bot with BotFather + Connect to n8n for Instant Notifications"
-  legacyCanonical: "https://www.mikemurphy.co/telegram/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How to Create a Telegram Bot with BotFather + Connect to n8n for Instant Notifications - Mike Murphy Co
+  legacyH1: How to Create a Telegram Bot with BotFather + Connect to n8n for Instant Notifications
+  legacyCanonical: https://www.mikemurphy.co/telegram/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 542
-youtube: 
-  - "https://youtu.be/PGB4qj_ZEUY"
+youtube:
+  - https://youtu.be/PGB4qj_ZEUY
 ---
 <https://youtu.be/PGB4qj_ZEUY>
 
-## How to Create a Telegram Bot with BotFather + Connect to n8n for Instant Notifications
+## Connect a Telegram Bot to n8n for Notifications
 
 **Description:  
 **In this tutorial, you will learn how to create your own Telegram bot using BotFather and connect it to n8n for automated notifications and workflows! This step-by-step tutorial covers everything from bot creation to getting those tricky chat IDs.

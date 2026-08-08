@@ -1,5 +1,5 @@
 ---
-title: How to Install Directus on a Hostinger VPS (Self-Hosted Airtable Alternative)
+title: How to Install Directus on a Hostinger VPS to Replace AirTable
 description: Install Directus, a free self-hosted Airtable alternative, on a Hostinger VPS with Docker and Claude Code, locked down behind Tailscale.
 pubDate: 2026-07-15
 draft: false
@@ -38,6 +38,7 @@ search:
   include: true
   boost: 1
 ---
+## Description
 
 I've used and loved Airtable for years to organize my content. I don't have a problem with it, I just don't love paying $20 a month, $240 a year, when there are open-source options I can self-host for free on infrastructure I already own. So I went looking for an Airtable replacement I could run on my Hostinger VPS, and I ended up somewhere I didn't expect: Directus.
 

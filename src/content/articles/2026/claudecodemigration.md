@@ -42,10 +42,9 @@ seo:
 youtube: 
   - "https://youtu.be/Gyh_ox9C1cI"
 ---
-<https://youtu.be/Gyh_ox9C1cI>
+## Description
 
-**Description:  
-**In this tutorial, I will show you how to migrate your current version of Claude Code installed using the old npm package manger to the new Native Installer Version.
+In this tutorial, I will show you how to migrate your current version of Claude Code installed using the old npm package manger to the new Native Installer Version.
 
 **Problem:**  
 When you launch Claude Code, you see an Alert Message about switching from npm to native installer.

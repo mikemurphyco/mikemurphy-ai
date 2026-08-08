@@ -42,12 +42,9 @@ seo:
 youtube: 
   - "https://youtu.be/LkDIKZBQLic"
 ---
-<https://youtu.be/LkDIKZBQLic>
+## Description
 
- 
-
-**Description:  
-**Reinstalling Claude Code doesn't have to mean starting from scratch.
+Reinstalling Claude Code doesn't have to mean starting from scratch.
 
 In this tutorial, I'll show you how to restore all of your custom commands, skills, and settings from a backup folder on your computer. If you followed my previous video on backing up Claude Code before uninstalling, this is the next step.
 

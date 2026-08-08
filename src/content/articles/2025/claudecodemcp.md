@@ -1,53 +1,53 @@
 ---
-title: "Claude Code + n8n: How To Import MCP Server from Claude Desktop & Build Workflows"
-description: "In this tutorial, you will learn how to import the N8N-MCP Server from Claude Desktop to Claude Claude to build AI Automation Workflows in N8N."
-pubDate: "2025-10-10T09:00:35"
-updatedDate: "2025-10-09T19:01:13"
+title: Import a Claude Desktop MCP Server into Claude Code
+description: In this tutorial, you will learn how to import the N8N-MCP Server from Claude Desktop to Claude Claude to build AI Automation Workflows in N8N.
+pubDate: 2025-10-10T09:00:35
+updatedDate: 2025-10-09T19:01:13
 draft: false
-type: "post"
-slug: "claudecodemcp"
-permalink: "/claudecodemcp/"
-legacyPermalink: "https://www.mikemurphy.co/claudecodemcp/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/claudecodemcp/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2025/10/claude-code_n8n.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2025/10/claude-code_n8n.jpg"
-categories: 
-  - "AI"
-  - "Automation"
-  - "Claude Code"
-  - "Claude Desktop"
-  - "n8n"
-  - "Tutorials"
+type: post
+slug: claudecodemcp
+permalink: /claudecodemcp/
+legacyPermalink: https://www.mikemurphy.co/claudecodemcp/
+canonicalUrl: https://mikemurphy.ai/tutorials/claudecodemcp/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2025/10/claude-code_n8n.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2025/10/claude-code_n8n.jpg
+categories:
+  - AI
+  - Automation
+  - Claude Code
+  - Claude Desktop
+  - n8n
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: true
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215047"
-  postType: "post"
+  postType: post
   rawWordCount: 510
 seo:
   legacyTitle: "Claude Code + n8n: How To Import MCP Server from Claude Desktop & Build Workflows - Mike Murphy Co"
   legacyH1: "Claude Code + n8n: How To Import MCP Server from Claude Desktop & Build Workflows"
-  legacyCanonical: "https://www.mikemurphy.co/claudecodemcp/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyCanonical: https://www.mikemurphy.co/claudecodemcp/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 548
-youtube: 
-  - "https://youtu.be/lL-hpEFIYHs"
+youtube:
+  - https://youtu.be/lL-hpEFIYHs
 ---
 <https://youtu.be/lL-hpEFIYHs>
 
-## Claude Code + n8n: How To Import MCP Server from Claude Desktop & Build Workflows
+# Import a Claude Desktop MCP Server into Claude Code
 
 **Description:**  
 In this tutorial, you will learn how to import the N8N-MCP Server from Claude Desktop to Claude Claude to build AI Automation Workflows in N8N.

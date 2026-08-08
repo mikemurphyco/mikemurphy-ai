@@ -1,52 +1,49 @@
 ---
-title: "How To Install Claude Code On Mac  (Native Installer 2026)"
-description: "In this tutorial, you will learn how to install and run Claude Code on a Mac using the Native Installer."
-pubDate: "2026-02-12T06:45:47"
-updatedDate: "2026-02-11T22:43:08"
+title: How To Install Claude Code On Mac Using Native Installer 2026
+description: In this tutorial, you will learn how to install and run Claude Code on a Mac using the Native Installer.
+pubDate: 2026-02-12T06:45:47
+updatedDate: 2026-02-11T22:43:08
 draft: false
-type: "post"
-slug: "claudecodeinstall2026"
-permalink: "/claudecodeinstall2026/"
-legacyPermalink: "https://www.mikemurphy.co/claudecodeinstall2026/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/claudecodeinstall2026/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/02/CLAUDE_INSTALL.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/02/CLAUDE_INSTALL.jpg"
-categories: 
-  - "AI"
-  - "Claude Code"
-  - "Tutorials"
+type: post
+slug: claudecodeinstall2026
+permalink: /claudecodeinstall2026/
+legacyPermalink: https://www.mikemurphy.co/claudecodeinstall2026/
+canonicalUrl: https://mikemurphy.ai/tutorials/claudecodeinstall2026/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/02/CLAUDE_INSTALL.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/02/CLAUDE_INSTALL.jpg
+categories:
+  - AI
+  - Claude Code
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: true
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215347"
-  postType: "post"
+  postType: post
   rawWordCount: 526
 seo:
-  legacyTitle: "How To Install Claude Code On Mac (Native Installer 2026) - Mike Murphy Co"
-  legacyH1: "How To Install Claude Code On Mac  (Native Installer 2026)"
-  legacyCanonical: "https://www.mikemurphy.co/claudecodeinstall2026/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How To Install Claude Code On Mac (Native Installer 2026) - Mike Murphy Co
+  legacyH1: How To Install Claude Code On Mac  (Native Installer 2026)
+  legacyCanonical: https://www.mikemurphy.co/claudecodeinstall2026/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 513
-youtube: 
-  - "https://youtu.be/uPpj6CZ6LLo"
+youtube:
+  - https://youtu.be/uPpj6CZ6LLo
 ---
-<https://youtu.be/uPpj6CZ6LLo>
+## Description
 
- 
-
-**Description:**   
 In this tutorial, you will learn how to install and run Claude Code on a Mac using the Native Installer.
 
 What You Will Learn:

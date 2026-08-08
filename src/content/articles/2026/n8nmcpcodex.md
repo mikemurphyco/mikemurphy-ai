@@ -45,11 +45,8 @@ seo:
 youtube: 
   - "https://youtu.be/xDTddwmcBcM"
 ---
-<https://youtu.be/xDTddwmcBcM>
+## Description
 
- 
-
-**Description**  
 In this tutorial, you will learn how to set up the n8n instance-level MCP server in OpenAI Codex. Once installed, Codex can build n8n workflows for you from simple text prompts, with no copying or pasting of JSON between apps.
 
 **🧠 What You Will Learn**

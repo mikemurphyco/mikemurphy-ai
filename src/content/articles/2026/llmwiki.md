@@ -43,7 +43,7 @@ seo:
 youtube: 
   - "https://youtu.be/KK4e1puhaEw"
 ---
-<https://youtu.be/KK4e1puhaEw>
+## Description
 
 In this tutorial, you will learn how to create your own LLM knowledge base in Obsidian using Claude Code. Inspired by Andrej Karpathy's LLM Wiki concept, this workflow turns Obsidian into a searchable second brain that you can query, expand, and maintain with the help of Claude Code.
 

@@ -1,51 +1,50 @@
 ---
-title: "How To Connect To Your Hostinger VPS Using SFTP (3 Methods)"
-description: "In this tutorial, I'll show you three different ways to connect to your Hostinger VPS using SFTP (Secure File Transfer Protocol) so you can visually browse, edit, and manage your server files just like you would in Finder on your local machine. If you've been staring at the terminal wondering where everything on your VPS is, this video is for you."
-pubDate: "2026-03-04T06:45:25"
-updatedDate: "2026-03-03T22:03:55"
+title: 3 Ways To Connect To Your Hostinger VPS Using SFTP
+description: In this tutorial, I'll show you three different ways to connect to your Hostinger VPS using SFTP (Secure File Transfer Protocol) so you can visually browse, edit, and manage your server files just like you would in Finder on your local machine. If you've been staring at the terminal wondering where everything on your VPS is, this video is for you.
+pubDate: 2026-03-04T06:45:25
+updatedDate: 2026-03-03T22:03:55
 draft: false
-type: "post"
-slug: "sftp"
-permalink: "/sftp/"
-legacyPermalink: "https://www.mikemurphy.co/sftp/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/sftp/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/03/SFTP_VPS.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/03/SFTP_VPS.jpg"
-categories: 
-  - "AI"
-  - "Hostinger VPS"
-  - "Termius SSH"
-  - "Tutorials"
+type: post
+slug: sftp
+permalink: /sftp/
+legacyPermalink: https://www.mikemurphy.co/sftp/
+canonicalUrl: https://mikemurphy.ai/tutorials/sftp/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/03/SFTP_VPS.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/03/SFTP_VPS.jpg
+categories:
+  - AI
+  - Hostinger VPS
+  - Termius SSH
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215386"
-  postType: "post"
+  postType: post
   rawWordCount: 627
 seo:
-  legacyTitle: "How To Connect To Your Hostinger VPS Using SFTP (3 Methods) - Mike Murphy Co"
-  legacyH1: "How To Connect To Your Hostinger VPS Using SFTP (3 Methods)"
-  legacyCanonical: "https://www.mikemurphy.co/sftp/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How To Connect To Your Hostinger VPS Using SFTP (3 Methods) - Mike Murphy Co
+  legacyH1: How To Connect To Your Hostinger VPS Using SFTP (3 Methods)
+  legacyCanonical: https://www.mikemurphy.co/sftp/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 647
-youtube: 
-  - "https://youtu.be/5JVdlFoeYwU"
+youtube:
+  - https://youtu.be/5JVdlFoeYwU
 ---
-<https://youtu.be/5JVdlFoeYwU>
+## Description
 
-**Description:**  
 Can't figure out how to actually see all the files and folders on your Hostinger VPS?
 
 In this tutorial, I'll show you three different ways to connect to your Hostinger VPS using SFTP (Secure File Transfer Protocol) so you can visually browse, edit, and manage your server files just like you would in Finder on your local machine. If you've been staring at the terminal wondering where everything on your VPS is, this video is for you.

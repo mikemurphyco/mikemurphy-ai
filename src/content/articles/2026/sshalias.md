@@ -47,10 +47,7 @@ seo:
 youtube:
   - "https://youtu.be/wknMMBZRHag"
 ---
-
-https://youtu.be/wknMMBZRHag
-
-# How To Create SSH Aliases on Mac to Connect to Your Hostinger VPS
+## Description
 
 If you connect to your Hostinger VPS from the Mac terminal, you may be typing a long SSH command every time:
 

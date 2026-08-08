@@ -44,9 +44,8 @@ seo:
 youtube: 
   - "https://youtu.be/GK36nHA7YLQ"
 ---
-<https://youtu.be/GK36nHA7YLQ>
+## Description
 
-**Description:**  
 In this tutorial, you will learn how to use Claude Code to move Uptime Kuma Docker Container into its own directory, configure Custom Domains & Set Up Docker Network.
 
 **What is Uptime Kuma?**  

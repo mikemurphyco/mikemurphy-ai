@@ -1,54 +1,54 @@
 ---
-title: "How To Setup UFW on Hostinger VPS (Step-by-Step)"
-description: "In this tutorial, you will learn how to set up UFW (Uncomplicated Firewall) on your Hostinger VPS. UFW is a command-line utility that runs at the operating system level, adding a second layer of protection alongside the network firewall in your Hostinger dashboard."
-pubDate: "2026-04-01T06:30:46"
-updatedDate: "2026-03-31T22:11:00"
+title: How To Setup UFW on Hostinger VPS
+description: In this tutorial, you will learn how to set up UFW (Uncomplicated Firewall) on your Hostinger VPS. UFW is a command-line utility that runs at the operating system level, adding a second layer of protection alongside the network firewall in your Hostinger dashboard.
+pubDate: 2026-04-01T06:30:46
+updatedDate: 2026-03-31T22:11:00
 draft: false
-type: "post"
-slug: "ufw"
-permalink: "/ufw/"
-legacyPermalink: "https://www.mikemurphy.co/ufw/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/ufw/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/03/UFWpsd.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/03/UFWpsd.jpg"
-categories: 
-  - "AI"
-  - "Hostinger VPS"
-  - "Tutorials"
-tags: 
-  - "firewall"
+type: post
+slug: ufw
+permalink: /ufw/
+legacyPermalink: https://www.mikemurphy.co/ufw/
+canonicalUrl: https://mikemurphy.ai/tutorials/ufw/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/03/UFWpsd.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/03/UFWpsd.jpg
+categories:
+  - AI
+  - Hostinger VPS
+  - Tutorials
+tags:
+  - firewall
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215423"
-  postType: "post"
+  postType: post
   rawWordCount: 735
 seo:
-  legacyTitle: "How To Setup UFW on Hostinger VPS (Step-by-Step) - Mike Murphy Co"
-  legacyH1: "How To Setup UFW on Hostinger VPS (Step-by-Step)"
-  legacyCanonical: "https://www.mikemurphy.co/ufw/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How To Setup UFW on Hostinger VPS (Step-by-Step) - Mike Murphy Co
+  legacyH1: How To Setup UFW on Hostinger VPS (Step-by-Step)
+  legacyCanonical: https://www.mikemurphy.co/ufw/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 724
-youtube: 
-  - "https://youtu.be/4IOx9ArJFdk"
+youtube:
+  - https://youtu.be/4IOx9ArJFdk
 ---
-<https://youtu.be/4IOx9ArJFdk>
 
-**Description  
-**In this tutorial, you will learn how to set up UFW (Uncomplicated Firewall) on your Hostinger VPS. UFW is a command-line utility that runs at the operating system level, adding a second layer of protection alongside the network firewall in your Hostinger dashboard. By the end of this tutorial, your VPS will have two locks protecting it from the outside world.
+## Description  
 
-🧠 **What You Will Learn**
+In this tutorial, you will learn how to set up UFW (Uncomplicated Firewall) on your Hostinger VPS. UFW is a command-line utility that runs at the operating system level, adding a second layer of protection alongside the network firewall in your Hostinger dashboard. By the end of this tutorial, your VPS will have two locks protecting it from the outside world.
+
+## 🧠 What You Will Learn
 
 - Two-firewall setup: outer network layer vs. inner OS level
 - UFW explained... what it is and why your VPS needs it
@@ -57,7 +57,7 @@ youtube:
 - Default policies: deny all incoming, allow outgoing
 - Common UFW commands: add ports, delete rules, reset, disable
 
-🔗 **Links**
+## 🔗 Links
 
 🌐 Hostinger VPS:  
 [https://www.hostg.xyz/SHIDN](https://www.hostg.xyz/SHIDN)
@@ -69,7 +69,7 @@ Hostinger VPS: How To Create a Non-Root Sudo User
 [https://youtu.be/00mrjyTB_Lk](https://youtu.be/00mrjyTB_Lk)
 
 ——————  
-**Timestamps**
+## Timestamps
 
 00:00 Intro: About The Tutorial  
 00:27 What is UFW?  

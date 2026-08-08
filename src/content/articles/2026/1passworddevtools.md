@@ -1,53 +1,49 @@
 ---
-title: "1Password Developer Tools: SSH Agent, CLI & Watchtower Setup"
-description: "Stop managing SSH keys the hard way. In this tutorial, I'll walk you through enabling and setting up the 1Password Developer Tools."
-pubDate: "2026-02-24T06:45:10"
-updatedDate: "2026-02-24T19:47:56"
+title: Getting Started with 1Password Developer Tools
+description: Stop managing SSH keys the hard way. In this tutorial, I'll walk you through enabling and setting up the 1Password Developer Tools.
+pubDate: 2026-02-24T06:45:10
+updatedDate: 2026-02-24T19:47:56
 draft: false
-type: "post"
-slug: "1passworddevtools"
-permalink: "/1passworddevtools/"
-legacyPermalink: "https://www.mikemurphy.co/1passworddevtools/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/1passworddevtools/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/02/1PASSWORD.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/02/1PASSWORD.jpg"
-categories: 
-  - "1Password"
-  - "AI"
-  - "Macs & iOS"
-  - "Tutorials"
+type: post
+slug: 1passworddevtools
+permalink: /1passworddevtools/
+legacyPermalink: https://www.mikemurphy.co/1passworddevtools/
+canonicalUrl: https://mikemurphy.ai/tutorials/1passworddevtools/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/02/1PASSWORD.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/02/1PASSWORD.jpg
+categories:
+  - 1Password
+  - AI
+  - Macs & iOS
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215363"
-  postType: "post"
+  postType: post
   rawWordCount: 593
 seo:
   legacyTitle: "1Password Developer Tools: SSH Agent, CLI & Watchtower Setup - Mike Murphy Co"
   legacyH1: "1Password Developer Tools: SSH Agent, CLI & Watchtower Setup"
-  legacyCanonical: "https://www.mikemurphy.co/1passworddevtools/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyCanonical: https://www.mikemurphy.co/1passworddevtools/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 607
-youtube: 
-  - "https://youtu.be/rle97m_vKuE"
+youtube:
+  - https://youtu.be/rle97m_vKuE
 ---
-<https://youtu.be/rle97m_vKuE>
-
- 
-
-**Description:**
+## Description
 
 Stop managing SSH keys the hard way. In this tutorial, I'll walk you through enabling and setting up the 1Password Developer Tools — including the SSH Agent, CLI, Environments, Watchtower, and VS Code integration — so you can store and access all your SSH keys securely in one place, connect to GitHub and servers without passwords, and even reach your secrets directly from the terminal.
 

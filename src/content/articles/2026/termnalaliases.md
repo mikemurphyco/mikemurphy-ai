@@ -1,64 +1,66 @@
 ---
-title: "How to Create MacOS Terminal Alias Shortcuts for Obsidian Vaults in iCloud Drive"
-description: "In this tutorial, I will show you how to create Terminal Aliases and turn those \"obnoxious\" iCloud and Obsidian directory paths into simple, one-word shortcuts you can use to change directories, open VS Code and more."
-pubDate: "2026-01-29T07:32:35"
-updatedDate: "2026-01-29T07:37:57"
+title: Create MacOS Terminal Alias Shortcuts for Obsidian Vaults
+description: In this tutorial, I will show you how to create Terminal Aliases and turn those "obnoxious" iCloud and Obsidian directory paths into simple, one-word shortcuts you can use to change directories, open VS Code and more.
+pubDate: 2026-01-29T07:32:35
+updatedDate: 2026-01-29T07:37:57
 draft: false
-type: "post"
-slug: "termnalaliases"
-permalink: "/termnalaliases/"
-legacyPermalink: "https://www.mikemurphy.co/termnalaliases/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/termnalaliases/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/01/ALIAS.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/01/ALIAS.jpg"
-categories: 
-  - "AI"
-  - "MacOS Terminal"
-  - "Tutorials"
+type: post
+slug: termnalaliases
+permalink: /termnalaliases/
+legacyPermalink: https://www.mikemurphy.co/termnalaliases/
+canonicalUrl: https://mikemurphy.ai/tutorials/termnalaliases/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/01/ALIAS.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/01/ALIAS.jpg
+categories:
+  - AI
+  - MacOS Terminal
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215295"
-  postType: "post"
+  postType: post
   rawWordCount: 446
 seo:
-  legacyTitle: "How to Create MacOS Terminal Alias Shortcuts for Obsidian Vaults in iCloud Drive - Mike Murphy Co"
-  legacyH1: "How to Create MacOS Terminal Alias Shortcuts for Obsidian Vaults in iCloud Drive"
-  legacyCanonical: "https://www.mikemurphy.co/termnalaliases/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How to Create MacOS Terminal Alias Shortcuts for Obsidian Vaults in iCloud Drive - Mike Murphy Co
+  legacyH1: How to Create MacOS Terminal Alias Shortcuts for Obsidian Vaults in iCloud Drive
+  legacyCanonical: https://www.mikemurphy.co/termnalaliases/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 448
-youtube: 
-  - "https://youtu.be/S8B1wFKyKLE"
+youtube:
+  - https://youtu.be/S8B1wFKyKLE
 ---
-<https://youtu.be/S8B1wFKyKLE>
 
-**Description:**  
+## Description:  
+
 In this tutorial, I will show you how to create Terminal Aliases and turn those "obnoxious" iCloud and Obsidian directory paths into simple, one-word shortcuts you can use to change directories, open VS Code and more.
 
-**📌 Links:  
+## 📌 Links:  
+
 **[Visual Studio Code + Dot (Tutorial)](https://youtu.be/8kjI1Bgszk0)  
 [Obsidian](https://obsidian.md/)  
 [Get Hostinger VPS for n8n](https://www.hostg.xyz/SHIDN)
 
-**What You Will Learn:**  
-What are Mac Terminal Aliases?  
-MacOS Terminal Tips & Tricks  
-How To Create & Activate Terminal Aliases  
-How to Use & Edit Terminal Aliases
+## What You Will Learn:  
 
-**Terminal Aliases Added in Tutorial:**  
+- What are Mac Terminal Aliases?  
+- MacOS Terminal Tips & Tricks  
+- How To Create & Activate Terminal Aliases  
+- How to Use & Edit Terminal Aliases
+
+## Terminal Aliases Added in Tutorial:  
 Jump to Obsidian Vault root  
 Jump to Code folder  
 Open Code folder in VS Code  
@@ -67,7 +69,7 @@ Jump to folder AND open VS Code
 Easy access to edit zsh Config File  
 Create Terminal Dashboard
 
-**Terminal Commands:**  
+## Terminal Commands:  
 **cd:** Change Directory  
 **pwd:** print working directory  
 **~:  **Home Directory  
@@ -79,7 +81,8 @@ Create Terminal Dashboard
 **Exit Nano:** Ctrl + O  
 **Activate Changes:** source ~/.zshrc 
 
-**🕒 Timestamps:**  
+## 🕒 Timestamps:  
+
 00:00 Intro To Tutorial  
 00:46 Terminal Aliases Demo  
 01:27 Terminal: Create Aliases  

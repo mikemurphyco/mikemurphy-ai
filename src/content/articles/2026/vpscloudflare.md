@@ -1,49 +1,48 @@
 ---
-title: "Hostinger VPS: How To Use a Custom Domain To Open n8n (Cloudflare Setup)"
-description: "In this tutorial, you will point a custom subdomain from Cloudflare to your Hostinger VPS so you can open n8n at a clean URL like flow.yourdomain.com."
-pubDate: "2026-06-03T06:30:33"
-updatedDate: "2026-06-02T23:52:50"
+title: "Hostinger VPS: Use a Custom Domain on CloudFlare To Open n8n"
+description: In this tutorial, you will point a custom subdomain from Cloudflare to your Hostinger VPS so you can open n8n at a clean URL like flow.yourdomain.com.
+pubDate: 2026-06-03T06:30:33
+updatedDate: 2026-06-02T23:52:50
 draft: false
-type: "post"
-slug: "vpscloudflare"
-permalink: "/vpscloudflare/"
-legacyPermalink: "https://www.mikemurphy.co/vpscloudflare/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/vpscloudflare/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/06/vps_custom_domains_cloudflare.png"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/06/vps_custom_domains_cloudflare.png"
+type: post
+slug: vpscloudflare
+permalink: /vpscloudflare/
+legacyPermalink: https://www.mikemurphy.co/vpscloudflare/
+canonicalUrl: https://mikemurphy.ai/tutorials/vpscloudflare/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/06/vps_custom_domains_cloudflare.png
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/06/vps_custom_domains_cloudflare.png
 categories:
-  - "Hostinger VPS"
-  - "n8n"
-  - "Tutorials"
+  - Hostinger VPS
+  - n8n
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-rest-recent-gap
 wp:
   id: "215667"
-  postType: "post"
+  postType: post
   rawWordCount: 2389
 seo:
   legacyTitle: "Hostinger VPS: How To Use a Custom Domain To Open n8n (Cloudflare Setup) - Mike Murphy Co"
   legacyH1: "Hostinger VPS: How To Use a Custom Domain To Open n8n (Cloudflare Setup)"
-  legacyCanonical: "https://www.mikemurphy.co/vpscloudflare/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyCanonical: https://www.mikemurphy.co/vpscloudflare/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 4202
 youtube:
-  - "https://youtu.be/iKvZiuRu0uQ"
+  - https://youtu.be/iKvZiuRu0uQ
 ---
-
-https://youtu.be/iKvZiuRu0uQ
+## Description
 
 Still opening your n8n server with a long, ugly IP address or Hostinger server URL? There is a cleaner way to do it.
 

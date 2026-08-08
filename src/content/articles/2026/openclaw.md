@@ -43,9 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/XvEDmYObHaI"
 ---
-<https://youtu.be/XvEDmYObHaI>
+## Description
 
-**Description:**  
 In this tutorial, you will learn how to install and set up OpenClaw, the AI Personal Assistant Bot, on a Hostinger VPS via the Docker Catalog.
 
 **What You Will Learn:**

@@ -1,70 +1,69 @@
 ---
-title: "Claude Code Tutorial: Install Uptime Kuma Docker Container on Hostinger VPS"
-description: "In this tutorial, you will learn how to use Claude Code to install Uptime Kuma as a Docker container on your Hostinger VPS. Uptime Kuma is a free, open-source monitoring tool that lets you monitor websites, APIs, and other services through a self-hosted dashboard. Instead of manually reading documentation and configuring Docker compose files, Claude Code handles everything in under 5 minutes."
-pubDate: "2026-01-06T06:45:48"
-updatedDate: "2026-01-29T07:12:14"
+title: "Claude Code: Install Uptime Kuma on Hostinger VPS"
+description: In this tutorial, you will learn how to use Claude Code to install Uptime Kuma as a Docker container on your Hostinger VPS. Uptime Kuma is a free, open-source monitoring tool that lets you monitor websites, APIs, and other services through a self-hosted dashboard. Instead of manually reading documentation and configuring Docker compose files, Claude Code handles everything in under 5 minutes.
+pubDate: 2026-01-06T06:45:48
+updatedDate: 2026-01-29T07:12:14
 draft: false
-type: "post"
-slug: "uptimekuma"
-permalink: "/uptimekuma/"
-legacyPermalink: "https://www.mikemurphy.co/uptimekuma/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/uptimekuma/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/01/KUMA.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/01/KUMA.jpg"
-categories: 
-  - "AI"
-  - "Claude Code"
-  - "Docker"
-  - "Hostinger VPS"
-  - "Tutorials"
+type: post
+slug: uptimekuma
+permalink: /uptimekuma/
+legacyPermalink: https://www.mikemurphy.co/uptimekuma/
+canonicalUrl: https://mikemurphy.ai/tutorials/uptimekuma/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/01/KUMA.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/01/KUMA.jpg
+categories:
+  - AI
+  - Claude Code
+  - Docker
+  - Hostinger VPS
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215247"
-  postType: "post"
+  postType: post
   rawWordCount: 501
 seo:
   legacyTitle: "Claude Code Tutorial: Install Uptime Kuma Docker Container on Hostinger VPS - Mike Murphy Co"
   legacyH1: "Claude Code Tutorial: Install Uptime Kuma Docker Container on Hostinger VPS"
-  legacyCanonical: "https://www.mikemurphy.co/uptimekuma/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyCanonical: https://www.mikemurphy.co/uptimekuma/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 515
-youtube: 
-  - "https://youtu.be/veztzLX4Kd4"
+youtube:
+  - https://youtu.be/veztzLX4Kd4
 ---
-<https://youtu.be/veztzLX4Kd4>
+## Description:
 
-**Description:**  
 In this tutorial, you will learn how to use Claude Code to install Uptime Kuma as a Docker container on your Hostinger VPS. Uptime Kuma is c. Instead of manually reading documentation and configuring Docker compose files, Claude Code handles everything in under 5 minutes.
 
-**What is Uptime Kuma?**  
+### What is Uptime Kuma?
 A free, open-source monitoring tool that lets you monitor websites, APIs, and other services through a self-hosted dashboard.
 
-**Prerequisites:**   
+### Prerequisites: 
 Claude Code installed  
 SSH connection to Hostinger VPS  
 Docker installed on VPS
 
-**📌 Links:**
+### 📌 Links:
 
 - Get Hostinger VPS + n8n: [https://www.hostg.xyz/SHIDN](https://www.hostg.xyz/SHIDN)
 - Connect Claude Code to VPS (Tutorial): [https://youtu.be/5X1FgNwYnkc](https://youtu.be/5X1FgNwYnkc)
 - Uptime Kuma: [https://uptimekuma.org/](https://uptimekuma.org/)
 - Claude Code: [https://www.anthropic.com/claude/code](https://www.anthropic.com/claude/code)
 
-**What You Will Learn:**
+### What You Will Learn:
 
 - How to launch Claude Code and connect to your Hostinger VPS via SSH
 - How to install Uptime Kuma as a Docker container using Claude Code
@@ -76,7 +75,7 @@ Docker installed on VPS
 
 ------------------------------------------------------------------------
 
-**🕒 Timestamps:**  
+### 🕒 Timestamps:
 00:00 Intro: About The Tutorial  
 00:30 Prerequisites  
 01:01 What is Uptime Kuma?  

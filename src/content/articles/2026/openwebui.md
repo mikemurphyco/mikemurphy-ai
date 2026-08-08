@@ -1,54 +1,52 @@
 ---
-title: "Run a Private AI Chatbot on Your Hostinger VPS (Tailscale + Ollama + Open WebUI)"
-description: "Set up a private, self-hosted AI chat interface on your Hostinger VPS using Tailscale, Ollama, and Open WebUI."
-pubDate: "2026-05-22T06:30:32"
-updatedDate: "2026-05-21T22:53:55"
+title: Run a Private AI Chatbot with Ollama and Open WebUI
+description: Set up a private, self-hosted AI chat interface on your Hostinger VPS using Tailscale, Ollama, and Open WebUI.
+pubDate: 2026-05-22T06:30:32
+updatedDate: 2026-05-21T22:53:55
 draft: false
-type: "post"
-slug: "openwebui"
-permalink: "/openwebui/"
-legacyPermalink: "https://www.mikemurphy.co/openwebui/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/openwebui/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/05/OPEN-WEB-UI.png"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/05/OPEN-WEB-UI.png"
+type: post
+slug: openwebui
+permalink: /openwebui/
+legacyPermalink: https://www.mikemurphy.co/openwebui/
+canonicalUrl: https://mikemurphy.ai/tutorials/openwebui/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/05/OPEN-WEB-UI.png
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/05/OPEN-WEB-UI.png
 categories:
-  - "AI"
-  - "Hostinger VPS"
-  - "Ollama"
-  - "Open WebUI"
-  - "Tailscale"
-  - "Tutorials"
+  - AI
+  - Hostinger VPS
+  - Ollama
+  - Open WebUI
+  - Tailscale
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-rest-recent-gap
 wp:
   id: "215652"
-  postType: "post"
+  postType: post
   rawWordCount: 2041
 seo:
-  legacyTitle: "Run a Private AI Chatbot on Your Hostinger VPS (Tailscale + Ollama + Open WebUI) - Mike Murphy Co"
-  legacyH1: "Run a Private AI Chatbot on Your Hostinger VPS (Tailscale + Ollama + Open WebUI)"
-  legacyCanonical: "https://www.mikemurphy.co/openwebui/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: Run a Private AI Chatbot on Your Hostinger VPS (Tailscale + Ollama + Open WebUI) - Mike Murphy Co
+  legacyH1: Run a Private AI Chatbot on Your Hostinger VPS (Tailscale + Ollama + Open WebUI)
+  legacyCanonical: https://www.mikemurphy.co/openwebui/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 2847
 youtube:
-  - "https://youtu.be/QWxkbtLJcHk"
+  - https://youtu.be/QWxkbtLJcHk
 ---
+## Description
 
-https://youtu.be/QWxkbtLJcHk
-
-**Description:**
 In this tutorial, you will learn how to set up a private, self-hosted AI chat interface on your Hostinger VPS using Tailscale, Ollama, and Open WebUI. This is Part 2 of the Tailscale series. Once it is set up, you will have a ChatGPT-style chat interface running 24/7 on your own server, accessible from any device on your Tailscale network, completely private, secure, and free (beyond your existing VPS subscription).
 
 **🧠 What You Will Learn**

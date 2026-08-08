@@ -31,6 +31,7 @@ search:
   include: true
   boost: 1
 ---
+## Description
 
 If you own a website, `www.yourdomain.com` and `yourdomain.com` probably feel like the same address.
 

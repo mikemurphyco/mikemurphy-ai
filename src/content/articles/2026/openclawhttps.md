@@ -43,9 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/LnUlz_EqBLY"
 ---
-<https://youtu.be/LnUlz_EqBLY>
-
-**Description:**  
+## Description
+ 
 In this tutorial, you will learn how to convert insecure HTTP to HTTPS Custom Domain for OpenClaw Docker Container on a Hostinger VPS using Traefik (Reverse Proxy) & SSL Certificate.
 
 **What You Will Learn:**  

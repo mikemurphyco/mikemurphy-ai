@@ -29,6 +29,7 @@ search:
   include: true
   boost: 1
 ---
+## Description
 
 Every page on my Astro site gets compiled into HTML at build time. The raw markdown file, the actual source, never gets served to anyone. But what if you could get to it anyway? Not a scraped, reformatted copy, the real source file, stripped clean and ready to paste into Obsidian or hand to an AI tool.
 

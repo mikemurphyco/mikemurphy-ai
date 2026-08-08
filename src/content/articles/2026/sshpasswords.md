@@ -44,10 +44,7 @@ seo:
 youtube: 
   - "https://youtu.be/28dKE3Owugg"
 ---
-<https://youtu.be/28dKE3Owugg>
-
-**Description  
-**
+## Description
 
 In this tutorial, you will learn how to disable SSH password login on your Hostinger VPS so that only SSH keys are accepted as credentials. Passwords can be guessed or hacked, and removing them as an option eliminates that risk entirely, leaving SSH keys as the only way in.
 

@@ -1,53 +1,52 @@
 ---
-title: "How to Connect Claude Code to a Hostinger VPS (SSH + macOS Terminal)"
-description: "In this tutorial, you will learn how to connect Claude Code to a Hostinger VPS using SSH and the macOS Terminal."
-pubDate: "2026-01-01T06:45:15"
-updatedDate: "2026-01-29T07:12:17"
+title: How to Connect Claude Code to a Hostinger VPS via SSH
+description: In this tutorial, you will learn how to connect Claude Code to a Hostinger VPS using SSH and the macOS Terminal.
+pubDate: 2026-01-01T06:45:15
+updatedDate: 2026-01-29T07:12:17
 draft: false
-type: "post"
-slug: "claudecodevps"
-permalink: "/claudecodevps/"
-legacyPermalink: "https://www.mikemurphy.co/claudecodevps/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/claudecodevps/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2025/12/claude-code.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2025/12/claude-code.jpg"
-categories: 
-  - "AI"
-  - "Claude Code"
-  - "Hostinger VPS"
-  - "MacOS Terminal"
-  - "Termius SSH"
-  - "Tutorials"
+type: post
+slug: claudecodevps
+permalink: /claudecodevps/
+legacyPermalink: https://www.mikemurphy.co/claudecodevps/
+canonicalUrl: https://mikemurphy.ai/tutorials/claudecodevps/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2025/12/claude-code.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2025/12/claude-code.jpg
+categories:
+  - AI
+  - Claude Code
+  - Hostinger VPS
+  - MacOS Terminal
+  - Termius SSH
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: true
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215240"
-  postType: "post"
+  postType: post
   rawWordCount: 474
 seo:
-  legacyTitle: "How to Connect Claude Code to a Hostinger VPS (SSH + macOS Terminal) - Mike Murphy Co"
-  legacyH1: "How to Connect Claude Code to a Hostinger VPS (SSH + macOS Terminal)"
-  legacyCanonical: "https://www.mikemurphy.co/claudecodevps/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How to Connect Claude Code to a Hostinger VPS (SSH + macOS Terminal) - Mike Murphy Co
+  legacyH1: How to Connect Claude Code to a Hostinger VPS (SSH + macOS Terminal)
+  legacyCanonical: https://www.mikemurphy.co/claudecodevps/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 469
-youtube: 
-  - "https://youtu.be/5X1FgNwYnkc"
+youtube:
+  - https://youtu.be/5X1FgNwYnkc
 ---
-<https://youtu.be/5X1FgNwYnkc>
+## Description
 
-**Description:**  
 In this tutorial, you will learn how to connect Claude Code to a Hostinger VPS using SSH and the macOS Terminal.
 
 **📌 Links:**

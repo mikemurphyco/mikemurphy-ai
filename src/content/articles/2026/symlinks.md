@@ -43,7 +43,7 @@ seo:
 youtube: 
   - "https://youtu.be/ezHBiWjLVVo"
 ---
-<https://youtu.be/ezHBiWjLVVo>
+## Description
 
 In this tutorial, you will learn how to create symbolic links (symlinks) on a Mac so you can access any folder inside your Obsidian Vault without moving it from its original location. If your Vault lives in iCloud Drive but you want to work on Markdown files that live in your home directory (like coding project READMEs), this is the video for you.
 

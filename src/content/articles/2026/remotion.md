@@ -1,5 +1,5 @@
 ---
-title: "Remotion: How To Get Started Making Videos With Code (Beginner's Guide)"
+title: "Remotion: How To Get Started Making Videos With Code"
 description: Set up your first Remotion project, launch the preview studio, and animate a logo using a plain English prompt to Claude Code.
 pubDate: 2026-07-28
 draft: false
@@ -30,6 +30,7 @@ search:
   include: true
   boost: 1
 ---
+## Description
 
 Most video editing means dragging clips on a timeline and nudging keyframes until something looks right. Remotion takes a different path: you describe the video, code builds it, and you preview the result live in your browser. Pair it with an AI agent like Claude Code and you never have to write the animation code yourself. You just say what you want.
 

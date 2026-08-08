@@ -1,52 +1,51 @@
 ---
-title: "How to Use Claude Code Remote Control (Mac, iPhone & Browser)"
-description: "In this tutorial, you will learn how to use Claude Code Remote Control to start a session on one computer and pick it up from any other device. Whether you're heading to a coffee shop, running an errand, or just want to work from your iPhone on the beach, this feature keeps you connected to your Claude Code sessions from anywhere."
-pubDate: "2026-03-25T06:30:09"
-updatedDate: "2026-03-24T20:00:46"
+title: How to Use Claude Code Remote Control on Apple Devices
+description: In this tutorial, you will learn how to use Claude Code Remote Control to start a session on one computer and pick it up from any other device. Whether you're heading to a coffee shop, running an errand, or just want to work from your iPhone on the beach, this feature keeps you connected to your Claude Code sessions from anywhere.
+pubDate: 2026-03-25T06:30:09
+updatedDate: 2026-03-24T20:00:46
 draft: false
-type: "post"
-slug: "clauderemote"
-permalink: "/clauderemote/"
-legacyPermalink: "https://www.mikemurphy.co/clauderemote/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/clauderemote/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/03/CLAUDE_REMOTE.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/03/CLAUDE_REMOTE.jpg"
-categories: 
-  - "AI"
-  - "Claude Code"
-  - "Tutorials"
+type: post
+slug: clauderemote
+permalink: /clauderemote/
+legacyPermalink: https://www.mikemurphy.co/clauderemote/
+canonicalUrl: https://mikemurphy.ai/tutorials/clauderemote/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/03/CLAUDE_REMOTE.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/03/CLAUDE_REMOTE.jpg
+categories:
+  - AI
+  - Claude Code
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215416"
-  postType: "post"
+  postType: post
   rawWordCount: 388
 seo:
-  legacyTitle: "How to Use Claude Code Remote Control (Mac, iPhone & Browser) - Mike Murphy Co"
-  legacyH1: "How to Use Claude Code Remote Control (Mac, iPhone & Browser)"
-  legacyCanonical: "https://www.mikemurphy.co/clauderemote/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How to Use Claude Code Remote Control (Mac, iPhone & Browser) - Mike Murphy Co
+  legacyH1: How to Use Claude Code Remote Control (Mac, iPhone & Browser)
+  legacyCanonical: https://www.mikemurphy.co/clauderemote/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 401
-youtube: 
-  - "https://youtu.be/3jlgin9q_mw"
+youtube:
+  - https://youtu.be/3jlgin9q_mw
 ---
-<https://youtu.be/3jlgin9q_mw>
+## Description
 
-**Description  
-**In this tutorial, you will learn how to use Claude Code Remote Control to start a session on one computer and pick it up from any other device. Whether you're heading to a coffee shop, running an errand, or just want to work from your iPhone on the beach, this feature keeps you connected to your Claude Code sessions from anywhere.**  
-**
+In this tutorial, you will learn how to use Claude Code Remote Control to start a session on one computer and pick it up from any other device. Whether you're heading to a coffee shop, running an errand, or just want to work from your iPhone on the beach, this feature keeps you connected to your Claude Code sessions from anywhere.
+
 
 **🧠 What You Will Learn**
 

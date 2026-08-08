@@ -1,51 +1,50 @@
 ---
-title: "How to Reinstall or Change the OS on Your Hostinger VPS (Step-by-Step)"
-description: "In this tutorial, I'll show you exactly how to reinstall your existing operating system or swap it out for a completely different one. Whether you're recovering from a bad setup, suspected malware, or just want to start fresh with n8n, Claude Code, or another app, this guide walks you through the entire process."
-pubDate: "2026-03-10T06:30:14"
-updatedDate: "2026-03-09T21:56:40"
+title: How to Reinstall or Change the OS on Your Hostinger VPS
+description: In this tutorial, I'll show you exactly how to reinstall your existing operating system or swap it out for a completely different one. Whether you're recovering from a bad setup, suspected malware, or just want to start fresh with n8n, Claude Code, or another app, this guide walks you through the entire process.
+pubDate: 2026-03-10T06:30:14
+updatedDate: 2026-03-09T21:56:40
 draft: false
-type: "post"
-slug: "reinstallos"
-permalink: "/reinstallos/"
-legacyPermalink: "https://www.mikemurphy.co/reinstallos/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/reinstallos/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/03/REINSTALL-UNINSTALL_VPS.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/03/REINSTALL-UNINSTALL_VPS.jpg"
-categories: 
-  - "AI"
-  - "Hostinger VPS"
-  - "Tutorials"
+type: post
+slug: reinstallos
+permalink: /reinstallos/
+legacyPermalink: https://www.mikemurphy.co/reinstallos/
+canonicalUrl: https://mikemurphy.ai/tutorials/reinstallos/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/03/REINSTALL-UNINSTALL_VPS.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/03/REINSTALL-UNINSTALL_VPS.jpg
+categories:
+  - AI
+  - Hostinger VPS
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215394"
-  postType: "post"
+  postType: post
   rawWordCount: 590
 seo:
-  legacyTitle: "How to Reinstall or Change the OS on Your Hostinger VPS (Step-by-Step) - Mike Murphy Co"
-  legacyH1: "How to Reinstall or Change the OS on Your Hostinger VPS (Step-by-Step)"
-  legacyCanonical: "https://www.mikemurphy.co/reinstallos/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How to Reinstall or Change the OS on Your Hostinger VPS (Step-by-Step) - Mike Murphy Co
+  legacyH1: How to Reinstall or Change the OS on Your Hostinger VPS (Step-by-Step)
+  legacyCanonical: https://www.mikemurphy.co/reinstallos/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 612
-youtube: 
-  - "https://youtu.be/sZhF8xG0zys"
+youtube:
+  - https://youtu.be/sZhF8xG0zys
 ---
-<https://youtu.be/sZhF8xG0zys>
+## Description
 
-**Description:  
-**Something broke on your Hostinger VPS, or you picked the wrong OS at signup, and now you need a clean slate.
+Something broke on your Hostinger VPS, or you picked the wrong OS at signup, and now you need a clean slate.
 
 In this tutorial, I'll show you exactly how to reinstall your existing operating system or swap it out for a completely different one. Whether you're recovering from a bad setup, suspected malware, or just want to start fresh with n8n, Claude Code, or another app, this guide walks you through the entire process.
 

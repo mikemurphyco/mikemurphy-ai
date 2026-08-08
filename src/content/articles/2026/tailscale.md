@@ -42,11 +42,11 @@ seo:
 youtube: 
   - "https://youtu.be/3UePiR7_AFg"
 ---
-<https://youtu.be/3UePiR7_AFg>
+## Description
 
 In this tutorial, you will learn how to set up a Tailscale private mesh network so all of your devices (iPhone, MacBook Pro, and a Hostinger VPS) can talk to each other from anywhere in the world over a free, private, and end-to-end encrypted network. No port forwarding, no firewall rules, and no exposed IP addresses.
 
-🧠 **What You Will Learn**
+## 🧠 What You Will Learn
 
 - Tailscale: what a mesh VPN is and why it beats traditional VPNs
 - WireGuard: the encryption powering your private network
@@ -59,7 +59,7 @@ In this tutorial, you will learn how to set up a Tailscale private mesh network 
 
 ------------------------------------------------------------------------
 
-🔗 **Links**
+## 🔗 Links
 
 **🌐 Hostinger VPS (Affiliate Link):**  
 [https://www.hostg.xyz/SHIDN](https://www.hostg.xyz/SHIDN)
@@ -67,8 +67,7 @@ In this tutorial, you will learn how to set up a Tailscale private mesh network 
 **Tailscale:**  
 [https://tailscale.com](https://tailscale.com)
 
-**⏱️ Timestamps  
-**
+## ⏱️ Timestamps  
 
 00:00 Intro: About The Tutorial  
 00:36 What is Tailscale?  
@@ -95,8 +94,6 @@ In this tutorial, you will learn how to set up a Tailscale private mesh network 
 - No port forwarding. No router config. No public IP exposure.
 - Works across cellular, Wi-Fi, and wired connections — anywhere in the world
 - Built on WireGuard under the hood, but you never have to think about that
-
-##  
 
 ## Core Commands Reference
 

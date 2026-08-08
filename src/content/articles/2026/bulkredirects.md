@@ -1,19 +1,19 @@
 ---
-title: "How To Create Bulk 301 Redirects on Cloudflare (Pretty Links to Shlink)"
-description: "Use Cloudflare Bulk Redirects to forward old WordPress Pretty Links to new Shlink URLs during a site migration."
-pubDate: "2026-06-24T06:30:00"
-updatedDate: "2026-06-24T06:30:00"
+title: How To Create Bulk 301 Redirects on Cloudflare
+description: Use Cloudflare Bulk Redirects to forward old WordPress Pretty Links to new Shlink URLs during a site migration.
+pubDate: 2026-06-24T06:30:00
+updatedDate: 2026-06-24T06:30:00
 draft: false
-type: "post"
-slug: "bulkredirects"
-permalink: "/bulkredirects/"
-legacyPermalink: "https://www.mikemurphy.co/bulkredirects/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/bulkredirects/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/06/bulk_redirects_cloudflare.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/06/bulk_redirects.jpg"
+type: post
+slug: bulkredirects
+permalink: /bulkredirects/
+legacyPermalink: https://www.mikemurphy.co/bulkredirects/
+canonicalUrl: https://mikemurphy.ai/tutorials/bulkredirects/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/06/bulk_redirects_cloudflare.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/06/bulk_redirects.jpg
 categories:
   - Cloudflare
   - WordPress
@@ -34,19 +34,18 @@ tools:
   - WordPress
   - Astro
   - CSV
-difficulty: "beginner"
-estimatedTime: "15 minutes"
-videoUrl: "https://youtu.be/cc10GAx7ppc"
-youtubeId: "cc10GAx7ppc"
+difficulty: beginner
+estimatedTime: 15 minutes
+videoUrl: https://youtu.be/cc10GAx7ppc
+youtubeId: cc10GAx7ppc
 youtube:
-  - "https://youtu.be/cc10GAx7ppc"
+  - https://youtu.be/cc10GAx7ppc
 resourceGuide: ""
 search:
   include: true
-  boost: 1.0
+  boost: 1
 ---
-
-# How To Create Bulk 301 Redirects on Cloudflare (Pretty Links to Shlink)
+## Description
 
 If you are moving a website away from WordPress, one of the sneaky problems is what happens to all the short links you created with Pretty Links.
 

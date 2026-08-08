@@ -1,51 +1,50 @@
 ---
-title: "Hostinger VPS: How To Install Fail2Ban To Protect Brute Force Logins"
-description: "In this tutorial, you will learn how to install and set up the security tool, Fail2Ban to protect your Hostinger VPS from suspicious activity and brute force login attempts."
-pubDate: "2026-02-05T07:00:42"
-updatedDate: "2026-02-04T22:57:38"
+title: "Hostinger VPS: How To Install Fail2Ban"
+description: In this tutorial, you will learn how to install and set up the security tool, Fail2Ban to protect your Hostinger VPS from suspicious activity and brute force login attempts.
+pubDate: 2026-02-05T07:00:42
+updatedDate: 2026-02-04T22:57:38
 draft: false
-type: "post"
-slug: "fail2ban"
-permalink: "/fail2ban/"
-legacyPermalink: "https://www.mikemurphy.co/fail2ban/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/fail2ban/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/02/FAIL2BAN.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/02/FAIL2BAN.jpg"
-categories: 
-  - "AI"
-  - "Fail2Ban"
-  - "Hostinger VPS"
-  - "Tutorials"
+type: post
+slug: fail2ban
+permalink: /fail2ban/
+legacyPermalink: https://www.mikemurphy.co/fail2ban/
+canonicalUrl: https://mikemurphy.ai/tutorials/fail2ban/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/02/FAIL2BAN.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/02/FAIL2BAN.jpg
+categories:
+  - AI
+  - Fail2Ban
+  - Hostinger VPS
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215330"
-  postType: "post"
+  postType: post
   rawWordCount: 375
 seo:
   legacyTitle: "Hostinger VPS: How To Install Fail2Ban To Protect Brute Force Logins - Mike Murphy Co"
   legacyH1: "Hostinger VPS: How To Install Fail2Ban To Protect Brute Force Logins"
-  legacyCanonical: "https://www.mikemurphy.co/fail2ban/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyCanonical: https://www.mikemurphy.co/fail2ban/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 407
-youtube: 
-  - "https://youtu.be/E0bRbhOgsVI"
+youtube:
+  - https://youtu.be/E0bRbhOgsVI
 ---
-<https://youtu.be/E0bRbhOgsVI>
+## Description
 
-**Description:**  
 In this tutorial, you will learn how to install and set up the security tool, Fail2Ban to protect your Hostinger VPS from suspicious activity and brute force login attempts.
 
 **What You Will Learn:**  

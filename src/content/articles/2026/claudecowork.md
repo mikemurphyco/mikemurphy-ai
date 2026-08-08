@@ -1,50 +1,49 @@
 ---
-title: "How To Use Claude Cowork (Beginner's Guide)"
-description: "In this tutorial, you will how to use Claude Cowork which has the agentic architecture of Claude Code but accessible in Claude Desktop App and not in the Terminal or PowerShell."
-pubDate: "2026-01-22T06:45:11"
-updatedDate: "2026-01-21T21:33:15"
+title: How To Get Started Using Claude Cowork
+description: In this tutorial, you will how to use Claude Cowork which has the agentic architecture of Claude Code but accessible in Claude Desktop App and not in the Terminal or PowerShell.
+pubDate: 2026-01-22T06:45:11
+updatedDate: 2026-01-21T21:33:15
 draft: false
-type: "post"
-slug: "claudecowork"
-permalink: "/claudecowork/"
-legacyPermalink: "https://www.mikemurphy.co/claudecowork/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/claudecowork/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/01/COWORK.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/01/COWORK.jpg"
-categories: 
-  - "AI"
-  - "Claude Desktop"
-  - "Tutorials"
+type: post
+slug: claudecowork
+permalink: /claudecowork/
+legacyPermalink: https://www.mikemurphy.co/claudecowork/
+canonicalUrl: https://mikemurphy.ai/tutorials/claudecowork/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/01/COWORK.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/01/COWORK.jpg
+categories:
+  - AI
+  - Claude Desktop
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: true
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215273"
-  postType: "post"
+  postType: post
   rawWordCount: 362
 seo:
-  legacyTitle: "How To Use Claude Cowork (Beginner's Guide) - Mike Murphy Co"
-  legacyH1: "How To Use Claude Cowork (Beginner’s Guide)"
-  legacyCanonical: "https://www.mikemurphy.co/claudecowork/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How To Use Claude Cowork (Beginner's Guide) - Mike Murphy Co
+  legacyH1: How To Use Claude Cowork (Beginner’s Guide)
+  legacyCanonical: https://www.mikemurphy.co/claudecowork/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 376
-youtube: 
-  - "https://youtu.be/hkBKByC_DaY"
+youtube:
+  - https://youtu.be/hkBKByC_DaY
 ---
-<https://youtu.be/hkBKByC_DaY>
+## Description
 
-**Description:**  
 In this tutorial, you will how to use Claude Cowork which has the agentic architecture of Claude Code but accessible in Claude Desktop App and not in the Terminal or PowerShell.
 
 **What Is Claude CoWork?**  

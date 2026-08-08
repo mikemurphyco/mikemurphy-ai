@@ -1,5 +1,5 @@
 ---
-title: How To Migrate WordPress to Astro Without Losing SEO (Live Domain Cutover)
+title: How To Migrate WordPress to Astro Without Losing SEO
 description: Migrate a WordPress website to Astro, switch domains, and keep 10+ years of SEO using bulk 301 redirects and a Cloudflare DNS cutover.
 pubDate: 2026-07-10
 draft: false
@@ -30,6 +30,7 @@ search:
   include: true
   boost: 1
 ---
+## Description
 
 After more than 10 years on WordPress, I migrated my website to Astro. And I did not just change platforms. I changed domains too, moving from `mikemurphy.co` to `mikemurphy.ai`.
 

@@ -1,53 +1,51 @@
 ---
-title: "How To Get Anthropic API Keys & Use Claude AI in n8n Automation Workflows"
+title: How To Get Anthropic API Keys To use Claude AI in n8n
 description: ""
-pubDate: "2026-01-26T07:48:10"
-updatedDate: "2026-01-26T08:08:32"
+pubDate: 2026-01-26T07:48:10
+updatedDate: 2026-01-26T08:08:32
 draft: false
-type: "post"
-slug: "anthropicapi"
-permalink: "/anthropicapi/"
-legacyPermalink: "https://www.mikemurphy.co/anthropicapi/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/anthropicapi/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2026/01/CLAUDE-API.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2026/01/CLAUDE-API.jpg"
-categories: 
-  - "AI"
-  - "API"
-  - "Automation"
-  - "Claude Code"
-  - "n8n"
-  - "Tutorials"
+type: post
+slug: anthropicapi
+permalink: /anthropicapi/
+legacyPermalink: https://www.mikemurphy.co/anthropicapi/
+canonicalUrl: https://mikemurphy.ai/tutorials/anthropicapi/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2026/01/CLAUDE-API.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2026/01/CLAUDE-API.jpg
+categories:
+  - AI
+  - API
+  - Automation
+  - Claude Code
+  - n8n
+  - Tutorials
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: true
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215280"
-  postType: "post"
+  postType: post
   rawWordCount: 399
 seo:
-  legacyTitle: "How To Get Anthropic API Keys & Use Claude AI in n8n Automation Workflows - Mike Murphy Co"
-  legacyH1: "How To Get Anthropic API Keys & Use Claude AI in n8n Automation Workflows"
-  legacyCanonical: "https://www.mikemurphy.co/anthropicapi/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: How To Get Anthropic API Keys & Use Claude AI in n8n Automation Workflows - Mike Murphy Co
+  legacyH1: How To Get Anthropic API Keys & Use Claude AI in n8n Automation Workflows
+  legacyCanonical: https://www.mikemurphy.co/anthropicapi/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 415
-youtube: 
-  - "https://youtu.be/HygN6UXBzqg"
+youtube:
+  - https://youtu.be/HygN6UXBzqg
 ---
-<https://youtu.be/HygN6UXBzqg>
-
-**Description:**
+## Description
 
 In this tutorial, you will learn how to generate Anthropic API Keys (Claude Developer Console) and save as n8n Credentials to be able to use Claude AI LLM's in n8n Automation Workflows.
 

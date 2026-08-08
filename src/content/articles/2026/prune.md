@@ -45,10 +45,8 @@ seo:
 youtube:
   - "https://youtu.be/oOAv5fdkY5Y"
 ---
+## Description
 
-https://youtu.be/oOAv5fdkY5Y
-
-**Description**
 In this tutorial, you will learn how to prune dangling Docker images that pile up on your Hostinger VPS after running updates. If you update n8n, Ollama, Traefik, or any other Docker containers, the old image versions stay behind taking up disk space. Time to clean them up.
 
 **🧠 What You Will Learn**

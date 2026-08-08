@@ -46,8 +46,7 @@ search:
   include: true
   boost: 1
 ---
-
-# How To Migrate Pretty Links To Shlink on Hostinger VPS
+## Description
 
 What happens to all your Pretty Links when you move a website away from WordPress?
 

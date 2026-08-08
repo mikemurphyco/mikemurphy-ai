@@ -44,8 +44,7 @@ seo:
 youtube:
   - "https://youtu.be/0-bpqRzXN7g"
 ---
-
-https://youtu.be/0-bpqRzXN7g
+## Description
 
 - Open WebUI is one of those tools that looks simple at first glance. You open it in a browser, pick a model, and start chatting. That alone is useful.
 - But the bigger idea is more interesting: you can turn your Mac into a private local AI server.
