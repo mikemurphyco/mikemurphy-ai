@@ -105,19 +105,6 @@ for (const article of articles) {
     if (source !== destination && !redirects.has(source)) {
       redirects.set(source, destination);
     }
-
-    // Bare no-trailing-slash form. Cloudflare's static-assets handler only
-    // auto-adds a trailing slash for paths that resolve to a real asset; a
-    // legacy slug with no live page at that path 404s outright instead of
-    // reaching the slash-form rule above. Safe here because every source is
-    // a plain slug segment (no file extension) that could collide with a
-    // real asset path.
-    if (source.endsWith('/')) {
-      const bare = source.slice(0, -1);
-      if (bare && bare !== destination && !redirects.has(bare)) {
-        redirects.set(bare, destination);
-      }
-    }
   }
 }
 
