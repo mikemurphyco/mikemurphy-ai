@@ -102,6 +102,47 @@ export function getArticleTopicTerms(article: Article) {
   return [...new Set(terms.filter(Boolean))];
 }
 
+function cleanDescriptionBlock(block: string) {
+  return block
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/<https?:\/\/[^>]+>/gi, ' ')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/https?:\/\/\S+/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/^\s{0,3}#{1,6}\s+/gm, '')
+    .replace(/^\s*>+\s?/gm, '')
+    .replace(/^\s*(?:[-*+] |\d+\. )/gm, '')
+    .replace(/[*_`~]/g, '')
+    .replace(/\\([\\`*{}[\]()#+.!_-])/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+export function articleMetaDescription(article: Article, maxLength = 160) {
+  const authoredDescription = article.data.description.trim();
+  if (authoredDescription) return authoredDescription;
+
+  const body = (article.body ?? '').replace(/^---\n[\s\S]*?\n---\n?/, '');
+  const candidate = body
+    .split(/\n\s*\n/)
+    .map(cleanDescriptionBlock)
+    .map((block) => block.replace(/^(?:Description|Episode Summary)\s*:\s*/i, ''))
+    .find((block) => block.length >= 40 && (block.match(/[a-z]/gi)?.length ?? 0) >= 30);
+  const fallback = isPodcastEpisode(article)
+    ? `Listen to ${article.data.title}, an episode of Mike Murphy Unplugged.`
+    : isTutorial(article)
+      ? `Learn ${article.data.title} in this tutorial from Mike Murphy.`
+      : `Read ${article.data.title}, an article by Mike Murphy.`;
+  const description = candidate || fallback;
+
+  if (description.length <= maxLength) return description;
+
+  const clipped = description.slice(0, maxLength - 1);
+  const wordBoundary = clipped.replace(/\s+\S*$/, '').trimEnd();
+  return `${wordBoundary || clipped}…`;
+}
+
 export function slugifyTerm(term: string) {
   return term
     .toLowerCase()

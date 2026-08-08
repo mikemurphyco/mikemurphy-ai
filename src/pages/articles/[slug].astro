@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import { articleUrl, formatDate, getArticleTopicTerms, isDiscoverableArticle, isStandardArticle, slugifyTerm } from '../../lib/articles';
+import { articleMetaDescription, articleUrl, formatDate, getArticleTopicTerms, isDiscoverableArticle, isStandardArticle, slugifyTerm } from '../../lib/articles';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', (article) => isDiscoverableArticle(article) && isStandardArticle(article));
@@ -14,6 +14,7 @@ export async function getStaticPaths() {
 const { article } = Astro.props;
 const { Content } = await render(article);
 const terms = getArticleTopicTerms(article);
+const metaDescription = articleMetaDescription(article);
 
 const searchable = article.data.search?.include !== false;
 const pagefindAttrs = searchable
@@ -33,7 +34,7 @@ function getYouTubeId(url: string): string | null {
 }
 ---
 
-<Layout title={article.data.title} description={article.data.description} canonical={articleUrl(article)} image={article.data.featuredImage || undefined}>
+<Layout title={article.data.title} description={metaDescription} canonical={articleUrl(article)} image={article.data.featuredImage || undefined}>
   <main>
     <article class="mm-container max-w-3xl py-12" {...pagefindAttrs}>
       <a href="/articles/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to articles</a>

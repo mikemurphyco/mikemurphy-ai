@@ -1,6 +1,6 @@
 ---
 title: "Podcast Gear"
-description: ""
+description: "Podcast gear and recording tools used by Mike Murphy for podcast production, audio recording, and content creation."
 pubDate: "2017-04-06T10:43:24"
 updatedDate: "2017-04-06T10:46:07"
 draft: false

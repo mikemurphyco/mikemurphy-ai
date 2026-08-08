@@ -30,7 +30,6 @@ export async function GET() {
     { loc: absoluteUrl('/media-kit/'), priority: '0.5' },
     { loc: absoluteUrl('/contact/'), priority: '0.5' },
     { loc: absoluteUrl('/topics/'), priority: '0.8' },
-    { loc: absoluteUrl('/search/'), priority: '0.6' },
     ...topics.map((topic) => ({
       loc: absoluteUrl(`/topics/${topic.slug}/`),
       priority: topic.articles.length + topic.notes.length >= 20 ? '0.8' : '0.7',

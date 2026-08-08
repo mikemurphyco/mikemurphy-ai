@@ -1,6 +1,6 @@
 ---
 title: "The Podcast"
-description: ""
+description: "Learn about Mike Murphy Unplugged, a podcast about learning, creating, and building an independent online business."
 pubDate: "2015-09-03T23:11:40"
 updatedDate: "2024-06-28T07:46:45"
 draft: false
