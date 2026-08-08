@@ -11,6 +11,19 @@ function metaContent(html, attribute) {
   return html.match(new RegExp(`<meta (?:name|property)="${escaped}" content="([^"]*)"\\s*/?>`))?.[1]?.trim();
 }
 
+function decodeHtmlEntities(value) {
+  return value
+    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(Number.parseInt(code, 16)))
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number.parseInt(code, 10)))
+    .replace(/&(amp|apos|gt|lt|quot);/g, (_, entity) => ({
+      amp: '&',
+      apos: "'",
+      gt: '>',
+      lt: '<',
+      quot: '"',
+    })[entity]);
+}
+
 function structuredDataForHtml(html, route) {
   const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
 
@@ -46,11 +59,17 @@ function routeForFile(file) {
 for (const file of walk(distRoot)) {
   const html = readFileSync(file, 'utf8');
   const route = routeForFile(file);
+  const encodedDocumentTitle = html.match(/<title>([\s\S]*?)<\/title>/)?.[1]?.trim();
+  const documentTitle = encodedDocumentTitle ? decodeHtmlEntities(encodedDocumentTitle) : undefined;
   const description = metaContent(html, 'description');
   const structuredData = structuredDataForHtml(html, route);
   const types = new Set(structuredData.map((item) => item['@type']));
 
   if (!description) failures.push(`${route} has no non-empty meta description`);
+  if (!documentTitle) failures.push(`${route} has no non-empty title`);
+  if (documentTitle?.endsWith(' | Mike Murphy') && documentTitle.length > 60) {
+    failures.push(`${route} has an overlong title with the brand suffix (${documentTitle.length} characters)`);
+  }
 
   const requiredSocialFields = [
     'og:title',
@@ -74,6 +93,14 @@ for (const file of walk(distRoot)) {
 
   const socialImage = metaContent(html, 'og:image');
   const twitterImage = metaContent(html, 'twitter:image');
+  const openGraphTitle = metaContent(html, 'og:title');
+  const twitterTitle = metaContent(html, 'twitter:title');
+  if (openGraphTitle && twitterTitle && openGraphTitle !== twitterTitle) {
+    failures.push(`${route} has mismatched Open Graph and X titles`);
+  }
+  if (openGraphTitle?.endsWith(' | Mike Murphy')) {
+    failures.push(`${route} has an unnecessary brand suffix in its social title`);
+  }
   if (socialImage && twitterImage && socialImage !== twitterImage) {
     failures.push(`${route} has mismatched Open Graph and X image URLs`);
   }
@@ -101,10 +128,26 @@ for (const file of walk(distRoot)) {
     isDetailRoute(route, 'articles') ||
     isDetailRoute(route, 'field-notes') ||
     (route.startsWith('/ai-unplugged/issues/') && route !== '/ai-unplugged/issues/');
-  const needsBreadcrumb = isArticleLike || isDetailRoute(route, 'podcast') || route === '/about/';
+  const isPodcastEpisode = isDetailRoute(route, 'podcast');
+  const hasAuthoredContent = isArticleLike || isPodcastEpisode;
+  const needsBreadcrumb = hasAuthoredContent || route === '/about/';
+
+  if (hasAuthoredContent && metaContent(html, 'author') !== 'Mike Murphy') {
+    failures.push(`${route} is missing the Mike Murphy meta author`);
+  }
+  if (hasAuthoredContent && (!html.includes('rel="author"') || !html.includes('href="/about/"'))) {
+    failures.push(`${route} is missing a visible author link to /about/`);
+  }
+  if (isArticleLike && metaContent(html, 'article:author') !== 'https://mikemurphy.ai/about/') {
+    failures.push(`${route} is missing the Open Graph article author URL`);
+  }
 
   if (isArticleLike && !types.has('BlogPosting')) {
     failures.push(`${route} is missing BlogPosting structured data`);
+  }
+  const articleSchema = structuredData.find((item) => item['@type'] === 'BlogPosting');
+  if (isArticleLike && articleSchema?.author?.['@id'] !== 'https://mikemurphy.ai/about/#person') {
+    failures.push(`${route} does not connect its schema author to Mike Murphy's profile`);
   }
   if (needsBreadcrumb && !types.has('BreadcrumbList')) {
     failures.push(`${route} is missing BreadcrumbList structured data`);
@@ -117,6 +160,14 @@ for (const file of walk(distRoot)) {
 const searchHtml = readFileSync(join(distRoot, 'search', 'index.html'), 'utf8');
 if (!/<meta name="robots" content="noindex,follow"\s*\/?>/.test(searchHtml)) {
   failures.push('/search/ is missing robots=noindex,follow');
+}
+
+const notFoundHtml = readFileSync(join(distRoot, '404.html'), 'utf8');
+if (!/<meta name="robots" content="noindex,follow"\s*\/?>/.test(notFoundHtml)) {
+  failures.push('/404.html is missing robots=noindex,follow');
+}
+if (!/<link rel="canonical" href="https:\/\/mikemurphy\.ai\/404\.html"\s*\/?>/.test(notFoundHtml)) {
+  failures.push('/404.html does not have a self-referencing canonical URL');
 }
 
 const sitemap = readFileSync(join(distRoot, 'sitemap.xml'), 'utf8');

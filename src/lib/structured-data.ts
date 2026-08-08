@@ -1,12 +1,12 @@
 import { absoluteUrl } from './articles';
-import { SITE_SOCIAL } from './site';
+import { SITE_AUTHOR, SITE_SOCIAL } from './site';
 
 export type JsonLd = Record<string, unknown>;
 
-export const PERSON_URL = absoluteUrl('/about/');
+export const PERSON_URL = absoluteUrl(SITE_AUTHOR.href);
 export const PERSON_ID = `${PERSON_URL}#person`;
 
-const PERSON_NAME = 'Mike Murphy';
+const PERSON_NAME = SITE_AUTHOR.name;
 const PERSON_IMAGE = absoluteUrl('/assets/brand/avatar-mike-orange-1200.png');
 const PERSON_DESCRIPTION =
   'Mike Murphy creates practical tutorials about AI tools, automation, and creative technology.';

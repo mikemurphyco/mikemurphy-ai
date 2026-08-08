@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-08-07
+updated: 2026-08-08
 status: living-doc
 ---
 
@@ -152,6 +152,34 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-08-08 — Post-audit metadata cleanup
+
+**Context:** A fresh LibreCrawl audit completed across 805 URLs with zero 404s,
+zero broken links, and zero redirects among the canonical pages it discovered.
+The remaining useful findings were a cross-canonical on the generated 404 page,
+overlong branded title tags, and an author-attribution counter that did not
+recognize Schema.org authorship.
+
+**Shipped:** Made `/404.html` self-canonical and explicitly `noindex,follow`.
+Title tags now append `| Mike Murphy` only when the complete title is 60
+characters or fewer; longer authored titles remain intact without the suffix.
+Open Graph and X titles use the original unbranded title.
+
+Added visible `rel="author"` links to `/about/` across tutorials, articles,
+podcast episodes, Field Notes, and AI Unplugged issues. Those 671 authored pages
+also emit `meta name="author"`; the 509 article-like pages additionally emit the
+valid Open Graph `article:author` URL. Schema.org authors remain connected to the
+stable `https://mikemurphy.ai/about/#person` identity.
+
+**Guardrails:** Build validation now enforces 404 indexing/canonical behavior,
+the conditional title suffix, unbranded and matching social titles, visible
+author links, author metadata, Open Graph article authors, and Schema.org author
+identity consistency.
+
+**Verified:** `npm run build` completed with 797 pages. Content-link, built-link,
+metadata, structured-data, social-card, title, 404, and author-attribution checks
+all passed; `git diff --check` passed.
 
 ### 2026-08-07 — Structured data and reliable social cards
 

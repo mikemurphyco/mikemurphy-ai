@@ -1,5 +1,9 @@
 export const SITE_EMAIL = 'hello@mikemurphy.ai';
 export const SITE_X_HANDLE = '@mikemurphyai';
+export const SITE_AUTHOR = {
+  name: 'Mike Murphy',
+  href: '/about/',
+} as const;
 
 export const SITE_FEEDS = [
   {

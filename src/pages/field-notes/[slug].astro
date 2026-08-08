@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import { fieldNoteUrl, isPublishedNote, noteTypeLabel } from '../../lib/field-notes';
 import { slugifyTerm } from '../../lib/articles';
 import { articleStructuredData, breadcrumbStructuredData } from '../../lib/structured-data';
+import { SITE_AUTHOR } from '../../lib/site';
 
 export async function getStaticPaths() {
   const notes = await getCollection('fieldNotes', isPublishedNote);
@@ -47,7 +48,7 @@ const pagefindAttrs = {
 };
 ---
 
-<Layout title={note.data.title} description={note.data.excerpt} canonical={canonicalPath} imageAlt={note.data.title} ogType="article" structuredData={structuredData}>
+<Layout title={note.data.title} description={note.data.excerpt} canonical={canonicalPath} imageAlt={note.data.title} author={SITE_AUTHOR.name} authorUrl={SITE_AUTHOR.href} ogType="article" structuredData={structuredData}>
   <main>
     <article class="mm-container max-w-3xl py-12" {...pagefindAttrs}>
       <a href="/field-notes/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to field notes</a>
@@ -59,6 +60,9 @@ const pagefindAttrs = {
             {formatDate(note.data.datePublished)}
           </span>
         )}
+        <a href={SITE_AUTHOR.href} rel="author" class="font-mono text-sm font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)] hover:underline">
+          {SITE_AUTHOR.name}
+        </a>
       </div>
 
       <h1 class="mm-h1 mt-4">{note.data.title}</h1>

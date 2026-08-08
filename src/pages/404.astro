@@ -2,7 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Page Not Found" description="This page doesn't exist. MurphBot checked every node and came back empty-handed.">
+<Layout
+	title="Page Not Found"
+	description="This page doesn't exist. MurphBot checked every node and came back empty-handed."
+	canonical="/404.html"
+	robots="noindex,follow"
+>
 	<main class="mm-container mm-404 grid gap-14 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
 		<div>
 			<p class="mm-eyebrow">This is where people get stuck</p>

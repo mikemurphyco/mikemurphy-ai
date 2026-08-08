@@ -12,6 +12,8 @@ interface Props {
 	canonical?: string;
 	image?: string;
 	imageAlt?: string;
+	author?: string;
+	authorUrl?: string;
 	robots?: string;
 	noHeader?: boolean;
 	ogType?: 'website' | 'article' | 'profile';
@@ -24,15 +26,27 @@ const {
 	canonical = Astro.url.pathname,
 	image = '/assets/brand/og-default.png',
 	imageAlt = 'Mike Murphy — AI Handyman',
+	author,
+	authorUrl,
 	robots,
 	noHeader = false,
 	ogType = 'website',
 	structuredData = [],
 } = Astro.props;
 
-const pageTitle = title === SITE_TITLE ? SITE_TITLE : `${title} | ${SITE_TITLE}`;
+const brandedPageTitle = `${title} | ${SITE_TITLE}`;
+const pageTitle =
+	title === SITE_TITLE
+		? SITE_TITLE
+		: brandedPageTitle.length <= 60
+			? brandedPageTitle
+			: title;
+const socialTitle = title;
 const canonicalUrl = canonical.startsWith('http') ? canonical : absoluteUrl(canonical);
 const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
+const absoluteAuthorUrl = authorUrl
+	? authorUrl.startsWith('http') ? authorUrl : absoluteUrl(authorUrl)
+	: undefined;
 const structuredDataItems = Array.isArray(structuredData) ? structuredData : [structuredData];
 const imageExtension = new URL(imageUrl).pathname.split('.').pop()?.toLowerCase();
 const imageMimeType = imageExtension === 'png'
@@ -73,6 +87,7 @@ const imageMimeType = imageExtension === 'png'
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 		<meta name="description" content={description} />
+		{author && <meta name="author" content={author} />}
 		{robots && <meta name="robots" content={robots} />}
 		<link rel="canonical" href={canonicalUrl} />
 		{SITE_FEEDS.map((feed) => (
@@ -84,17 +99,20 @@ const imageMimeType = imageExtension === 'png'
 			/>
 		))}
 		<meta property="og:site_name" content={SITE_TITLE} />
-		<meta property="og:title" content={pageTitle} />
+		<meta property="og:title" content={socialTitle} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalUrl} />
 		<meta property="og:type" content={ogType} />
+		{ogType === 'article' && absoluteAuthorUrl && (
+			<meta property="article:author" content={absoluteAuthorUrl} />
+		)}
 		<meta property="og:image" content={imageUrl} />
 		{imageMimeType && <meta property="og:image:type" content={imageMimeType} />}
 		<meta property="og:image:alt" content={imageAlt} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content={SITE_X_HANDLE} />
 		<meta name="twitter:creator" content={SITE_X_HANDLE} />
-		<meta name="twitter:title" content={pageTitle} />
+		<meta name="twitter:title" content={socialTitle} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={imageUrl} />
 		<meta name="twitter:image:alt" content={imageAlt} />

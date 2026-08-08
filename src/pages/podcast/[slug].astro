@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { articleMetaDescription, formatDate, getArticleTopicTerms, isDiscoverableArticle, isPodcastEpisode, podcastUrl, slugifyTerm } from '../../lib/articles';
 import { breadcrumbStructuredData } from '../../lib/structured-data';
+import { SITE_AUTHOR } from '../../lib/site';
 
 export async function getStaticPaths() {
   const episodes = await getCollection('articles', (article) => isDiscoverableArticle(article) && isPodcastEpisode(article));
@@ -36,14 +37,14 @@ const pagefindAttrs = searchable
   : {};
 ---
 
-<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} image={article.data.featuredImage || undefined} imageAlt={article.data.title} structuredData={structuredData}>
+<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} image={article.data.featuredImage || undefined} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} structuredData={structuredData}>
   <main>
     <article class="mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <div {...pagefindAttrs}>
         <a href="/podcast/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to podcast</a>
         <h1 class="mm-h1 mt-5">{article.data.title}</h1>
         <p class="mt-4 font-mono text-sm font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
-          {formatDate(article.data.pubDate)} · {article.data.author}
+          {formatDate(article.data.pubDate)} · <a href={SITE_AUTHOR.href} rel="author" class="hover:underline">{article.data.author}</a>
         </p>
         {article.data.description && <p class="mm-lede mt-5">{article.data.description}</p>}
         {article.data.featuredImage && (
