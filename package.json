@@ -7,8 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "check:content-links": "node scripts/check-content-links.mjs",
+    "check:built-links": "node scripts/check-built-links.mjs",
+    "prebuild": "npm run check:content-links",
     "build": "astro build",
-    "postbuild": "node scripts/copy-md-twins.mjs && pagefind --site dist",
+    "postbuild": "node scripts/copy-md-twins.mjs && pagefind --site dist && npm run check:built-links",
     "import:ai-unplugged": "node scripts/import-ai-unplugged-from-obsidian.mjs",
     "redirects": "node scripts/generate-redirects.mjs",
     "redirects:cloudflare-main": "node scripts/generate-main-site-redirects.mjs",

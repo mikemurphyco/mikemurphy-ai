@@ -78,7 +78,7 @@ isDraft: false
  The AI that actually does things.
 
 **What is MoltBot:**
-A very powerful coding assistant (formerly ClawdBot until Claude said nope) that caught the AI Nerd World by storm. It went crazy viral because of how good it is. Everyone loved it until they admitted that it basically had access to EVERYTHING and there were major security concerns. BTW, it’s just a side project project by a developer named [Peter](http://Peter Steinberger) who started working on it like a month ago. Bonkers.
+A very powerful coding assistant (formerly ClawdBot until Claude said nope) that caught the AI Nerd World by storm. It went crazy viral because of how good it is. Everyone loved it until they admitted that it basically had access to EVERYTHING and there were major security concerns. BTW, it’s just a side project project by a developer named Peter Steinberger who started working on it like a month ago. Bonkers.
 **Mike’s Take:**
 I think we just got a glimpse of the AI we all want. It’s how Siri was supposed to work and likely will one day. Imagine having an AI on your phone that knows everything about you and remembers everything for you. It literally becomes your 2nd brain.
 

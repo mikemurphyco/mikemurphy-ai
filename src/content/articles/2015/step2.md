@@ -80,7 +80,7 @@ This is important and can also drive you crazy. Trust me on that one. I have des
 
 4. [Upwork.com](http://upwork.com)
 
-5. [PodcastDesigns.com ](http://PodcastDesigns.com%20)
+5. [PodcastDesigns.com](http://PodcastDesigns.com)
 
 6. [JennyHDesign.com](http://jennyhdesign.com)
 

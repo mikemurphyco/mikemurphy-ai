@@ -81,7 +81,7 @@ CoT makes AI outputs clearer, more accurate, and easier to debug or remix. Wheth
 
  👉 [Try Lindy here (affiliate link)](https://try.lindy.ai/4ylyhv0gtmst?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-19-open-ai-oh-no)
 
-### **🛠 ****What I Made:**[ElevenMusic Tutorial: How To Create Songs from Text Prompts](http://?utm_source=aiunplug.io&utm_medium=referral&utm_campaign=issue-19-open-ai-oh-no)
+### **🛠 ****What I Made:**[ElevenMusic Tutorial: How To Create Songs from Text Prompts](/tutorials/elevenmusic/)
 
  In this tutorial, you’ll learn how to use **ElevenMusic by ElevenLabs** to generate full songs, with or without vocals, just from a text prompt.
 

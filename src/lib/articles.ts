@@ -2,6 +2,7 @@ import type { CollectionEntry } from 'astro:content';
 
 export type Article = CollectionEntry<'articles'>;
 export type AiUnpluggedIssue = CollectionEntry<'aiUnplugged'>;
+export type FieldNote = CollectionEntry<'fieldNotes'>;
 
 export const SITE_URL = 'https://mikemurphy.ai';
 export const SITE_TITLE = 'Mike Murphy';
@@ -110,7 +111,14 @@ export function slugifyTerm(term: string) {
 }
 
 export function getTopicMap(articles: Article[]) {
-  const topics = new Map<string, { name: string; slug: string; articles: Article[] }>();
+  return getUnifiedTopicMap(articles, []);
+}
+
+export function getUnifiedTopicMap(articles: Article[], notes: FieldNote[]) {
+  const topics = new Map<
+    string,
+    { name: string; slug: string; articles: Article[]; notes: FieldNote[] }
+  >();
 
   for (const article of articles) {
     const articleTopicSlugs = new Set<string>();
@@ -124,7 +132,24 @@ export function getTopicMap(articles: Article[]) {
       if (existing) {
         existing.articles.push(article);
       } else {
-        topics.set(slug, { name: term, slug, articles: [article] });
+        topics.set(slug, { name: term, slug, articles: [article], notes: [] });
+      }
+    }
+  }
+
+  for (const note of notes) {
+    const noteTopicSlugs = new Set<string>();
+
+    for (const term of note.data.tags) {
+      const slug = slugifyTerm(term);
+      if (!slug || noteTopicSlugs.has(slug)) continue;
+      noteTopicSlugs.add(slug);
+
+      const existing = topics.get(slug);
+      if (existing) {
+        existing.notes.push(note);
+      } else {
+        topics.set(slug, { name: term, slug, articles: [], notes: [note] });
       }
     }
   }
@@ -133,8 +158,17 @@ export function getTopicMap(articles: Article[]) {
     .map((topic) => ({
       ...topic,
       articles: sortArticlesByDate(topic.articles),
+      notes: [...topic.notes].sort((a, b) => {
+        const at = a.data.datePublished ? new Date(a.data.datePublished).getTime() : 0;
+        const bt = b.data.datePublished ? new Date(b.data.datePublished).getTime() : 0;
+        return bt - at || (a.data.sort ?? 0) - (b.data.sort ?? 0);
+      }),
     }))
-    .sort((a, b) => b.articles.length - a.articles.length || a.name.localeCompare(b.name));
+    .sort(
+      (a, b) =>
+        b.articles.length + b.notes.length - (a.articles.length + a.notes.length) ||
+        a.name.localeCompare(b.name),
+    );
 }
 
 export function absoluteUrl(path: string) {

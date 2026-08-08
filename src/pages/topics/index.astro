@@ -1,19 +1,21 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import { getTopicMap, isDiscoverableArticle, sortArticlesByDate } from '../../lib/articles';
+import { getUnifiedTopicMap, isDiscoverableArticle, sortArticlesByDate } from '../../lib/articles';
+import { isPublishedNote, sortNotesByDate } from '../../lib/field-notes';
 
 const articles = sortArticlesByDate(await getCollection('articles', isDiscoverableArticle));
-const topics = getTopicMap(articles);
+const notes = sortNotesByDate(await getCollection('fieldNotes', isPublishedNote));
+const topics = getUnifiedTopicMap(articles, notes);
 ---
 
-<Layout title="Topics" description="Browse Mike Murphy articles by topic, category, tool, and workflow." canonical="/topics/">
+<Layout title="Topics" description="Browse Mike Murphy articles and field notes by topic, category, tool, and workflow." canonical="/topics/">
   <main class="mm-container py-12">
     <header class="max-w-3xl">
       <p class="mm-eyebrow">Hubs</p>
       <h1 class="mm-h1 mt-3">Topics</h1>
       <p class="mm-lede mt-5">
-        Static topic hubs generated from the imported corpus, designed for browsing and clean internal linking.
+        Topic hubs across tutorials, articles, podcast episodes, and Field Notes, designed for browsing and clean internal linking.
       </p>
     </header>
 
@@ -21,7 +23,9 @@ const topics = getTopicMap(articles);
       {topics.map((topic) => (
         <a href={`/topics/${topic.slug}/`} class="mm-card block p-5 transition-transform duration-150 hover:-translate-y-0.5">
           <span class="font-mono text-lg font-bold uppercase leading-tight">{topic.name}</span>
-          <span class="mt-2 block font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-muted)]">{topic.articles.length} articles</span>
+          <span class="mt-2 block font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-muted)]">
+            {topic.articles.length + topic.notes.length} items
+          </span>
         </a>
       ))}
     </section>

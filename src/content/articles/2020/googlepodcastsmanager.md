@@ -71,7 +71,7 @@ Manage Shows & View Listener Data
 
 - [Blog Post About Google Podcasts Manager Launch](https://www.blog.google/products/search/new-way-podcasters-understand-and-grow-their-audiences)
 - [Google Podcasts Help Center](https://support.google.com/podcast-publishers)
-- [Add New or Existing Shows](http://Adding%20New%20and%20Existing%20Shows)
+- Add New or Existing Shows
 - [Download “Listen on Google Podcasts” Promotional Badges](https://support.google.com/podcast-publishers/answer/9798635?hl=en&ref_topic=9476061)
 
 ![](https://cdn-images-1.medium.com/max/800/1*vIVL1uMMSho0Y37SQ-FPDg.png)

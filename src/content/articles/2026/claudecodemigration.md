@@ -68,7 +68,8 @@ Migrate Claude Code to Native Installer (claude install)
 **⚡ Migration Command:**  
 claude install
 
-**[\#️⃣](app://obsidian.md/index.html#%EF%B8%8F%E2%83%A3) Check Version:**  
+**\#️⃣ Check Version:**
+
 claude --version
 
 **🛠️ Check Binary Location:**  

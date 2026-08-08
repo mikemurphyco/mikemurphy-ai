@@ -3,7 +3,7 @@ import {
   SITE_URL,
   absoluteUrl,
   contentUrl,
-  getTopicMap,
+  getUnifiedTopicMap,
   isDiscoverableArticle,
   isPublishedIssue,
   issueUrl,
@@ -16,7 +16,7 @@ export async function GET() {
   const articles = sortArticlesByDate(await getCollection('articles', isDiscoverableArticle));
   const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIssue));
   const notes = sortNotesByDate(await getCollection('fieldNotes', isPublishedNote));
-  const topics = getTopicMap(articles);
+  const topics = getUnifiedTopicMap(articles, notes);
   const urls = [
     { loc: absoluteUrl('/'), priority: '1.0' },
     { loc: absoluteUrl('/tutorials/'), priority: '1.0' },
@@ -33,7 +33,7 @@ export async function GET() {
     { loc: absoluteUrl('/search/'), priority: '0.6' },
     ...topics.map((topic) => ({
       loc: absoluteUrl(`/topics/${topic.slug}/`),
-      priority: topic.articles.length >= 20 ? '0.8' : '0.7',
+      priority: topic.articles.length + topic.notes.length >= 20 ? '0.8' : '0.7',
     })),
     ...articles.map((article) => ({
       loc: absoluteUrl(contentUrl(article)),
