@@ -42,11 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/OzTvtrhR8vg"
 ---
-<https://youtu.be/OzTvtrhR8vg>
+## Description
 
-## Chat GPT: How I Use a Custom GPT to Write My Weekly Newsletter
-
-**Description:  
 **This tutorial will show you the step-by-step process how I automated the production of my weekly newsletter, AI Unplugged, by creating a Custom GPT.
 
 **Open AI GPT Store:**  

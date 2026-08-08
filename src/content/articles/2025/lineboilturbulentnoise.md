@@ -41,11 +41,7 @@ seo:
 youtube: 
   - "https://youtu.be/zu4Kw1EwTbs"
 ---
-<https://youtu.be/zu4Kw1EwTbs>
-
-## Adobe After Effects CC 2025: Line Boil Animation Using Turbulent Noise & Displacement Map
-
-**Description:  
+## Description
 **This tutorial will show you how to create a Line Boil Jittery Animation using Turbulent Noise & Displacement Map Effects in Adobe After Effects CC 2025.
 
 **Effects Used: **  

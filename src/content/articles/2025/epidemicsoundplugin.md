@@ -41,11 +41,8 @@ seo:
 youtube: 
   - "https://youtu.be/BrOjYYOFBLc"
 ---
-<https://youtu.be/BrOjYYOFBLc>
+## Description
 
-## After Effects + Photoshop CC 2025: How To Install Epidemic Sound Plugin
-
-**Description:  
 **This tutorial will show you how to install the Epidemic Sound Plugin in Adobe After Effects CC 2025.
 
 **Epidemic Sound (Free Trial):**  

@@ -43,15 +43,9 @@ seo:
 youtube: 
   - "https://youtu.be/fUvU4p-kUEU"
 ---
-<https://youtu.be/fUvU4p-kUEU>
+## Description
 
-# The Animation Texture Rig: Idea To Shipping Workflow
-
-### *How To Use Cursor AI + After Effects to make a digital product*
-
-------------------------------------------------------------------------
-
-## ✨ **Adobe After Effects + Cursor AI:** Building a stop-motion style texture animation rig In this Mike Murphy AI Build video, I show you how to take a single idea — animating textures with a stop-motion look — and turn it into a real product using Adobe After Effects + Cursor AI (smart code editor)
+✨ Adobe After Effects + Cursor AI: Building a stop-motion style texture animation rig In this Mike Murphy AI Build video, I show you how to take a single idea — animating textures with a stop-motion look — and turn it into a real product using Adobe After Effects + Cursor AI (smart code editor)
 
 **This is AI Build 107: The Animated Texture Rig**  
 A simple, powerful preset that adds jittery, handmade motion to any scanned texture using only a few slider controls.

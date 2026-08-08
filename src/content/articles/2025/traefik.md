@@ -43,9 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/i515M0FwK7s"
 ---
-<https://youtu.be/i515M0FwK7s>
+## Description
 
-**Description:**  
 In this tutorial, you will learn what **Traefik** is and why it is a critical component of your **Hostinger Virtual Private Server (VPS)**. You will learn the three main roles of Traefik: Reverse Proxy, Auto HTTPS/SSL Certificates & Service Discovery (Docker).
 
 **What is Traefik on Hostinger VPS?:**  

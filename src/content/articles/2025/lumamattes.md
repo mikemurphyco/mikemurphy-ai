@@ -41,11 +41,8 @@ seo:
 youtube: 
   - "https://youtu.be/QjntKpeWABs"
 ---
-<https://youtu.be/QjntKpeWABs>
+## Description
 
-## After Effects + Photoshop CC 2025: How To Use Luma Mattes
-
-**Description:  
 **This tutorial will show you how to create Luma Mattes in Photoshop and then import and animate in Adobe After Effects CC 2025.
 
 **After Effects User Guide Course:**  

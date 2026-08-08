@@ -41,12 +41,9 @@ seo:
 youtube: 
   - "https://youtu.be/nKhSi6GaGLY"
 ---
-<https://youtu.be/nKhSi6GaGLY>
+## Description
 
-## After Effects + Character Animator 2025: How To Create Dynamic Link
-
-**Description:  
-**This tutorial will show you how to create a Dynamic Link between Adobe Character Animator and Adobe After Effects CC 2025 for a round-trip workflow.
+This tutorial will show you how to create a Dynamic Link between Adobe Character Animator and Adobe After Effects CC 2025 for a round-trip workflow.
 
 **Keyboard Shortcuts: **  
 Show Audio Levels (L) Show Audio Waveform (LL)

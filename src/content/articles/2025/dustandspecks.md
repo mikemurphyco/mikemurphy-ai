@@ -41,12 +41,9 @@ seo:
 youtube: 
   - "https://youtu.be/Bs1pqYWpTZo"
 ---
-<https://youtu.be/Bs1pqYWpTZo>
+## Description
 
-## Adobe After Effects + Photoshop CC 2025: How To Create Animated Dust & Specks From Paper Textures
-
-**Description:  
-**This tutorial will show you how to create a Animated Dust and Specks From Scanned Paper in Adobe Photoshop & After Effects CC 2025.
+This tutorial will show you how to create a Animated Dust and Specks From Scanned Paper in Adobe Photoshop & After Effects CC 2025.
 
 **Expression Used: **  
 posterizeTime(8);  

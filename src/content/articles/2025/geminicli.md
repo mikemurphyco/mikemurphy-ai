@@ -43,11 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/IJG1Vs0glzI"
 ---
-<https://youtu.be/IJG1Vs0glzI>
+## Description
 
-## How to Install Google Gemini CLI in MacOS Terminal
-
-**Description:**  
 In this tutorial, you will learn how to create Google Gemini CLI on MacOS to run Gemini 2.5 Pro Model in the Terminal.
 
 **In this tutorial, you'll learn:**

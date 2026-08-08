@@ -41,11 +41,8 @@ seo:
 youtube: 
   - "https://youtu.be/SIVg9yXXeoQ"
 ---
-<https://youtu.be/SIVg9yXXeoQ>
+## Description
 
-## After Effects + Photoshop CC 2025: How To Use seedRandom Expression
-
-**Description:  
 **This tutorial will show you how to use the seedRandom Expression with the wiggle expression in Adobe After Effects CC 2025.
 
 **wiggle(3,50);**  

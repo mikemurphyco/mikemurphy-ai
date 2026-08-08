@@ -41,11 +41,8 @@ seo:
 youtube: 
   - "https://youtu.be/tMOf-yvugec"
 ---
-<https://youtu.be/tMOf-yvugec>
+## Description
 
-## Adobe After Effects CC 2025: Print Frames For Mixed Media
-
-**Description:  
 **This tutorial will show you how control the number of keyframes that loop at the end of animations using the LoopOut Expression in Adobe After Effects CC 2025.
 
 **Library of Congress Video:**   

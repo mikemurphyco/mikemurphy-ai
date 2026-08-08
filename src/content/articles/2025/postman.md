@@ -43,12 +43,9 @@ seo:
 youtube: 
   - "https://youtu.be/rn6alwafU5Q"
 ---
-<https://youtu.be/rn6alwafU5Q>
+## Description
 
-## Beginner’s Guide: How to Test OpenAI API Keys in Postman
-
-**Description:  
-**You know how to generate OpenAI API Keys, but how exactly do you use them?
+You know how to generate OpenAI API Keys, but how exactly do you use them?
 
 **Description:**  
 In this tutorial, I will show you step-by-step how to use Postman to test your OpenAI API keys and make your first API Requests.

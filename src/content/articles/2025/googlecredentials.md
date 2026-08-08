@@ -45,13 +45,8 @@ seo:
 youtube:
   - https://youtu.be/Y4iDC5z3GFg
 ---
-<https://youtu.be/Y4iDC5z3GFg>
+## Description
 
-## Set Up Google Credentials for n8n in Google Cloud
-
- 
-
-**Description:**  
 In this tutorial, you will learn how to set up Google credentials in n8n for Drive, Docs, Gmail, Calendar, and Sheets using OAuth2 credentials created in Google Cloud Console. This allows your automations to securely read, write, and manage Google data directly within your n8n workflows.
 
 **🔑 Key Benefit:** You only need to create ONE set of OAuth credentials in Google Cloud Console, which can then be reused for all Google services in n8n.

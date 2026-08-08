@@ -43,11 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/EJSlHv9r_1o"
 ---
-<https://youtu.be/EJSlHv9r_1o>
+## Description
 
-## How To Update Diffusion Bee Using GitHub
-
-**Description:  
 **In this tutorial, you will learn how to update DiffusionBee on GitHub so you can use Flux Models locally on your Mac. Diffusion Bee is MacOS only and is the easiest way to run AI Models with Stable Diffusion run locally on your Mac. It is private, no internet required and is 100% free.
 
 **Problem This Tutorial Solves:**   

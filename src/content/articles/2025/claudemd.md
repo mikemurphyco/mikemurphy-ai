@@ -43,11 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/oYEqwsqy2UQ"
 ---
-<https://youtu.be/oYEqwsqy2UQ>
+## Description
 
-## How to Create a CLAUDE.md File in Claude Code
-
-**Description:  
 **In this tutorial, you will learn how to create a CLAUDE.md configuration file in Claude Code to provide guidance and instructions to Claude when using Claude Code.
 
 **Why Do This?**   

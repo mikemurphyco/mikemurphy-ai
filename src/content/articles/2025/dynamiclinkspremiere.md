@@ -41,11 +41,8 @@ seo:
 youtube: 
   - "https://youtu.be/DMWM9vaj7B0"
 ---
-<https://youtu.be/DMWM9vaj7B0>
+## Description
 
-## How To Create Dynamic Link Between Adobe Premiere Pro + After Effects CC 2025
-
-**Description:  
 **This tutorial will show you two different ways to create Dynamic Links between Adobe Premiere Pro and Adobe After Effects CC 2025 for a round-trip workflow.
 
 **Dynamic Link Techniques:**   

@@ -42,14 +42,11 @@ seo:
 youtube: 
   - "https://youtu.be/55Sc6ygaweg"
 ---
-<https://youtu.be/55Sc6ygaweg>
+## Description
 
-## Replicate: Generating LoRa YouTube Thumbnails
-
-**Description:  
 **This tutorial will show you how to use the Trained LoRa Model to generate YouTube Thumbnails.   Part 1: Training The LoRa https://youtu.be/QSgC7Db84ZM
 
-**Replicate: **  
+**Replicate:**  
 https://replicate.com
 
 **Fast-flux-trainer: **  

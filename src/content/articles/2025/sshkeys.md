@@ -43,11 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/6--d2faQSFY"
 ---
-<https://youtu.be/6--d2faQSFY>
+## Description
 
-## Hostinger VPS: How To Generate & Add SSH Keys & Connect Remotely Using Termius
-
-**Description:**  
 In this tutorial, you will learn how to generate SSH Keys, add the Public SSH Key to your Hostinger VPS Dashboard & How To Connect Remotely using the SSH Client, Termius.
 
 **Hostinger VPS (Discount Referral Lin):**  

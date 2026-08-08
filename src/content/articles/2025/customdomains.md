@@ -42,12 +42,12 @@ seo:
 youtube: 
   - "https://youtu.be/2XJbZIi5JBs"
 ---
-<https://youtu.be/2XJbZIi5JBs>
+## Description
 
-**Description:  
-**In this tutorial, you will learn how to add custom domains that you already own and add to your Hostinger VPS and then create unlimited subdomains to create custom URLs to open n8n and other apps and services on your VPS.  
-**  
-What You Will Learn:**
+In this tutorial, you will learn how to add custom domains that you already own and add to your Hostinger VPS and then create unlimited subdomains to create custom URLs to open n8n and other apps and services on your VPS.
+
+
+What You Will Learn:
 
 - How To Add Domains to DNS Manager
 - How To Change NameServers on Domain Registrar

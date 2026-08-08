@@ -43,11 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/bjMGvwHKXyY"
 ---
-<https://youtu.be/bjMGvwHKXyY>
+## Description
 
-## How to Secure Your Hostinger VPS with Firewall Rules (n8n Protection)
-
-**Description:**  
 In this tutorial, you will learn how to add Firewall Rules on your Hostinger VPS to **block unauthorized access** and protect all of the services on your VPS.
 
 **What is a Firewall?**  

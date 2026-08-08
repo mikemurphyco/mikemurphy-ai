@@ -43,13 +43,7 @@ seo:
 youtube: 
   - "https://youtu.be/0tGFu6kBm9o"
 ---
-<https://youtu.be/0tGFu6kBm9o>
-
-# The Animation Texture Rig:
-
-### *How To Install & Set Up*
-
-------------------------------------------------------------------------
+## Description
 
 In this video, I show you how to install and use the Animated Texture Rig from Mike Murphy AI Build 107 where I used Cursor AI + Chat GPT to build a digital product from start to finish.
 

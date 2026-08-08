@@ -43,15 +43,9 @@ seo:
 youtube: 
   - "https://youtu.be/_MgGtZ59_Vc"
 ---
-<https://youtu.be/_MgGtZ59_Vc>
+## Description
 
-# How To Reopen After Effects Wiggle Panel Project using Cursor AI Code Editor
-
-### *Modify or Update Wiggle Panel*
-
-------------------------------------------------------------------------
-
-## ✨ Intro In this tutorial, you will learn how to re-open the After Effects Wiggle Script UI Panel Project Folder and update the Wiggle Expression using Cursor AI Code Editor.
+✨ Intro In this tutorial, you will learn how to re-open the After Effects Wiggle Script UI Panel Project Folder and update the Wiggle Expression using Cursor AI Code Editor.
 
 **Watch On YouTube:**
 

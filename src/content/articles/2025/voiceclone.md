@@ -42,11 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/ISu004rGnaI"
 ---
-<https://youtu.be/ISu004rGnaI>
+## Description
 
-## Eleven Labs: How To Clone Your Voice Using AI
-
-**Description:  
 **This tutorial will show you how to use Eleven Labs to clone your own voice so you can generate audio recordings from text prompts that sound like you.
 
 **Note:**  

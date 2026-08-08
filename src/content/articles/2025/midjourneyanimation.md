@@ -42,11 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/IGhbxY12R3k"
 ---
-<https://youtu.be/IGhbxY12R3k>
+## Description
 
-## MidJourney: How To Animate ANY Image (Even Line Art!)
-
-**Description:  
 **This tutorial will show you how to animate images generated on MidJourney or uploaded artwork and images from your computer.
 
 **MidJourney: **  

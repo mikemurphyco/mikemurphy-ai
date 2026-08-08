@@ -41,11 +41,8 @@ seo:
 youtube: 
   - "https://youtu.be/S4Use-i24RE"
 ---
-<https://youtu.be/S4Use-i24RE>
+## Description
 
-## Adobe After Effects CC 2025: Looping Sky & Clouds Background Animation
-
-**Description:  
 **This tutorial will show you how to create a seamlessly looping sky & clouds background animation using the Offset Effect in Adobe After Effects CC 2025.
 
 Happy 2025!

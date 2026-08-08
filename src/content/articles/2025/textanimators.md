@@ -41,11 +41,8 @@ seo:
 youtube: 
   - "https://youtu.be/1wicPllIAHU"
 ---
-<https://youtu.be/1wicPllIAHU>
+## Description
 
-## Adobe After Effects CC 2025: How To Use Text Animators
-
-**Description:  
 **This tutorial will show you how control the number of keyframes that loop at the end of animations using the LoopOut Expression in Adobe After Effects CC 2025.
 
 **After Effects User Guide Course:**  

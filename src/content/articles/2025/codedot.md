@@ -42,11 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/8kjI1Bgszk0"
 ---
-<https://youtu.be/8kjI1Bgszk0>
+## Description
 
-## How To Open VS Code From Terminal with Code Dot
-
-**Description:**  
 In this tutorial, you will learn how to open any directory from the Terminal in Visual Studio Code (VS Code) using Code + Period.
 
 **Download VS Code:**  

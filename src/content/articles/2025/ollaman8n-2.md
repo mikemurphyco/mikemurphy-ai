@@ -46,11 +46,9 @@ seo:
 youtube: 
   - "https://youtu.be/5qFNxvj59hw"
 ---
-<https://youtu.be/5qFNxvj59hw>
 
-## Free AI for n8n: How To Connect Ollama to n8n Workflows – No API Costs! (Part 2)
+## Description
 
-**Description**  
 In this Part 2, learn how to connect n8n to shared Docker Network and how to use Ollama AI Models in n8n automation workflows with no API Costs, Rate Limits and 100% free (excluding the cost of monthly Hostinger VPS Plan).
 
 **What You Will Learn (How):**

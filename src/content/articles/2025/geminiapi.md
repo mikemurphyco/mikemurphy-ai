@@ -43,11 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/Kr-5k884YS0"
 ---
-<https://youtu.be/Kr-5k884YS0>
+## Description
 
-## Google Gemini: How To Create API Keys & Save N8N Credentials
-
-**Description:  
 **In this tutorial, you will learn how to create Google Gemini API Keys and Save Credentials to use in N8N AI Automation Workflows.
 
 **In this tutorial, you'll learn:**

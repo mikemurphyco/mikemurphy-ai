@@ -45,11 +45,8 @@ seo:
 youtube: 
   - "https://youtu.be/UdM7Va4JXTI"
 ---
-<https://youtu.be/UdM7Va4JXTI>
+## Description
 
-## Hostinger VPS for n8n: The Ultimate Setup Guide
-
-**Description:**  
 In this tutorial, you will learn how to set up the free, self-hosted version of n8n on a Hostinger VPS from start to finish!
 
 **Hostinger VPS (affiliate link):**  

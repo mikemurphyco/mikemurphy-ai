@@ -44,11 +44,8 @@ seo:
 youtube: 
   - "https://youtu.be/OB4GZ_WugQI"
 ---
-<https://youtu.be/OB4GZ_WugQI>
+## Description
 
-## How I Built a RAG System to Mine My AI Chat History for Gold 
-
-**Description:  
 **In this tutorial, you will learn about RAG (Retrieval Augmented Generation) and how to build a RAG system from scratch that mines your AI Chat Conversations for ‘gold nuggets’ of information.
 
 **In this tutorial, you'll learn:  

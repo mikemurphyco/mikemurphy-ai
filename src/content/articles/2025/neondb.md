@@ -44,11 +44,8 @@ seo:
 youtube: 
   - "https://youtu.be/doIFdMp7D2E"
 ---
-<https://youtu.be/doIFdMp7D2E>
+## Description
 
-## How to Create A PostgreSQL on Neon: A Step by Step Tutorial for Beginners
-
-**Description:**  
 In this tutorial, you will how to setup a Neon Account & Create a PostgreSQL Database & Tables to organize your documents for a future RAG System.
 
 **In this tutorial, you'll learn:**

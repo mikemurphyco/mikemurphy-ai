@@ -44,11 +44,8 @@ seo:
 youtube: 
   - "https://youtu.be/Lj43aSwNpog"
 ---
-<https://youtu.be/Lj43aSwNpog>
+## Description
 
-## OpenAI: How To Generate API Keys
-
-**Description:  
 **In this tutorial, you will learn how to generate OpenAI Secret API Keys so you can access Open AI models in your automation workflows and more.
 
 **In this tutorial, you'll learn:**

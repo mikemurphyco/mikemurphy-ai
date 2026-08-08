@@ -45,11 +45,8 @@ seo:
 youtube:
   - https://youtu.be/lL-hpEFIYHs
 ---
-<https://youtu.be/lL-hpEFIYHs>
+## Description
 
-# Import a Claude Desktop MCP Server into Claude Code
-
-**Description:**  
 In this tutorial, you will learn how to import the N8N-MCP Server from Claude Desktop to Claude Claude to build AI Automation Workflows in N8N.
 
 **What You Will Learn:**

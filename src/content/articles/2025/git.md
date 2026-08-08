@@ -43,11 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/bxn1PEssZqg"
 ---
-<https://youtu.be/bxn1PEssZqg>
+## Description
 
-## Git & GitHub for Beginners: Turn Any Project Into a Repo Using VS Code
-
-**Description:**  
 How to turn your local n8n-workflows folder into a GitHub repository and sync future changes—all using VS Code's visual interface (no terminal commands needed).
 
 **Prerequisites:**

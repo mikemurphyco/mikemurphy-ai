@@ -41,12 +41,9 @@ seo:
 youtube: 
   - "https://youtu.be/gE4YudHBMD8"
 ---
-<https://youtu.be/gE4YudHBMD8>
+## Description
 
-## Adobe After Effects CC 2025: How To Create Stop Motion Paper Rip Transition
-
-**Description:  
-**This tutorial will show you how to create a hand-made, stop-motion, paper rip transition using Track Mattes in Adobe After Effects CC 2025.
+This tutorial will show you how to create a hand-made, stop-motion, paper rip transition using Track Mattes in Adobe After Effects CC 2025.
 
 **Expressions Used: **  
 loopOut()  

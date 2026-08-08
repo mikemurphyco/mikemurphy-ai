@@ -43,9 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/tR0LnhlWzpA"
 ---
-<https://youtu.be/tR0LnhlWzpA>
+## Description
 
-**Description:**  
 In this tutorial, you will learn how to manually set, roll back, or "pin" the version of n8n on your self-hosted Hostinger Virtual Private Server (VPS) using the VPS Dashboard & Terminal/SSH.
 
 **What You Will Learn:**

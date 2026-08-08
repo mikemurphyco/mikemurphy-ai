@@ -44,11 +44,8 @@ seo:
 youtube: 
   - "https://youtu.be/tsSo9tC8J3g"
 ---
-<https://youtu.be/tsSo9tC8J3g>
+## Description
 
-## How To Update Self-Hosted N8N at Hostinger VPS
-
-**Description:  
 **In this tutorial, you will learn how to how to update a self-hosted version of n8n being hosted on a Hostinger Virtual Private Server.
 
 **In this tutorial, you'll learn:**

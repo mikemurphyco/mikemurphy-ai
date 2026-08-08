@@ -42,11 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/OMtqpF7dAgE"
 ---
-<https://youtu.be/OMtqpF7dAgE>
+## Description
 
-## ElevenMusic Tutorial: How To Create Songs from Text Prompts
-
-**Description:  
 **In this tutorial, you will learn how to use the new ElevenMusic by ElevenLabs to create full songs with or without vocals from a text prompt.
 
 **In this tutorial, you'll learn:**

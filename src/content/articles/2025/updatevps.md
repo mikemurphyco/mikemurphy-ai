@@ -44,11 +44,8 @@ seo:
 youtube: 
   - "https://youtu.be/FTxdBuvk5nA"
 ---
-<https://youtu.be/FTxdBuvk5nA>
+## Description
 
-## How To Update Hostinger VPS Packages (Ubuntu OS)
-
-**Description:**  
 In this tutorial, you will learn how to update the Ubuntu OS Packages on your Hostinger VPS to keep the OS clean, secure and running efficiently.
 
 **In this tutorial, you'll learn:**

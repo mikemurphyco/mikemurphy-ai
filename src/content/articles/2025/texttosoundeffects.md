@@ -42,11 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/HPw8-oXXEHI"
 ---
-<https://youtu.be/HPw8-oXXEHI>
+## Description
 
-## ElevenLabs AI: How To Use Text To Sound Effects
-
-**Description:  
 **This tutorial will show you how to use Eleven Labs to create Sound Effects from Text Prompts and use the Sound Effects Library from Eleven Labs.
 
 **Eleven Labs:**  

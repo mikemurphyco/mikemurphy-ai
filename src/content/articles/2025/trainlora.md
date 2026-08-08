@@ -42,11 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/QSgC7Db84ZM"
 ---
-<https://youtu.be/QSgC7Db84ZM>
+## Description
 
-## Replicate: How To Train A LoRa
-
-**Description:  
 **This tutorial will show you how to train a LoRa on Replicate.com by uploading images of yourself so all you need to do is use a ‘Trigger Word’ to generate images with your likeness.
 
 **Replicate: **  

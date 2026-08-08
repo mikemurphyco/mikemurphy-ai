@@ -43,11 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/0FmT0uasKWw"
 ---
-<https://youtu.be/0FmT0uasKWw>
+## Description
 
-## How To Install Claude Code Extension in VS Code
-
-**Description:  
 **In this tutorial, you will learn how to install the Claude Code Extension for Visual Studio Code (VS Code)
 
 **In this tutorial, you'll learn:**

@@ -42,11 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/vkhuduZWOIw"
 ---
-<https://youtu.be/vkhuduZWOIw>
+## Description
 
-## Ollama Desktop App: Create a Free & Private AI Chat Assistant on Your Computer
-
-**Description:  
 **This tutorial is a step-by-step guide on how to install the new Ollama App on your computer that can run multiple Large Language Models (LLMs) and serves as your own AI Chat Assistant that keeps your data private and is free to install and run.
 
 **Benefits of Ollama:**  

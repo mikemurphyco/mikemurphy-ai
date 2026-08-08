@@ -43,11 +43,8 @@ seo:
 youtube: 
   - "https://youtu.be/7Egx498mtj0"
 ---
-<https://youtu.be/7Egx498mtj0>
+## Description
 
-## How to Install N8N-MCP Server in Claude Desktop
-
-**Description:**  
 In this tutorial, you will learn how to install an N8N-MCP Server in Claude Desktop to use Claude to build AI Automation Workflows in N8N.
 
 **In This Tutorial:**

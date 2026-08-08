@@ -41,11 +41,8 @@ seo:
 youtube: 
   - "https://youtu.be/PjqHvKi3ic8"
 ---
-<https://youtu.be/PjqHvKi3ic8>
+## Description
 
-## Adobe After Effects CC 2025: Loop Out Expression + Keyframe Control
-
-**Description:  
 **This tutorial will show you how control the number of keyframes that loop at the end of animations using the LoopOut Expression in Adobe After Effects CC 2025.
 
 **Expression Used: **  

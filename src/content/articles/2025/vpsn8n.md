@@ -42,12 +42,9 @@ seo:
 youtube: 
   - "https://youtu.be/u2XUjoX-0S0"
 ---
-<https://youtu.be/u2XUjoX-0S0>
+## Description
 
-## How To Set Up A Virtual Private Server (VPS) + Free N8N!
-
-**Description:  
-**In this tutorial, I will show you how to set up a Virtual Private Server (VPS) on Hostinger and install the free version of n8n automation workflows.
+In this tutorial, I will show you how to set up a Virtual Private Server (VPS) on Hostinger and install the free version of n8n automation workflows.
 
 **🧱 What You’ll Learn:**
 

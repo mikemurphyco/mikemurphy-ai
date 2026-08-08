@@ -43,15 +43,11 @@ seo:
 youtube: 
   - "https://youtube.com/playlist?list=PLqeRnzRtkROQ9Cu0B5X5JoAZk-gs71vqD&si=2turDPqxF6oFos_y"
 ---
-<https://youtube.com/playlist?list=PLqeRnzRtkROQ9Cu0B5X5JoAZk-gs71vqD&si=2turDPqxF6oFos_y>
-
-# Build a Custom Wiggle Panel in After Effects Using Cursor AI 
+## Description
 
 ### *Free 4-Part Mini-Course for Creators*
 
-------------------------------------------------------------------------
-
-## ✨ Intro In this free 4-part mini-course, you'll learn how to use **Cursor AI**, an AI-powered code editor, to build a custom, dock-able **Wiggle Panel** inside Adobe After Effects. No coding experience required—just curiosity and a desire to build something useful. This project is perfect for creators who want to explore how AI can help them design tools, automate workflows, and make After Effects smarter and more fun to use.
+✨ Intro In this free 4-part mini-course, you'll learn how to use **Cursor AI**, an AI-powered code editor, to build a custom, dock-able **Wiggle Panel** inside Adobe After Effects. No coding experience required—just curiosity and a desire to build something useful. This project is perfect for creators who want to explore how AI can help them design tools, automate workflows, and make After Effects smarter and more fun to use.
 
 **Watch On YouTube:**
 

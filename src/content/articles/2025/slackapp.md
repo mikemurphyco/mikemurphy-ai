@@ -44,11 +44,8 @@ seo:
 youtube: 
   - "https://youtu.be/oC8UZiQV3OU"
 ---
-<https://youtu.be/oC8UZiQV3OU>
+## Description
 
-## How To Create a Slack App for n8n Workflows
-
-**Description:**  
 In this tutorial, you will learn how to create a Slack App/Bot to send messages from Slack to trigger n8n workflows and have n8n send messages back.
 
 The Step-By-Step Guide:  

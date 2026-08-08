@@ -44,11 +44,8 @@ seo:
 youtube: 
   - "https://youtu.be/9-u3BGl0ubU"
 ---
-<https://youtu.be/9-u3BGl0ubU>
+## Description
 
-## How To Safely Update n8n on Hostinger VPS (Without Losing Your Workflows)
-
-**Description:  
 **In this tutorial, you will learn about Docker about the process of updating self-hosted version of n8n on Hostinger VPS and learn why it is safe.
 
 **In this tutorial, you'll learn:**

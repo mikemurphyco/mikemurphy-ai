@@ -46,11 +46,8 @@ seo:
 youtube:
   - https://youtu.be/PGB4qj_ZEUY
 ---
-<https://youtu.be/PGB4qj_ZEUY>
+## Description
 
-## Connect a Telegram Bot to n8n for Notifications
-
-**Description:  
 **In this tutorial, you will learn how to create your own Telegram bot using BotFather and connect it to n8n for automated notifications and workflows! This step-by-step tutorial covers everything from bot creation to getting those tricky chat IDs.
 
 **Why Do This?  

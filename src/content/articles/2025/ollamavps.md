@@ -46,11 +46,8 @@ seo:
 youtube: 
   - "https://youtu.be/nvdpOXk-fU4"
 ---
-<https://youtu.be/nvdpOXk-fU4>
+## Description
 
-## How To Install Ollama on Hostinger VPS: Free AI Models for n8n (No API Costs)
-
-**Description**  
 Learn how to install Ollama in a Docker container on your Hostinger VPS with persistent storage. Perfect for using local AI models in n8n workflows without API costs. Complete beginner-friendly guide for non-developers.
 
 **What You Will Learn (How):**  

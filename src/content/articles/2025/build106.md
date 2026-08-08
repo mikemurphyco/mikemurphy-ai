@@ -57,7 +57,7 @@ In this tutorial, I walk you through the start to finish workflow of building a 
 - **Part 3:** [Add Wiggle Expression To After Effects Panel with Cursor AI](https://youtu.be/s9ZfCeXCP6A)
 - **Part 4:** [Add Sliders, Input Fields & Debug the Panel](https://youtu.be/IeMQYTlJ0p4)
 - **Playlist: ** [Build a Wiggle Panel with Cursor AI](https://www.youtube.com/playlist?list=PLqeRnzRtkROQ9Cu0B5X5JoAZk-gs71vqD)**  
-  **
+
 
 ------------------------------------------------------------------------
 

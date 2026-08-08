@@ -43,11 +43,8 @@ seo:
 youtube:
   - https://youtu.be/tF8CdHc0ZnI
 ---
-<https://youtu.be/tF8CdHc0ZnI>
+## Description
 
-## How To Enable pgvector on Neon Postgres for RAG
-
-**Description:**  
 In this tutorial, you will learn how to **enable the pgvector extension** to convert your Neon Postgres database into a vector database. This allows you to store and earch vector embeddings, which are necessary components when building Retrieval Augmented Generation (RAG) systems. The tutorial uses the Neon SQL editor for all the necessary steps.
 
 **Vector Store:**  
