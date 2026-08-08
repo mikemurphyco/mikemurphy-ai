@@ -90,6 +90,10 @@ const redirects = new Map([
   ['/articles', '/articles/'],
   ['/field-notes', '/field-notes/'],
   ['/resources', '/resources/'],
+  // Same 307/404 gap as above, for two legacy podcast slugs GSC flagged as
+  // 404 (no trailing-slash form): /ep151, /ep152.
+  ['/ep151', '/podcast/ep151/'],
+  ['/ep152', '/podcast/ep152/'],
 ]);
 
 for (const article of articles) {
