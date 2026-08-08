@@ -153,6 +153,53 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-08-07 — Fix GSC "Redirect error" on section root paths (307 → 301)
+
+**Context:** Google Search Console reported `https://mikemurphy.ai/tutorials`
+as "URL is not on Google… Redirect error" and refused to index it. `curl`
+showed the chain actually resolved fine (`/tutorials` → `/tutorials/` → 200,
+no loop) — the problem was the status code, not the destination.
+
+**Root cause:** Cloudflare's static-assets handler (this is a pure
+`[assets]` Workers deployment, no Worker script — see 2026-07-22 Markdown
+migration entry) auto-redirects any extensionless path missing a trailing
+slash using a **307 (Temporary Redirect)**. `public/_redirects` had zero
+explicit rules for `/tutorials`, `/articles`, `/field-notes`, or
+`/resources` — all four section roots were silently relying on this
+default. Google treats 307s far more cautiously than 301s (a temporary
+redirect doesn't tell Google to index the destination), and with no
+canonical/sitemap signal reinforcing the bare path, it gave up rather than
+following it.
+
+**Fix:** Added explicit 301 rules for the four section roots to the
+manually-seeded `redirects` Map in `scripts/generate-redirects.mjs` (not
+hand-edited into `public/_redirects` — that file is generated and the edit
+would be lost on the next `npm run redirects` run):
+
+```js
+['/tutorials', '/tutorials/'],
+['/articles', '/articles/'],
+['/field-notes', '/field-notes/'],
+['/resources', '/resources/'],
+```
+
+Regenerated `public/_redirects`, verified `npm run build` clean, confirmed
+`/tutorials/` was already correctly listed in `dist/sitemap.xml`.
+
+**Verified:** `curl -IL` before/after on apex, `www`, HTTP, and a Googlebot
+smartphone UA all showed the same 307→200 chain pre-fix. Post-deploy check
+is `curl -I https://mikemurphy.ai/tutorials` should show `301` directly.
+
+**Commit:** `06e1298` on `codex/media-kit`.
+
+**Next:** After deploy, use GSC **Test Live URL** then **Request Indexing**
+on the `/tutorials` inspection page.
+
+**For a future post:** "The 307 that isn't a loop" — why GSC's "Redirect
+error" doesn't always mean broken redirects, and how Cloudflare's default
+trailing-slash behavior on static-assets deployments differs from an
+explicit 301 rule.
+
 ### 2026-08-01 — Directus-powered Brand & Media Kit
 
 **Context:** Built a public press and collaboration page from the Claude Design
