@@ -83,6 +83,13 @@ const redirects = new Map([
   ['/ai-unplugged/issues/1/', '/ai-unplugged/issues/001/'],
   ['/articles/resources/', '/resources/'],
   ['/brand-kit/', '/media-kit/'],
+  // Explicit 301s for section roots without a trailing slash. Without these,
+  // Cloudflare's static-assets handler auto-redirects them with a 307, which
+  // Google Search Console flags as a "Redirect error" and won't index.
+  ['/tutorials', '/tutorials/'],
+  ['/articles', '/articles/'],
+  ['/field-notes', '/field-notes/'],
+  ['/resources', '/resources/'],
 ]);
 
 for (const article of articles) {

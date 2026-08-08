@@ -32,6 +32,7 @@
 /applewatchbands/ /tutorials/applewatchbands/ 301
 /arrangeallwindows/ /tutorials/arrangeallwindows/ 301
 /artboardtemplate/ /tutorials/artboardtemplate/ 301
+/articles /articles/ 301
 /articles/1passworddevtools/ /tutorials/1passworddevtools/ 301
 /articles/301redirecttest/ /tutorials/301redirecttest/ 301
 /articles/addeffectstowigglebutton/ /tutorials/addeffectstowigglebutton/ 301
@@ -479,6 +480,7 @@
 /articles/reinstallos/ /tutorials/reinstallos/ 301
 /articles/relink/ /tutorials/relink/ 301
 /articles/remotion/ /tutorials/remotion/ 301
+/articles/remotiontemplates/ /tutorials/remotiontemplates/ 301
 /articles/removeunused/ /tutorials/removeunused/ 301
 /articles/renderqueue/ /tutorials/renderqueue/ 301
 /articles/renderworkarea/ /tutorials/renderworkarea/ 301
@@ -877,6 +879,7 @@
 /fail2ban/ /tutorials/fail2ban/ 301
 /fake3d/ /tutorials/fake3d/ 301
 /fakeeq/ /tutorials/fakeeq/ 301
+/field-notes /field-notes/ 301
 /fillcolorrgb/ /tutorials/fillcolorrgb/ 301
 /filtercontent/ /tutorials/filtercontent/ 301
 /findandreplace/ /tutorials/findandreplace/ 301
@@ -1044,11 +1047,13 @@
 /reinstallos/ /tutorials/reinstallos/ 301
 /relink/ /tutorials/relink/ 301
 /remotion/ /tutorials/remotion/ 301
+/remotiontemplates/ /tutorials/remotiontemplates/ 301
 /removeunused/ /tutorials/removeunused/ 301
 /renderqueue/ /tutorials/renderqueue/ 301
 /renderworkarea/ /tutorials/renderworkarea/ 301
 /reopenpaths/ /tutorials/reopenpaths/ 301
 /resetpreferences/ /tutorials/resetpreferences/ 301
+/resources /resources/ 301
 /responsivedesign/ /tutorials/responsivedesign/ 301
 /revealcomps/ /tutorials/revealcomps/ 301
 /reverseorder/ /tutorials/reverseorder/ 301
@@ -1127,6 +1132,7 @@
 /trash/ /tutorials/trash/ 301
 /tritone/ /tutorials/tritone/ 301
 /tumblein/ /tutorials/tumblein/ 301
+/tutorials /tutorials/ 301
 /twist/ /tutorials/twist/ 301
 /twister/ /tutorials/twister/ 301
 /typetool/ /tutorials/typetool/ 301
