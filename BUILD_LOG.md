@@ -153,6 +153,18 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-08-08 — Descriptive hub search titles
+
+**Shipped:** Updated the Tutorials, Articles, Field Notes, Podcast, Resources,
+Topics, and AI Unplugged hub metadata with concise, descriptive titles. Visible
+page headings and URLs remain unchanged. Added an optional layout override for
+titles that already contain the site name, preventing duplicate branding on the
+Mike Murphy Unplugged Podcast title.
+
+**Verified:** The production build completed with 797 pages. All content-link,
+built-link, and metadata validation passed, and the seven rendered hub titles,
+social titles, and visible headings were checked directly.
+
 ### 2026-08-08 — Post-audit metadata cleanup
 
 **Context:** A fresh LibreCrawl audit completed across 805 URLs with zero 404s,

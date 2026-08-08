@@ -14,6 +14,7 @@ interface Props {
 	imageAlt?: string;
 	author?: string;
 	authorUrl?: string;
+	appendSiteTitle?: boolean;
 	robots?: string;
 	noHeader?: boolean;
 	ogType?: 'website' | 'article' | 'profile';
@@ -28,6 +29,7 @@ const {
 	imageAlt = 'Mike Murphy — AI Handyman',
 	author,
 	authorUrl,
+	appendSiteTitle = true,
 	robots,
 	noHeader = false,
 	ogType = 'website',
@@ -38,9 +40,11 @@ const brandedPageTitle = `${title} | ${SITE_TITLE}`;
 const pageTitle =
 	title === SITE_TITLE
 		? SITE_TITLE
-		: brandedPageTitle.length <= 60
-			? brandedPageTitle
-			: title;
+		: !appendSiteTitle
+			? title
+			: brandedPageTitle.length <= 60
+				? brandedPageTitle
+				: title;
 const socialTitle = title;
 const canonicalUrl = canonical.startsWith('http') ? canonical : absoluteUrl(canonical);
 const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
