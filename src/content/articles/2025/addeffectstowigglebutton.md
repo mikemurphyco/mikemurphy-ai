@@ -43,15 +43,9 @@ seo:
 youtube: 
   - "https://youtu.be/PL31pFINnMg"
 ---
-<https://youtu.be/PL31pFINnMg>
+## Description
 
-# After Effects Wiggle Panel: Add 12 Effect Buttons Using Cursor AI
-
-### *Add 12 Effects As Buttons On Panel*
-
-------------------------------------------------------------------------
-
-## ✨ IntroIn this tutorial, we re-open the Wiggle Panel Project Folder in Cursor Ai and add 12 of my favorite effects for stop-motion & hand-drawn style animations in Adobe After Effects
+✨ In this tutorial, we re-open the Wiggle Panel Project Folder in Cursor Ai and add 12 of my favorite effects for stop-motion & hand-drawn style animations in Adobe After Effects
 
 **Watch On YouTube:**
 
@@ -59,8 +53,7 @@ youtube:
 - **Part 2:** [Build Basic ScriptUI Panel in After Effects](https://youtu.be/Kc7sygIlMdQ)
 - **Part 3:** [Add Wiggle Expression To After Effects Panel with Cursor AI](https://youtu.be/s9ZfCeXCP6A)
 - **Part 4:** [Add Sliders, Input Fields & Debug the Panel](https://youtu.be/IeMQYTlJ0p4)
-- **Playlist: ** [Build a Wiggle Panel with Cursor AI](https://www.youtube.com/playlist?list=PLqeRnzRtkROQ9Cu0B5X5JoAZk-gs71vqD)**  
-  **
+- **Playlist:  [Build a Wiggle Panel with Cursor AI](https://www.youtube.com/playlist?list=PLqeRnzRtkROQ9Cu0B5X5JoAZk-gs71vqD)** 
 
 ------------------------------------------------------------------------
 

@@ -42,14 +42,9 @@ seo:
 youtube: 
   - "https://youtube.com/shorts/REoJQ5mkrFQ?feature=share"
 ---
-[![Amazon Keyboard Shortcut](/assets/media/2025/01/03_The-Popup-1024x764.png)](/assets/media/2025/01/03_The-Popup.png)
+## Description
 
- 
-
- 
-
-**About This Tutorial:  
-**This tutorial will show you how to stop the annoying Keyboard Shortcut Popup when visiting Amazon in a web browser on your Mac.
+This tutorial will show you how to stop the annoying Keyboard Shortcut Popup when visiting Amazon in a web browser on your Mac.
 
 **Problem:  
 **When you visit Amazon, a small popup related to Keyboard Shortcuts automatically appears.

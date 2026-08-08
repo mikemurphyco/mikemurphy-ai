@@ -82,24 +82,18 @@ If you want to see a master of the GorillaPod, check out [Casey Neistat](https:/
 - Private Scopes
 
 **What Do I Need To Start a Periscope, or Scope?**
-
 Only an iOS or Android Device (iPhone or iPad).
 
 **Audio Tip:**
 
 **[Rode Smartlav+ Lavalier Micrphone](http://amzn.to/1ivAek8)**
-
-[![](https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00EO4A7L0&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=videounplu-20)](http://www.amazon.com/gp/product/B00EO4A7L0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00EO4A7L0&linkCode=as2&tag=videounplu-20&linkId=UROONHPVIPAWEGIM)![](https://ir-na.amazon-adsystem.com/e/ir?t=videounplu-20&l=as2&o=1&a=B00EO4A7L0)
-
  
-
 **[Rode SC6 TRRS Input & Headphone Output (Splitter)](http://amzn.to/1NJhdGe)**
 
-[![](https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00KHQW6JU&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=videounplu-20)](http://www.amazon.com/gp/product/B00KHQW6JU/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00KHQW6JU&linkCode=as2&tag=videounplu-20&linkId=6G6NNF2VCIO4X4GZ)![](https://ir-na.amazon-adsystem.com/e/ir?t=videounplu-20&l=as2&o=1&a=B00KHQW6JU)
 
 \*\*\*\*\*\*\*\*\*\*\*\*
 
-### **[Blab.Im:](http://blab.im)**
+### Blab.Im
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*
 

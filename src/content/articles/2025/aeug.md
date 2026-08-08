@@ -38,11 +38,7 @@ seo:
   liveWordCount: 842
 youtube: []
 ---
-#### Free Course
-
-# AFTER EFFECTS USER GUIDE
-
-### Master The Essentials
+## Master The Essentials
 
 The course for content creators who want to confidently create animated content in Adobe After Effects—without the overwhelm and frustration of learning a complex, powerful tool.
 

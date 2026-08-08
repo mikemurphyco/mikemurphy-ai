@@ -42,9 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/P4BmyoHelF0"
 ---
-<https://youtu.be/P4BmyoHelF0>
+## Description
 
-**AI Foundations:  
 **25-part series breaking down essential AI terms for creators and small businesses in under 3 minutes!
 
 **📘 AI Foundation \#2:**  

@@ -42,14 +42,11 @@ seo:
 youtube: 
   - "https://youtu.be/TqrrCXWegpc"
 ---
-<https://youtu.be/TqrrCXWegpc>
+## Description
 
-## Adobe Podcasts: How To Create Audiograms
+This tutorial will show you how to use Adobe Podcasts to create free audiograms to transform audio content into shareable video clips with waveform animations and captions.
 
-**Description:  
-**This tutorial will show you how to use Adobe Podcasts to create free audiograms to transform audio content into shareable video clips with waveform animations and captions.
-
-**Adobe Podcast: **  
+**Adobe Podcast:**  
 https://podcast.adobe.com
 
 **AudioGram Documentation:**  

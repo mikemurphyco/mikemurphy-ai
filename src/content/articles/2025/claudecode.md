@@ -41,12 +41,9 @@ seo:
 youtube: 
   - "https://youtu.be/NRF0HoiTSiI"
 ---
-<https://youtu.be/NRF0HoiTSiI>
+## Description
 
-## How To Install Claude Code On Mac
-
-**Description:  
-**In this tutorial, you will learn how to install and run the AI Coding Assistant, Claude Code, on a Mac computer.
+In this tutorial, you will learn how to install and run the AI Coding Assistant, Claude Code, on a Mac computer.
 
 **In this tutorial, you'll learn:**
 

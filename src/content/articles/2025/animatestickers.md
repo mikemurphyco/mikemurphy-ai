@@ -42,15 +42,7 @@ seo:
 youtube: 
   - "https://youtu.be/47ITw8aZtrQ"
 ---
-<https://youtu.be/47ITw8aZtrQ>
-
-# How To Animate PNG Stickers & Export With Transparency in After Effects
-
-### *My complete workflow for animating AI Stickers*
-
-------------------------------------------------------------------------
-
-**In this tutorial:**
+## Description
 
 In this tutorial, I will show you my complete start-to-finish workflow for animating AI-Generated PNG Stickers using the looping wiggle expression in Adobe After Effects CC 2025 and exporting with transparency using Adobe Media Encoder.
 

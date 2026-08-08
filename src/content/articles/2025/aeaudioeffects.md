@@ -41,12 +41,9 @@ seo:
 youtube: 
   - "https://youtu.be/NT29Q4Fgeao"
 ---
-<https://youtu.be/NT29Q4Fgeao>
+## Description
 
-## Adobe After Effects CC 2025: How To Use Audio & Effects
-
-**Description:  
-**This tutorial will show you how to use Audio + Audio Effects in Adobe After Effects CC 2025.
+This tutorial will show you how to use Audio + Audio Effects in Adobe After Effects CC 2025.
 
 **After Effects User Guide Course:**  
 https://aeuserguide.com

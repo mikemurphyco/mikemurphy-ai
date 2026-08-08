@@ -43,18 +43,10 @@ seo:
 youtube: 
   - "https://youtu.be/MJAXSpHdJlw"
 ---
-<https://youtu.be/MJAXSpHdJlw>
-
-# The AI Sticker Pack: PNGs + Animations
-
-### *How To Use ChatGPT + After Effects to make a digital product*
-
-------------------------------------------------------------------------
-
-## ✨ **ChatGPT + Adobe After Effects :** Building a set of AI-Themed Text Stickers 
+## Description
 
 **This is AI Build 108: The AI Sticker Pack  
-**In this Mike Murphy AI Build video, I show you how to take a single idea — an AI-Themed Digital Sticker Pack— and turn it into a real product using Chat GPT 4o Image Generator + Adobe After Effects.
+In this Mike Murphy AI Build video, I show you how to take a single idea — an AI-Themed Digital Sticker Pack— and turn it into a real product using Chat GPT 4o Image Generator + Adobe After Effects.
 
 **Open AI/Chat GPT 4o Image Generation:**  
 <https://openai.com/index/introducing-4o-image-generation/>

@@ -43,12 +43,9 @@ seo:
 youtube: 
   - "https://youtu.be/TZfNrK0QRV4"
 ---
-<https://youtu.be/TZfNrK0QRV4>
+## Description
 
-## Neural Frames AutoPilot: How To Create AI Music Videos Using
-
-**Description:  
-**This tutorial will show you how to use the AutoPilot feature on Neural Frames generate AI music videos by simply uploading a song. Perfect for musicians, content creators, and anyone curious about AI video tools.
+This tutorial will show you how to use the AutoPilot feature on Neural Frames generate AI music videos by simply uploading a song. Perfect for musicians, content creators, and anyone curious about AI video tools.
 
 **Neural Frames**:   
 https://mikemurphy.co/neuralframes

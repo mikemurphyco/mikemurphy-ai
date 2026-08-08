@@ -42,11 +42,8 @@ seo:
 youtube: 
   - "https://youtu.be/Ey5HnbJJk2g"
 ---
-<https://youtu.be/Ey5HnbJJk2g>
+## Description
 
-### **🧠 AI Foundation \#1: Artificial Intelligence (AI)**
-
-**Description:  
 **Welcome to AI Foundations...a 25-part series designed to help content creators and small business owners understand essential AI concepts, one term at a time.
 
 **What is Artificial Intelligence?  

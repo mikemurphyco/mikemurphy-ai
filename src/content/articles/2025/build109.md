@@ -43,15 +43,7 @@ seo:
 youtube: 
   - "https://youtu.be/gnq6JtS78lE"
 ---
-<https://youtu.be/gnq6JtS78lE>
-
-# The AI Sticker Pack Vol 02: PNGs + Animations
-
-### *How To Use Custom GPTs + After Effects to make a digital product*
-
-------------------------------------------------------------------------
-
-## ✨ **ChatGPT + Adobe After Effects :** Building a set of AI-Themed Text Stickers 
+## Description
 
 **This is AI Build 109: The AI Sticker Pack Vol. 02  
 **In this Mike Murphy AI Build video, I show you how to take a single idea — an AI-Themed Digital Sticker Pack— make a Custom ChatGPT and then turn the pack into a digital product for sale.

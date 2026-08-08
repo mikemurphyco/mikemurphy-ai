@@ -43,15 +43,7 @@ seo:
 youtube: 
   - "https://youtu.be/Czs805LKfAU"
 ---
-<https://youtu.be/Czs805LKfAU>
-
-# The Wiggly Squiggly Panel: Idea To Shipping Workflow
-
-### *How To Use Cursor AI + After Effects to make a digital product*
-
-------------------------------------------------------------------------
-
-## ✨ **Adobe After Effects + Cursor AI:** Building a custom ScriptUI Panel with wiggle expression and 10 Effects.
+## Description
 
 In this tutorial, I walk you through the start to finish workflow of building a digital product for Adobe After Effects CC 2025 (The Wiggly Squiggly Panel) using Cursor AI.
 

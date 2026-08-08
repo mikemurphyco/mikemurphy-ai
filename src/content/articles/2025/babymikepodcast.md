@@ -47,19 +47,18 @@ seo:
 youtube: 
   - "https://youtu.be/ISu004rGnaI"
 ---
-<https://youtu.be/ISu004rGnaI>
 
-## How I Made a Viral Baby Podcast Video Using AI (Feat. Jerry Garcia & Hedra)
+## Description
 
-**Description:  
-**This tutorial will show you how I created a viral-style baby podcast animation using AI tools like **Sora by OpenAI, ElevenLabs, Adobe Podcast, and Hedra**.  
-Inspired by the Theo Von and Joe Rogan baby podcast trend, I used a photo of myself to generate “**Baby Mike**,” then brought him to life with voiceover and animation — including a surprise guest appearance by **AI Jerry Garcia**.
+This tutorial will show you how I created a viral-style baby podcast animation using AI tools like Sora by OpenAI, ElevenLabs, Adobe Podcast, and Hedra.  
+I
+nspired by the Theo Von and Joe Rogan baby podcast trend, I used a photo of myself to generate “**Baby Mike,” then brought him to life with voiceover and animation — including a surprise guest appearance by AI Jerry Garcia.
 
 **Baby Prompt:  
-**Generate A toddler version of Mike sitting at a podcast desk, wearing large over-ear headphones and a trucker hat, speaking into a professional podcast microphone (like Shure SM7B), stylized like a real podcast set with moody lighting, wood paneling in the background, and a neon sign that says "MIKECAST”. Hyper-realistic photo style. Comedic and charming.
+Generate A toddler version of Mike sitting at a podcast desk, wearing large over-ear headphones and a trucker hat, speaking into a professional podcast microphone (like Shure SM7B), stylized like a real podcast set with moody lighting, wood paneling in the background, and a neon sign that says "MIKECAST”. Hyper-realistic photo style. Comedic and charming.
 
 **Hedra Prompt:  
-**Make the character look natural and relaxed, like they’re casually speaking into a podcast mic. Add subtle eye movement, occasional slow blinks, and slight head nods to match a confident, chill podcast host. Keep the mouth synced to the audio, with realistic speech motion but not overly animated.
+Make the character look natural and relaxed, like they’re casually speaking into a podcast mic. Add subtle eye movement, occasional slow blinks, and slight head nods to match a confident, chill podcast host. Keep the mouth synced to the audio, with realistic speech motion but not overly animated.
 
 **Tools used:  
 **🧠 ChatGPT: <https://chatgpt.com>  
