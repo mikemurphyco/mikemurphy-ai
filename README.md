@@ -66,3 +66,13 @@ Use public asset paths in Markdown:
 - `LAUNCH.md` contains the launch checklist and deployment plan.
 - `POST_LAUNCH.md` contains the current post-launch handoff and cleanup list.
 - Do not add broad redirects from `mikemurphy.co` yet. WordPress remains active for the transition period.
+
+## Resource Shelves (planned, not yet built)
+
+Directus has a `shelves` collection (Books, Studio & Tech, Favorite Things) and each `Resources` item can link to one via a `shelf` field. That field is fully wired end-to-end (Directus → `src/content.config.ts` → `src/lib/directus-loader.ts`), but `src/pages/resources/index.astro` never reads it — it only groups resources by `category`, and items with no `category` are silently dropped from every section. `MAIN_SHELF_TITLE` in `src/lib/directus.ts` is scaffolding left for this.
+
+To build out a shelf (e.g. Books):
+
+1. Give shelf items a `category` in Directus, or update the grouping logic in `resources/index.astro` to also handle `category: null` (e.g. group by `shelf` when present).
+2. Add a dedicated page (e.g. `src/pages/resources/books.astro`) filtering by `r.data.shelf === 'Books'`, or add a distinct "Books" section to the main resources page using the existing `shelf` field.
+3. Flip the shelf's `status` in Directus from `coming_soon` to live once the page exists.

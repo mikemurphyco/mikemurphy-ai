@@ -113,4 +113,4 @@ Turn off Preferences for Auto-Sort to Bottom
 
 ------------------------------------------------------------------------
 
-**I Help People Figure Things Out** **-** My name is [Mike Murphy](http://mikemurphy.co/), I’m a one-man-band and [podcaster](http://mikemurphy.co/itunes). - I make podcasts and tutorials that teach people how to make better content. - @mikeunplugged on [Twitter](http://twitter.com/mikeunplugged) or [Instagram](http://instagram.com/mikeunplugged) - I also work full-time as a product support specialist at [Simplecast](https://simplecast.com/)
+**I Help People Figure Things Out** **-** My name is [Mike Murphy](https://mikemurphy.ai/), I’m a one-man-band and [podcaster](https://go.mikemurphy.ai/mmu). - I make podcasts and tutorials that teach people how to make better content. - @mikeunplugged on [X](https://x.com/mikemurphy.ai) or [Instagram](http://instagram.com/mikemurphyai) - I also work full-time as a product support specialist at [Simplecast](https://simplecast.com/)
