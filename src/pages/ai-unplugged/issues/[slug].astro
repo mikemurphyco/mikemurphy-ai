@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import { formatDate, isPublishedIssue, issueUrl } from '../../../lib/articles';
 import { getAgentReadable, hasAgentReadable, issueAgentJsonUrl } from '../../../lib/agent';
+import { articleStructuredData, breadcrumbStructuredData } from '../../../lib/structured-data';
 
 export async function getStaticPaths() {
   const issues = await getCollection('aiUnplugged', isPublishedIssue);
@@ -18,6 +19,23 @@ const paddedIssue = String(issue.data.issue).padStart(3, '0');
 const agentReadable = getAgentReadable(issue);
 const showAgentReadable = hasAgentReadable(issue);
 const agentJsonHref = issueAgentJsonUrl(issue);
+const canonicalPath = issueUrl(issue);
+const structuredData = [
+  articleStructuredData({
+    url: canonicalPath,
+    headline: issue.data.subject,
+    description: issue.data.summary,
+    datePublished: issue.data.publishedAt,
+    dateModified: issue.data.updatedAt,
+    image: issue.data.og?.image,
+  }),
+  breadcrumbStructuredData([
+    { name: 'Home', url: '/' },
+    { name: 'AI Unplugged', url: '/ai-unplugged/' },
+    { name: 'Issues', url: '/ai-unplugged/issues/' },
+    { name: issue.data.subject, url: canonicalPath },
+  ], canonicalPath),
+];
 
 const pagefindAttrs = {
   'data-pagefind-body': true,
@@ -29,7 +47,7 @@ const pagefindAttrs = {
 };
 ---
 
-<Layout title={issue.data.subject} description={issue.data.summary} canonical={issueUrl(issue)} image={issue.data.og?.image}>
+<Layout title={issue.data.subject} description={issue.data.summary} canonical={canonicalPath} image={issue.data.og?.image} imageAlt={`AI Unplugged issue ${paddedIssue}: ${issue.data.subject}`} ogType="article" structuredData={structuredData}>
   <main class="mm-container grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
     <article {...pagefindAttrs}>
       <a href="/ai-unplugged/issues/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to issues</a>

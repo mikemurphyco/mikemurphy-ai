@@ -1,9 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SocialLinks from '../../components/SocialLinks.astro';
+import { breadcrumbStructuredData, profilePageStructuredData } from '../../lib/structured-data';
+
+const structuredData = [
+  profilePageStructuredData(),
+  breadcrumbStructuredData([
+    { name: 'Home', url: '/' },
+    { name: 'About Mike Murphy', url: '/about/' },
+  ], '/about/'),
+];
 ---
 
-<Layout title="About" description="About Mike Murphy and the work behind mikemurphy.ai." canonical="/about/">
+<Layout title="About" description="About Mike Murphy and the work behind mikemurphy.ai." canonical="/about/" imageAlt="Mike Murphy" ogType="profile" structuredData={structuredData}>
   <main class="mm-container grid gap-12 py-16 lg:grid-cols-[24rem_1fr] lg:items-start">
     <aside class="mx-auto w-full max-w-sm lg:order-none">
       <div class="mm-polaroid -rotate-2">

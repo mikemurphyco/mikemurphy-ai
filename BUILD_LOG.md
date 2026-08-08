@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-08-01
+updated: 2026-08-07
 status: living-doc
 ---
 
@@ -152,6 +152,42 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-08-07 — Structured data and reliable social cards
+
+**Context:** The post-launch crawl showed that the site had strong conventional
+metadata and machine-readable endpoints, but no Schema.org JSON-LD. A related
+review found that X cards were generally configured correctly yet could fail on
+specific legacy images or show incomplete descriptions from the deployed build.
+
+**Structured data:** Added reusable JSON-LD helpers and connected content to a
+stable Mike Murphy identity at `https://mikemurphy.ai/about/#person`.
+
+- `BlogPosting` on tutorials, articles, Field Notes, and AI Unplugged issues
+- `BreadcrumbList` on content detail pages, podcast episodes, and `/about/`
+- `ProfilePage` with a `Person` main entity on `/about/`
+- Article-specific Open Graph types and author/profile relationships
+
+**Social previews:** Added X account attribution and image alt metadata, emitted
+accurate image MIME types, and removed globally hard-coded dimensions that were
+incorrect for many legacy images. Kept the branded 1200×630 cream default social
+card. Fixed three problematic legacy previews: an image over X's 5 MB limit, an
+extensionless JPEG served without an image content type, and an excessively wide
+podcast banner that now has a dedicated 1200×630 derivative.
+
+**Icons:** Rebuilt the favicon, Apple touch icon, and 192/512 PWA icons from the
+official orange loop SVG with transparent backgrounds. The full cream social
+card was intentionally left unchanged.
+
+**Guardrails:** Expanded `scripts/check-built-metadata.mjs` to parse every JSON-LD
+block and require the expected article, breadcrumb, and profile schemas. It now
+also checks Open Graph/X fields, matching image URLs, supported extensions,
+local image existence, and the 5 MB social-image limit.
+
+**Verified:** `npm run build` completed with 797 pages; content-link, built-link,
+metadata, structured-data, and social-card checks passed; `git diff --check`
+passed. The local build used the existing Directus snapshots because credentials
+were unavailable, which did not affect these changes.
 
 ### 2026-08-07 — Fix GSC "Redirect error" on section root paths (307 → 301)
 

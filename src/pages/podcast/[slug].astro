@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { articleMetaDescription, formatDate, getArticleTopicTerms, isDiscoverableArticle, isPodcastEpisode, podcastUrl, slugifyTerm } from '../../lib/articles';
+import { breadcrumbStructuredData } from '../../lib/structured-data';
 
 export async function getStaticPaths() {
   const episodes = await getCollection('articles', (article) => isDiscoverableArticle(article) && isPodcastEpisode(article));
@@ -15,6 +16,12 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 const terms = getArticleTopicTerms(article);
 const metaDescription = articleMetaDescription(article);
+const canonicalPath = podcastUrl(article);
+const structuredData = breadcrumbStructuredData([
+  { name: 'Home', url: '/' },
+  { name: 'Podcast', url: '/podcast/' },
+  { name: article.data.title, url: canonicalPath },
+], canonicalPath);
 
 const searchable = article.data.search?.include !== false;
 const pagefindAttrs = searchable
@@ -29,7 +36,7 @@ const pagefindAttrs = searchable
   : {};
 ---
 
-<Layout title={article.data.title} description={metaDescription} canonical={podcastUrl(article)} image={article.data.featuredImage || undefined}>
+<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} image={article.data.featuredImage || undefined} imageAlt={article.data.title} structuredData={structuredData}>
   <main>
     <article class="mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <div {...pagefindAttrs}>

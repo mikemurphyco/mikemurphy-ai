@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { fieldNoteUrl, isPublishedNote, noteTypeLabel } from '../../lib/field-notes';
 import { slugifyTerm } from '../../lib/articles';
+import { articleStructuredData, breadcrumbStructuredData } from '../../lib/structured-data';
 
 export async function getStaticPaths() {
   const notes = await getCollection('fieldNotes', isPublishedNote);
@@ -14,6 +15,20 @@ export async function getStaticPaths() {
 
 const { note } = Astro.props;
 const { Content } = await render(note);
+const canonicalPath = fieldNoteUrl(note);
+const structuredData = [
+  articleStructuredData({
+    url: canonicalPath,
+    headline: note.data.title,
+    description: note.data.excerpt,
+    datePublished: note.data.datePublished,
+  }),
+  breadcrumbStructuredData([
+    { name: 'Home', url: '/' },
+    { name: 'Field Notes', url: '/field-notes/' },
+    { name: note.data.title, url: canonicalPath },
+  ], canonicalPath),
+];
 
 function formatDate(value: Date | null): string {
   if (!value) return '';
@@ -32,7 +47,7 @@ const pagefindAttrs = {
 };
 ---
 
-<Layout title={note.data.title} description={note.data.excerpt} canonical={fieldNoteUrl(note)}>
+<Layout title={note.data.title} description={note.data.excerpt} canonical={canonicalPath} imageAlt={note.data.title} ogType="article" structuredData={structuredData}>
   <main>
     <article class="mm-container max-w-3xl py-12" {...pagefindAttrs}>
       <a href="/field-notes/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to field notes</a>

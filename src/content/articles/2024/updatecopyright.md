@@ -12,7 +12,7 @@ canonicalUrl: "https://mikemurphy.ai/articles/updatecopyright/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
-featuredImage: "/assets/media/2023/12/UPDATE-COPYRIGHT.png"
+featuredImage: "/assets/media/2023/12/UPDATE-COPYRIGHT-1024x585.png"
 featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/UPDATE-COPYRIGHT.png"
 categories: 
   - "Blog"

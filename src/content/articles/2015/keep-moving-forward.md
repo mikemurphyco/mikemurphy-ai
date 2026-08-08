@@ -12,7 +12,7 @@ canonicalUrl: "https://mikemurphy.ai/articles/keep-moving-forward/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
-featuredImage: "/assets/media/2015/08/jpg"
+featuredImage: "/assets/media/2015/08/keep-moving-forward.jpg"
 featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2015/08/jpg"
 categories: []
 tags: 

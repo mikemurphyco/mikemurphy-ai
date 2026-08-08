@@ -3,15 +3,19 @@ import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, absoluteUrl } from '../lib/articles';
-import { SITE_FEEDS } from '../lib/site';
+import { SITE_FEEDS, SITE_X_HANDLE } from '../lib/site';
+import { serializeJsonLd, type JsonLd } from '../lib/structured-data';
 
 interface Props {
 	title?: string;
 	description?: string;
 	canonical?: string;
 	image?: string;
+	imageAlt?: string;
 	robots?: string;
 	noHeader?: boolean;
+	ogType?: 'website' | 'article' | 'profile';
+	structuredData?: JsonLd | JsonLd[];
 }
 
 const {
@@ -19,13 +23,27 @@ const {
 	description = SITE_DESCRIPTION,
 	canonical = Astro.url.pathname,
 	image = '/assets/brand/og-default.png',
+	imageAlt = 'Mike Murphy — AI Handyman',
 	robots,
 	noHeader = false,
+	ogType = 'website',
+	structuredData = [],
 } = Astro.props;
 
 const pageTitle = title === SITE_TITLE ? SITE_TITLE : `${title} | ${SITE_TITLE}`;
 const canonicalUrl = canonical.startsWith('http') ? canonical : absoluteUrl(canonical);
 const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
+const structuredDataItems = Array.isArray(structuredData) ? structuredData : [structuredData];
+const imageExtension = new URL(imageUrl).pathname.split('.').pop()?.toLowerCase();
+const imageMimeType = imageExtension === 'png'
+	? 'image/png'
+	: imageExtension === 'jpg' || imageExtension === 'jpeg'
+		? 'image/jpeg'
+		: imageExtension === 'webp'
+			? 'image/webp'
+			: imageExtension === 'gif'
+				? 'image/gif'
+				: undefined;
 ---
 
 <!doctype html>
@@ -69,14 +87,20 @@ const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
 		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalUrl} />
-		<meta property="og:type" content="website" />
+		<meta property="og:type" content={ogType} />
 		<meta property="og:image" content={imageUrl} />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
+		{imageMimeType && <meta property="og:image:type" content={imageMimeType} />}
+		<meta property="og:image:alt" content={imageAlt} />
 		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content={SITE_X_HANDLE} />
+		<meta name="twitter:creator" content={SITE_X_HANDLE} />
 		<meta name="twitter:title" content={pageTitle} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={imageUrl} />
+		<meta name="twitter:image:alt" content={imageAlt} />
+		{structuredDataItems.map((item) => (
+			<script type="application/ld+json" set:html={serializeJsonLd(item)} />
+		))}
 		{import.meta.env.PROD && (
 			<>
 				<script async is:inline src="https://www.googletagmanager.com/gtag/js?id=G-CGTD41XG4M"></script>

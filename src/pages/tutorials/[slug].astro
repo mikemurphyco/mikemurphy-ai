@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import SubscribeBand from '../../components/ai-unplugged/SubscribeBand.astro';
 import Layout from '../../layouts/Layout.astro';
 import { articleMetaDescription, formatDate, getArticleTopicTerms, isDiscoverableArticle, isTutorial, slugifyTerm, tutorialUrl } from '../../lib/articles';
+import { articleStructuredData, breadcrumbStructuredData } from '../../lib/structured-data';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', (article) => isDiscoverableArticle(article) && isTutorial(article));
@@ -16,6 +17,23 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 const terms = getArticleTopicTerms(article);
 const metaDescription = articleMetaDescription(article);
+const canonicalPath = tutorialUrl(article);
+const structuredData = [
+  articleStructuredData({
+    url: canonicalPath,
+    headline: article.data.title,
+    description: metaDescription,
+    datePublished: article.data.pubDate,
+    dateModified: article.data.updatedDate,
+    image: article.data.featuredImage,
+    authorName: article.data.author,
+  }),
+  breadcrumbStructuredData([
+    { name: 'Home', url: '/' },
+    { name: 'Tutorials', url: '/tutorials/' },
+    { name: article.data.title, url: canonicalPath },
+  ], canonicalPath),
+];
 
 const searchable = article.data.search?.include !== false;
 const pagefindAttrs = searchable
@@ -35,7 +53,7 @@ function getYouTubeId(url: string): string | null {
 }
 ---
 
-<Layout title={article.data.title} description={metaDescription} canonical={tutorialUrl(article)} image={article.data.featuredImage || undefined}>
+<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} image={article.data.featuredImage || undefined} imageAlt={article.data.title} ogType="article" structuredData={structuredData}>
   <main>
     <article class="mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <div {...pagefindAttrs}>
