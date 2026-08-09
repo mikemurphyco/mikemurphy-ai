@@ -16,7 +16,7 @@ canonicalUrl: "https://mikemurphy.ai/podcast/ep8/"
 contentEra: "legacy"
 visibility: "search"
 author: "Mike Murphy"
-featuredImage: "/assets/media/2015/10/2019_FEATURED-IMAGE8.jpg"
+featuredImage: ""
 featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2015/10/2019_FEATURED-IMAGE8.jpg"
 categories: 
   - "Episodes"
