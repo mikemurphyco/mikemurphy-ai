@@ -44,69 +44,61 @@ seo:
   robots: ""
   liveWordCount: 0
 youtube: []
+podcast:
+  episodeNumber: 7
+  durationSeconds: 1110
+  buzzsproutEpisodeId: "10439329"
+  audioUrl: "https://www.buzzsprout.com/1973705/episodes/10439329-the-microphone-show.mp3"
+  embedUrl: "https://www.buzzsprout.com/1973705/episodes/10439329?client_source=website&iframe=true"
+  keyTakeaways:
+    - "Dynamic vs. condenser microphones, and when each makes sense"
+    - "USB vs. XLR connections, and what XLR requires to work"
+    - "A full popular-microphone shopping list by category and connection type"
+    - "Where to find the complete, current gear recommendations"
+  showNotesLinks:
+    - label: "Mike Murphy Co Resources Page"
+      url: "https://www.mikemurphy.co/resources/"
+    - label: "Mike Murphy Co Amazon Store"
+      url: "http://mikemurphy.co/amazon"
+    - label: "Shure MOTIV Line"
+      url: "http://www.bhphotovideo.com/c/search?Ntt=shure+motiv&N=0&InitialSearch=yes&sts=ma&Top+Nav-Search="
+  relatedEpisodeSlugs: []
 ---
-## **EP07: THE microphone SHOW**
+**Episode Summary:** All about microphones for podcasters and online creators — dynamic vs. condenser, USB vs. XLR, and a full popular-microphone shopping list organized by category.
 
- 
+## What You'll Learn
 
-## 
-
-## 
+- Dynamic vs. condenser microphones, and when each makes sense
+- USB vs. XLR connections, and what XLR requires to work
+- A full popular-microphone shopping list by category and connection type
+- Where to find the complete, current gear recommendations
 
 ## Types of Microphones
 
-**Dynamic microphones** are considered the standard in broadcasting and radio. Tend to be gain heavy.
-
-**Condenser microphones** tend to be very sensitive to room noise and other unwanted noise like breaths and lip smacking and require phantom power typically.
+**Dynamic microphones** are the standard in broadcasting and radio, and tend to be gain-hungry. **Condenser microphones** tend to be very sensitive to room noise and other unwanted sounds like breaths and lip smacking, and typically require phantom power.
 
 ## Connection Types
 
-**USB microphones** attach directly to your computer. Simple and easy and usually recommended for people just starting out as they work right out of the box.
+**USB microphones** attach directly to a computer — simple, easy, and usually recommended for beginners since they work right out of the box. **XLR microphones** are the pro connector, found on most higher-end mics. XLR requires either an audio interface (a Focusrite Scarlett 6i6-class interface, for example) or a mixing board. <!-- REVIEW: original goo.gl shortlink for the Focusrite Scarlett 6i6 is dead — Google shut down goo.gl link creation/redirects; flagged for the link migration pass -->
 
-**XLR microphones** are considered the pro connector and found on most higher end microphones. XLR require either an audio interface like the [Focusrite Scarlett 6i6](http://goo.gl/rWCRAd) which is what I use or a mixing board.
+## Popular Podcast Microphones
 
- 
+**Dynamic mics:** Shure SM7B <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->, Heil PR-40 <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->, Electro-Voice RE-20 <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->, Rode Procaster. <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->
 
-## Popular Podcast Microphones:
+**Condenser mics:** Rode NT1-A <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->, Audio-Technica AT2050 <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->, Audio-Technica AT2020 <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->, MXL-990. <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->
 
-#### **Dynamic Mics:**
+**USB mics:** Rode Podcaster <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->, Blue Yeti <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> and Blue Snowball <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->, Audio-Technica ATR2100 <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->, Samson C01U. <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->
 
-1\. [Shure SM7B](http://goo.gl/MWSbcl)
+**iOS mics:** Rode SmartLav+ <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->, [Shure MOTIV line](http://www.bhphotovideo.com/c/search?Ntt=shure+motiv&N=0&InitialSearch=yes&sts=ma&Top+Nav-Search=).
 
-2\. [Heil PR40](http://amzn.to/1LhSuYv).
+## Resources
 
-3\. [Electro Voice RE20.](http://amzn.to/1kfSD5W)
+For the complete, current list of recommended microphones, see the [resources page](https://www.mikemurphy.co/resources/). To purchase gear directly, visit the [Amazon Store](http://mikemurphy.co/amazon), with everything in one place.
 
-4\. [Rode Procaster.](http://amzn.to/1GMOxHk)
+Music: "Life of Riley" & "Wallpaper" (incompetech.com).
 
-#### Condenser Mics:
+## Show Notes & Links
 
-1\. [Rode NT1-A](http://goo.gl/ALkQg4).
-
-2\. [Audio-Technica AT 2050](http://amzn.to/1NizzO4)
-
-3\. [Audio-Technica AT 2020](http://amzn.to/1GMOATw)
-
-4\. [MXL-990](http://amzn.to/1NOqwr9)
-
-#### USB Mics
-
-1\. [Rode Podcaster](http://amzn.to/1NOqvU0)
-
-2\. [Blue Yeti](http://goo.gl/ilni1w) & [Blue Snowball](http://amzn.to/1kfTDqW)
-
-3\. [Audio-Technics AT2100](http://amzn.to/1NizQk4)
-
-4\. [Samson C01U](http://amzn.to/1NOqH5N)
-
-#### iOS Mics:
-
-1\. [Rode SmartLav+](http://amzn.to/1Pqtcvl)
-
-2\. [Shure Motiv Line](http://www.bhphotovideo.com/c/search?Ntt=shure+motiv&N=0&InitialSearch=yes&sts=ma&Top+Nav-Search=)
-
-## Resources:
-
-For a complete list of microphones that I use and recommend go to [mikemurphy.co/resources](https://www.mikemurphy.co/resources/).
-
-To purchase gear, visit my Amazon Store where I have all the gear in one place: [mikemurphy.co/amazon](http://mikemurphy.co/amazon)
+- [Mike Murphy Co Resources Page](https://www.mikemurphy.co/resources/)
+- [Mike Murphy Co Amazon Store](http://mikemurphy.co/amazon)
+- [Shure MOTIV Line](http://www.bhphotovideo.com/c/search?Ntt=shure+motiv&N=0&InitialSearch=yes&sts=ma&Top+Nav-Search=)

@@ -46,51 +46,64 @@ seo:
   robots: ""
   liveWordCount: 0
 youtube: []
+podcast:
+  episodeNumber: 2
+  durationSeconds: 860
+  buzzsproutEpisodeId: "10439334"
+  audioUrl: "https://www.buzzsprout.com/1973705/episodes/10439334-the-gear-show.mp3"
+  embedUrl: "https://www.buzzsprout.com/1973705/episodes/10439334?client_source=website&iframe=true"
+  keyTakeaways:
+    - "The full studio toolkit across microphones, cameras, lenses, and lighting"
+    - "The 3 gear categories every content creator's kit falls into"
+    - "Real pros/cons calls on dynamic vs. condenser mics and USB vs. XLR gear"
+    - "Budget-friendly lighting picks, including the $30 'china ball' favorite"
+  showNotesLinks:
+    - label: "B&H Photo/Video"
+      url: "http://www.bhphotovideo.com/c/search?Ntt=rode+ntg3&N=0&InitialSearch=yes&sts=ps"
+    - label: "Zen Pro Audio: Triton FetHead"
+      url: "http://www.zenproaudio.com/triton-audio-fethead"
+    - label: "Caleb Wojcik: DBX 286S Review (YouTube)"
+      url: "http://www.youtube.com/watch?v=4v7aE99zkjc"
+    - label: "SeanWes Gear Page"
+      url: "http://seanwes.com/gear/"
+  relatedEpisodeSlugs: []
 ---
-# EP02: The Gear Show
+**Episode Summary:** What's in the studio toolkit, and what gear a new content creator actually needs — cameras and lenses, lighting, and audio, broken down by category with real recommendations.
 
-What is in my studio toolkit and what gear do you need to start creating online content?
+## What You'll Learn
 
-**Episode Summary:**  
-All of my gear is listed on [Kit.com](https://kit.co/mikemurphy.co)
+- The full studio toolkit across microphones, cameras, lenses, and lighting
+- The 3 gear categories every content creator's kit falls into
+- Real pros/cons calls on dynamic vs. condenser mics and USB vs. XLR gear
+- Budget-friendly lighting picks, including the $30 "china ball" favorite
 
-**3 Categories of Gear:**  
-Camera and Lenses  
-Lighting  
-Audio & Accessories
+## 3 Categories of Gear
 
-Be sure to visit my [Resource Page](https://mikemurphy.co/resources) for more tools of the trade.
+Camera and lenses, lighting, audio and accessories.
 
- 
+## Microphones & Audio
 
-[Rode NTG3 Shotgun Mic:](http://www.bhphotovideo.com/c/search?Ntt=rode+ntg3&N=0&InitialSearch=yes&sts=ps) Simply the best  
-[Shure SM7B Dynamic Microphone](http://goo.gl/MWSbcl): The best mic I have ever used.  
-[Triton Fethead:](http://www.zenproaudio.com/triton-audio-fethead) A must for SM7B to boost gain. CloudLifter is also an alternative.  
-[Rode NT1KIT Condenser Microphone Cardioid](http://goo.gl/ALkQg4): Amazing sounding microphone.  
-[Rode VideoMic Pro](http://goo.gl/5sNF1M): Decent shotgun mic. Will be replaced by Rode NTG3.  
-[Shure SM58 Vocal Mic](http://goo.gl/jY54mA): The workhorse of dynamic mics  
-[Blue Microphones Yeti USB Microphone](http://goo.gl/ilni1w): I love my Blue Yeti  
-[Audio-Technica AT899 Lavalier Microphone](http://goo.gl/iLhVdv): Good lavalier mic.  
-[Focusrite Scarlet 6i6](http://goo.gl/rWCRAd): USB Audio Interface  
-[DBX 286S](http://amzn.to/1IVETl5): Microphone Preamp. The secret weapon in audio. Check out this [review by Caleb Wojcik.](http://www.youtube.com/watch?v=4v7aE99zkjc)  
-[Zoom H6 Six-Track Portable Recorder](http://goo.gl/RUZObm): Way better than H4N!  
-[M-Audio BX5 D2 Speakers](http://goo.gl/PylE61): Great studio monitors  
-[Rode PSA1 Swivel Mount Boom Arm](http://goo.gl/E2b0h6): Love it.  
-[Rode Boom Pole](http://goo.gl/XriIec):  
-[Sony MDR7506 Headphones](http://goo.gl/c4Qlf6) : Great studio headphones
+The [Rode NTG3 shotgun mic](http://www.bhphotovideo.com/c/search?Ntt=rode+ntg3&N=0&InitialSearch=yes&sts=ps) — simply the best. The Shure SM7B dynamic microphone — the best mic used to date. <!-- REVIEW: original goo.gl shortlink for the Shure SM7B is dead — Google shut down goo.gl link creation/redirects; flagged for the link migration pass --> The [Triton FetHead](http://www.zenproaudio.com/triton-audio-fethead) — a must-have with the SM7B to boost gain (a Cloudlifter is an alternative). The Rode NT1-Kit condenser microphone — amazing sounding. <!-- REVIEW: original goo.gl shortlink for the Rode NT1-Kit is dead — flagged for the link migration pass --> The Rode VideoMic Pro — a decent shotgun mic, since replaced by the NTG3. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Shure SM58 vocal mic — the workhorse of dynamic mics. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Blue Yeti USB microphone — a genuine favorite. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Audio-Technica AT899 lavalier mic — a good lav option. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
 
-[Canon t5i](http://goo.gl/h2GriO): My main camera for still photography & video. Love this camera.  
-[Logitech c920 (webcam):](http://amzn.to/1M7LmB9) 1080p HD webcam. Amazing quality and cheap.  
-[Canon G11](http://goo.gl/Y6yFHp): Oldie, but goodie  
-[GoPro Hero 4 Black](http://goo.gl/ei2uSY): Cannot say enough about GoPro  
-[Canon 24–105 mm Lens](http://goo.gl/Yq3jDZ): My best lens by far  
-[Canon EF 50mm f/1.8 STM Lens](http://amzn.to/1IVFKCo): Cheap and awesome lens for shallow depth of field.  
-[Canon 18–55 mm Lens](http://goo.gl/Fgoma9): Kit Lens  
-[Canon 10–18 mm Lens](http://goo.gl/EKuPke): Wide angle goodness  
-[Canon 50 mm Lens](http://goo.gl/97tBWJ): Like the Nifty Fifty, only better.
+The Focusrite Scarlett 6i6 USB audio interface. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The DBX 286S microphone preamp — the secret weapon in audio; check out [Caleb Wojcik's review](http://www.youtube.com/watch?v=4v7aE99zkjc) <!-- REVIEW: amzn.to shortlink for the DBX 286S itself is missing from this list — original source only linked the review, not the product page -->. The Zoom H6 six-track portable recorder — way better than the H4N. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> M-Audio BX5 D2 speakers — great studio monitors. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Rode PSA1 swivel-mount boom arm — genuinely loved. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Rode boom pole. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> Sony MDR-7506 headphones — great studio cans. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
 
-[Fotodiox Pro LED-312DS](http://astore.amazon.com/videounplu-20/detail/B00FL7LLZA): Small & portable LEDs. I have 3 of them. Not super bright, but like them.  
-[Ikan IFD576-S Daylight LED Light](http://astore.amazon.com/videounplu-20/detail/B00HEGP0C6). Love these lights. Bright, cool and good price.  
-[Genaray LED-6200T 144 LED Light](http://www.bhphotovideo.com/c/product/857246-REG/genaray_led_6200t_144_lamp_variable_clr.html). Small and awesome! I'd buy more Generay stuff.  
-[China Balls](http://www.filmtools.com/24whitchinla.html). I have 4 LED lights and I prefer the \$30 china ball to all. Soft & bright!  
-[LED Strips:](http://www.amazon.com/gp/product/B0040FJ27S?ie=UTF8&creativeASIN=B0040FJ27S&tag=videounplu-20) Unnecessary, but fun for desk. [SeanWes](http://seanwes.com/gear/) turned me on to these.
+## Cameras & Lenses
+
+The Canon T5i — the main camera for still photography and video, genuinely loved. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Logitech C920 webcam — 1080p HD, amazing quality for the price. <!-- REVIEW: original amzn.to shortlink for the C920 is unverifiable without fetching — deferred to the link migration pass --> The Canon G11 — an oldie but goodie. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The GoPro Hero 4 Black — can't say enough good things. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Canon 24-105mm lens — the best lens by far. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Canon EF 50mm f/1.8 STM lens — cheap and great for shallow depth of field. <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass --> The Canon 18-55mm kit lens. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Canon 10-18mm lens — wide-angle goodness. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Canon 50mm lens — like the "nifty fifty," only better. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
+
+## Lighting
+
+The Fotodiox Pro LED-312DS — small, portable LEDs; not super bright, but well-liked (3 in rotation). The Ikan IFD576-S daylight LED light — bright, cool-running, and good value. The Genaray LED-6200T 144 LED light — small and excellent, would buy more Genaray gear. "China balls" — of the 4 LED lights owned, the ~$30 china ball gets preferred over all of them for soft, bright output. LED strips — unnecessary, but fun for the desk; a tip picked up from [SeanWes's gear page](http://seanwes.com/gear/).
+
+## Resources
+
+The full, current gear list lives on the [resources page](https://mikemurphy.co/resources).
+
+Music: "Life of Riley" & "Wallpaper" (incompetech.com).
+
+## Show Notes & Links
+
+- [B&H Photo/Video](http://www.bhphotovideo.com/c/search?Ntt=rode+ntg3&N=0&InitialSearch=yes&sts=ps)
+- [Zen Pro Audio: Triton FetHead](http://www.zenproaudio.com/triton-audio-fethead)
+- [Caleb Wojcik: DBX 286S Review (YouTube)](http://www.youtube.com/watch?v=4v7aE99zkjc)
+- [SeanWes Gear Page](http://seanwes.com/gear/)

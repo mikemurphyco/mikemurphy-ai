@@ -49,115 +49,153 @@ seo:
   robots: ""
   liveWordCount: 0
 youtube: []
+podcast:
+  episodeNumber: 6
+  durationSeconds: 1138
+  buzzsproutEpisodeId: "10439330"
+  audioUrl: "https://www.buzzsprout.com/1973705/episodes/10439330-the-money-show.mp3"
+  embedUrl: "https://www.buzzsprout.com/1973705/episodes/10439330?client_source=website&iframe=true"
+  keyTakeaways:
+    - "11 real ways a one-man band or podcaster can generate online income"
+    - "The real pros and cons of teaching on a platform vs. self-hosting courses"
+    - "How podcast sponsorships actually work, with real numbers from John Lee Dumas"
+    - "Why affiliate marketing costs the buyer nothing extra"
+  showNotesLinks:
+    - label: "Skillshare"
+      url: "http://www.skillshare.com"
+    - label: "Udemy"
+      url: "http://www.udemy.com"
+    - label: "Teachable"
+      url: "http://www.teachable.com"
+    - label: "Photoshop: The Art of the Headswap (Mike's Skillshare class)"
+      url: "https://www.skillshare.com/classes/photography/Photoshop-The-Art-of-the-Head-Swap/1700917171"
+    - label: "WordPress Cheatsheet for Entrepreneurs (Mike's Skillshare class)"
+      url: "https://www.skillshare.com/classes/technology/Wordpress-For-Entrepreneurs-The-Quick-Easy-Install-Cheatsheet/1105132078"
+    - label: "LearnDash"
+      url: "http://learndash.com"
+    - label: "Teachery"
+      url: "http://teachery.co"
+    - label: "Thinkific"
+      url: "http://thinkific.com"
+    - label: "Zippy Courses"
+      url: "http://zippycourses.com"
+    - label: "WP Courseware"
+      url: "https://flyplugins.com/wp-courseware/"
+    - label: "EOFire: The Ultimate Guide to Podcast Sponsorships"
+      url: "http://www.eofire.com/podcast-sponsorships/"
+    - label: "Mike Murphy Co Resources Page"
+      url: "http://mikemurphy.co/resources"
+    - label: "Mike Murphy Co Amazon Store"
+      url: "http://mikemurphy.co/amazon"
+    - label: "Etsy"
+      url: "http://etsy.com"
+    - label: "Shopify"
+      url: "http://shopify.com"
+    - label: "Gumroad"
+      url: "http://gum.co/unplugged"
+    - label: "Printful"
+      url: "http://printful.com"
+    - label: "Fiverr"
+      url: "http://fiverr.com"
+    - label: "Upwork"
+      url: "http://upwork.com"
+    - label: "The Automatic Customer by John Warrillow"
+      url: "https://www.amazon.com/Automatic-Customer-Creating-Subscription-Business/dp/159184746X"
+  relatedEpisodeSlugs: []
 ---
-# **10 Ways To Make Money Online**
+**Episode Summary:** 11 real ways a one-man band or podcaster can make money online — from teaching and sponsorships to affiliate marketing, e-commerce, and freelancing.
 
-## **1. Tutorial Sites**
+## What You'll Learn
 
-Make classes and tutorials and sell them on online education sites. **Pros:** Websites are built to help you succeed and they handle the technology, hosting, some promotion and the financial transactions. You get paid a percentage of the sales. **Cons:** You share the profits on Skillshare. Udemy often sells your class with big discounts.
+- 11 real ways a one-man band or podcaster can generate online income
+- The real pros and cons of teaching on a platform vs. self-hosting courses
+- How podcast sponsorships actually work, with real numbers from John Lee Dumas
+- Why affiliate marketing costs the buyer nothing extra
 
-### 
+## 10 Ways to Make Money Online
 
-### **Popular Sites:**
+### 1. Tutorial Sites
 
-[Www.skillshare.com](http://www.skillshare.com)
+Make classes and tutorials, then sell them through online education platforms. **Pros:** these sites handle technology, hosting, some promotion, and financial transactions — payment comes as a percentage of sales. **Cons:** Skillshare means splitting profits, and Udemy often discounts a class heavily.
 
-[Www.udemy.com](http://www.udemy.com)
+**Popular sites:** [Skillshare](http://www.skillshare.com), [Udemy](http://www.udemy.com), [Teachable](http://www.teachable.com) (formerly Fedora).
 
-[Www.teachable.com](http://www.teachable.com) (formerly Fedora)
+**Classes taught on Skillshare/Udemy (the first internet dollar ever earned!):** [Photoshop: The Art of the Headswap](https://www.skillshare.com/classes/photography/Photoshop-The-Art-of-the-Head-Swap/1700917171) and [WordPress Cheatsheet for Entrepreneurs](https://www.skillshare.com/classes/technology/Wordpress-For-Entrepreneurs-The-Quick-Easy-Install-Cheatsheet/1105132078).
 
-#### **Mike’s classes on Skillshare/Udemy (first internet dollar!):**
+### 2. Self-Hosted Courses
 
-1. [Photoshop: The Art of the Headswap](http://skl.sh/1hCYReo)
+Classes and courses sold directly through your own platform or website.
 
-2. [Wordpress for Entrepreneurs](http://skl.sh/1Le0MDn)
+**Pros:** 100% of the profit. **Cons:** 100% of the responsibility — launch, creation, technology, promotion, all on you.
 
-## **2. Self-Hosted Courses**
+**Platforms for self-hosted courses:** [LearnDash](http://learndash.com), [Teachery](http://teachery.co), [Thinkific](http://thinkific.com), [Zippy Courses](http://zippycourses.com), [WP Courseware](https://flyplugins.com/wp-courseware/).
 
-Classes & Courses sold on your own platform/website
+### 3. Podcast Sponsorships
 
-**Pros:** 100% profit
+Advertisers have recognized podcasting's popularity and want in. Sponsorships take time to land — like everything else, more downloads means more sponsor interest, and having a clear niche helps attract them. John Lee Dumas of [EOFire](http://www.eofire.com/podcast-sponsorships/) has reportedly made around $100K/month in sponsorships by guaranteeing over 1 million listens per month, publishing 7 days a week — not too shabby. See [his Ultimate Guide to Podcast Sponsorships](http://www.eofire.com/podcast-sponsorships/) for the full breakdown.
 
-**Cons:** 100% responsibility for launch, creation, technology, promotion
+### 4. Affiliate Marketing
 
-**Education Platforms for self-hosted courses:**
+Affiliate marketing for products and gear is a great revenue generator, and the plan for covering monthly costs of running this site and podcast. It's simply advertising products with a small kickback on any resulting sale — the buyer pays nothing extra compared to purchasing directly from Amazon or elsewhere.
 
-[LearnDash.com](http://LearnDash.com)
+Affiliate links in action can be seen on the [resources page](http://mikemurphy.co/resources), and there's also a dedicated [Amazon storefront](http://mikemurphy.co/amazon).
 
-[Teachery.com](http://www.udemy.com)
+![Divi](/assets/media/2015/08/divi_250x250.jpg)
+![BlueHost](/assets/media/2015/08/1-300x154.png)
 
-[Thinkific.com](http://thinkific.com)
+### 5. Guest Blogging
 
-[ZippyCourses.com](http://zippycourses.com)
+Get paid to write articles for other sites in the same niche, linking back to build an audience. Content marketing has taken over, and sites are hungry for content — guest blogging is genuinely in demand.
 
-[WP-Courseware](https://flyplugins.com/wp-courseware/)
+### 6. YouTube
 
-## **3. Podcast Sponsorships**
+Ad revenue sharing. It takes time, but there's real money to be made — and the rules are always changing.
 
-Advertisers are recognizing the popularity of podcasts and advertisers want in. Sponsorships take time and like everything else the more downloads, the more likely sponsors will come knocking. It also helps if you have a niche to attract sponsors. John Lee Dumas from [EOFIRE.COM](http://www.eofire.com/podcast-sponsorships/) has been making about \$100K per month in sponsorships because he guaranteed over 1 million listens per month and he is 7 days/week, but that’s not too shabby.
+### 7. Kindle eBooks (Amazon)
 
-[The Ultimate Guide To Sponsorships](http://www.eofire.com/podcast-sponsorships/)
+Write and sell Kindle ebooks. They typically sell under $10, so it's a volume game, but also a great marketing tool for audience building. Not for everyone, but worth exploring if writing is a strength.
 
-## **4. Affiliate Marketing**
+### 8. E-Commerce Stores
 
-Affiliate marketing for products and gear on your website is a great revenue generator and how I plan on maintaining my monthly fees for running my site and podcast. Affiliate marketing is simply advertising products on your site and getting a small kickback if someone buys a product through your link. Your audience (the buyer) is not charged any extra than if they went to Amazon or wherever and purchased the gear directly.
+[Etsy](http://etsy.com) (artsy goods), [Shopify](http://shopify.com) (e-commerce for anything), [Gumroad](http://gum.co/unplugged) (a personal favorite), [Printful](http://printful.com) (t-shirts).
 
-#### Check out my resource page to see my affiliate links in action:
+### 9. Freelancing (Online)
 
-<http://mikemurphy.co/resources>
+Offering services like Photoshop retouching, video or audio editing, graphic design, or voiceovers.
 
-#### You can also create your own storefront on Amazon:
+**Popular sites to offer services:** [Fiverr](http://fiverr.com), [Upwork](http://upwork.com). <!-- REVIEW: original source also listed "Elancer.com," which appears to be a misspelling/dead link for the former Elance (now merged into Upwork) — omitted rather than linking to a defunct or unverified domain -->
 
-[http://mikemurphy.co/amazon](http://mikemurphy.co/amazon)
+### 10. Coaching & Consulting
 
-[![Divi](/assets/media/2015/08/divi_250x250.jpg)](/assets/media/2015/08/divi_250x250.jpg) Divi
+Offer expertise directly to others. People need help figuring things out, and coaching can be a great income source for a good teacher willing to provide accountability and guidance.
 
- 
+### 11. Membership Sites (Bonus)
 
-[![BlueHost](/assets/media/2015/08/1-300x154.png)](/assets/media/2015/08/1.png) BlueHost
+Create premium content and charge a monthly fee for access. A popular model that requires consistently great content and a loyal fan base, but worth watching closely.
 
-## **5. Guest Blogging**
+**Recommended book:** [The Automatic Customer by John Warrillow](https://www.amazon.com/Automatic-Customer-Creating-Subscription-Business/dp/159184746X).
 
-Get paid to write articles for other sites in your niche and link back to your site to build an audience. Everything is content marketing today and sites desperately need content, so guess blogging is in demand.
+Music: "Life of Riley" & "Wallpaper" (incompetech.com).
 
-## **6. YouTube**
+## Show Notes & Links
 
-YouTube ads revenue sharing. It takes time, but there is money to be made on YouTube and it is always changing.
-
-## **7. Kindle eBooks (Amazon)**
-
-Write and sell Kindle ebooks. They usually sell for under \$10, but this is a volume game and also a great marketing tool for you to build an audience. Selling ebooks on the Amazon Kindle store is not for everyone, but something worth checking into if writing is your thing.
-
-## **8. ECommerce Stores**
-
-Create an e-commerce store:
-
-[Easy](http://etsy.com) (Artsy stuff)
-
-[Shopify](http://shopify.com) (e-Commerce store…anything)
-
-[\*Gumroad (favorite)](http://gum.co/unplugged)
-
-[Printful (T-Shirts)](http://printful.com)
-
-## **9. Freelancing (Online)**
-
-Freelancing services (web design, graphic design) and offering your services such as Photoshop retouching, video or audio editing, graphic design or voiceovers.
-
-**Popular sites to offer services:**
-
-[**Fiverr.com**](http://fiverr.com)
-
-[**Upward.com**](http://upward.com)
-
-[**Elancer.com**](http://elancer.com)
-
-## **10. Coaching & Consulting**
-
-Offer your expertise to others. People need help figuring things out and coaching is a great form of income if you are a good teacher and want to to a personal coach to someone who needs your help or needs accountability.
-
-## **11. Membership Sites (Bonus)**
-
-Create premium content for your audience and charge a monthly fee to access. This is a very popular model and will require you to produce great content and have a loyal fanbase, but this is something to keep an eye on.
-
-Recommended Book: [The Automatic Customer by John Warrilow](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CB0QFjAAahUKEwjohKPG0MTIAhVK-4AKHZwuAaU&url=http%3A%2F%2Fwww.amazon.com%2FThe-Automatic-Customer-Creating-Subscription%2Fdp%2F159184746X&usg=AFQjCNH3RXHa97j1E0wWoAwTYQOyw9s_8A&bvm=bv.105039540,d.eXY)
+- [Skillshare](http://www.skillshare.com)
+- [Udemy](http://www.udemy.com)
+- [Teachable](http://www.teachable.com)
+- [Photoshop: The Art of the Headswap (Mike's Skillshare class)](https://www.skillshare.com/classes/photography/Photoshop-The-Art-of-the-Head-Swap/1700917171)
+- [WordPress Cheatsheet for Entrepreneurs (Mike's Skillshare class)](https://www.skillshare.com/classes/technology/Wordpress-For-Entrepreneurs-The-Quick-Easy-Install-Cheatsheet/1105132078)
+- [LearnDash](http://learndash.com)
+- [Teachery](http://teachery.co)
+- [Thinkific](http://thinkific.com)
+- [Zippy Courses](http://zippycourses.com)
+- [WP Courseware](https://flyplugins.com/wp-courseware/)
+- [EOFire: The Ultimate Guide to Podcast Sponsorships](http://www.eofire.com/podcast-sponsorships/)
+- [Mike Murphy Co Resources Page](http://mikemurphy.co/resources)
+- [Mike Murphy Co Amazon Store](http://mikemurphy.co/amazon)
+- [Etsy](http://etsy.com)
+- [Shopify](http://shopify.com)
+- [Gumroad](http://gum.co/unplugged)
+- [Printful](http://printful.com)
+- [Fiverr](http://fiverr.com)
+- [Upwork](http://upwork.com)
+- [The Automatic Customer by John Warrillow](https://www.amazon.com/Automatic-Customer-Creating-Subscription-Business/dp/159184746X)

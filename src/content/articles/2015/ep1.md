@@ -45,33 +45,55 @@ seo:
   robots: ""
   liveWordCount: 0
 youtube: []
+podcast:
+  episodeNumber: 1
+  durationSeconds: 840
+  buzzsproutEpisodeId: "10439335"
+  audioUrl: "https://www.buzzsprout.com/1973705/episodes/10439335-about-mike-murphy.mp3"
+  embedUrl: "https://www.buzzsprout.com/1973705/episodes/10439335?client_source=website&iframe=true"
+  keyTakeaways:
+    - "The origin story behind Mike Murphy Unplugged and why it started"
+    - "The show's core mission: Learn, Create, Move Forward"
+    - "What topics and recurring features to expect going forward"
+    - "Why being a 'jack of all trades' isn't a flaw, it's the whole premise"
+  showNotesLinks: []
+  relatedEpisodeSlugs: []
 ---
-**Episode \#1: Intro**
+**Episode Summary:** The very first episode — the story behind the one-man band, why this podcast started, and what to expect from every episode going forward: Learn, Create, Move Forward.
 
-You are listening to Episode NUMBER 1 of Mike Murphy Unplugged. Learn. Create. Move Forward.
+## What You'll Learn
 
-I am your host, Mike Murphy ((a one man band  and technology junkie, who loves to help people figure things out).  I am really excited to be here with you today. The goal of Mike Murphy Unplugged is to help you **learn** what you need to know in order to **create** online content so you can **move forward** in business and in life.
+- The origin story behind Mike Murphy Unplugged and why it started
+- The show's core mission: Learn, Create, Move Forward
+- What topics and recurring features to expect going forward
+- Why being a "jack of all trades" isn't a flaw, it's the whole premise
 
-Purpose of episode:
+## Episode 1: Intro
 
-This episode is to give you a behind the scenes view of my story and what to expect from future episodes of Mike Murphy Unplugged.
+This is Episode 1 of Mike Murphy Unplugged. Learn. Create. Move Forward.
 
-Are you a one man/woman band where it feels like you have to learn and do everything yourself? Do you suffer like I do from being a jack of all trades with too many great ideas in your head? You get all excited about something and then you wake up with a new idea? It’s exciting and maddening at the same time. But don’t worry, I’m here to help.
+Your host: Mike Murphy — a one-man band and technology junkie who loves helping people figure things out. The goal of this podcast is simple: help you **learn** what you need to know in order to **create** online content, so you can **move forward** in business and in life.
 
-This is a podcast that documents my journey which led me to blogging and starting a podcast.
+**Purpose of this episode:** a behind-the-scenes look at the story so far, and what to expect from future episodes.
 
-I will be sharing my knowledge, skills and insights to build a community of like-minded people who want to make a dent in the universe no matter how big or small. My goal of the podcast is to provide as much value to you as possible in under 15 minutes to motivate you to just keep making content and moving forward.
+Are you a one-person operation where it feels like you have to learn and do everything yourself? Do you suffer from being a jack-of-all-trades with too many good ideas in your head at once — getting excited about something, then waking up with a brand new idea the next day? It's exciting and maddening at the same time. That's exactly the audience this show is built for.
 
-This podcast will teach the tools of the trade of running an online business and podcast and topics will include:
+This podcast documents the journey that led to blogging and eventually starting a podcast — sharing knowledge, skills, and insights to build a community of like-minded people who want to make a dent in the universe, no matter how big or small. The goal: pack as much value as possible into every episode, in under 15 minutes, to keep listeners motivated to make content and move forward.
 
-- Gear & Equipment
-- Building a website and using Wordpress
-- How & Why to launch a podcast
-- Graphic design,Entrepreneurship & Productivity
+**Topics this show will cover:**
+
+- Gear & equipment
+- Building a website and using WordPress
+- How and why to launch a podcast
+- Graphic design, entrepreneurship, and productivity
 - Curated content and social media trends
-- There will be features such as:
+
+**Recurring features to expect:**
+
 - Ask Mike Anything (Q&A)
-- My Favorite Things (Podcasts, Books, Music, Websites)
-- What is in your podcast toolkit? I will be asking fellow podcasters what their go-to tools are
-- Guest interviews in the very near future
-- And much more to come as we evolve together.
+- My Favorite Things (podcasts, books, music, websites)
+- What's in Your Podcast Toolkit? — asking fellow podcasters about their go-to tools
+- Guest interviews, coming soon
+- And more, as the show evolves
+
+Music: "Life of Riley" & "Wallpaper" (incompetech.com).

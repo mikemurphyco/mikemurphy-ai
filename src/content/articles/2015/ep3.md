@@ -45,56 +45,180 @@ seo:
   robots: ""
   liveWordCount: 0
 youtube: []
+podcast:
+  episodeNumber: 3
+  durationSeconds: 846
+  buzzsproutEpisodeId: "10439333"
+  audioUrl: "https://www.buzzsprout.com/1973705/episodes/10439333-the-tool-show.mp3"
+  embedUrl: "https://www.buzzsprout.com/1973705/episodes/10439333?client_source=website&iframe=true"
+  keyTakeaways:
+    - "The full web and business toolkit used to run Mike Murphy Co."
+    - "Organization and productivity tools that actually get used, not just downloaded"
+    - "Where to find affordable freelancers, stock assets, and design resources"
+    - "The go-to platforms for ongoing online education"
+  showNotesLinks:
+    - label: "Bluehost"
+      url: "http://www.bluehost.com/track/videounplugged"
+    - label: "Divi by Elegant Themes"
+      url: "http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=30230"
+    - label: "X-Theme by Theme.co"
+      url: "http://theme.co"
+    - label: "Mailchimp"
+      url: "http://mailchimp.com/"
+    - label: "Dropbox"
+      url: "http://dropbox.com/"
+    - label: "Google Apps for Business"
+      url: "https://www.google.com/work/apps/business/"
+    - label: "Buffer"
+      url: "https://bufferapp.com/"
+    - label: "Baron Fig"
+      url: "http://www.baronfig.com/pages/shop"
+    - label: "Evernote"
+      url: "https://evernote.com/"
+    - label: "Trello"
+      url: "http://trello.com/"
+    - label: "Asana"
+      url: "https://asana.com/"
+    - label: "Calendly"
+      url: "http://calendly.com/"
+    - label: "Slack"
+      url: "http://slack.com/"
+    - label: "List.ly"
+      url: "http://list.ly/"
+    - label: "Workflowy"
+      url: "https://workflowy.com/"
+    - label: "Scrivener"
+      url: "https://itunes.apple.com/us/app/scrivener/id418889511?mt=12"
+    - label: "Byword"
+      url: "http://bywordapp.com/"
+    - label: "Medium"
+      url: "http://medium.com/"
+    - label: "1Password"
+      url: "https://agilebits.com/onepassword"
+    - label: "FreshBooks"
+      url: "http://www.freshbooks.com/pages/invoices"
+    - label: "Xero"
+      url: "http://xero.com/"
+    - label: "Fiverr"
+      url: "https://www.fiverr.com/"
+    - label: "PeoplePerHour"
+      url: "https://www.peopleperhour.com/"
+    - label: "Freelancer"
+      url: "https://www.freelancer.com/"
+    - label: "DesignCuts"
+      url: "http://www.designcuts.com/"
+    - label: "Envato / ThemeForest"
+      url: "http://themeforest.net/"
+    - label: "The Stocks"
+      url: "http://thestocks.im/"
+    - label: "Unsplash"
+      url: "https://unsplash.com/"
+    - label: "AudioBlocks"
+      url: "https://www.audioblocks.com/"
+    - label: "VideoBlocks"
+      url: "https://www.videoblocks.com/"
+    - label: "CompFight"
+      url: "http://compfight.com/"
+    - label: "Pixabay"
+      url: "https://pixabay.com/"
+    - label: "picjumbo"
+      url: "http://picjumbo.com/"
+    - label: "Placeit"
+      url: "https://placeit.net/"
+    - label: "Lynda.com"
+      url: "http://lynda.com/"
+    - label: "Udemy"
+      url: "http://udemy.com/"
+    - label: "Skillshare"
+      url: "http://skillshare.com/"
+    - label: "KelbyOne"
+      url: "https://kelbyone.com/"
+  relatedEpisodeSlugs: []
 ---
-### Ep 03: The TOOL SHOW:
+**Episode Summary:** Every web and business tool used to run Mike Murphy Co. — hosting, email, organization, accounting, freelancing platforms, stock resources, and where the ongoing education happens.
 
-What Web &Business Tools do I use to run my online business
+## What You'll Learn
 
-[Bluehost (Hosting)](http://www.bluehost.com/track/videounplugged): The best hosting company with equally as good customer service.  
-[Divi Theme by Elegant Themes: ](http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=30230) Words cannot say enough about how great this theme framework is.  
-[X-Theme by Theme.co](http://theme.co) This was my favorite WP theme before I met Divi, but I still think it's great.
+- The full web and business toolkit used to run Mike Murphy Co.
+- Organization and productivity tools that actually get used, not just downloaded
+- Where to find affordable freelancers, stock assets, and design resources
+- The go-to platforms for ongoing online education
 
-[MailChimp](http://mailchimp.com/): My preferred email service for newsletters, etc.
+## Hosting & Website
 
-[Dropbox](http://dropbox.com/): No explanation needed. A must-have  
-[Google Apps For Business](https://www.google.com/work/apps/business/): If you do one thing for your business, install Google Apps.  
-[Buffer](https://bufferapp.com/): I think I'm in love with Buffer.  
-[Baron Fig:](http://www.baronfig.com/pages/shop) Notebooks that make me feel creative and smart.  
-[Evernote](https://evernote.com/): Oh how I try to love you. We're making headway.  
-[Trello](http://trello.com/): My favorite organizer. Trello keeps track of everything.  
-[Asana:](https://asana.com/) Another great project management tool.  
-[Calendly](http://calendly.com/): Very cool scheduling tool. Integrates with Google Calendar.  
-[Slack](http://slack.com/): Communication tool. Eliminate emails.  
-[List.ly](http://list.ly/): Make & share lists with the world.  
-[Workflowy:](https://workflowy.com/) So awesome! Forget to use it, but love for long lists!  
-[Scrivener:](https://itunes.apple.com/us/app/scrivener/id418889511?mt=12) Trying to make this my default writer.  
-[ByWord](http://bywordapp.com/): Great markup writing tool.  
-[Medium](http://medium.com/): Write & publish articles. Love Medium.  
-[1Password](https://agilebits.com/onepassword): Password manager. Would be locked out of everything without it. Game-changer.
+[Bluehost](http://www.bluehost.com/track/videounplugged) — the best hosting company, with equally good customer service. [Divi by Elegant Themes](http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=30230) — words can't do justice to how great this theme framework is. [X-Theme by Theme.co](http://theme.co) — the favorite WordPress theme before discovering Divi, and still great.
 
-[FreshBooks](http://www.freshbooks.com/pages/invoices): Beautiful Invoicing & so much more.  
-[Xero](http://xero.com/): Love Xero. They make accounting fun.
+## Email & Communication
 
-[Odesk](https://www.odesk.com/):  
-[Fiverr](https://www.fiverr.com/) : Like Fiverr a lot for little jobs.  
-[People Per Hour](http://videounplugged.com/resources/www.peopleperhour.com):  
-[Freelancer](https://www.freelancer.com/):
+[Mailchimp](http://mailchimp.com/) — the preferred email service for newsletters. [Slack](http://slack.com/) — eliminates internal email entirely.
 
-[CreativeMarket.com](http://videounplugged.com/cmarket)  
-[DesignCuts.com](http://www.designcuts.com/)  
-[Envato](http://themeforest.net/?ref=videounplugged)  
-[The Fancy Deal](https://www.thefancydeal.com/downloads/best-custom-fonts-and-graphics/?wpam_refkey=199)  
-[The Stocks](http://thestocks.im/): Hispster Heaven.  
-[Unsplash](https://unsplash.com/): Good images  
-[AudioBlocks.com](https://www.audioblocks.com/)  
-[VideoBlocks.com](https://www.videoblocks.com/)  
-[CompFight (Photos)](http://videounplugged.com/resources/compfight.com): A FlickR search tool  
-[Pixabay](http://videounplugged.com/resources/pixabay.com/en/)  
-[PicJumbo](http://picjumbo.com/)  
-[Placeit.net](https://placeit.net/) (Mockups)
+## Organization & Productivity
 
-[Lynda.com](http://lynda.com/): The cream of the crop for online education.  
-[Udemy](http://udemy.com/): Huge resource for online classes.  
-[Skillfeed](http://skillfeed.com/): Yet another good place to learn  
-[Skillshare](http://skillshare.com/): One of my new favorites for tutorials.  
-[KelbyOne](http://www.dpbolvw.net/click-7785420-11798107-1422030825000): I owe a lot of my design & photoshop skills to Scott Kelby.
+[Dropbox](http://dropbox.com/) — no explanation needed, an absolute must-have. [Google Apps for Business](https://www.google.com/work/apps/business/) — if you do one thing for your business, install this. [Buffer](https://bufferapp.com/) — genuinely one of the favorite tools in the stack. [Baron Fig](http://www.baronfig.com/pages/shop) — notebooks that make working feel more creative and organized. [Evernote](https://evernote.com/) — still working on making this a habit. [Trello](http://trello.com/) — the favorite organizer, keeps track of everything. [Asana](https://asana.com/) — another great project management tool. [Calendly](http://calendly.com/) — a cool scheduling tool that integrates with Google Calendar. [List.ly](http://list.ly/) — make and share lists with the world. [Workflowy](https://workflowy.com/) — awesome for long lists, even if underused.
+
+## Writing
+
+[Scrivener](https://itunes.apple.com/us/app/scrivener/id418889511?mt=12) — working toward making this the default writer. [Byword](http://bywordapp.com/) — a great markup writing tool. [Medium](http://medium.com/) — for writing and publishing articles.
+
+## Security
+
+[1Password](https://agilebits.com/onepassword) — a genuine game-changer; being locked out of everything without it is unimaginable now.
+
+## Accounting
+
+[FreshBooks](http://www.freshbooks.com/pages/invoices) — beautiful invoicing and much more. [Xero](http://xero.com/) — makes accounting genuinely enjoyable.
+
+## Freelancing & Outsourcing
+
+[Fiverr](https://www.fiverr.com/) — great for small jobs. [PeoplePerHour](https://www.peopleperhour.com/) and [Freelancer](https://www.freelancer.com/) are also worth knowing. <!-- REVIEW: original source also listed "Odesk" (now merged into Upwork) — omitted as a dead/defunct brand rather than linking to a service that no longer exists under that name -->
+
+## Design & Stock Resources
+
+[DesignCuts](http://www.designcuts.com/), [Envato/ThemeForest](http://themeforest.net/), [The Fancy Deal](https://www.thefancydeal.com/), [The Stocks](http://thestocks.im/) (hipster heaven), [Unsplash](https://unsplash.com/), [AudioBlocks](https://www.audioblocks.com/), [VideoBlocks](https://www.videoblocks.com/), [CompFight](http://compfight.com/) (a Flickr search tool), [Pixabay](https://pixabay.com/), [picjumbo](http://picjumbo.com/), [Placeit](https://placeit.net/) (mockups). <!-- REVIEW: mikemurphy.co Pretty Link redirect for creativemarket.com omitted here — deferred to the Pretty Links → Shlinks migration pass -->
+
+## Online Education
+
+[Lynda.com](http://lynda.com/) — the cream of the crop for online education. [Udemy](http://udemy.com/) — a huge resource for online classes. Skillfeed — another good place to learn. <!-- REVIEW: Skillfeed was acquired and shut down by Shutterstock in 2015 — the service no longer exists, kept as a historical mention without a live link --> [Skillshare](http://skillshare.com/) — a new favorite for tutorials. [KelbyOne](https://kelbyone.com/) — a lot of design and Photoshop skill is owed directly to Scott Kelby.
+
+Music: "Life of Riley" & "Wallpaper" (incompetech.com).
+
+## Show Notes & Links
+
+- [Bluehost](http://www.bluehost.com/track/videounplugged)
+- [Divi by Elegant Themes](http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=30230)
+- [X-Theme by Theme.co](http://theme.co)
+- [Mailchimp](http://mailchimp.com/)
+- [Dropbox](http://dropbox.com/)
+- [Google Apps for Business](https://www.google.com/work/apps/business/)
+- [Buffer](https://bufferapp.com/)
+- [Baron Fig](http://www.baronfig.com/pages/shop)
+- [Evernote](https://evernote.com/)
+- [Trello](http://trello.com/)
+- [Asana](https://asana.com/)
+- [Calendly](http://calendly.com/)
+- [Slack](http://slack.com/)
+- [List.ly](http://list.ly/)
+- [Workflowy](https://workflowy.com/)
+- [Scrivener](https://itunes.apple.com/us/app/scrivener/id418889511?mt=12)
+- [Byword](http://bywordapp.com/)
+- [Medium](http://medium.com/)
+- [1Password](https://agilebits.com/onepassword)
+- [FreshBooks](http://www.freshbooks.com/pages/invoices)
+- [Xero](http://xero.com/)
+- [Fiverr](https://www.fiverr.com/)
+- [PeoplePerHour](https://www.peopleperhour.com/)
+- [Freelancer](https://www.freelancer.com/)
+- [DesignCuts](http://www.designcuts.com/)
+- [Envato / ThemeForest](http://themeforest.net/)
+- [The Stocks](http://thestocks.im/)
+- [Unsplash](https://unsplash.com/)
+- [AudioBlocks](https://www.audioblocks.com/)
+- [VideoBlocks](https://www.videoblocks.com/)
+- [CompFight](http://compfight.com/)
+- [Pixabay](https://pixabay.com/)
+- [picjumbo](http://picjumbo.com/)
+- [Placeit](https://placeit.net/)
+- [Lynda.com](http://lynda.com/)
+- [Udemy](http://udemy.com/)
+- [Skillshare](http://skillshare.com/)
+- [KelbyOne](https://kelbyone.com/)

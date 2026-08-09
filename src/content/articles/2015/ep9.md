@@ -45,66 +45,94 @@ seo:
   robots: ""
   liveWordCount: 0
 youtube: []
+podcast:
+  episodeNumber: 9
+  durationSeconds: 1035
+  buzzsproutEpisodeId: "10439327"
+  audioUrl: "https://www.buzzsprout.com/1973705/episodes/10439327-the-stream-show.mp3"
+  embedUrl: "https://www.buzzsprout.com/1973705/episodes/10439327?client_source=website&iframe=true"
+  keyTakeaways:
+    - "Live broadcasting tools for podcasters: Periscope and Blab.im compared"
+    - "A recommended iPhone tripod and mounting setup for video"
+    - "Audio gear that makes a real difference for live streaming"
+    - "What Blab.im requires technically, including browser limitations"
+  showNotesLinks:
+    - label: "Turning Inward (Dr. Vivian Carrasco)"
+      url: "https://itunes.apple.com/us/podcast/turning-inward-dr.-vivian/id961459563?mt=2"
+    - label: "VivianCarrasco.com"
+      url: "http://viviancarrasco.com"
+    - label: "JOBY GorillaPod"
+      url: "http://astore.amazon.com/videounplu-20/detail/B002FGTWOC"
+    - label: "JOBY GripTight"
+      url: "http://astore.amazon.com/videounplu-20/detail/B00M2GFIZ2"
+    - label: "Casey Neistat: GorillaPod in Action (YouTube)"
+      url: "https://youtu.be/dGLEEZZ15N4"
+    - label: "Casey Neistat Videos (YouTube)"
+      url: "https://www.youtube.com/watch?v=WxfZkMm3wcg"
+    - label: "Rode SmartLav+ Lavalier Microphone"
+      url: "http://amzn.to/1ivAek8"
+    - label: "Rode SC6 TRRS Input & Headphone Output"
+      url: "http://amzn.to/1NJhdGe"
+  relatedEpisodeSlugs: []
 ---
-## **Ep 09: The Stream Show**
+**Episode Summary:** Live broadcasting tools for podcasters — Periscope and Blab.im compared, plus the tripod, mounting, and audio gear that actually makes a difference for live streaming.
 
-### **Ask Mike Anything:**
+## What You'll Learn
 
-[![blab](/assets/media/2015/10/blab-300x200.jpg)](/assets/media/2015/10/blab.jpg)
+- Live broadcasting tools for podcasters: Periscope and Blab.im compared
+- A recommended iPhone tripod and mounting setup for video
+- Audio gear that makes a real difference for live streaming
+- What Blab.im requires technically, including browser limitations
 
-Dr. Vivian Carrasco  
-**Podcast:** [**Turning Inward  
-**](https://itunes.apple.com/us/podcast/turning-inward-dr.-vivian/id961459563?mt=2)**Website: [VivianCarrasco.com](http://VivianCarrasco.com)**
+## Ask Mike Anything: An iPhone Tripod for Video
 
-**Q.** What tripod do you recommend for making videos with my iPhone.
+![blab](/assets/media/2015/10/blab-300x200.jpg)
 
-**A.** [GorillaPod by Joby (Tripod)](http://astore.amazon.com/videounplu-20/detail/B002FGTWOC)  
-[GripTight by Joby (iPhone Holder)](http://astore.amazon.com/videounplu-20/detail/B00M2GFIZ2)
+**Guest:** Dr. Vivian Carrasco. **Podcast:** [Turning Inward](https://itunes.apple.com/us/podcast/turning-inward-dr.-vivian/id961459563?mt=2). **Website:** [VivianCarrasco.com](http://viviancarrasco.com).
 
-[![GorillaPod](/assets/media/2015/08/Accessories_012-300x200.jpg)](http://astore.amazon.com/videounplu-20/detail/B002FGTWOC)
+**Question:** What tripod is recommended for making videos with an iPhone?
 
-If you want to see a master of the GorillaPod, check out [Casey Neistat](https://youtu.be/dGLEEZZ15N4) and many other daily vlogggers. Noboby uses them better than Casey.
+**Answer:** the [JOBY GorillaPod](http://astore.amazon.com/videounplu-20/detail/B002FGTWOC) and the [JOBY GripTight](http://astore.amazon.com/videounplu-20/detail/B00M2GFIZ2) iPhone holder.
 
-**Warning:** Watching [Casey Neistat videos](https://www.youtube.com/watch?v=WxfZkMm3wcg) can be highly addicting.
+![GorillaPod](/assets/media/2015/08/Accessories_012-300x200.jpg)
 
-\*\*\*\*\*\*\*\*\*\*\*\*
+To see a true master of the GorillaPod at work, check out [Casey Neistat](https://youtu.be/dGLEEZZ15N4) and other daily vloggers — nobody uses one better. **Warning:** [watching Casey Neistat videos](https://www.youtube.com/watch?v=WxfZkMm3wcg) can be highly addictive.
 
-### **Periscope:**
-
-\*\*\*\*\*\*\*\*\*\*\*\*\*
+## Periscope
 
 - Owned by Twitter
-- Started in 2015
-- Competitor: Meerkat
-- Periscopes called Scopes
-- Replay expires in 24 hours
-- Follow People & Get Notified
-- Private Scopes
+- Launched in 2015
+- Main competitor: Meerkat
+- Broadcasts are called "Scopes"
+- Replays expire after 24 hours
+- Follow people and get notified when they go live
+- Private Scopes are supported
 
-**What Do I Need To Start a Periscope, or Scope?**
-Only an iOS or Android Device (iPhone or iPad).
+**What's needed to start a Scope?** Just an iOS or Android device — iPhone or iPad.
 
-**Audio Tip:**
+**Audio tip:** the [Rode SmartLav+ Lavalier Microphone](http://amzn.to/1ivAek8) <!-- REVIEW: amzn.to shortlink, unverifiable without fetching — deferred to the link migration pass --> paired with the [Rode SC6 TRRS Input & Headphone Output splitter](http://amzn.to/1NJhdGe) <!-- REVIEW: amzn.to shortlink, unverifiable without fetching — deferred to the link migration pass -->.
 
-**[Rode Smartlav+ Lavalier Micrphone](http://amzn.to/1ivAek8)**
- 
-**[Rode SC6 TRRS Input & Headphone Output (Splitter)](http://amzn.to/1NJhdGe)**
+## Blab.im
 
+- Similar to Google Hangouts on Air (GHOA)
+- One host plus up to 3 guests
+- Live chat stream built in
+- Live Twitter integration
+- Open to the public
+- Audio and camera preferences get changed in browser settings
+- Doesn't work in Safari — Chrome, Firefox, and Windows only
+- Good audio and lighting genuinely matter
+- **Tip:** delegate someone to help manage the live chat
 
-\*\*\*\*\*\*\*\*\*\*\*\*
+Music: "Life of Riley" & "Wallpaper" (incompetech.com).
 
-### Blab.Im
+## Show Notes & Links
 
-\*\*\*\*\*\*\*\*\*\*\*\*\*
-
-- Similar To Google Hangouts on Air (GHOA)
-- Host + 3 Guests
-- Live Chat Stream
-- Live Twitter Integration
-- Open To Public
-- Change Audio & Camera Preferences in Browser Settings
-- Will not work in Safari (Chrome & Firefox & Windows)
-- Good audio & lighting matter
-- Tip: Delegate someone to help with chat
-
-Music: Life of Riley & Wallpaper [(incompetech.com)](http://incompetech.com)
+- [Turning Inward (Dr. Vivian Carrasco)](https://itunes.apple.com/us/podcast/turning-inward-dr.-vivian/id961459563?mt=2)
+- [VivianCarrasco.com](http://viviancarrasco.com)
+- [JOBY GorillaPod](http://astore.amazon.com/videounplu-20/detail/B002FGTWOC)
+- [JOBY GripTight](http://astore.amazon.com/videounplu-20/detail/B00M2GFIZ2)
+- [Casey Neistat: GorillaPod in Action (YouTube)](https://youtu.be/dGLEEZZ15N4)
+- [Casey Neistat Videos (YouTube)](https://www.youtube.com/watch?v=WxfZkMm3wcg)
+- [Rode SmartLav+ Lavalier Microphone](http://amzn.to/1ivAek8) <!-- REVIEW: amzn.to shortlink, unverifiable without fetching — deferred to the link migration pass -->
+- [Rode SC6 TRRS Input & Headphone Output](http://amzn.to/1NJhdGe) <!-- REVIEW: amzn.to shortlink, unverifiable without fetching — deferred to the link migration pass -->

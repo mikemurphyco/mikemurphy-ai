@@ -44,173 +44,140 @@ seo:
   robots: ""
   liveWordCount: 0
 youtube: []
+podcast:
+  episodeNumber: 4
+  durationSeconds: 909
+  buzzsproutEpisodeId: "10439332"
+  audioUrl: "https://www.buzzsprout.com/1973705/episodes/10439332-the-podcast-launch.mp3"
+  embedUrl: "https://www.buzzsprout.com/1973705/episodes/10439332?client_source=website&iframe=true"
+  keyTakeaways:
+    - "The full 7-step process to launch a podcast, start to finish"
+    - "Why media hosting and RSS feed setup are the trickiest steps to get right"
+    - "How to actually submit a podcast to iTunes and other directories"
+    - "Why promotion doesn't stop once the first episode goes live"
+  showNotesLinks:
+    - label: "Divi by Elegant Themes"
+      url: "http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=30230"
+    - label: "Fiverr"
+      url: "http://fiverr.com"
+    - label: "Incompetech"
+      url: "http://incompetech.com"
+    - label: "AudioJungle"
+      url: "http://audiojungle.net/"
+    - label: "AudioBlocks"
+      url: "https://www.audioblocks.com/"
+    - label: "Libsyn"
+      url: "http://libsyn.com"
+    - label: "Pat Flynn: How to Start a Podcast Tutorial"
+      url: "http://www.smartpassiveincome.com/how-to-start-a-podcast-podcasting-tutorial/"
+    - label: "Free Podcast Course by John Lee Dumas"
+      url: "https://itunes.apple.com/us/podcast/free-podcast-course-podcast/id947671706?mt=2"
+    - label: "Daniel J. Lewis: The Audacity to Podcast"
+      url: "https://theaudacitytopodcast.com/"
+    - label: "Stitcher"
+      url: "https://www.stitcher.com/"
+    - label: "TuneIn"
+      url: "https://tunein.com/"
+    - label: "Miro"
+      url: "http://www.getmiro.com/"
+  relatedEpisodeSlugs: []
 ---
-**Ep 04: THE PODCAST LAUNCH: START TO FINISH**
+**Episode Summary:** The full start-to-finish process for launching a podcast — planning, assets, production, hosting, RSS feed setup, directory submission, and promotion — the exact steps used to launch this show.
 
-**Steps to launching Mike Murphy Unplugged podcast:**
+## What You'll Learn
 
-Today I am going to share with you the basic steps required to start a podcast.
+- The full 7-step process to launch a podcast, start to finish
+- Why media hosting and RSS feed setup are the trickiest steps to get right
+- How to actually submit a podcast to iTunes and other directories
+- Why promotion doesn't stop once the first episode goes live
 
-**Steps To Launching A Podcast**
+## The Podcast Launch: Start to Finish
 
-1.   Planning
-2.   Graphics & Assets
-3.   Production & Tagging
-4.   Media Hosting
-5.   RSS Feed Creation
-6.   Submitting To Podcast Directories
-7.   Marketing
+**Steps to launching a podcast:**
 
- 
+1. Planning
+2. Graphics & assets
+3. Production & tagging
+4. Media hosting
+5. RSS feed creation
+6. Submitting to podcast directories
+7. Marketing
 
-1.  **Planning**
+## 1. Planning
 
-**Start Date:** Pick a date to give yourself a goal. My advice is to give yourself at least 4-6 weeks and even more time if you plan on having an interview show. I launched [Mike Murphy Unplugged](http://mikemurphy.co/itunes) in one month, but I could have used a couple of more weeks. You know yourself best, but picking a start date will help you \#moveforward.
+**Start date:** pick one to give yourself a real goal. At least 4-6 weeks is recommended, more if an interview format is planned. Mike Murphy Unplugged launched in one month — a couple more weeks would have helped. Everyone knows their own pace best, but picking a start date is what actually gets things moving.
 
- 
+**Show planning (very important):** What is the show about? What value gets delivered to listeners — knowledge, humor, insight? What's the format — solo, interview, co-host? What's the frequency — daily, weekly, monthly? **Be consistent.** What's the approximate length — 10 minutes, 30 minutes, an hour? **Be consistent.** Who is the audience? This one's big, and it's genuinely okay not to know exactly at first.
 
-**Show Planning (very important):**
+**Tip:** when recording, imagine speaking to one person, not an entire audience — it changes the tone for the better.
 
-What is your show about?
+## 2. Graphics & Assets
 
-What value will you be delivering to your listeners? Knowledge, humor, insights….
+**Website:** every podcast needs a home. [Divi by Elegant Themes](http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=30230) is the best WordPress theme used to date, and highly recommended.
 
-What is the format? Just you? Interview? Co-host?
+**Podcast cover art:** genuinely important, and worth outsourcing if needed — [Fiverr](http://fiverr.com) is one option among many designers who specialize in podcast cover art.
 
-What is the frequency?  Daily? Weekly? Monthly? **Be consistent.**
+**Music:** [Incompetech](http://incompetech.com), [AudioJungle](http://audiojungle.net/), [AudioBlocks](https://www.audioblocks.com/).
 
-What is the show length (approx). 10 minutes, 30 mins, hour?  **Be consistent**
+**Sound effects and voiceover intros:** [Fiverr](http://fiverr.com) again.
 
-Who is your audience? This is a biggie. You may not really know at first, that’s ok.
+**Tip:** don't get stuck gathering assets — done is better than perfect.
 
- 
+## 3. Production
 
-**Tip:** When recording podcast, pretend you are speaking to one person, not an entire audience. Most people
+**Write a script** — developing a repeatable template, like a story, helps a lot. Scrivener is the writing tool of choice.
 
- 
+**Record the podcast.** Adobe Audition is the tool used here; other popular editors include GarageBand, Reaper, Pro Tools, and Audacity.
 
-2.  **Graphics & Assets:**
+**Edit, add music and sound effects, export as an MP3 file.**
 
-**Website:**You need a home for your podcast. [Divi by ElegantThemes.com](http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=30230) is the best Wordpress theme I have used to date and I highly recommend.
+**Tag it.** ID3 Editor handles this — the metadata embedded in an MP3 file. To see it in action, open iTunes, right-click any song, and select "Get Info" — all that text and artwork comes from ID3 tags. Not hard, but important.
 
-**Podcast Cover Art:** This is very important. You might want to outsource it. Fiverr.com is an option and there are many others who design podcast cover art.
+## 4. Choose a Media Host
 
-**Music (Links in shownotes):** I like [Incompetech.com](http://incompetech.com), [Audio Jungle](http://audiojungle.net/), [Audio Blocks.](https://www.audioblocks.com/)
+This is where the MP3 podcast file actually lives — just like a website needs hosting, a podcast needs a media host. **Media host used here:** Libsyn (recommended as download-only).
 
-**Sound Effects**
+**Tip:** for maximum flexibility, don't publish the RSS feed directly through Libsyn — use it strictly as a download-only server, so switching hosts later stays easy.
 
-**Voiceover Intros:** [**Fiverr.com**](http://fiverr.com)
+**Runner-up:** SoundCloud — genuinely liked for its design and vibe, but it retains too much control over the feed, which is why Libsyn won out instead.
 
-**\*Tip:** When gathering assets, try not to get stuck here**: Done is better than perfect.**
+## 5. Use the Blubrry/PowerPress Plugin for WordPress
 
- 
+**Install the plugin** on WordPress. PowerPress generates the all-important RSS feed submitted to iTunes — the same feed that notifies subscribers every time a new episode goes live. (Ever subscribed to a blog and gotten notified about a new post? That's RSS at work.)
 
-3.  **Production**
+**Tutorials to learn PowerPress:** setup can feel a little intimidating — go slow, since every field matters. Watching several tutorials before diving in helped a lot. [Pat Flynn's popular 6-part series](http://www.smartpassiveincome.com/how-to-start-a-podcast-podcasting-tutorial/) on launching a podcast is excellent, and video 5 in that series walks through the PowerPress settings specifically. John Lee Dumas of Entrepreneur on Fire has a [free 20-episode podcast course](https://itunes.apple.com/us/podcast/free-podcast-course-podcast/id947671706?mt=2) on iTunes — genuinely inspiring, and a great way to understand the whole podcasting puzzle. [Daniel J. Lewis at The Audacity to Podcast](https://theaudacitytopodcast.com/) <!-- REVIEW: original goo.gl shortlink is dead — Google shut down goo.gl link creation/redirects; linked to the show's current site instead, verify during the link migration pass --> also has great tutorials.
 
-**Write A Script** (Try to develop a template just like a story) I use Scrivener to write.
+After PowerPress is set up, at least one episode has to be published on the WordPress site before iTunes will accept the podcast — a private or scheduled post won't work, it has to be live.
 
-**Record Podcast.** I use Adobe Audition. Other popular editors include: GarageBand, Reaper, ProTools & Audacity
+**Publishing episode 1:** create a new blog post, then paste the episode URL from Libsyn (the MP3 file) into the PowerPress blog post module.
 
-**Edit, Add in music and sound effects, export as .mp3 file**
+**Steps 4 & 5, summarized:** record the podcast → export as MP3 → upload to Libsyn as download-only → install Blubrry/PowerPress on the website → create a new post like any other blog post → paste the Libsyn MP3 URL into PowerPress → PowerPress generates the RSS feed submitted to iTunes → the RSS feed notifies the audience of every new episode. Repeat that loop each week and the audience gets notified automatically every time.
 
-**Tag it. I use ID3 EDITOR.** This is the metadata of your .mp3 file. If you want to know what I’m talking about, open iTunes, right click on any song and select Get INFO. All that text and the artwork is controlled by ID3 Tags. Not very hard, but important.
+## 6. Submit to iTunes & Other Directories
 
-**Warning:** Steps 4 & 5 get a little confusing. Let me know if you need more explanation.
+**The big moment.** Once episode 1 is published: go into the PowerPress settings and copy the podcast feed URL (typically the website address with `/feed/podcast/` at the end). Open iTunes, go to Podcasts in the iTunes Store, and look for "Submit a Podcast" in the upper right. Paste the RSS feed in. Wait 24-48 hours for the iTunes congratulations email — that's it, done.
 
- 
+**Other directories to submit to:** [Stitcher](https://www.stitcher.com/), [TuneIn](https://tunein.com/), [Miro](http://www.getmiro.com/).
 
-4.  **Choose your MEDIA HOST.**
+## 7. Promote, Promote, Promote
 
-**This is where your .mp3 podcast file lives. Just like your website, you need a hosting company for your podcast.**
+Share the podcast with the world, and keep reminding listeners to subscribe and leave ratings and reviews. Landing on iTunes's New & Noteworthy section is the goal, and downloads, subscriptions, and ratings are exactly what gets a show there.
 
-**My Media Host:** LIBSYN.com (recommend as Download Only)
+Learn. Create. Move Forward.
 
-**Tip:** For maximum flexibility, Do not publish your feed on Libsyn, only use as a Download Only server, so if you ever want to change hosts in the future it will be easy.
+Music: "Life of Riley" & "Wallpaper" (incompetech.com).
 
-**Runner-Up:**
+## Show Notes & Links
 
-**SOUNDCLOUD.com:** I really like Soundcloud’s design and vibe, but they have too much control over your feed, so I chose Libsyn so I only have
-
- 
-
-5.  **USE BLUBRRY/POWERPRESS PLUGIN FOR WORDPRESS**
-
-**Install plugin** on Wordpress
-
-PowerPress generates the oh-so important RSS FEED that you will submit to iTunes and it will be the feed that tells your subscribers every time you publish a new episode: Have you ever subscribed to a blog and get notified when they wrote a new blog post? You can thank RSS for that.
-
-**Tutorials To Learn Powerpress:**
-
-Setting up PowerPress is a little intimidating, but take it very slow as every field matters. I watched a lot of tutorials on setting up PowerPress before I jumped in.
-
- 
-
-[*Pat Flynn has a very popular 6 part series*](http://https//www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CB0QFjAAahUKEwi39MuYkJfIAhVDLB4KHeK_AHI&url=http%253A%252F%252Fwww.smartpassiveincome.com%252Fhow-to-start-a-podcast-podcasting-tutorial%252F&usg=AFQjCNGh-r-4Ag4_-BH1z6LQRzdvLcTw0Q&bvm=bv.103388427,d.dmo)* on how to launch a podcast and* [*Video \#5*](http://https//youtu.be/Ei67QMWD4MA)* does a good job walking you through the Powerpress settings.*
-
-*John Lee Dumas of Entrepreneur on Fire who has a free 20 episode course in iTunes, Called*
-
-[*Free Podcast Course*](http://https//itunes.apple.com/us/podcast/free-podcast-course-podcast/id947671706?mt=2)*. John is awesome and a huge inspiration to me and I highly recommend listening to this course, it will really help you understand the whole podcast puzzle.*
-
-*Great tutorials on podcasting:  *[*Daniel J Lewis at Audacity to Podcast*](http://goo.gl/8xj6Uf)
-
-After Powerpress is set up, you need to publish at least one episode on your Wordpress site in order for iTunes to accept your podcast. FYI, a private or scheduled post will not work, it must be published.
-
-**Episode \#1:**
-
-In order to publish one new episode all you have to do is create a new blog post
-
-Paste your episode url from Libsyn (the mp3 file) into the PowerPress blog post module
-
-**STEPS 4 & 5 Summary:**
-
-After recording your podcast, you export as .mp3 file.
-
-The .mp3 file is uploaded to Libsyn for download only
-
-On your website, you install Blubrry/Powerpress plugin (see step \#5)
-
-Create a new post just like any other blog poste.
-
-Paste the url of your .mp3 file from Libsyn in the Powerpress on your website.
-
-Powerpress will create an RSS feed that you will submit to iTunes and the RSS feed will let your audience know whenever you publish a new episode.
-
-Record a new podcast, upload .mp3 to Libsyn as download only, copy/paste link in Wordpress, publish new blog post and iTunes will tell your audience you have published a new episode!
-
- 
-
-6.   NOW, **SUBMIT TO ITUNES & OTHER DIRECTORIES!!!**
-
-**The big moment.**
-
-Once you have your 1st episode published:
-
-Go into the Powerpress settings and copy your podcast feed URL (it is likely your website address with [feed/podcast/](https://www.mikemurphy.co/feed/podcast/) at the end)
-
- 
-
-Open up iTunes, Go To Podcasts in iTunes Store and in the upper right, look for Submit A Podcast.
-
-Paste your RSS feed into iTunes.
-
-Wait 24-48 Hours for iTunes Congratulations email! You did it!
-
- 
-
-**Other Directories to submit feed to:**
-
-[Stitcher.com](http://Stitcher.com)
-
-[TuneIn.com](http://TuneIn.com)
-
-[Miro.com](http://www.getmiro.com/)
-
- 
-
-7.  **Promote, Promote Promote**. Share your podcast with the world and always be reminding them to Subscribe to your podcast and leave a ratings and reviews. You want your podcast to be on the New & Noteworthy section of iTunes, and this is how to do it. The more downloads, subscribes and Ratings, the better your chances.
-
- 
-
-Learn. Create. Move Forward
-
-Music: Life of Riley & Wallpaper (incompetech.com)
+- [Divi by Elegant Themes](http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=30230)
+- [Fiverr](http://fiverr.com)
+- [Incompetech](http://incompetech.com)
+- [AudioJungle](http://audiojungle.net/)
+- [AudioBlocks](https://www.audioblocks.com/)
+- [Libsyn](http://libsyn.com)
+- [Pat Flynn: How to Start a Podcast Tutorial](http://www.smartpassiveincome.com/how-to-start-a-podcast-podcasting-tutorial/)
+- [Free Podcast Course by John Lee Dumas](https://itunes.apple.com/us/podcast/free-podcast-course-podcast/id947671706?mt=2)
+- [Daniel J. Lewis: The Audacity to Podcast](https://theaudacitytopodcast.com/)
+- [Stitcher](https://www.stitcher.com/)
+- [TuneIn](https://tunein.com/)
+- [Miro](http://www.getmiro.com/)
