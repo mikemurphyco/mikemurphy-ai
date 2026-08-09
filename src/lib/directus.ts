@@ -48,8 +48,16 @@ function readSnapshot(collection: DirectusCollectionName): { fetchedAt: string; 
  * Persist the last-good snapshot. Loaders call this AFTER normalization so the
  * snapshot stores the enriched shape (e.g. Resources' self-hosted `logoPath`),
  * letting offline/PR builds reproduce the live render without the tailnet.
+ *
+ * Skips the write when `items` is unchanged from the existing snapshot, so a
+ * routine build doesn't dirty the file with nothing but a new `fetchedAt` —
+ * that was showing up as noise in every commit even when the underlying
+ * Directus content hadn't actually changed.
  */
 export function writeSnapshot(collection: DirectusCollectionName, items: any[]): void {
+  const existing = readSnapshot(collection);
+  if (existing && JSON.stringify(existing.items) === JSON.stringify(items)) return;
+
   fs.mkdirSync(SNAPSHOT_DIR, { recursive: true });
   const payload = { fetchedAt: new Date().toISOString(), items };
   fs.writeFileSync(snapshotPath(collection), `${JSON.stringify(payload, null, 2)}\n`);
