@@ -6,9 +6,10 @@ interface Props {
   article: Article;
   showImage?: boolean;
   fallbackImage?: string;
+  aspectClass?: string;
 }
 
-const { article, showImage = true, fallbackImage } = Astro.props;
+const { article, showImage = true, fallbackImage, aspectClass = 'aspect-video' } = Astro.props;
 const terms = getArticleTopicTerms(article).slice(0, 3);
 const url = contentUrl(article);
 const cardImage = article.data.featuredImage || fallbackImage;
@@ -16,7 +17,7 @@ const cardImage = article.data.featuredImage || fallbackImage;
 
 <article class="group grid gap-5 border-b border-[var(--mm-border)] py-6 sm:grid-cols-[13rem_1fr] sm:items-start">
   {showImage && cardImage ? (
-    <a href={url} class="block aspect-video overflow-hidden rounded bg-[var(--mm-navy)]">
+    <a href={url} class={`block ${aspectClass} overflow-hidden rounded bg-[var(--mm-navy)]`}>
       <img
         src={cardImage}
         alt=""
@@ -25,7 +26,7 @@ const cardImage = article.data.featuredImage || fallbackImage;
       />
     </a>
   ) : (
-    <div class="hidden aspect-video rounded bg-[var(--mm-border)] sm:block" aria-hidden="true"></div>
+    <div class={`hidden ${aspectClass} rounded bg-[var(--mm-border)] sm:block`} aria-hidden="true"></div>
   )}
   <div class="min-w-0">
     <p class="text-sm text-[var(--mm-muted)]">
