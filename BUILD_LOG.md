@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-08-08
+updated: 2026-08-09
 status: living-doc
 ---
 
@@ -152,6 +152,95 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-08-09 — Podcast episode SEO template + retroactive reformat (11/162)
+
+**Context:** All 162 episode posts carried the raw WordPress migration as-is —
+weak/empty SEO frontmatter, no audio player at all, no `PodcastEpisode`
+structured data, and real content bugs (dead `amzn.to` shortlinks, copy-paste
+bugs where multiple products linked to the same wrong URL). Discovered the
+podcast is actually hosted on **Buzzsprout** (`feeds.buzzsprout.com/1973705.rss`),
+not Megaphone as assumed — its embeds from the old mikemurphy.co site never
+made it into the migration, so no episode page had a way to actually listen.
+
+**Shipped in code:**
+- Added an optional `podcast` object to the `articles` schema
+  (`src/content.config.ts`): `episodeNumber`, `durationSeconds`,
+  `buzzsproutEpisodeId`, `audioUrl`, `embedUrl`, `keyTakeaways[]`,
+  `showNotesLinks[]` (strict `.url()` — external resources only, not
+  internal episode cross-links), `relatedEpisodeSlugs[]`.
+- `src/components/BuzzsproutPlayer.astro` — Buzzsprout's own official iframe
+  embed (confirmed via their oEmbed API), not a custom player. The
+  `{episode_id}` parses straight out of the RSS `<enclosure>` URL, so no
+  manual lookup is needed per episode.
+- `podcastEpisodeStructuredData()` in `src/lib/structured-data.ts` — real
+  schema.org `PodcastEpisode` (episodeNumber, duration as ISO 8601,
+  associatedMedia, partOfSeries), wired into `src/pages/podcast/[slug].astro`
+  alongside the existing breadcrumb data whenever `podcast.episodeNumber` is
+  set.
+- Episode number now renders in the existing muted date/era metadata line on
+  `ArticleCard` ("Episode 157 · August 19, 2016 · Archive") instead of a new
+  pill — reuses an existing pattern rather than adding a UI element.
+- `src/content/articles/2025/ep162.md` reformatted as the reference/worked
+  example the template was built from.
+
+**Show art decision:** custom per-episode 16:9 thumbnails were dropped
+entirely in favor of one reused square cover
+(`public/assets/brand/podcast-cover.jpg`, 1200×1200, sourced from the show's
+current Buzzsprout art). `ArticleCard` gained an `aspectClass` prop (default
+`aspect-video`, unchanged for articles/tutorials) and a `fallbackImage` prop,
+used by `/podcast/` specifically with `aspect-square`. The on-page banner
+image only renders when an episode has genuine unique art (e.g. ep162) — it
+was duplicating the show art already visible inside the Buzzsprout player
+for every other episode. Deleted the 107 now-orphaned 16:9 image files from
+`public/assets/media/` after confirming each had no other reference in the
+codebase. Rationale: a future artwork swap becomes one file replacement
+instead of touching 162 posts.
+
+**Fixed:** `writeSnapshot()` in `src/lib/directus.ts` was stamping a fresh
+`fetchedAt` on every successful Directus fetch regardless of whether the
+underlying items changed, so `Brand_Kit.json` (the only singleton collection)
+dirtied every single local build/commit with nothing but a timestamp diff.
+Now compares against the existing snapshot and skips the write when content
+is identical — verified both directions (identical content → no write;
+genuinely changed content → still writes correctly).
+
+**The retroactive content pass:** built a Claude Code skill,
+`podcast-episode-format` (`~/.claude/skills/podcast-episode-format/`), with a
+helper script (`scripts/buzzsprout_episode.py {N}`) that pulls authoritative
+per-episode data from the RSS feed. Workflow per episode: cross-check
+pubDate/title against Buzzsprout, reformat frontmatter, restructure the body
+into a standard H2 shape (Episode Summary → What You'll Learn → topic
+sections → Show Notes & Links → optional Related Episodes), and flag
+suspicious/dead links inline with `<!-- REVIEW: ... -->` HTML comments rather
+than auto-fixing or guessing replacements — this repo has real Pretty Links
+(`mikemurphy.co/...`) that are a separate, later migration to Shlinks.
+
+Ran two batches tonight, working backwards from the most recent episode:
+**ep157–ep162** and **ep150–ep156**, 11 episodes total. Ranged from light
+reformatting (content already solid) to full rewrites from the raw
+transcript archive (ep155, ep161 — WordPress bodies were nearly empty
+outlines). Caught and fixed two real link bugs matching the known ep50
+pattern: ep151 had a "Episode 150" link pointing at itself, and ep156 had two
+different `amzn.to` links both claiming the same book.
+
+**Verified:** `npm run build` green after each batch (797 pages,
+content-link/built-link/metadata checks passing); spot-checked rendered
+`dist/podcast/epNN/index.html` for the player iframe and `"@type":
+"PodcastEpisode"` JSON-LD on every touched episode; confirmed live on
+mikemurphy.ai after each push via background polling.
+
+**Remaining:** 151 of 162 episodes still need the content pass — plan is
+small batches (5-10) run via the skill, reviewed before commit, working
+backwards from ep149. A dedicated Pretty Links → Shlinks pass is intentionally
+deferred until the formatting pass is complete, so the flagged-link comments
+across all 162 files can be swept in one dedicated project instead of
+interleaved with content work.
+
+**For a future post:** "The audio player that never made the move" — how a
+WordPress-to-Astro migration can faithfully carry over article text while
+silently dropping an embedded player, and why cross-checking an RSS feed
+against migrated content caught it.
 
 ### 2026-08-08 — Descriptive hub search titles
 
