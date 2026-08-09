@@ -63,7 +63,7 @@ podcast:
     - label: "Zen Pro Audio: Triton FetHead"
       url: "http://www.zenproaudio.com/triton-audio-fethead"
     - label: "Caleb Wojcik: DBX 286S Review (YouTube)"
-      url: "http://www.youtube.com/watch?v=4v7aE99zkjc"
+      url: "https://youtu.be/4v7aE99zkjc?si=czczTAp62LEH9UCb"
     - label: "SeanWes Gear Page"
       url: "http://seanwes.com/gear/"
   relatedEpisodeSlugs: []
@@ -85,7 +85,7 @@ Camera and lenses, lighting, audio and accessories.
 
 The [Rode NTG3 shotgun mic](http://www.bhphotovideo.com/c/search?Ntt=rode+ntg3&N=0&InitialSearch=yes&sts=ps) — simply the best. The Shure SM7B dynamic microphone — the best mic used to date. <!-- REVIEW: original goo.gl shortlink for the Shure SM7B is dead — Google shut down goo.gl link creation/redirects; flagged for the link migration pass --> The [Triton FetHead](http://www.zenproaudio.com/triton-audio-fethead) — a must-have with the SM7B to boost gain (a Cloudlifter is an alternative). The Rode NT1-Kit condenser microphone — amazing sounding. <!-- REVIEW: original goo.gl shortlink for the Rode NT1-Kit is dead — flagged for the link migration pass --> The Rode VideoMic Pro — a decent shotgun mic, since replaced by the NTG3. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Shure SM58 vocal mic — the workhorse of dynamic mics. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Blue Yeti USB microphone — a genuine favorite. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Audio-Technica AT899 lavalier mic — a good lav option. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
 
-The Focusrite Scarlett 6i6 USB audio interface. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The DBX 286S microphone preamp — the secret weapon in audio; check out [Caleb Wojcik's review](http://www.youtube.com/watch?v=4v7aE99zkjc) <!-- REVIEW: amzn.to shortlink for the DBX 286S itself is missing from this list — original source only linked the review, not the product page -->. The Zoom H6 six-track portable recorder — way better than the H4N. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> M-Audio BX5 D2 speakers — great studio monitors. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Rode PSA1 swivel-mount boom arm — genuinely loved. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Rode boom pole. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> Sony MDR-7506 headphones — great studio cans. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
+The Focusrite Scarlett 6i6 USB audio interface. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The DBX 286S microphone preamp — the secret weapon in audio; check out [Caleb Wojcik's review](https://youtu.be/4v7aE99zkjc?si=czczTAp62LEH9UCb). The Zoom H6 six-track portable recorder — way better than the H4N. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> M-Audio BX5 D2 speakers — great studio monitors. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Rode PSA1 swivel-mount boom arm — genuinely loved. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> The Rode boom pole. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> Sony MDR-7506 headphones — great studio cans. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
 
 ## Cameras & Lenses
 
@@ -105,5 +105,5 @@ Music: "Life of Riley" & "Wallpaper" (incompetech.com).
 
 - [B&H Photo/Video](http://www.bhphotovideo.com/c/search?Ntt=rode+ntg3&N=0&InitialSearch=yes&sts=ps)
 - [Zen Pro Audio: Triton FetHead](http://www.zenproaudio.com/triton-audio-fethead)
-- [Caleb Wojcik: DBX 286S Review (YouTube)](http://www.youtube.com/watch?v=4v7aE99zkjc)
+- [Caleb Wojcik: DBX 286S Review (YouTube)](https://youtu.be/4v7aE99zkjc?si=czczTAp62LEH9UCb)
 - [SeanWes Gear Page](http://seanwes.com/gear/)

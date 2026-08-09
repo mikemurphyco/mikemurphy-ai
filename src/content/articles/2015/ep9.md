@@ -70,9 +70,9 @@ podcast:
     - label: "Casey Neistat Videos (YouTube)"
       url: "https://www.youtube.com/watch?v=WxfZkMm3wcg"
     - label: "Rode SmartLav+ Lavalier Microphone"
-      url: "http://amzn.to/1ivAek8"
+      url: "https://go.mikemurphy.ai/smartlav"
     - label: "Rode SC6 TRRS Input & Headphone Output"
-      url: "http://amzn.to/1NJhdGe"
+      url: "https://go.mikemurphy.ai/rodesc6"
   relatedEpisodeSlugs: []
 ---
 **Episode Summary:** Live broadcasting tools for podcasters — Periscope and Blab.im compared, plus the tripod, mounting, and audio gear that actually makes a difference for live streaming.
@@ -110,7 +110,7 @@ To see a true master of the GorillaPod at work, check out [Casey Neistat](https:
 
 **What's needed to start a Scope?** Just an iOS or Android device — iPhone or iPad.
 
-**Audio tip:** the [Rode SmartLav+ Lavalier Microphone](http://amzn.to/1ivAek8) <!-- REVIEW: amzn.to shortlink, unverifiable without fetching — deferred to the link migration pass --> paired with the [Rode SC6 TRRS Input & Headphone Output splitter](http://amzn.to/1NJhdGe) <!-- REVIEW: amzn.to shortlink, unverifiable without fetching — deferred to the link migration pass -->.
+**Audio tip:** the [Rode SmartLav+ Lavalier Microphone](https://go.mikemurphy.ai/smartlav) paired with the [Rode SC6 TRRS Input & Headphone Output splitter](https://go.mikemurphy.ai/rodesc6).
 
 ## Blab.im
 
@@ -134,5 +134,5 @@ Music: "Life of Riley" & "Wallpaper" (incompetech.com).
 - [JOBY GripTight](http://astore.amazon.com/videounplu-20/detail/B00M2GFIZ2)
 - [Casey Neistat: GorillaPod in Action (YouTube)](https://youtu.be/dGLEEZZ15N4)
 - [Casey Neistat Videos (YouTube)](https://www.youtube.com/watch?v=WxfZkMm3wcg)
-- [Rode SmartLav+ Lavalier Microphone](http://amzn.to/1ivAek8) <!-- REVIEW: amzn.to shortlink, unverifiable without fetching — deferred to the link migration pass -->
-- [Rode SC6 TRRS Input & Headphone Output](http://amzn.to/1NJhdGe) <!-- REVIEW: amzn.to shortlink, unverifiable without fetching — deferred to the link migration pass -->
+- [Rode SmartLav+ Lavalier Microphone](https://go.mikemurphy.ai/smartlav)
+- [Rode SC6 TRRS Input & Headphone Output](https://go.mikemurphy.ai/rodesc6)
