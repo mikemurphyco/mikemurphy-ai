@@ -5,18 +5,20 @@ import { contentUrl, formatDate, getArticleTopicTerms } from '../lib/articles';
 interface Props {
   article: Article;
   showImage?: boolean;
+  fallbackImage?: string;
 }
 
-const { article, showImage = true } = Astro.props;
+const { article, showImage = true, fallbackImage } = Astro.props;
 const terms = getArticleTopicTerms(article).slice(0, 3);
 const url = contentUrl(article);
+const cardImage = article.data.featuredImage || fallbackImage;
 ---
 
 <article class="group grid gap-5 border-b border-[var(--mm-border)] py-6 sm:grid-cols-[13rem_1fr] sm:items-start">
-  {showImage && article.data.featuredImage ? (
+  {showImage && cardImage ? (
     <a href={url} class="block aspect-video overflow-hidden rounded bg-[var(--mm-navy)]">
       <img
-        src={article.data.featuredImage}
+        src={cardImage}
         alt=""
         loading="lazy"
         class="h-full w-full object-cover transition duration-200 group-hover:scale-[1.025]"

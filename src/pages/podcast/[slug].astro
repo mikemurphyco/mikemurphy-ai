@@ -17,6 +17,10 @@ export async function getStaticPaths() {
 const { article } = Astro.props;
 const { Content } = await render(article);
 const terms = getArticleTopicTerms(article);
+// Self-hosted show art, reused for any episode without its own custom
+// featuredImage — replacing this one file updates every episode at once.
+const DEFAULT_PODCAST_IMAGE = '/assets/brand/podcast-cover.jpg';
+const displayImage = article.data.featuredImage || DEFAULT_PODCAST_IMAGE;
 const metaDescription = articleMetaDescription(article);
 const canonicalPath = podcastUrl(article);
 const breadcrumbData = breadcrumbStructuredData([
@@ -48,7 +52,7 @@ const structuredData = podcastMeta
         episodeNumber: podcastMeta.episodeNumber,
         datePublished: article.data.pubDate,
         dateModified: article.data.updatedDate,
-        image: article.data.featuredImage || undefined,
+        image: displayImage,
         durationSeconds: podcastMeta.durationSeconds,
         audioUrl: podcastMeta.audioUrl,
       }),
@@ -56,7 +60,7 @@ const structuredData = podcastMeta
   : breadcrumbData;
 ---
 
-<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} image={article.data.featuredImage || undefined} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} structuredData={structuredData}>
+<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} image={displayImage} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} structuredData={structuredData}>
   <main>
     <article class="mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <div {...pagefindAttrs}>
@@ -74,9 +78,7 @@ const structuredData = podcastMeta
             <BuzzsproutPlayer embedUrl={podcastMeta.embedUrl} title={article.data.title} />
           </div>
         )}
-        {article.data.featuredImage && (
-          <img src={article.data.featuredImage} alt="" class="mm-card mt-8 aspect-video w-full object-cover" />
-        )}
+        <img src={displayImage} alt="" class="mm-card mt-8 aspect-video w-full object-cover" />
         <div class="mm-prose prose mt-10">
           <Content />
         </div>

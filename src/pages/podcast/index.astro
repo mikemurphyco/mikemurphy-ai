@@ -32,7 +32,7 @@ const aiEpisodes = episodes.filter((episode) => episode.data.contentEra === 'ai'
       <InlineSearch filterType="Podcast" noun="episode" label="Search episodes" placeholder={`Search ${episodes.length} episodes…`} />
     </div>
     <section class="mt-6" data-inline-search-hide>
-      {episodes.map((episode) => <ArticleCard article={episode} />)}
+      {episodes.map((episode) => <ArticleCard article={episode} fallbackImage="/assets/brand/podcast-cover.jpg" />)}
     </section>
   </main>
 </Layout>
