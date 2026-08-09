@@ -34,6 +34,22 @@ const articles = defineCollection({
 
     youtube: z.array(z.string()).optional().default([]),
 
+    podcast: z
+      .object({
+        episodeNumber: z.number().int().positive(),
+        durationSeconds: z.number().int().positive().optional(),
+        buzzsproutEpisodeId: z.string().optional(),
+        audioUrl: z.string().url().optional(),
+        embedUrl: z.string().url().optional(),
+        keyTakeaways: z.array(z.string()).optional().default([]),
+        showNotesLinks: z
+          .array(z.object({ label: z.string(), url: z.string().url() }))
+          .optional()
+          .default([]),
+        relatedEpisodeSlugs: z.array(z.string()).optional().default([]),
+      })
+      .optional(),
+
     search: z
       .object({
         include: z.boolean().optional().default(true),

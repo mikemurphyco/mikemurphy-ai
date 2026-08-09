@@ -84,6 +84,95 @@ export function articleStructuredData({
   };
 }
 
+export const PODCAST_SERIES_URL = absoluteUrl('/podcast/');
+export const PODCAST_SERIES_ID = `${PODCAST_SERIES_URL}#podcast-series`;
+const PODCAST_SERIES_NAME = 'Mike Murphy Unplugged';
+
+function podcastSeriesStructuredData(): JsonLd {
+  return {
+    '@type': 'PodcastSeries',
+    '@id': PODCAST_SERIES_ID,
+    name: PODCAST_SERIES_NAME,
+    url: PODCAST_SERIES_URL,
+  };
+}
+
+interface PodcastEpisodeStructuredDataOptions {
+  url: string;
+  headline: string;
+  description: string;
+  episodeNumber: number;
+  datePublished?: Date | string | null;
+  dateModified?: Date | string | null;
+  image?: string | null;
+  durationSeconds?: number;
+  audioUrl?: string;
+  authorName?: string;
+}
+
+export function podcastEpisodeStructuredData({
+  url,
+  headline,
+  description,
+  episodeNumber,
+  datePublished,
+  dateModified,
+  image,
+  durationSeconds,
+  audioUrl,
+  authorName = PERSON_NAME,
+}: PodcastEpisodeStructuredDataOptions): JsonLd {
+  const canonicalUrl = absoluteUrl(url);
+  const author =
+    authorName === PERSON_NAME
+      ? personStructuredData()
+      : { '@type': 'Person', name: authorName };
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'PodcastEpisode',
+    '@id': `${canonicalUrl}#episode`,
+    url: canonicalUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+    },
+    name: headline,
+    headline,
+    description,
+    episodeNumber,
+    ...(image ? { image: [absoluteUrl(image)] } : {}),
+    ...(datePublished ? { datePublished: new Date(datePublished).toISOString() } : {}),
+    ...(dateModified || datePublished
+      ? { dateModified: new Date(dateModified ?? datePublished!).toISOString() }
+      : {}),
+    ...(durationSeconds ? { duration: secondsToIsoDuration(durationSeconds) } : {}),
+    ...(audioUrl
+      ? {
+          associatedMedia: {
+            '@type': 'MediaObject',
+            contentUrl: audioUrl,
+          },
+        }
+      : {}),
+    partOfSeries: podcastSeriesStructuredData(),
+    author,
+    publisher: { '@id': PERSON_ID },
+  };
+}
+
+function secondsToIsoDuration(totalSeconds: number): string {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  const parts = [
+    hours ? `${hours}H` : '',
+    minutes ? `${minutes}M` : '',
+    seconds || (!hours && !minutes) ? `${seconds}S` : '',
+  ].join('');
+  return `PT${parts}`;
+}
+
 export interface BreadcrumbItem {
   name: string;
   url: string;
