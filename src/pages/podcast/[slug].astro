@@ -78,7 +78,9 @@ const structuredData = podcastMeta
             <BuzzsproutPlayer embedUrl={podcastMeta.embedUrl} title={article.data.title} />
           </div>
         )}
-        <img src={displayImage} alt="" class="mm-card mt-8 aspect-video w-full object-cover" />
+        {article.data.featuredImage && (
+          <img src={article.data.featuredImage} alt="" class="mm-card mt-8 aspect-video w-full object-cover" />
+        )}
         <div class="mm-prose prose mt-10">
           <Content />
         </div>
