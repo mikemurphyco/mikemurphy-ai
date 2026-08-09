@@ -30,6 +30,12 @@ const cardImage = article.data.featuredImage || fallbackImage;
   )}
   <div class="min-w-0">
     <p class="text-sm text-[var(--mm-muted)]">
+      {article.data.podcast?.episodeNumber && (
+        <>
+          Episode {article.data.podcast.episodeNumber}
+          <span class="mx-2 opacity-40">/</span>
+        </>
+      )}
       {formatDate(article.data.pubDate)}
       <span class="mx-2 opacity-40">/</span>
       {article.data.contentEra === 'ai' ? 'AI Era' : 'Archive'}
