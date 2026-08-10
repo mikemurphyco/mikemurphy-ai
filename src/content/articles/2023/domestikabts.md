@@ -64,7 +64,7 @@ In the summer of 2022, I received an email from Domestika asking if I would be i
 
 After several months of hard work, I broke through a big mental hurdle and created a course with the support of the amazing people at Domestika, and now I want to take you behind the scenes to show you how I did it in hopes that it may inspire you to create or finish your own course!
 
-![[02-learn-adobe-audition-from-scratch.png]]
+![Learn Adobe Audition from scratch course preview](/assets/media/2023/03/02-learn-adobe-audition-from-scratch.png)
 
 
 
@@ -81,7 +81,7 @@ Learn how to use Adobe Audition to record and edit audio for podcasting, music p
 
 [Domestika](https://domestika.org/) is a multi-lingual online learning platform that offers courses and workshops on a variety of creative topics, such as design, illustration, photography, animation, and more. Domestika has been around for over 20 years, and is one of the largest platform for creative education in the world.
 
-![[03-domestika-community 1.jpg]]
+![Domestika creative learning community](/assets/media/2023/03/03-domestika-community.jpg)
 
 
 [Domestika](https://domestika.org/)
@@ -93,7 +93,7 @@ Domestika originated in Spain and now has over 8 million engaged students regist
 
 My name is [Mike Murphy](https://mikemurphy.co/) and I am a full-time tutorial maker, writer, podcaster and tech handyman living in Old Naples, Florida creating the life I want and helping others do the same.
 
-![[04-mike-domestika-headphones 1.jpg]]
+![Mike Murphy wearing headphones for his Domestika course](/assets/media/2023/03/04-mike-domestika-headphones.jpg)
 
 I started my podcast, [Mike Murphy Unplugged](https://mikemurphy.co/mmu), in 2015 teaching others how to podcast and build an online business and that led to a full-time position with [Simplecast/Sirius XM](https://simplecast.com/) providing tech support and training to enterprise clients.
 
@@ -115,7 +115,7 @@ I am cautious and skeptical by nature, but there was something about this email 
 
 **Spoiler alert:** Everything checked out and I signed a contract within 2 weeks of that initial email. My gut instinct was right. The Domestika experience from start-to-finish was top-notch and easily one of the best decisions of my professional career.
 
-![[05-domestika-learn-audition 1.png]]
+![Learn Adobe Audition course on Domestika](/assets/media/2023/03/05-domestika-learn-audition.png)
 
 [Learn Adobe Audition From Scratch](https://youtu.be/0tGAIX7q2Cs)
 
@@ -146,7 +146,7 @@ I am cautious and skeptical by nature, but there was something about this email 
 - Create course content (Screencasts + Narration)
 - Weekly progress meetings with producer
 
-![[06-domestika-learn-audition-laptop 1.png]]
+![Adobe Audition course displayed on a laptop](/assets/media/2023/03/06-domestika-learn-audition-laptop.png)
 
 ***  
 **Early November 2022 (Filming in New York City)**
@@ -158,13 +158,13 @@ I am cautious and skeptical by nature, but there was something about this email 
 - [The High Line](https://www.thehighline.org/visit/), [Comedy Cellar](https://www.comedycellar.com/), [McSorleys](https://mcsorleysoldalehouse.nyc/), and all the awesomeness of NYC!
 - *Move on to next team: Teaching Account Manager*
 
-![[07-domestika-studios-nyc-01.jpg]]
+![Behind the scenes at the Domestika studios in New York City](/assets/media/2023/03/07-domestika-studios-nyc-01.jpg)
 
 Behind the Scenes: Domestika NYC Studios
 
 
 
-![[08-domestika-studios-nyc-02.jpg]]
+![Filming at the Domestika studios in New York City](/assets/media/2023/03/08-domestika-studios-nyc-02.jpg)
 
 Behind the Scenes: Domestika NYC Studios
 
@@ -198,7 +198,7 @@ Behind the Scenes: Domestika NYC Studios
 
 Domestika instructors have 100% creative freedom to build the class in their own style and voice. The Domestika team is available to help and support and provide guidance and feedback, but instructors have complete freedom when it comes to course creation.
 
-![[09-domestika-learn-audition-waveform.jpg]]
+![Editing an audio waveform in Adobe Audition](/assets/media/2023/03/09-domestika-learn-audition-waveform.jpg)
 
 [Learn Adobe Audition From Scratch](https://youtu.be/0tGAIX7q2Cs)
 
@@ -246,7 +246,7 @@ In the mean time, I would love for you to take the class if you are interested i
 ## ⭕️ Check out my new Domestika Course!  
 [Learn Adobe Audition From Scratch](https://www.domestika.org/en/courses/4919-basics-intro-to-adobe-audition/mikemurphy)
 
-![[10-domestika-learn-adobe-audition-square-thumbnail.png]]
+![Learn Adobe Audition from scratch course thumbnail](/assets/media/2023/03/10-domestika-learn-adobe-audition-square-thumbnail.png)
 
 [View Course on Domestika](https://www.domestika.org/en/courses/4919-basics-intro-to-adobe-audition/mikemurphy)
 
