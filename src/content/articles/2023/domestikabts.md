@@ -103,7 +103,7 @@ My YouTube Channel ([Mike Murphy Co](https://youtube.com/mikemurphyco)) contains
 
 I am a minimalist, hobby photographer, and self-improvement junkie, and I recently completed my first pilgrimage on the Camino Frances route of the Camino de Santiago starting in St. Jean Pied de Port, France, and ending in Muxia, Spain.
 
-> A quote that inspires me as an online educator:
+**A quote that inspires me as an online educator:**
 > Obvious to you. Amazing to others.  
 > -Derek Sivers
 
