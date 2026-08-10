@@ -17,7 +17,6 @@ featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2018/05/ABOUT_
 categories:
   - Courses
   - Adobe After Effects
-  - Tutorials
   - Blog
 tags: []
 topics: []
