@@ -14,7 +14,11 @@ visibility: public
 author: Mike Murphy
 featuredImage: /assets/media/2025/06/after-effects-user-guide.jpg
 featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2018/05/ABOUT_FB.jpg
-categories: []
+categories:
+  - Courses
+  - Adobe After Effects
+  - Blog
+  - Tutorials
 tags: []
 topics: []
 search:
