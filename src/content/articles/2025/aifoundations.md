@@ -1,43 +1,43 @@
 ---
-title: "25 Must-Know AI Terms"
-description: "Learn 25 must-know AI terms explained in easy-to-understand language. A simple AI foundations guide for creators, small business owners and AI enthusiasts."
-pubDate: "2025-12-16T06:14:42"
-updatedDate: "2026-01-29T07:07:20"
+title: 25 Must-Know AI Terms
+description: Learn 25 must-know AI terms explained in easy-to-understand language. A simple AI foundations guide for creators, small business owners and AI enthusiasts.
+pubDate: 2025-12-16T06:14:42
+updatedDate: 2026-01-29T07:07:20
 draft: false
-type: "post"
-slug: "aifoundations"
-permalink: "/aifoundations/"
-legacyPermalink: "https://www.mikemurphy.co/aifoundations/"
-canonicalUrl: "https://mikemurphy.ai/articles/aifoundations/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2018/05/ABOUT_FB.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2018/05/ABOUT_FB.jpg"
-categories: 
-  - "AI"
-  - "AI Foundations"
-  - "Blog"
+type: post
+slug: aifoundations
+permalink: /aifoundations/
+legacyPermalink: https://www.mikemurphy.co/aifoundations/
+canonicalUrl: https://mikemurphy.ai/articles/aifoundations/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2025/09/25-must-know-terms.png
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2018/05/ABOUT_FB.jpg
+categories:
+  - AI
+  - AI Foundations
+  - Blog
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "215184"
-  postType: "post"
+  postType: post
   rawWordCount: 2066
 seo:
-  legacyTitle: "25 Must-Know AI Terms - Mike Murphy Co"
-  legacyH1: "25 Must-Know AI Terms"
-  legacyCanonical: "https://www.mikemurphy.co/aifoundations/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: 25 Must-Know AI Terms - Mike Murphy Co
+  legacyH1: 25 Must-Know AI Terms
+  legacyCanonical: https://www.mikemurphy.co/aifoundations/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 2213
 youtube: []
 ---
