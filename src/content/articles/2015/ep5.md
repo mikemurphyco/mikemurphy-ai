@@ -104,7 +104,7 @@ podcast:
 1. **[Entrepreneurs on Fire](https://itunes.apple.com/us/podcast/eofire-daily-chats-entrepreneurs/id564001633?mt=2)** by John Lee Dumas
 2. **[The $100 MBA](https://itunes.apple.com/us/podcast/the-$100-mba-show/id906218859?mt=2)** by Omar Zenhom
 3. **[The Gary Vee Audio Experience](https://itunes.apple.com/us/podcast/the-askgaryvee-show/id928159684?mt=2)** by Gary Vaynerchuk
-4. **SeanWes Podcast** by Sean McCabe (archived)
+4. **SeanWes Podcast** by Sean McCabe (d)
 5. **[The Unmistakable Creative](https://itunes.apple.com/us/podcast/unmistakable-creative/id352721366?mt=2)** by Srini Rao
 6. **[The School of Greatness](https://itunes.apple.com/us/podcast/school-greatness-lewis-howes/id596047499?mt=2)** by Lewis Howes
 7. **[Mixergy](https://itunes.apple.com/us/podcast/mixergy-startup-stories-1000+/id348690336?mt=2)** by Andrew Warner
@@ -119,8 +119,6 @@ podcast:
 13. **Photoshop User TV** by Kelby Media (archived)
 14. **[The Grid](https://itunes.apple.com/us/podcast/the-grid-photography-podcast/id424914578?mt=2)** by Scott Kelby
 15. **[Photofocus](https://itunes.apple.com/us/podcast/photofocus/id512223214?mt=2)** by Rich Harrington
-
-Music: "Life of Riley" & "Wallpaper" (incompetech.com).
 
 ## Show Notes & Links
 
@@ -139,3 +137,5 @@ Music: "Life of Riley" & "Wallpaper" (incompetech.com).
 - Photoshop User TV (archived)
 - [The Grid](https://itunes.apple.com/us/podcast/the-grid-photography-podcast/id424914578?mt=2)
 - [Photofocus](https://itunes.apple.com/us/podcast/photofocus/id512223214?mt=2)
+
+Music: "Life of Riley" & "Wallpaper" ([Incompetech](https://go.mikemurphy.ai/incompetech))
