@@ -83,44 +83,44 @@ Camera and lenses, lighting, audio and accessories.
 
 ## Microphones & Audio
 
-- The [Rode NTG3 shotgun mic](http://www.bhphotovideo.com/c/search?Ntt=rode+ntg3&N=0&InitialSearch=yes&sts=ps) — simply the best. 
-- The [Shure SM7B dynamic microphone](https://go.mikemurphy.ai/sm7b) — the best mic used to date. <!-- REVIEW: original goo.gl shortlink for the Shure SM7B is dead — Google shut down goo.gl link creation/redirects; flagged for the link migration pass --> 
-- The [Triton FetHead](http://www.zenproaudio.com/triton-audio-fethead) — a must-have with the SM7B to boost gain (a Cloudlifter is an alternative). 
+- [Rode NTG3 shotgun mic](http://www.bhphotovideo.com/c/search?Ntt=rode+ntg3&N=0&InitialSearch=yes&sts=ps) — simply the best. 
+- [Shure SM7B dynamic microphone](https://go.mikemurphy.ai/sm7b) — the best mic used to date. <!-- REVIEW: original goo.gl shortlink for the Shure SM7B is dead — Google shut down goo.gl link creation/redirects; flagged for the link migration pass --> 
+- [Triton FetHead](http://www.zenproaudio.com/triton-audio-fethead) — a must-have with the SM7B to boost gain (a Cloudlifter is an alternative). 
 - [The Rode NT1-Kit condenser microphone](https://go.mikemurphy.ai/nt1a) — amazing sounding. <!-- REVIEW: original goo.gl shortlink for the Rode NT1-Kit is dead — flagged for the link migration pass --> 
-- The [Rode VideoMic Pro](https://go.mikemurphy.ai/videomicpro) — a decent shotgun mic, since replaced by the NTG3. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Shure SM58 vocal mic](https://go.mikemurphy.ai/sm58) — the workhorse of dynamic mics. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Blue Yeti USB microphone](https://go.mikemurphy.ai/yeti) — a genuine favorite. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Audio-Technica AT899 lavalier mic](https://go.mikemurphy.ai/at899) — a good lav option. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
-- The [Focusrite Scarlett 6i6 USB audio interface](https://go.mikemurphy.ai/6i6). <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [DBX 286S microphone preamp](https://go.mikemurphy.ai/dbx286s) — the secret weapon in audio; check out [Caleb Wojcik's review](https://youtu.be/4v7aE99zkjc?si=czczTAp62LEH9UCb). 
-- The [Zoom H6 six-track portable recorder ](https://go.mikemurphy.ai/zoomh6)— way better than the H4N. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Rode VideoMic Pro](https://go.mikemurphy.ai/videomicpro) — a decent shotgun mic, since replaced by the NTG3. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Shure SM58 vocal mic](https://go.mikemurphy.ai/sm58) — the workhorse of dynamic mics. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Blue Yeti USB microphone](https://go.mikemurphy.ai/yeti) — a genuine favorite. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Audio-Technica AT899 lavalier mic](https://go.mikemurphy.ai/at899) — a good lav option. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
+-  [Focusrite Scarlett 6i6 USB audio interface](https://go.mikemurphy.ai/6i6). <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [DBX 286S microphone preamp](https://go.mikemurphy.ai/dbx286s) — the secret weapon in audio; check out [Caleb Wojcik's review](https://youtu.be/4v7aE99zkjc?si=czczTAp62LEH9UCb). 
+-  [Zoom H6 six-track portable recorder ](https://go.mikemurphy.ai/zoomh6)— way better than the H4N. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
 - [M-Audio BX5 D2 speakers ](https://go.mikemurphy.ai/bx5)— great studio monitors. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Rode PSA1 swivel-mount boom arm](https://go.mikemurphy.ai/rodepsa1) — genuinely loved. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Rode boom pole](https://go.mikemurphy.ai/rodepsa1). <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Rode PSA1 swivel-mount boom arm](https://go.mikemurphy.ai/rodepsa1) — genuinely loved. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Rode boom pole](https://go.mikemurphy.ai/rodepsa1). <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
 - [Sony MDR-7506 headphones](https://go.mikemurphy.ai/sonymdr7506) — great studio cans. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
 
 ## Cameras & Lenses
 
-- The [Canon T5i ](https://go.mikemurphy.ai/t5i)— the main camera for still photography and video, genuinely loved. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Logitech C920 webcam](https://go.mikemurphy.ai/c920) — 1080p HD, amazing quality for the price. <!-- REVIEW: original amzn.to shortlink for the C920 is unverifiable without fetching — deferred to the link migration pass --> 
-- The [Canon G11 ](https://go.mikemurphy.ai/g11)— an oldie but goodie. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [GoPro Hero 4 Black ](https://go.mikemurphy.ai/goprohero)— can't say enough good things. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Canon 24-105mm lens ](https://go.mikemurphy.ai/canon24)— the best lens by far. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Canon EF 50mm f/1.8 STM lens](https://go.mikemurphy.ai/canon50) — cheap and great for shallow depth of field. <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->
-- The [Canon 18-55mm kit lens](https://go.mikemurphy.ai/t5i). <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Canon 10-18mm lens](https://go.mikemurphy.ai/canon18) — wide-angle goodness. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
-- The [Canon 50mm lens](https://go.mikemurphy.ai/canon50) — like the "nifty fifty," only better. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
+-  [Canon T5i ](https://go.mikemurphy.ai/t5i)— the main camera for still photography and video, genuinely loved. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Logitech C920 webcam](https://go.mikemurphy.ai/c920) — 1080p HD, amazing quality for the price. <!-- REVIEW: original amzn.to shortlink for the C920 is unverifiable without fetching — deferred to the link migration pass --> 
+-  [Canon G11 ](https://go.mikemurphy.ai/g11)— an oldie but goodie. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [GoPro Hero 4 Black ](https://go.mikemurphy.ai/goprohero)— can't say enough good things. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Canon 24-105mm lens ](https://go.mikemurphy.ai/canon24)— the best lens by far. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Canon EF 50mm f/1.8 STM lens](https://go.mikemurphy.ai/canon50) — cheap and great for shallow depth of field. <!-- REVIEW: original amzn.to shortlink is unverifiable without fetching — deferred to the link migration pass -->
+-  [Canon 18-55mm kit lens](https://go.mikemurphy.ai/t5i). <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Canon 10-18mm lens](https://go.mikemurphy.ai/canon18) — wide-angle goodness. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass --> 
+-  [Canon 50mm lens](https://go.mikemurphy.ai/canon50) — like the "nifty fifty," only better. <!-- REVIEW: original goo.gl shortlink is dead — flagged for the link migration pass -->
 
 ## Lighting
 
-- The [Fotodiox Pro LED-312DS ](https://go.mikemurphy.ai/fotodiox)— small, portable LEDs; not super bright, but well-liked (3 in rotation). 
-- The [Ikan IFD576-S daylight LED light ](https://go.mikemurphy.ai/ikan576)— bright, cool-running, and good value. 
+-  [Fotodiox Pro LED-312DS ](https://go.mikemurphy.ai/fotodiox)— small, portable LEDs; not super bright, but well-liked (3 in rotation). 
+-  [Ikan IFD576-S daylight LED light ](https://go.mikemurphy.ai/ikan576)— bright, cool-running, and good value. 
 - [Kupo China Ball Light](https://go.mikemurphy.ai/chinaball)— Made to create an omnidirectional spread of soft, diffused light.
 
 ## Resources
 
 - The full, current gear list lives on the [Mike Murphy Amazon Shop](https://go.mikemurphy.ai/amazon)
-- Music: "Life of Riley" & "Wallpaper" ([incompetech.com](https://go.mikemurphy.ai/incompetech)).
+- Music: "Life of Riley" & "Wallpaper" ([Incompetech.com](https://go.mikemurphy.ai/incompetech)).
 
 ## Show Notes & Links
 
