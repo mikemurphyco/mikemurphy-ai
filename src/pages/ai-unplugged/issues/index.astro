@@ -4,11 +4,26 @@ import IssueCard from '../../../components/ai-unplugged/IssueCard.astro';
 import InlineSearch from '../../../components/InlineSearch.astro';
 import Layout from '../../../layouts/Layout.astro';
 import { isPublishedIssue, sortIssuesByDate } from '../../../lib/articles';
+import { breadcrumbStructuredData, collectionPageStructuredData } from '../../../lib/structured-data';
 
 const issues = sortIssuesByDate(await getCollection('aiUnplugged', isPublishedIssue));
+const canonicalPath = '/ai-unplugged/issues/';
+const description = 'Browse every AI Unplugged newsletter issue from Mike Murphy about practical AI tools, terms, tutorials, and workflows.';
+const structuredData = [
+  collectionPageStructuredData({
+    url: canonicalPath,
+    name: 'AI Unplugged Issue Archive',
+    description,
+  }),
+  breadcrumbStructuredData([
+    { name: 'Home', url: '/' },
+    { name: 'AI Unplugged', url: '/ai-unplugged/' },
+    { name: 'Issues', url: canonicalPath },
+  ], canonicalPath),
+];
 ---
 
-<Layout title="AI Unplugged Issues" description="Browse the AI Unplugged issue archive." canonical="/ai-unplugged/issues/">
+<Layout title="AI Unplugged Issues" description={description} canonical={canonicalPath} structuredData={structuredData}>
   <main class="mm-container py-12">
     <a href="/ai-unplugged/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">Back to AI Unplugged</a>
     <header class="mt-5 border-b border-[var(--mm-border)] pb-8">

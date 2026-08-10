@@ -99,6 +99,7 @@ Not an AI-SEO cheat code. These make the site followable and easy for tools/agen
 | Markdown mirrors | `{any content URL minus trailing slash}.md` | Raw Markdown of every tutorial / article / podcast episode / issue / field note — static files emitted at build time |
 | Resources Markdown | `/resources.md` | Full resource list as one Markdown file |
 | llms.txt | `/llms.txt` | Short hub map for machines |
+| Schema.org JSON-LD | Inline on applicable pages | Stable WebSite, Person, CollectionPage, article, podcast, profile, and breadcrumb entities |
 | Sitemap | `/sitemap.xml` | Standard discovery |
 | robots.txt | `/robots.txt` | Allow + sitemap |
 
@@ -152,6 +153,31 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-08-10 — Website and newsletter collection structured data
+
+**Context:** A follow-up LibreCrawl review exposed a bug in its author-attribution
+metric, but also correctly identified that the homepage and AI Unplugged hub
+pages did not yet emit JSON-LD. Added useful schema for those page types rather
+than adding metadata solely to satisfy the crawler.
+
+**Shipped:** Added a reusable `WebSite` helper and stable
+`https://mikemurphy.ai/#website` identity. The homepage now describes the site,
+its alternate name, language, description, and Mike Murphy as publisher. Added
+reusable `CollectionPage` markup to `/ai-unplugged/` and
+`/ai-unplugged/issues/`; both collections connect to the WebSite and the stable
+Mike Murphy Person entity. Each collection also emits a canonical
+`BreadcrumbList` describing its place in the site hierarchy.
+
+**Decisions:** Kept the graph factual and maintainable: no obsolete sitelinks
+`SearchAction`, no invented Organization entity, and no ItemList claiming
+content that is not visible on the page. Individual AI Unplugged issues retain
+their existing `BlogPosting` and breadcrumb markup.
+
+**Verified:** `npm run build` completed with 797 pages. Content-link,
+built-link, metadata, and structured-data validation passed. The generated
+JSON-LD on all three routes parsed successfully with the expected canonical
+URLs, entity IDs, schema types, and breadcrumb order; `git diff --check` passed.
 
 ### 2026-08-10 — Podcast retroactive reformat completed (162/162) + Pretty Links → Shlinks migration
 

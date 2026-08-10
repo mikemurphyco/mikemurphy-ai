@@ -5,6 +5,8 @@ export type JsonLd = Record<string, unknown>;
 
 export const PERSON_URL = absoluteUrl(SITE_AUTHOR.href);
 export const PERSON_ID = `${PERSON_URL}#person`;
+export const WEBSITE_URL = absoluteUrl('/');
+export const WEBSITE_ID = `${WEBSITE_URL}#website`;
 
 const PERSON_NAME = SITE_AUTHOR.name;
 const PERSON_IMAGE = absoluteUrl('/assets/brand/avatar-mike-orange-1200.png');
@@ -35,6 +37,56 @@ export function profilePageStructuredData(): JsonLd {
     name: 'About Mike Murphy',
     description: PERSON_DESCRIPTION,
     mainEntity: personStructuredData(),
+  };
+}
+
+interface WebsiteStructuredDataOptions {
+  name: string;
+  alternateName?: string;
+  description: string;
+}
+
+export function websiteStructuredData({
+  name,
+  alternateName,
+  description,
+}: WebsiteStructuredDataOptions): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': WEBSITE_ID,
+    url: WEBSITE_URL,
+    name,
+    ...(alternateName ? { alternateName } : {}),
+    description,
+    inLanguage: 'en-US',
+    publisher: personStructuredData(),
+  };
+}
+
+interface CollectionPageStructuredDataOptions {
+  url: string;
+  name: string;
+  description: string;
+}
+
+export function collectionPageStructuredData({
+  url,
+  name,
+  description,
+}: CollectionPageStructuredDataOptions): JsonLd {
+  const canonicalUrl = absoluteUrl(url);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${canonicalUrl}#collection-page`,
+    url: canonicalUrl,
+    name,
+    description,
+    inLanguage: 'en-US',
+    isPartOf: { '@id': WEBSITE_ID },
+    publisher: { '@id': PERSON_ID },
   };
 }
 

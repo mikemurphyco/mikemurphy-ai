@@ -12,6 +12,7 @@ import {
   sortTutorialsByDate,
 } from '../lib/articles';
 import { fieldNoteUrl, isPublishedNote, noteTypeLabel, sortNotesByDate } from '../lib/field-notes';
+import { websiteStructuredData } from '../lib/structured-data';
 
 const allArticles = await getCollection('articles', isDiscoverableArticle);
 // Two freshest Field Notes greet visitors above the footer; rotates as new
@@ -22,9 +23,14 @@ const latestTutorials = tutorials.slice(0, 6);
 const issues = await getCollection('aiUnplugged', isPublishedIssue);
 const topics = getTopicMap(tutorials).slice(0, 8);
 const aiTutorials = tutorials.filter((tutorial) => tutorial.data.contentEra === 'ai').length;
+const structuredData = websiteStructuredData({
+  name: 'Mike Murphy',
+  alternateName: 'Mike Murphy AI',
+  description: SITE_DESCRIPTION,
+});
 ---
 
-<Layout title="AI Knowledge Hub" description={SITE_DESCRIPTION} canonical="/">
+<Layout title="AI Knowledge Hub" description={SITE_DESCRIPTION} canonical="/" structuredData={structuredData}>
   <main>
     <section class="border-b border-[var(--mm-border)] bg-[var(--color-bg-page)]">
       <div class="mm-container py-14">
