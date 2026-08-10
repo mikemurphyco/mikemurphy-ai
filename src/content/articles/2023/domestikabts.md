@@ -64,8 +64,8 @@ In the summer of 2022, I received an email from Domestika asking if I would be i
 
 After several months of hard work, I broke through a big mental hurdle and created a course with the support of the amazing people at Domestika, and now I want to take you behind the scenes to show you how I did it in hopes that it may inspire you to create or finish your own course!
 
+![[02-learn-adobe-audition-from-scratch.png]]
 
-![](https://miro.medium.com/v2/resize:fit:1400/1*v1t6O0XuhDWEEtaIghrwqA.png)
 
 
 **Check out my course on Domestika!**
@@ -81,8 +81,7 @@ Learn how to use Adobe Audition to record and edit audio for podcasting, music p
 
 [Domestika](https://domestika.org/) is a multi-lingual online learning platform that offers courses and workshops on a variety of creative topics, such as design, illustration, photography, animation, and more. Domestika has been around for over 20 years, and is one of the largest platform for creative education in the world.
 
-![[03-domestika-community.jpg]]
-
+![[03-domestika-community 1.jpg]]
 
 
 [Domestika](https://domestika.org/)
@@ -94,7 +93,7 @@ Domestika originated in Spain and now has over 8 million engaged students regist
 
 My name is [Mike Murphy](https://mikemurphy.co/) and I am a full-time tutorial maker, writer, podcaster and tech handyman living in Old Naples, Florida creating the life I want and helping others do the same.
 
-![[04-mike-domestika-headphones.jpg]]
+![[04-mike-domestika-headphones 1.jpg]]
 
 I started my podcast, [Mike Murphy Unplugged](https://mikemurphy.co/mmu), in 2015 teaching others how to podcast and build an online business and that led to a full-time position with [Simplecast/Sirius XM](https://simplecast.com/) providing tech support and training to enterprise clients.
 
@@ -104,9 +103,9 @@ My YouTube Channel ([Mike Murphy Co](https://youtube.com/mikemurphyco)) contains
 
 I am a minimalist, hobby photographer, and self-improvement junkie, and I recently completed my first pilgrimage on the Camino Frances route of the Camino de Santiago starting in St. Jean Pied de Port, France, and ending in Muxia, Spain.
 
-> ***A quote that inspires me as an online educator:*  
-> ***Obvious to you. Amazing to others.  
-> -Derek Sivers*
+> A quote that inspires me as an online educator:
+> Obvious to you. Amazing to others.  
+> -Derek Sivers
 
 ### Domestika: How It Started
 
@@ -116,7 +115,7 @@ I am cautious and skeptical by nature, but there was something about this email 
 
 **Spoiler alert:** Everything checked out and I signed a contract within 2 weeks of that initial email. My gut instinct was right. The Domestika experience from start-to-finish was top-notch and easily one of the best decisions of my professional career.
 
-![[05-domestika-learn-audition.png]]
+![[05-domestika-learn-audition 1.png]]
 
 [Learn Adobe Audition From Scratch](https://youtu.be/0tGAIX7q2Cs)
 
@@ -147,10 +146,7 @@ I am cautious and skeptical by nature, but there was something about this email 
 - Create course content (Screencasts + Narration)
 - Weekly progress meetings with producer
 
-
-![](https://miro.medium.com/v2/resize:fit:1400/1*r7mNHSehkg9qGZ7ycLS8bA.png)
-
-[Do you want to learn Adobe Audition?](https://www.domestika.org/en/courses/4919-basics-intro-to-adobe-audition/mikemurphy)
+![[06-domestika-learn-audition-laptop 1.png]]
 
 ***  
 **Early November 2022 (Filming in New York City)**
@@ -209,7 +205,7 @@ Domestika instructors have 100% creative freedom to build the class in their own
 
 ## My Class:  
 
-**[Introduction To Adobe Audition](https://www.domestika.org/en/courses/4919-basics-intro-to-adobe-audition/mikemurphy)
+[Introduction To Adobe Audition](https://www.domestika.org/en/courses/4919-basics-intro-to-adobe-audition/mikemurphy)
 
 - This class is for anyone who wants to start using [Adobe Audition](https://mikemurphy.co/adobe) for podcasting, music, voiceovers, etc whether you are brand new to audio production or a seasoned professional wanting to switch DAWs.
 - Basics courses are the best-selling classes on Domestika intended for beginners and broken down into ‘Mini-Courses’ with practice lessons at the end of each section.
@@ -247,7 +243,7 @@ I do not know the answer to those questions yet, but I will be sure to write a P
 
 In the mean time, I would love for you to take the class if you are interested in learning how to use Adobe Audition and if you left a review of the class I would be forever grateful.  
 
-## ⭕️ **Check out my new Domestika Course!  
+## ⭕️ Check out my new Domestika Course!  
 [Learn Adobe Audition From Scratch](https://www.domestika.org/en/courses/4919-basics-intro-to-adobe-audition/mikemurphy)
 
 ![[10-domestika-learn-adobe-audition-square-thumbnail.png]]
