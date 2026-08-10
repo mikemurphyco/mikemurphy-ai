@@ -12,7 +12,7 @@ canonicalUrl: https://mikemurphy.ai/articles/aifoundations/
 contentEra: ai
 visibility: public
 author: Mike Murphy
-featuredImage: /assets/media/2025/09/25-must-know-terms.png
+featuredImage: /assets/media/2025/12/25-must-know-terms.jpg
 featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2018/05/ABOUT_FB.jpg
 categories:
   - AI
