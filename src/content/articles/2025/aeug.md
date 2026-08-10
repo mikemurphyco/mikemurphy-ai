@@ -18,6 +18,7 @@ categories:
   - Courses
   - Adobe After Effects
   - Tutorials
+  - Blog
 tags: []
 topics: []
 search:
