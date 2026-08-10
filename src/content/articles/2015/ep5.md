@@ -103,20 +103,20 @@ podcast:
 
 1. **[Entrepreneurs on Fire](https://itunes.apple.com/us/podcast/eofire-daily-chats-entrepreneurs/id564001633?mt=2)** by John Lee Dumas
 2. **[The $100 MBA](https://itunes.apple.com/us/podcast/the-$100-mba-show/id906218859?mt=2)** by Omar Zenhom
-3. **[The AskGaryVee Show](https://itunes.apple.com/us/podcast/the-askgaryvee-show/id928159684?mt=2)** by Gary Vaynerchuk
-4. **[SeanWes Podcast](https://itunes.apple.com/us/podcast/seanwes-podcast/id685421236?mt=2)** by Sean McCabe
+3. **[The Gary Vee Audio Experience](https://itunes.apple.com/us/podcast/the-askgaryvee-show/id928159684?mt=2)** by Gary Vaynerchuk
+4. **SeanWes Podcast** by Sean McCabe (archived)
 5. **[The Unmistakable Creative](https://itunes.apple.com/us/podcast/unmistakable-creative/id352721366?mt=2)** by Srini Rao
 6. **[The School of Greatness](https://itunes.apple.com/us/podcast/school-greatness-lewis-howes/id596047499?mt=2)** by Lewis Howes
 7. **[Mixergy](https://itunes.apple.com/us/podcast/mixergy-startup-stories-1000+/id348690336?mt=2)** by Andrew Warner
 8. **[The Fizzle Show](https://itunes.apple.com/us/podcast/the-fizzle-show/id656726654?mt=2)** by Corbett Barr, Chase Reeves & Barrett Brooks
 9. **[The Side Hustle Show](https://itunes.apple.com/us/podcast/side-hustle-show-business/id655135292?mt=2)** by Nick Loper
-10. **[DIY Video Guy](https://itunes.apple.com/us/podcast/diy-video-guy-make-better/id931282106?mt=2)** by Caleb Wojcik
+10. **[Creator Scale](https://itunes.apple.com/us/podcast/diy-video-guy-make-better/id931282106?mt=2)** (formerly, DIY Video Guy) by Caleb Wojcik
 
 ## Bonus Round
 
 11. **[TWiT (This Week in Tech)](https://itunes.apple.com/us/podcast/this-week-in-tech-mp3/id73329404?mt=2)** by Leo Laporte
 12. **[MacMost Now](https://itunes.apple.com/us/podcast/macmost-now-mac-tutorials/id220400371?mt=2)** by Gary Rosenzweig
-13. **[Photoshop User TV](https://itunes.apple.com/us/podcast/photoshop-user-tv/id83927625?mt=2)** by Kelby Media
+13. **Photoshop User TV** by Kelby Media (archived)
 14. **[The Grid](https://itunes.apple.com/us/podcast/the-grid-photography-podcast/id424914578?mt=2)** by Scott Kelby
 15. **[Photofocus](https://itunes.apple.com/us/podcast/photofocus/id512223214?mt=2)** by Rich Harrington
 
@@ -126,16 +126,16 @@ Music: "Life of Riley" & "Wallpaper" (incompetech.com).
 
 - [Entrepreneurs on Fire](https://itunes.apple.com/us/podcast/eofire-daily-chats-entrepreneurs/id564001633?mt=2)
 - [The $100 MBA](https://itunes.apple.com/us/podcast/the-$100-mba-show/id906218859?mt=2)
-- [The AskGaryVee Show](https://itunes.apple.com/us/podcast/the-askgaryvee-show/id928159684?mt=2)
-- [SeanWes Podcast](https://itunes.apple.com/us/podcast/seanwes-podcast/id685421236?mt=2)
+- [The Gary Vee Audio Experience](https://itunes.apple.com/us/podcast/the-askgaryvee-show/id928159684?mt=2)
+- SeanWes Podcast (archived)
 - [The Unmistakable Creative](https://itunes.apple.com/us/podcast/unmistakable-creative/id352721366?mt=2)
 - [The School of Greatness](https://itunes.apple.com/us/podcast/school-greatness-lewis-howes/id596047499?mt=2)
 - [Mixergy](https://itunes.apple.com/us/podcast/mixergy-startup-stories-1000+/id348690336?mt=2)
 - [The Fizzle Show](https://itunes.apple.com/us/podcast/the-fizzle-show/id656726654?mt=2)
 - [The Side Hustle Show](https://itunes.apple.com/us/podcast/side-hustle-show-business/id655135292?mt=2)
-- [DIY Video Guy](https://itunes.apple.com/us/podcast/diy-video-guy-make-better/id931282106?mt=2)
+- [Creator Scale](https://itunes.apple.com/us/podcast/diy-video-guy-make-better/id931282106?mt=2)  (DIY Video Guy)
 - [TWiT (This Week in Tech)](https://itunes.apple.com/us/podcast/this-week-in-tech-mp3/id73329404?mt=2)
 - [MacMost Now](https://itunes.apple.com/us/podcast/macmost-now-mac-tutorials/id220400371?mt=2)
-- [Photoshop User TV](https://itunes.apple.com/us/podcast/photoshop-user-tv/id83927625?mt=2)
+- Photoshop User TV (archived)
 - [The Grid](https://itunes.apple.com/us/podcast/the-grid-photography-podcast/id424914578?mt=2)
 - [Photofocus](https://itunes.apple.com/us/podcast/photofocus/id512223214?mt=2)
