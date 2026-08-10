@@ -1,40 +1,40 @@
 ---
-title: "After Effects User Guide (Course)"
+title: After Effects User Guide (Course)
 description: ""
-pubDate: "2025-06-28T13:26:27"
-updatedDate: "2025-10-20T16:14:58"
+pubDate: 2025-06-28T13:26:27
+updatedDate: 2025-10-20T16:14:58
 draft: false
-type: "page"
-slug: "aeug"
-permalink: "/aeug/"
-legacyPermalink: "https://www.mikemurphy.co/aeug/"
-canonicalUrl: "https://mikemurphy.ai/articles/aeug/"
-contentEra: "ai"
-visibility: "public"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2018/05/ABOUT_FB.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2018/05/ABOUT_FB.jpg"
+type: page
+slug: aeug
+permalink: /aeug/
+legacyPermalink: https://www.mikemurphy.co/aeug/
+canonicalUrl: https://mikemurphy.ai/articles/aeug/
+contentEra: ai
+visibility: public
+author: Mike Murphy
+featuredImage: /assets/media/2025/06/after-effects-user-guide.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2018/05/ABOUT_FB.jpg
 categories: []
 tags: []
 topics: []
 search:
   include: true
-  boost: 1.0
+  boost: 1
 migration:
   dryRun: false
   prioritySample: true
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "214603"
-  postType: "page"
+  postType: page
   rawWordCount: 1014
 seo:
-  legacyTitle: "After Effects User Guide (Course) - Mike Murphy Co"
-  legacyH1: "AFTER EFFECTS USER GUIDE"
-  legacyCanonical: "https://www.mikemurphy.co/aeug/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyTitle: After Effects User Guide (Course) - Mike Murphy Co
+  legacyH1: AFTER EFFECTS USER GUIDE
+  legacyCanonical: https://www.mikemurphy.co/aeug/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 842
 youtube: []
 ---
