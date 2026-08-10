@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-08-09
+updated: 2026-08-10
 status: living-doc
 ---
 
@@ -152,6 +152,90 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-08-10 — Podcast retroactive reformat completed (162/162) + Pretty Links → Shlinks migration
+
+**Context:** Continuation of the 2026-08-09 entry below. Finished the retroactive
+`podcast-episode-format` pass across the remaining 151 episodes, then ran a
+dedicated Pretty Links → Shlinks migration to resolve the `<!-- REVIEW: ... -->`
+comments the formatting pass had deliberately left behind instead of
+auto-fixing or guessing at replacement URLs.
+
+**The reformat (151 remaining episodes):** Worked backwards from ep161 in
+batches of 5–10, verifying `npm run build` (content-link/built-link/metadata
+checks + rendered player + `PodcastEpisode` JSON-LD spot-checks) after every
+batch. Commits: `ab4b1fc` (157–161), `defc040` (150–156), `b2374f6`
+(140–149), `407a6a0` (135–139), `44f1e1e` (130–134), `07dfe9b` (125–129),
+`bbe49d8` (115–124), `d1b72f6` (90–114), `48675c4` (70–89), `bc0b7bc`
+(40–69), `b2ca7a1` (1–39). All 162 episodes now carry the standard template:
+Buzzsprout player, `PodcastEpisode` structured data, structured `podcast.*`
+frontmatter, and clean H2/H3 body structure.
+
+**Real content bugs found and fixed along the way** (beyond the ep50/ep151
+pattern already known from the 08-09 batch): ep52's own heading read "Ep51"
+(copy-paste artifact, corrected against Buzzsprout pubDate); ep94 had two
+different episode cross-links both pointing at the same wrong URL; ep46 had
+two different software names ("Camtasia" and "Screenflow") both linking to
+an unrelated microphone page; ep22's frontmatter claimed "10 reasons" but
+the source text only contained 9. All flagged inline and corrected against
+Buzzsprout/cross-episode evidence rather than guessed.
+
+**Two episodes (ep126, ep127) had a real content gap:** their WordPress-era
+"Q&A With Ross Brand" sections preserved only the interview questions — the
+actual answers were missing from the migrated source, with no way to
+recover them from the article body alone. Flagged and left as a content gap
+in the reformat pass; recovered afterward (see below) once Mike located the
+original episode transcripts.
+
+**The Pretty Links → Shlinks migration:** Extracted every `<!-- REVIEW -->`
+flagged link across all 162 files (620 raw occurrences), grouped by unique
+destination URL down to 216 rows, and published as an interactive worksheet
+artifact — sortable by episode-reach (fix the highest-leverage links first),
+with inline destination inputs that autosave to the browser and an
+export-to-CSV flow, since the sandboxed artifact iframe silently blocks
+triggered file downloads (fixed by swapping to a copy/paste modal instead of
+`a.click()`). Mike filled in real Shlink destinations for all 216 rows over
+three passes; each CSV export was diffed against the previous one to isolate
+only the genuinely new rows before running a script
+(`apply_link_fixes.py`) that swapped each old URL for the new one in both
+markdown link targets and `showNotesLinks` frontmatter, stripping the now-
+resolved REVIEW comment in the same pass. Commits: `c906f6f` (first batch,
+75 links / 30 files), `66cec61` (second batch, 40 links / 59 files),
+`d3b5131` (third and final batch, 99 links / 31 files) — 214 of 216 rows
+successfully applied across the archive, build verified clean after each.
+
+**Cleanup pass (`f2c4f97`, `9d6eb1b`):** Recovered Ross Brand's actual
+answers for ep126 and ep127 from Mike's local transcript archive
+(`mark-it-down-transcripts/mmu_transcripts/txt/126_*.txt`,
+`127_*.txt`) — both Q&A sections now carry full quotes instead of bare
+questions. Fixed two broken internal links Mike's own local edits had
+introduced (`mikemurphy.ai/amazon` missing the `go.` Shlink subdomain in
+ep7 and ep28 — caught by `check:built-links` failing on `/amazon` as an
+unresolvable internal route). Stripped ~20 stale REVIEW comments across
+episodes where Mike had already resolved the underlying link locally.
+Confirmed `writethelife.com` (ep131) is a dead, intentionally-unlinked
+project per Mike's call.
+
+**What's left (72 REVIEW comments / 36 files, and OK to stay that way):**
+almost entirely intentional — 2018-era pricing/stats/platform mentions
+(Blab.im, IGTV, Google Podcasts, Instagram Swipe Up, Evernote/iCloud
+pricing, LinkedIn/Twitter stats) that Mike chose to preserve as
+period-accurate historical record rather than "correct" to reflect today.
+A small number of individual gear-link fixes (ep2, ep7, ep28 had several
+products bundled under one dead `goo.gl`/`amzn.to` link, so only the first
+product per group got flagged/fixed and siblings were left as unlinked
+plain text) remain genuinely optional cleanup, not required for a working
+site.
+
+**Verified:** `npm run build` green after every commit in this arc — 797
+pages, `check:built-links` and `check:built-metadata` both passing
+throughout, including the two-broken-link catch during final cleanup.
+
+**For a future post:** "620 flagged links, 216 unique destinations" — how
+grouping a flat list of broken links by destination (not by episode) turns
+an unworkable manual-review task into a tractable one, and why an
+in-browser worksheet artifact with autosave + CSV export beat a spreadsheet
+handoff for a multi-session collaborative cleanup.
 
 ### 2026-08-09 — Podcast episode SEO template + retroactive reformat (11/162)
 

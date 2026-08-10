@@ -40,9 +40,8 @@ seo:
   liveWordCount: 706
 youtube: []
 ---
-[![UPDATE COPYRIGHT](/assets/media/2023/12/UPDATE-COPYRIGHT-1024x585.png)](/assets/media/2023/12/UPDATE-COPYRIGHT.png)
-
-### **About This Blog Post:**
+ 
+### About This Blog Post
 
 This is just a friendly reminder to check your website footer and update the copyright year if your website/theme does not update automatically.
 
@@ -58,9 +57,6 @@ As we enter into 2024, in addition to your goals and resolutions, it is also imp
 
 **Tip:** Create a Recurring/Repeating To-Do in Apple Reminders, Things3, etc for 12/31 each year so you never forget again!
 
-###  
-
- 
 
 ### **Why Update Your Copyright Date?**
 
@@ -74,7 +70,7 @@ As we enter into 2024, in addition to your goals and resolutions, it is also imp
     
   - Search engines consider the freshness of content when ranking websites. A current copyright date can positively impact your SEO, potentially improving your site's visibility.
 
-### ** How to Update Your Copyright Date:**
+### How to Update Your Copyright Date:
 
 Updating the copyright date is a straightforward process, and it depends on how your website is built. Here are general instructions for different scenarios:
 
@@ -88,13 +84,8 @@ Updating the copyright date is a straightforward process, and it depends on how 
     
   - Consult your CMS documentation for specific instructions on updating the copyright date. Most platforms have a designated area in the settings or theme customization section.
 
-[![DIVI FOOTER](/assets/media/2023/12/DIVI-FOOTER-scaled.jpg)](/assets/media/2023/12/DIVI-FOOTER-scaled.jpg)
 
- 
-
- 
-
-### **Conclusion:**
+### Conclusion:
 
 It is easy to overlook or not think much of something so seemingly minor as the copyright date in your website's footer, but it's the little things that matter.  Setting a yearly reminder in your To-Do App and taking a minute to update the copyright date of your website(s) will give you a dopamine hit and let your audience know that you are professional and take your business or brand seriously.
 
