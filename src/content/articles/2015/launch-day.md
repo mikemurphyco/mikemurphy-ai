@@ -40,12 +40,12 @@ seo:
 youtube: 
   - "https://www.youtube.com/watch?v=rqbCUrWu4z0"
 ---
-### Subscribe in iTunes:
+## Subscribe in Apple Podcasts
+[Mike Murphy Unplugged](https://go.mikemurphy.ai/mmu/)
 
-### How To Subscribe, etc:
-
+## How To Subscribe and Leave Ratings & Reviews
 <https://www.youtube.com/watch?v=rqbCUrWu4z0>
 
-### Episode List:
+##  Join My Email List:
 
-The Unplugged Newsletter is delivered to your inbox and is filled with curated content and plenty of tips and tricks. Simply fill out the form, confirm your email and you're all set.
+The [AI Unplugged Newsletter ](https://mikemurphy.ai/ai-unpluuged/)is delivered to your inbox week and is filled with curated AI content and plenty of tips and tricks. Simply fill out the form, confirm your email and you're all set.

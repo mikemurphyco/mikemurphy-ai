@@ -41,4 +41,39 @@ seo:
   liveWordCount: 532
 youtube: []
 ---
-My audio kit is one that I have accumulated over the years as a singer-songwriter and as I started making videos and recording tutorials, etc. The Shure SM7B is my favorite mic I have ever owned and the Rode NTG3 is incredible. Of course they are the most expensive on the list, but both are solid. The second list (Popular Online) are microphones I hear about over and over on Podcaster Blogs & various sites that discuss gear and equipment. Pat Flynn from SmartPassiveIncome.com has raved about the Heil PR-40 for years as have a lot of others, who note this as one of the best podcast mics for the money. **[My Personal Audio Kit:](http://astore.amazon.com/videounplu-20?_encoding=UTF8&node=1)** Shure SM7B (\$350) Rode NTG3 Shotgun (\$699) Rode NT1 Condenser(\$249) Rode VideoMic Pro (\$100) Shure SM58 (\$90) Blue Yeti USB (\$129) Audio-Technica AT899 Lavalier (\$269) Focusrite Scarlet 6i6 (\$250) Zoom H6 (\$399) Sony MDR7506 Headphones (\$75)   **[Top 10 Popular Online: ](http://astore.amazon.com/videounplu-20?_encoding=UTF8&node=8)** Audio-Technica ATR2100 (\$60) Audio-Technica AT2005USB (\$50) Samson Q1U (\$50) Audio-Technica ATR2500 (\$65) Rode Podcaster c (\$200) Rode Procaster (\$230) Samson C01UCW(\$55) Blue  Yeti USB (\$125) Heil PR-40(\$325) MXL 990 (\$100)   [Download The Free PDF Guide](http://videounplugged.com/assets/media/2015/05/Top-10-Podcast-Mics.pdf) [![Top 10 Podcast Mics](http://videounplugged.com/assets/media/2015/05/Top-10-Podcast-Mics-232x300.png)](http://videounplugged.com/assets/media/2015/05/Top-10-Podcast-Mics.pdf) AFFILIATE DISCLAIMER: Some of the links in this guide are afliate links which means I’ll earn a small commission at no cost to you if you buy them. I use every one of these products and would never recommend something I do not think will help you or that I do not use and love.
+## My Microphones & Audio Kit
+
+I love them all, but the Shure SM7B is my personal favorite microphone that I own and I also think the Rode NTG3 is incredible. Of course they are the most expensive on the list, but both are solid. And if I was stuck on a desert island, the mic I am bringing with me is my tried and tested, never-lets-me-down, Shure SM58 that I have owned for over 30 years. 
+
+ - Shure SM7B Dynamic 
+ - Rode NTG3 Shotgun
+ - Rode NT1 Condenser
+ - Rode VideoMic Pro
+ - Shure SM58
+ - Blue Yeti USB
+ - Audio-Technica AT899 Lavalier
+ - Focusrite Scarlet 6i6
+ - Zoom H6
+ - Sony MDR7506 Headphones
+
+## Top 10 Microphones Popular Online
+This second list are microphones I hear about over and over on podcaster blogs & various sites that discuss audio gear and equipment. For example, Pat Flynn from SmartPassiveIncome.com has raved about the Heil PR-40 for years as have a lot of others, who note this as one of the best podcast mics for the money.
+
+ 1. Audio-Technica AT2005USB
+ 2. Audio-Technica ATR2100
+ 3. Audio-Technica ATR2500
+ 4. Blue Yeti USB
+ 5. Heil PR-40
+ 6. MXL 990
+ 7. Rode Podcaster
+ 8. Rode Procaster
+ 9. Samson C01UCW
+ 10. Samson Q1U
+
+**AFFILIATE DISCLAIMER:** Some of the links in this guide are afliate links which means I’ll earn a small commission at no cost to you if you buy them. I use every one of these products and would never recommend something I do not think will help you or that I do not use and love.
+
+
+![The-Mike-Murphy-Unofficial-Microphone-Guide](/assets/media/2023/03/image.png)
+
+ 
+

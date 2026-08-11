@@ -40,9 +40,9 @@ seo:
   liveWordCount: 210
 youtube: []
 ---
-###### [Ask Mike Anything](https://www.mikemurphy.co/contact-form/)
 
-# **PODCASTING: STEP 3**
+
+## PODCASTING: STEP 3
 
 ## Production 
 

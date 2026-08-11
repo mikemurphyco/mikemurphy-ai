@@ -40,4 +40,14 @@ seo:
   liveWordCount: 166
 youtube: []
 ---
-Mike Murphy Unplugged is set to go live. Wish me luck as I jump in the podcaster world. Mike Murphy Unplugged will be a weekly podcast inspiring one man bands to learn as much as possible in order to create useful content and keep moving forward in business and in life. Don't forget to stop and smell the roses from time to time. Creating a podcast has been something I have wanted to do for a long time and I am ready to share my insights and knowledge in hopes of helping a few people figure out whatever they are stuck on. What are you struggling with or want to know more about? Please leave a comment and let me know. -Mike
+[Mike Murphy Unplugged](https://go.mikemurphy.ai/mmu/) is set to go live. 
+
+Wish me luck as I jump in the podcaster world. 
+
+[Mike Murphy Unplugged](https://go.mikemurphy.ai/mmu/) will be a weekly podcast inspiring one man bands to learn as much as possible in order to create useful content and keep moving forward in business and in life. Don't forget to stop and smell the roses from time to time. 
+
+Creating a podcast has been something I have wanted to do for a long time and I am ready to share my insights and knowledge in hopes of helping a few people figure out whatever they are stuck on. What are you struggling with or want to know more about? 
+
+Please leave a comment and let me know. 
+
+-Mike
