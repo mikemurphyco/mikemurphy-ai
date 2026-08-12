@@ -41,7 +41,7 @@ youtube:
   - "https://www.youtube.com/watch?v=rqbCUrWu4z0"
 ---
 ## Subscribe in Apple Podcasts
-[Mike Murphy Unplugged](https://go.mikemurphy.ai/mmu/)
+[Mike Murphy Unplugged](https://go.mikemurphy.ai/mmu)
 
 ## How To Subscribe and Leave Ratings & Reviews
 <https://www.youtube.com/watch?v=rqbCUrWu4z0>

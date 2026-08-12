@@ -41,4 +41,15 @@ seo:
   liveWordCount: 241
 youtube: []
 ---
-Mike Murphy Unplugged is now live on [Soundcloud](https://soundcloud.com/user-793573901), [iTunes](http://mikemurphy.co/itunes), [Spreaker](http://mikemurphy.co/spreaker), [Stitcher](http://app.stitcher.com/mystations/16312799/73973/episodes) & [TuneIn](http://tunein.com/radio/Mike-Murphy-Unplugged-p795702/). Soundcloud is the only platform where I have to upload each episode individually as it is not pulling from the rss feed. I originally wanted to host my podcast on Soundcloud mostly because I like the platform and the design of the player (below). Whenever I go to a site with Soundcloud files embedded, I am visually attracted to it and the players work well. I was dissuaded from hosting on Soundcloud mostly because of having control of the RSS feed which is a big deal. If Soundcloud goes under as a company (which rumor mills say they are in trouble), then my feed goes with them and then I am faced with the hassle of redirecting my feed to another service. My solution was to create the feed using Powerpress/Blubrry plugin right here on my website and host the file only on Libsyn.com. Now I have full flexibility and control and I still get to use Soundcloud, I just have to manually upload, which is no big deal. Another day, another directory where the podcast can be discovered. Cool.
+**Mike Murphy Unplugged is now live on** 
+- [Soundcloud](https://soundcloud.com/user-793573901)
+- [Apple Podcasts](https://go.mikemurphy.ai/mmu)
+- [TuneIn](http://tunein.com/radio/Mike-Murphy-Unplugged-p795702/)
+
+Soundcloud is the only platform where I have to upload each episode individually as it is not pulling from the rss feed. I originally wanted to host my podcast on Soundcloud mostly because I like the platform and the design of the player (below). 
+
+Whenever I go to a site with Soundcloud files embedded, I am visually attracted to it and the players work well. I was dissuaded from hosting on Soundcloud mostly because of having control of the RSS feed which is a big deal. 
+
+If Soundcloud goes under as a company (which rumor mills say they are in trouble), then my feed goes with them and then I am faced with the hassle of redirecting my feed to another service. 
+
+My solution was to create the feed using Powerpress/Blubrry plugin right here on my website and host the file only on Libsyn.com. Now I have full flexibility and control and I still get to use Soundcloud, I just have to manually upload, which is no big deal. Another day, another directory where the podcast can be discovered. Cool.

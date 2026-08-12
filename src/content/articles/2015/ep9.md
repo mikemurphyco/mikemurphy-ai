@@ -86,15 +86,11 @@ podcast:
 
 ## Ask Mike Anything: An iPhone Tripod for Video
 
-![blab](/assets/media/2015/10/blab-300x200.jpg)
-
 **Guest:** Dr. Vivian Carrasco. **Podcast:** [Turning Inward](https://itunes.apple.com/us/podcast/turning-inward-dr.-vivian/id961459563?mt=2). **Website:** [VivianCarrasco.com](http://viviancarrasco.com).
 
 **Question:** What tripod is recommended for making videos with an iPhone?
 
 **Answer:** the [JOBY GorillaPod](http://astore.amazon.com/videounplu-20/detail/B002FGTWOC) and the [JOBY GripTight](http://astore.amazon.com/videounplu-20/detail/B00M2GFIZ2) iPhone holder.
-
-![GorillaPod](/assets/media/2015/08/Accessories_012-300x200.jpg)
 
 To see a true master of the GorillaPod at work, check out [Casey Neistat](https://youtu.be/dGLEEZZ15N4) and other daily vloggers — nobody uses one better. **Warning:** [watching Casey Neistat videos](https://www.youtube.com/watch?v=WxfZkMm3wcg) can be highly addictive.
 

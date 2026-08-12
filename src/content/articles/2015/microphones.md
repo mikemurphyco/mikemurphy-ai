@@ -43,32 +43,32 @@ youtube: []
 ---
 ## My Microphones & Audio Kit
 
-I love them all, but the Shure SM7B is my personal favorite microphone that I own and I also think the Rode NTG3 is incredible. Of course they are the most expensive on the list, but both are solid. And if I was stuck on a desert island, the mic I am bringing with me is my tried and tested, never-lets-me-down, Shure SM58 that I have owned for over 30 years. 
+I love them all, but the [Shure SM7B](https://go.mikemurphy.ai/sm7b) is my personal favorite microphone that I own and I also think the [Rode NTG3](https://go.mikemurphy.ai/ntg3) is incredible. Of course they are the most expensive on the list, but both are solid. And if I was stuck on a desert island, the mic I am bringing with me is my tried and tested, never-lets-me-down, [Shure SM58 ](https://go.mikemurphy.ai/sm58)that I have owned for over 30 years. 
 
- - Shure SM7B Dynamic 
- - Rode NTG3 Shotgun
- - Rode NT1 Condenser
- - Rode VideoMic Pro
- - Shure SM58
- - Blue Yeti USB
- - Audio-Technica AT899 Lavalier
- - Focusrite Scarlet 6i6
- - Zoom H6
- - Sony MDR7506 Headphones
+ - [Shure SM7B Dynamic ](https://go.mikemurphy.ai/sm7b)
+ - [Rode NTG3 Shotgun](https://go.mikemurphy.ai/ntg3)
+ - [Rode NT1 Condenser](https://go.mikemurphy.ai/nt1a)
+ - [Rode VideoMic Pro](https://go.mikemurphy.ai/videomicpro)
+ - [Shure SM58](https://go.mikemurphy.ai/sm58)
+ - [Blue Yeti USB](https://go.mikemurphy.ai/yeti)
+ - [Audio-Technica AT899 Lavalier](https://go.mikemurphy.ai/at899)
+ - [Focusrite Scarlet 6i6](https://go.mikemurphy.ai/6i6)
+ - [Zoom H6](https://go.mikemurphy.ai/zoomh5)
+ - [Sony MDR7506 Headphones](https://go.mikemurphy.ai/sonymdr7506)
 
 ## Top 10 Microphones Popular Online
 This second list are microphones I hear about over and over on podcaster blogs & various sites that discuss audio gear and equipment. For example, Pat Flynn from SmartPassiveIncome.com has raved about the Heil PR-40 for years as have a lot of others, who note this as one of the best podcast mics for the money.
 
- 1. Audio-Technica AT2005USB
- 2. Audio-Technica ATR2100
- 3. Audio-Technica ATR2500
- 4. Blue Yeti USB
- 5. Heil PR-40
- 6. MXL 990
- 7. Rode Podcaster
- 8. Rode Procaster
- 9. Samson C01UCW
- 10. Samson Q1U
+ 1. Audio-Technica AT2005 USB
+ 2. [Audio-Technica ATR2100](https://go.mikemurphy.ai/at2005)
+ 3. [Audio-Technica ATR2500](https://go.mikemurphy.ai/atr2500)
+ 4. [Blue Yeti USB](https://go.mikemurphy.ai/yeti)
+ 5. [Heil PR-40](https://go.mikemurphy.ai/heilpr40)
+ 6. [MXL 990](https://go.mikemurphy.ai/mxl990)
+ 7. [Rode PodMic](https://go.mikemurphy.ai/rodepodcaster)
+ 8. [Rode Procaster](https://go.mikemurphy.ai/procaster)
+ 9. [Samson C01UCW](https://go.mikemurphy.ai/co1u)
+ 10. [Samson Q2U](https://go.mikemurphy.ai/q2u)
 
 **AFFILIATE DISCLAIMER:** Some of the links in this guide are afliate links which means I’ll earn a small commission at no cost to you if you buy them. I use every one of these products and would never recommend something I do not think will help you or that I do not use and love.
 

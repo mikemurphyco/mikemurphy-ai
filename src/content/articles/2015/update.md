@@ -44,7 +44,7 @@ It's been a long-time goal of mine to start a podcast.
 
 I have been an avid listener of podcasts since iTunes 1.0 was introduced and everything about podcasts resonates with my personality. '
 
-I am excited to announce that on Friday 9/18/15 I will be launching a weekly podcast called [**Mike Murphy Unplugged**. ](https://go.mikemurphy.ai/mmu/)
+I am excited to announce that on Friday 9/18/15 I will be launching a weekly podcast called [**Mike Murphy Unplugged**. ](https://go.mikemurphy.ai/mmu)
 
 I will be teaching entrepreneurs tips and tricks about technology and tools of the trade. 
 

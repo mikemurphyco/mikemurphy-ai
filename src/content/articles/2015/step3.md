@@ -40,20 +40,13 @@ seo:
   liveWordCount: 210
 youtube: []
 ---
-
-
 ## PODCASTING: STEP 3
 
 ## Production 
 
-**Write A Script** (Try to develop a template just like a story) I use [Scrivener](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCQQFjAAahUKEwi4jNDertPIAhVIpYgKHSJdARU&url=https%3A%2F%2Fwww.literatureandlatte.com%2Fscrivener.php&usg=AFQjCNEUM5I0p6ig1h7lWnb7AlBA7SJZbw&bvm=bv.105814755,d.cGU) to write.
-
-**Record Podcast.** I use Adobe Audition. Other popular editors include: GarageBand, Reaper, ProTools & Audacity
-
-**Edit Recording. **Add in Intro/Outro Music and any sound effects. 
-
-**Export. **Compile final mix and export as .mp3.
-
-**Tag it. I use [ID3 EDITOR.](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CB0QFjAAahUKEwiR7rHRrtPIAhVDN4gKHWTZCQs&url=http%3A%2F%2Fwww.pa-software.com%2Fid3editor%2F&usg=AFQjCNFnN11PtZYI_Zs1-aUQUgzRhol0kg&bvm=bv.105814755,d.cGU)** This is the metadata of your .mp3 file. If you want to know what I’m talking about, open iTunes, right click on any song and select Get INFO. All that text and the artwork is controlled by ID3 Tags. Not very hard, but important.
-
-**Upload. **Upload .mp3 to [Libsyn](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCQQFjAAahUKEwi4jNDertPIAhVIpYgKHSJdARU&url=https%3A%2F%2Fwww.literatureandlatte.com%2Fscrivener.php&usg=AFQjCNEUM5I0p6ig1h7lWnb7AlBA7SJZbw&bvm=bv.105814755,d.cGU) as Download File Only   facebook Twitter Instagram Pinterest Google+ Youtube \#Learn \#Create \#Move Forward If you need help help with the technical behind podcasting or content creation, or you just need a little help developing your voice and finding clarity, join my band.
+1. **Write A Script** (Try to develop a template just like a story) I use [Scrivener](https://go.mikemurphy.ai/scrivener) to write.
+2. **Record Podcast.** I use Adobe Audition. Other popular editors include: GarageBand, Reaper, ProTools & Audacity
+3. **Edit Recording.** Add in Intro/Outro Music and any sound effects. 
+4. **Export.** Compile final mix and export as .mp3.
+5. **Tag it.** I use [ID3 EDITOR.](https://go.mikemurphy.ai/id3)This is the metadata of your .mp3 file. If you want to know what I’m talking about, open iTunes, right click on any song and select Get INFO. All that text and the artwork is controlled by ID3 Tags. Not very hard, but important.
+6. **Upload.** Upload .mp3 to [Libsyn](https://libsyn.com) as Download File Only  
