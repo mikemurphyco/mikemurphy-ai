@@ -48,7 +48,7 @@ const pagefindAttrs = {
 };
 ---
 
-<Layout title={issue.data.subject} description={issue.data.summary} canonical={canonicalPath} image={issue.data.og?.image} imageAlt={`AI Unplugged issue ${paddedIssue}: ${issue.data.subject}`} author={SITE_AUTHOR.name} authorUrl={SITE_AUTHOR.href} ogType="article" structuredData={structuredData}>
+<Layout title={issue.data.subject} description={issue.data.summary} canonical={canonicalPath} markdown={`${canonicalPath.replace(/\/$/, '')}.md`} image={issue.data.og?.image} imageAlt={`AI Unplugged issue ${paddedIssue}: ${issue.data.subject}`} author={SITE_AUTHOR.name} authorUrl={SITE_AUTHOR.href} ogType="article" structuredData={structuredData}>
   <main class="mm-container grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
     <article {...pagefindAttrs}>
       <a href="/ai-unplugged/issues/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to issues</a>

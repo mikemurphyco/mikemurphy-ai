@@ -1,10 +1,12 @@
 ---
 import { getCollection, render } from 'astro:content';
 import SubscribeBand from '../../components/ai-unplugged/SubscribeBand.astro';
+import YouTubePlayer from '../../components/YouTubePlayer.astro';
 import Layout from '../../layouts/Layout.astro';
 import { articleMetaDescription, formatDate, getArticleTopicTerms, isDiscoverableArticle, isTutorial, slugifyTerm, tutorialUrl } from '../../lib/articles';
 import { articleStructuredData, breadcrumbStructuredData } from '../../lib/structured-data';
 import { SITE_AUTHOR } from '../../lib/site';
+import { getYouTubeId } from '../../lib/youtube';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', (article) => isDiscoverableArticle(article) && isTutorial(article));
@@ -47,14 +49,14 @@ const pagefindAttrs = searchable
       'data-date': new Date(article.data.pubDate).toISOString().slice(0, 10),
     }
   : {};
-
-function getYouTubeId(url: string): string | null {
-  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([a-zA-Z0-9_-]{11})/);
-  return match ? match[1] : null;
-}
+const primaryVideoUrl = article.data.video?.url;
+const videoUrls = primaryVideoUrl
+  ? [primaryVideoUrl, ...article.data.youtube.filter((url) => url !== primaryVideoUrl)]
+  : article.data.youtube;
+const embeddableVideoUrls = videoUrls.filter((url) => getYouTubeId(url));
 ---
 
-<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} image={article.data.featuredImage || undefined} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} ogType="article" structuredData={structuredData}>
+<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} markdown={`${canonicalPath.replace(/\/$/, '')}.md`} image={article.data.featuredImage || undefined} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} ogType="article" structuredData={structuredData}>
   <main>
     <article class="mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <div {...pagefindAttrs}>
@@ -65,22 +67,15 @@ function getYouTubeId(url: string): string | null {
         </p>
         {article.data.description && <p class="mm-lede mt-5">{article.data.description}</p>}
 
-        {article.data.youtube && article.data.youtube.length > 0 ? (
+        {embeddableVideoUrls.length > 0 ? (
           <div class="mt-8 space-y-6">
-            {article.data.youtube.map((url: string) => {
-              const id = getYouTubeId(url);
-              return id ? (
-                <div class="mm-card aspect-video overflow-hidden">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${id}`}
-                    title={article.data.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    class="h-full w-full"
-                  />
-                </div>
-              ) : null;
-            })}
+            {embeddableVideoUrls.map((url: string, index: number) => (
+              <YouTubePlayer
+                url={url}
+                title={article.data.title}
+                chapters={index === 0 ? article.data.video?.chapters : undefined}
+              />
+            ))}
           </div>
         ) : article.data.featuredImage && (
           <img src={article.data.featuredImage} alt="" class="mm-card mt-8 aspect-video w-full object-cover" />

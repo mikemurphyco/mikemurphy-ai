@@ -1,4 +1,5 @@
 import { absoluteUrl, type Article } from './articles';
+import { getYouTubeId, parseVideoChapters, youtubeTimestampUrl } from './youtube';
 
 // Shared builder for the static .md endpoints (tutorials/articles/podcast).
 // Emits a self-describing Markdown document: minimal YAML frontmatter for
@@ -22,12 +23,25 @@ export function buildArticleMarkdown(article: Article, canonicalPath: string) {
     `canonical: ${yamlString(absoluteUrl(canonicalPath))}`,
     d.tags?.length ? `tags: [${d.tags.map(yamlString).join(', ')}]` : null,
     d.categories?.length ? `categories: [${d.categories.map(yamlString).join(', ')}]` : null,
+    d.video?.url ? `video: ${yamlString(d.video.url)}` : null,
     '---',
   ].filter((line): line is string => line !== null);
 
   const body = (article.body ?? '').trim();
+  const videoId = d.video?.url ? getYouTubeId(d.video.url) : null;
+  const chapterSection = d.video && videoId
+    ? [
+        '## Video Chapters',
+        '',
+        ...parseVideoChapters(d.video.chapters).map(
+          (chapter) =>
+            `- [${chapter.timestamp} ${chapter.label}](${youtubeTimestampUrl(videoId, chapter.seconds)})`,
+        ),
+        '',
+      ].join('\n')
+    : '';
 
-  return `${frontmatter.join('\n')}\n\n${body}\n`;
+  return `${frontmatter.join('\n')}\n\n${chapterSection}${chapterSection ? '\n' : ''}${body}\n`;
 }
 
 export function markdownResponse(body: string) {

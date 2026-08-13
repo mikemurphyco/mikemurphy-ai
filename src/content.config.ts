@@ -2,6 +2,28 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'zod';
 import { fieldNotesLoader, resourcesLoader } from './lib/directus-loader';
+import { getYouTubeId, parseVideoChapters } from './lib/youtube';
+
+const videoSchema = z
+  .object({
+    url: z.string(),
+    chapters: z.string().min(1),
+  })
+  .superRefine((video, context) => {
+    if (!getYouTubeId(video.url)) {
+      context.addIssue({ code: 'custom', path: ['url'], message: 'Invalid YouTube URL' });
+    }
+
+    try {
+      parseVideoChapters(video.chapters);
+    } catch (error) {
+      context.addIssue({
+        code: 'custom',
+        path: ['chapters'],
+        message: error instanceof Error ? error.message : 'Invalid video chapters',
+      });
+    }
+  });
 
 const articles = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/articles' }),
@@ -33,6 +55,7 @@ const articles = defineCollection({
     topics: z.array(z.string()).optional().default([]),
 
     youtube: z.array(z.string()).optional().default([]),
+    video: videoSchema.optional(),
 
     podcast: z
       .object({

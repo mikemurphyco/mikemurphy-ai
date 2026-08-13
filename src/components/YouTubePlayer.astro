@@ -1,0 +1,236 @@
+---
+import { getYouTubeId, parseVideoChapters, youtubeTimestampUrl } from '../lib/youtube';
+
+interface Props {
+  url: string;
+  title: string;
+  chapters?: string;
+}
+
+const { url, title, chapters: chapterSource } = Astro.props;
+const videoId = getYouTubeId(url);
+
+if (!videoId) {
+  throw new Error(`Invalid YouTube URL for "${title}": ${url}`);
+}
+
+const chapters = chapterSource ? parseVideoChapters(chapterSource) : [];
+---
+
+<section class="youtube-player" data-youtube-component>
+  <div class="mm-card aspect-video overflow-hidden">
+    <iframe
+      src={`https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&playsinline=1`}
+      title={title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      class="h-full w-full"
+      data-youtube-player
+    ></iframe>
+  </div>
+
+  {chapters.length > 0 && (
+    <div class="mm-card mt-5 overflow-hidden" data-youtube-chapters>
+      <h2 class="chapter-heading">Video chapters</h2>
+      <ol class="chapter-list" aria-label={`Chapters for ${title}`}>
+        {chapters.map((chapter) => (
+          <li>
+            <a
+              class="chapter-link"
+              href={youtubeTimestampUrl(videoId, chapter.seconds)}
+              data-chapter-seconds={chapter.seconds}
+            >
+              <time datetime={`PT${chapter.seconds}S`}>{chapter.timestamp}</time>
+              <span>{chapter.label}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  )}
+</section>
+
+<style>
+  .chapter-heading {
+    border-bottom: 1px solid var(--color-border-default);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono-label);
+    font-weight: 700;
+    letter-spacing: var(--ls-label);
+    padding: var(--space-4) var(--space-5);
+    text-transform: uppercase;
+  }
+
+  .chapter-list {
+    list-style: none;
+    margin: 0;
+    max-height: 24rem;
+    overflow-y: auto;
+    padding: 0;
+  }
+
+  .chapter-list li + li {
+    border-top: 1px solid var(--color-border-default);
+  }
+
+  .chapter-link {
+    align-items: baseline;
+    color: var(--color-text-primary);
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    padding: 0.75rem var(--space-5);
+    text-decoration: none;
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  .chapter-link:hover,
+  .chapter-link:focus-visible {
+    background: color-mix(in srgb, var(--mm-orange) 14%, transparent);
+  }
+
+  .chapter-link:focus-visible {
+    outline: 2px solid var(--mm-orange-deep);
+    outline-offset: -2px;
+  }
+
+  .chapter-link[aria-current='true'] {
+    background: var(--mm-orange);
+    color: var(--mm-navy);
+    font-weight: 700;
+  }
+
+  .chapter-link time {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 30rem) {
+    .chapter-link {
+      gap: var(--space-2);
+      grid-template-columns: 3.75rem minmax(0, 1fr);
+      padding-inline: var(--space-4);
+    }
+  }
+</style>
+
+<script>
+  type YouTubePlayerInstance = {
+    getCurrentTime: () => number;
+    playVideo: () => void;
+    seekTo: (seconds: number, allowSeekAhead: boolean) => void;
+  };
+
+  type YouTubeApi = {
+    Player: new (
+      element: HTMLIFrameElement,
+      options: { events: { onReady: () => void; onStateChange: (event: { data: number }) => void } },
+    ) => YouTubePlayerInstance;
+  };
+
+  type YouTubeWindow = Window &
+    typeof globalThis & {
+      YT?: YouTubeApi;
+      __youtubeIframeApi?: Promise<YouTubeApi>;
+      onYouTubeIframeAPIReady?: () => void;
+    };
+
+  function loadYouTubeApi() {
+    const youtubeWindow = window as YouTubeWindow;
+
+    if (youtubeWindow.YT?.Player) return Promise.resolve(youtubeWindow.YT);
+    if (youtubeWindow.__youtubeIframeApi) return youtubeWindow.__youtubeIframeApi;
+
+    youtubeWindow.__youtubeIframeApi = new Promise<YouTubeApi>((resolve) => {
+      const previousReady = youtubeWindow.onYouTubeIframeAPIReady;
+
+      youtubeWindow.onYouTubeIframeAPIReady = () => {
+        previousReady?.();
+        if (youtubeWindow.YT) resolve(youtubeWindow.YT);
+      };
+
+      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+        const script = document.createElement('script');
+        script.src = 'https://www.youtube.com/iframe_api';
+        script.async = true;
+        document.head.append(script);
+      }
+    });
+
+    return youtubeWindow.__youtubeIframeApi;
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-youtube-component]').forEach((component) => {
+    if (component.dataset.youtubeReady === 'true') return;
+    component.dataset.youtubeReady = 'true';
+
+    const iframe = component.querySelector<HTMLIFrameElement>('[data-youtube-player]');
+    const links = Array.from(
+      component.querySelectorAll<HTMLAnchorElement>('[data-chapter-seconds]'),
+    );
+
+    if (!iframe || links.length === 0) return;
+
+    let player: YouTubePlayerInstance | undefined;
+    let updateTimer: number | undefined;
+
+    const setActiveChapter = (currentTime: number) => {
+      let activeLink = links[0];
+
+      for (const link of links) {
+        if (Number(link.dataset.chapterSeconds) <= currentTime) activeLink = link;
+        else break;
+      }
+
+      for (const link of links) {
+        if (link === activeLink) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      }
+    };
+
+    const playerReady = loadYouTubeApi().then(
+      (YT) =>
+        new Promise<YouTubePlayerInstance>((resolve) => {
+          player = new YT.Player(iframe, {
+            events: {
+              onReady: () => {
+                if (player) resolve(player);
+              },
+              onStateChange: ({ data }) => {
+                if (updateTimer) window.clearInterval(updateTimer);
+                updateTimer = undefined;
+
+                if (player) setActiveChapter(player.getCurrentTime());
+                if (data === 1) {
+                  updateTimer = window.setInterval(() => {
+                    if (player) setActiveChapter(player.getCurrentTime());
+                  }, 500);
+                }
+              },
+            },
+          });
+        }),
+    );
+
+    setActiveChapter(0);
+
+    for (const link of links) {
+      link.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const seconds = Number(link.dataset.chapterSeconds);
+        setActiveChapter(seconds);
+
+        try {
+          const readyPlayer = await playerReady;
+          readyPlayer.seekTo(seconds, true);
+          readyPlayer.playVideo();
+        } catch {
+          window.location.href = link.href;
+        }
+      });
+    }
+  });
+</script>

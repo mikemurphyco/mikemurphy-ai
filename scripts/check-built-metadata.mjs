@@ -64,6 +64,9 @@ for (const file of walk(distRoot)) {
   const description = metaContent(html, 'description');
   const structuredData = structuredDataForHtml(html, route);
   const types = new Set(structuredData.map((item) => item['@type']));
+  const markdownAlternate = html.match(
+    /<link rel="alternate" type="text\/markdown" href="([^"]+)"\s*\/?>/,
+  )?.[1];
 
   if (!description) failures.push(`${route} has no non-empty meta description`);
   if (!documentTitle) failures.push(`${route} has no non-empty title`);
@@ -130,7 +133,27 @@ for (const file of walk(distRoot)) {
     (route.startsWith('/ai-unplugged/issues/') && route !== '/ai-unplugged/issues/');
   const isPodcastEpisode = isDetailRoute(route, 'podcast');
   const hasAuthoredContent = isArticleLike || isPodcastEpisode;
+  const shouldHaveMarkdown = hasAuthoredContent || route === '/resources/';
   const needsBreadcrumb = hasAuthoredContent || route === '/about/';
+
+  if (shouldHaveMarkdown && !markdownAlternate) {
+    failures.push(`${route} is missing its Markdown alternate link`);
+  }
+  if (markdownAlternate) {
+    const markdownUrl = new URL(markdownAlternate);
+    if (markdownUrl.origin !== 'https://mikemurphy.ai') {
+      failures.push(`${route} has an off-site Markdown alternate: ${markdownAlternate}`);
+    } else {
+      const markdownFile = join(distRoot, decodeURIComponent(markdownUrl.pathname).replace(/^\//, ''));
+      try {
+        if (!statSync(markdownFile).isFile()) {
+          failures.push(`${route} references a non-file Markdown alternate: ${markdownUrl.pathname}`);
+        }
+      } catch {
+        failures.push(`${route} references a missing Markdown alternate: ${markdownUrl.pathname}`);
+      }
+    }
+  }
 
   if (hasAuthoredContent && metaContent(html, 'author') !== 'Mike Murphy') {
     failures.push(`${route} is missing the Mike Murphy meta author`);

@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-08-10
+updated: 2026-08-12
 status: living-doc
 ---
 
@@ -24,12 +24,12 @@ Living note for the Astro rebuild. Use it for memory, future blog seeds, and “
 
 | Layer | Choice | Notes |
 |-------|--------|-------|
-| Framework | Astro 6 | Static output |
+| Framework | Astro 7 | Static output |
 | Content | Content Collections + MDX | `articles`, `aiUnplugged` (local MD); `fieldNotes`, `resources`, Brand Kit copy/assets (Directus) |
 | Styling | Tailwind 4 + `global.css` tokens | Design System v2026.3 (`--mm-*`) |
 | Search | Pagefind 1.5 | Indexed in `postbuild` |
 | Newsletter send | Beehiiv | Archive owned by Astro |
-| Hosting | Cloudflare Pages | Deploy on push to `main` |
+| Hosting | Cloudflare Workers static assets | Asset-only deployment from `dist`; no runtime Worker script; deploy on push to `main` |
 | Node | ≥ 22.12 | See `package.json` engines |
 
 ### Scripts
@@ -153,6 +153,47 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-08-12 — Discoverable Markdown alternatives
+
+**Context:** The site already emitted real static Markdown twins for tutorials,
+articles, podcast episodes, AI Unplugged issues, field notes, and Resources.
+The `.md` convention was documented in `/llms.txt`, but an agent arriving
+directly on an HTML page had no standard page-level signal pointing to the
+corresponding Markdown representation.
+
+**Shipped:** Added an optional `markdown` property to the shared Layout and now
+emit `<link rel="alternate" type="text/markdown" href="…">` on every HTML page
+that has a generated Markdown twin. Enabled it for tutorial, article, podcast,
+AI Unplugged issue, and field-note detail pages plus `/resources/`. Pages without
+a Markdown counterpart, such as `/about/`, deliberately do not advertise one.
+
+**Guardrail:** Extended `check:built-metadata` so every page type expected to
+have Markdown must emit the alternate link, and every advertised local `.md`
+URL must resolve to a real generated file in `dist`. This prevents the HTML and
+Markdown surfaces from silently drifting out of sync.
+
+**Verified:** `npm run build` completed with 792 pages. Content-link, built-link,
+and metadata validation passed; Pagefind indexed 668 pages. Spot-checks confirmed
+correct absolute Markdown alternate URLs across all supported content types and
+confirmed that `/about/` does not advertise the nonexistent `/about.md`.
+
+### 2026-08-12 — Major framework upgrade: Astro 6 → Astro 7
+
+**Context:** Upgraded the site across a major Astro release as part of the
+dependency-security cleanup. This was intentionally treated as a compatibility
+change, not just a routine dependency bump.
+
+**Shipped:** Updated `astro` from 6.3.5 to 7.2.1 and `@astrojs/mdx` from 5.0.6
+to 7.0.5, with the lockfile regenerated for the new dependency graph. The site
+remains a statically generated Astro deployment; no hosting, route, canonical,
+or content-model changes were required for the upgrade.
+
+**Verified:** The full build completed cleanly under Astro 7's stricter Rust
+compiler. All 792 pages generated successfully, content-link, built-link, and
+metadata checks passed, `npm audit` reported zero vulnerabilities, and manual
+browser spot-checks covered the homepage plus representative article and
+tutorial pages. Commit: `14ea159`.
 
 ### 2026-08-10 — Website and newsletter collection structured data
 

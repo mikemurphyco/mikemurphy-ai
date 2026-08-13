@@ -41,8 +41,29 @@ seo:
   legacyCanonical: "https://www.mikemurphy.co/sshpasswords/"
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   liveWordCount: 518
-youtube: 
-  - "https://youtu.be/28dKE3Owugg"
+youtube: []
+video:
+  url: "https://youtu.be/28dKE3Owugg"
+  chapters: |
+    00:00 Intro: About The Tutorial
+    01:13 SSH & SSH KEYS 101
+    02:20 MacOS Terminal: SSH
+    03:54 Why Disable SSH Passwords?
+    05:28 Termius: SSH Client
+    06:10 Step 1: Verify SSH Keys Work
+    07:05 Step 2: Check SSH Config
+    07:43 Gotcha Moment (Hashtag)
+    08:48 Step 3: Open SSH Config File
+    11:15 Attention: It didn't work!!
+    12:12 Ask Kodee
+    12:58 Checking Config Files
+    14:14 Step 7: Search For Drop-In File
+    15:43 Step 7b. Edit Drop-In Config File
+    16:42 Recheck Source of Truth
+    17:43 Test: MacOS Terminal
+    19:14 Prove It: Connect via SSH
+    19:56 Final Test: Termius
+    20:38 Change Your Mind? Reverse Steps
 ---
 ## Description
 
@@ -67,27 +88,6 @@ In this tutorial, you will learn how to disable SSH password login on your Hosti
 
 **How To Install Fail2Ban on Hostinger VPS:**  
 [https://youtu.be/E0bRbhOgsVI](https://youtu.be/E0bRbhOgsVI)
-
-**⏱️ Timestamps**  
-00:00 Intro: About The Tutorial  
-01:13 SSH & SSH KEYS 101  
-02:20 MacOS Terminal: SSH  
-03:54 Why Disable SSH Passwords?  
-05:28 Termius: SSH Client  
-06:10 Step 1: Verify SSH Keys Work  
-07:05 Step 2: Check SSH Config  
-07:43 Gotcha Moment (Hashtag)  
-08:48 Step 3: Open SSH Config File  
-11:15 Attention: It didn't work!!  
-12:12 Ask Kodee  
-12:58 Checking Config Files  
-14:14 Step 7: Search For Drop-In File  
-15:43 Step 7b. Edit Drop-In Config File  
-16:42 Recheck Source of Truth  
-17:43 Test: MacOS Terminal  
-19:14 Prove It: Connect via SSH  
-19:56 Final Test: Termius  
-20:38 Change Your Mind? Reverse Steps
 
 **\# Verify key login works first (second terminal)**  
 ssh your-username@your-vps-ip

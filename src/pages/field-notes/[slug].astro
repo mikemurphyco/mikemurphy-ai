@@ -48,7 +48,7 @@ const pagefindAttrs = {
 };
 ---
 
-<Layout title={note.data.title} description={note.data.excerpt} canonical={canonicalPath} imageAlt={note.data.title} author={SITE_AUTHOR.name} authorUrl={SITE_AUTHOR.href} ogType="article" structuredData={structuredData}>
+<Layout title={note.data.title} description={note.data.excerpt} canonical={canonicalPath} markdown={`${canonicalPath.replace(/\/$/, '')}.md`} imageAlt={note.data.title} author={SITE_AUTHOR.name} authorUrl={SITE_AUTHOR.href} ogType="article" structuredData={structuredData}>
   <main>
     <article class="mm-container max-w-3xl py-12" {...pagefindAttrs}>
       <a href="/field-notes/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to field notes</a>

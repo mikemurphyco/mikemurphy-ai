@@ -10,6 +10,7 @@ interface Props {
 	title?: string;
 	description?: string;
 	canonical?: string;
+	markdown?: string;
 	image?: string;
 	imageAlt?: string;
 	author?: string;
@@ -25,6 +26,7 @@ const {
 	title = SITE_TITLE,
 	description = SITE_DESCRIPTION,
 	canonical = Astro.url.pathname,
+	markdown,
 	image = '/assets/brand/og-default.png',
 	imageAlt = 'Mike Murphy — AI Handyman',
 	author,
@@ -47,6 +49,9 @@ const pageTitle =
 				: title;
 const socialTitle = title;
 const canonicalUrl = canonical.startsWith('http') ? canonical : absoluteUrl(canonical);
+const markdownUrl = markdown
+	? markdown.startsWith('http') ? markdown : absoluteUrl(markdown)
+	: undefined;
 const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
 const absoluteAuthorUrl = authorUrl
 	? authorUrl.startsWith('http') ? authorUrl : absoluteUrl(authorUrl)
@@ -94,6 +99,7 @@ const imageMimeType = imageExtension === 'png'
 		{author && <meta name="author" content={author} />}
 		{robots && <meta name="robots" content={robots} />}
 		<link rel="canonical" href={canonicalUrl} />
+		{markdownUrl && <link rel="alternate" type="text/markdown" href={markdownUrl} />}
 		{SITE_FEEDS.map((feed) => (
 			<link
 				rel="alternate"

@@ -60,7 +60,7 @@ const structuredData = podcastMeta
   : breadcrumbData;
 ---
 
-<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} image={displayImage} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} structuredData={structuredData}>
+<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} markdown={`${canonicalPath.replace(/\/$/, '')}.md`} image={displayImage} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} structuredData={structuredData}>
   <main>
     <article class="mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
       <div {...pagefindAttrs}>
