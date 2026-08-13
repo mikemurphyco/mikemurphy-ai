@@ -32,11 +32,19 @@ const chapters = chapterSource ? parseVideoChapters(chapterSource) : [];
   </div>
 
   {chapters.length > 0 && (
-    <div class="mm-card mt-5 overflow-hidden" data-youtube-chapters>
-      <h2 class="chapter-heading">Video chapters</h2>
+    <div class="chapter-panel mm-card mt-4 overflow-hidden" data-youtube-chapters>
+      <div class="chapter-header">
+        <div class="chapter-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m9 7 8 5-8 5V7Z" fill="currentColor"></path>
+          </svg>
+          <h2>Jump to a chapter</h2>
+        </div>
+        <p>{chapters.length} sections</p>
+      </div>
       <ol class="chapter-list" aria-label={`Chapters for ${title}`}>
-        {chapters.map((chapter) => (
-          <li>
+        {chapters.map((chapter, index) => (
+          <li data-chapter-extra={index >= 5 ? '' : undefined}>
             <a
               class="chapter-link"
               href={youtubeTimestampUrl(videoId, chapter.seconds)}
@@ -48,47 +56,91 @@ const chapters = chapterSource ? parseVideoChapters(chapterSource) : [];
           </li>
         ))}
       </ol>
+      {chapters.length > 5 && (
+        <button class="chapter-toggle" type="button" aria-expanded="false" data-chapter-toggle hidden>
+          <span data-chapter-toggle-label>Show all {chapters.length} chapters</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+      )}
     </div>
   )}
 </section>
 
 <style>
-  .chapter-heading {
-    border-bottom: 1px solid var(--color-border-default);
+  .chapter-panel {
+    border-top: 3px solid var(--mm-orange);
+  }
+
+  .chapter-header {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    justify-content: space-between;
+    padding: 0.9rem var(--space-5) 0.65rem;
+  }
+
+  .chapter-header > p {
+    color: var(--color-text-muted);
     font-family: var(--font-mono);
-    font-size: var(--fs-mono-label);
+    font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: var(--ls-label);
-    padding: var(--space-4) var(--space-5);
+    margin: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .chapter-title {
+    align-items: center;
+    display: flex;
+    gap: 0.55rem;
+  }
+
+  .chapter-title svg {
+    color: var(--mm-orange-deep);
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  .chapter-title h2 {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin: 0;
     text-transform: uppercase;
   }
 
   .chapter-list {
+    display: grid;
+    gap: 0.2rem;
     list-style: none;
     margin: 0;
-    max-height: 24rem;
-    overflow-y: auto;
-    padding: 0;
+    padding: 0.35rem 0.65rem 0.65rem;
   }
 
-  .chapter-list li + li {
-    border-top: 1px solid var(--color-border-default);
+  [data-youtube-chapters][data-collapsed='true'] [data-chapter-extra] {
+    display: none;
   }
 
   .chapter-link {
-    align-items: baseline;
+    align-items: center;
+    border-left: 3px solid transparent;
+    border-radius: var(--radius-sm);
     color: var(--color-text-primary);
     display: grid;
-    gap: var(--space-3);
-    grid-template-columns: 4.5rem minmax(0, 1fr);
-    padding: 0.75rem var(--space-5);
+    gap: 0.8rem;
+    grid-template-columns: 4rem minmax(0, 1fr);
+    padding: 0.55rem 0.65rem;
     text-decoration: none;
-    transition: background-color 150ms ease, color 150ms ease;
+    transition: background-color 150ms ease, border-color 150ms ease;
   }
 
   .chapter-link:hover,
   .chapter-link:focus-visible {
-    background: color-mix(in srgb, var(--mm-orange) 14%, transparent);
+    background: color-mix(in srgb, var(--mm-orange) 9%, transparent);
   }
 
   .chapter-link:focus-visible {
@@ -97,22 +149,87 @@ const chapters = chapterSource ? parseVideoChapters(chapterSource) : [];
   }
 
   .chapter-link[aria-current='true'] {
-    background: var(--mm-orange);
-    color: var(--mm-navy);
+    background: color-mix(in srgb, var(--mm-orange) 14%, transparent);
+    border-left-color: var(--mm-orange-deep);
+  }
+
+  .chapter-link[aria-current='true'] span {
     font-weight: 700;
   }
 
   .chapter-link time {
+    background: color-mix(in srgb, var(--mm-navy) 7%, transparent);
+    border: 1px solid color-mix(in srgb, var(--mm-navy) 16%, transparent);
+    border-radius: 999px;
+    color: var(--color-text-primary);
+    display: inline-flex;
     font-family: var(--font-mono);
-    font-size: 0.875rem;
+    font-size: 0.72rem;
     font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0.02em;
+    padding: 0.18rem 0.42rem;
+  }
+
+  html[data-theme='dark'] .chapter-link time {
+    background: color-mix(in srgb, var(--mm-chalk) 8%, transparent);
+    border-color: color-mix(in srgb, var(--mm-chalk) 18%, transparent);
+  }
+
+  .chapter-toggle {
+    align-items: center;
+    background: color-mix(in srgb, var(--color-bg-surface) 92%, var(--mm-orange));
+    border: 0;
+    border-top: 1px solid var(--color-border-default);
+    color: var(--mm-orange-deep);
+    cursor: pointer;
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    gap: 0.4rem;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    padding: 0.75rem var(--space-4);
+    text-transform: uppercase;
+    transition: background-color 150ms ease;
+    width: 100%;
+  }
+
+  .chapter-toggle[hidden] {
+    display: none;
+  }
+
+  .chapter-toggle:hover,
+  .chapter-toggle:focus-visible {
+    background: color-mix(in srgb, var(--mm-orange) 15%, var(--color-bg-surface));
+  }
+
+  .chapter-toggle:focus-visible {
+    outline: 2px solid var(--mm-orange-deep);
+    outline-offset: -2px;
+  }
+
+  .chapter-toggle svg {
+    height: 1rem;
+    transition: transform 150ms ease;
+    width: 1rem;
+  }
+
+  .chapter-toggle[aria-expanded='true'] svg {
+    transform: rotate(180deg);
   }
 
   @media (max-width: 30rem) {
+    .chapter-header {
+      align-items: flex-start;
+      padding-inline: var(--space-4);
+    }
+
     .chapter-link {
       gap: var(--space-2);
-      grid-template-columns: 3.75rem minmax(0, 1fr);
-      padding-inline: var(--space-4);
+      grid-template-columns: 3.6rem minmax(0, 1fr);
+      padding-inline: 0.45rem;
     }
   }
 </style>
@@ -171,8 +288,25 @@ const chapters = chapterSource ? parseVideoChapters(chapterSource) : [];
     const links = Array.from(
       component.querySelectorAll<HTMLAnchorElement>('[data-chapter-seconds]'),
     );
+    const chaptersPanel = component.querySelector<HTMLElement>('[data-youtube-chapters]');
+    const chapterToggle = component.querySelector<HTMLButtonElement>('[data-chapter-toggle]');
+    const chapterToggleLabel = component.querySelector<HTMLElement>('[data-chapter-toggle-label]');
 
     if (!iframe || links.length === 0) return;
+
+    if (chaptersPanel && chapterToggle && chapterToggleLabel) {
+      chaptersPanel.dataset.collapsed = 'true';
+      chapterToggle.hidden = false;
+
+      chapterToggle.addEventListener('click', () => {
+        const expanded = chapterToggle.getAttribute('aria-expanded') === 'true';
+        chapterToggle.setAttribute('aria-expanded', String(!expanded));
+        chaptersPanel.dataset.collapsed = String(expanded);
+        chapterToggleLabel.textContent = expanded
+          ? `Show all ${links.length} chapters`
+          : 'Show fewer chapters';
+      });
+    }
 
     let player: YouTubePlayerInstance | undefined;
     let updateTimer: number | undefined;
@@ -214,8 +348,6 @@ const chapters = chapterSource ? parseVideoChapters(chapterSource) : [];
           });
         }),
     );
-
-    setActiveChapter(0);
 
     for (const link of links) {
       link.addEventListener('click', async (event) => {
