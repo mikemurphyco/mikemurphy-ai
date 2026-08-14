@@ -1,29 +1,29 @@
 ---
 title: "Podcasting Tip: How To Test A 301 Redirect (Is It Working?)"
-description: "Moving Your Podcast To A New Host? How To Test A 301 Redirect Moving your show to a new hosting platform and getting a new RSS Feed? Want to keep all of your subscribers for your podcast after making the move? How can you test to make sure the 301 Redirect you set is working? Spoiler […]"
-pubDate: "2020-05-28T03:08:47"
-updatedDate: "2024-01-20T04:54:25"
+description: Moving Your Podcast To A New Host? How To Test A 301 Redirect Moving your show to a new hosting platform and getting a new RSS Feed? Want to keep all of your subscribers for your podcast after making the move? How can you test to make sure the 301 Redirect you set is working? Spoiler […]
+pubDate: 2020-05-28T03:08:47
+updatedDate: 2024-01-20T04:54:25
 draft: false
-type: "post"
-slug: "301redirecttest"
-permalink: "/301redirecttest/"
-legacyPermalink: "https://www.mikemurphy.co/301redirecttest/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/301redirecttest/"
-contentEra: "legacy"
-visibility: "search"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2023/12/301_HEADER.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2023/12/301_HEADER.jpg"
-categories: 
-  - "Blog"
-  - "Podcasting"
-  - "Tutorials"
-tags: 
-  - "how-to"
-  - "podcast"
-  - "podcasting"
-  - "tips"
-  - "tutorial"
+type: post
+slug: 301redirecttest
+permalink: /301redirecttest/
+legacyPermalink: https://www.mikemurphy.co/301redirecttest/
+canonicalUrl: https://mikemurphy.ai/tutorials/301redirecttest/
+contentEra: legacy
+visibility: search
+author: Mike Murphy
+featuredImage: /assets/media/2023/12/301_HEADER.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2023/12/301_HEADER.jpg
+categories:
+  - Blog
+  - Podcasting
+  - Tutorials
+tags:
+  - how-to
+  - podcast
+  - podcasting
+  - tips
+  - tutorial
 topics: []
 search:
   include: true
@@ -32,25 +32,23 @@ migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "26"
-  postType: "post"
+  postType: post
   rawWordCount: 794
 seo:
   legacyTitle: "Podcasting Tip: How To Test A 301 Redirect (Is It Working?) - Mike Murphy Co"
   legacyH1: "Podcasting Tip: How To Test A 301 Redirect (Is It Working?)"
-  legacyCanonical: "https://www.mikemurphy.co/301redirecttest/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyCanonical: https://www.mikemurphy.co/301redirecttest/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 862
-youtube: []
+youtube:
+  - https://youtu.be/izTTSgUG6PA
 ---
-Moving Your Podcast To A New Host?
 
-![](https://cdn-images-1.medium.com/max/800/1*JMdtfVg6Pu10mrhuWuccpg.jpeg)
-
-How To Test A 301 Redirect
+## How To Test A 301 Redirect
 
 > Moving your show to a new hosting platform and getting a new RSS Feed? Want to keep all of your subscribers for your podcast after making the move? How can you test to make sure the 301 Redirect you set is working?
 
@@ -112,10 +110,7 @@ The 301 Redirect forwards your old RSS Feed to your new RSS Feed.
 
 **301 Redirect:** Enter Old RSS Feed URL in Browser. New RSS Feed Opens.
 
-### Video Tutorial:
 
-<https://www.youtube.com/watch?v=izTTSgUG6PA?feature=oembed>
+
 
 ------------------------------------------------------------------------
-
-**I Help People Figure Things Out** **-** My name is [Mike Murphy](http://mikemurphy.co/), I’m a one-man-band and [podcaster](http://mikemurphy.co/itunes). - I make podcasts and tutorials that teach people how to make better content. - @mikeunplugged on [Twitter](http://twitter.com/mikeunplugged) or [Instagram](http://instagram.com/mikeunplugged) - I also work full-time as a product support specialist at [Simplecast](https://simplecast.com/)

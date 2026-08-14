@@ -42,23 +42,20 @@ seo:
 youtube: 
   - "https://youtu.be/rEDiwLRp3wo"
 ---
-<https://youtu.be/rEDiwLRp3wo>
-
 ## After Effects CC 2022: Show & Hide Audio Levels Property & Waveforms. (Keyboard Shortcuts)
 
-**Description:  
-**
+**Description:**
 
 This tutorial will show you the keyboard shortcuts to show and hide the Audio Levels property and Waveforms for all layers that contain audio in Adobe After Effects CC 2022. You will also learn how to search and isolate all audio layers in a Composition.
 
 ** **
 
-**Software Used:  
-**Adobe After Effects CC 2022 ([Click To Try or Buy](https://mikemurphy.co/adobe%20(affiliate%20link)))
+**Software Used:**
+Adobe After Effects CC 2022
 
-**Audio Levels Property:  
-**One use case for pulling up the audio property is to keyframe the Audio Gain to add fade ins and fade outs or to mute the audio at specific times in the animation.**  
-**
+**Audio Levels Property:**
+One use case for pulling up the audio property is to keyframe the Audio Gain to add fade ins and fade outs or to mute the audio at specific times in the animation.**  
+
 
 **Keyboard Shortcut:**
 
@@ -68,9 +65,7 @@ This tutorial will show you the keyboard shortcuts to show and hide the Audio Le
 - Tap LL to show Audio Waveforms
 - Press Cmd/Ctrl + F to Search for Audio
 
-**How To Show & Hide Audio Levels Properties in the Layers Panel:  
-**
-
+**How To Show & Hide Audio Levels Properties in the Layers Panel:**
 1.  Create a new Composition 
 2.  Add at least one layer with audio (sound)
 3.  Select/highlight the layers/timeline panel (look for blue highlight around the panel)
@@ -79,8 +74,7 @@ This tutorial will show you the keyboard shortcuts to show and hide the Audio Le
 
 ** **
 
-**How To Show & Hide Audio Waveforms on the Timeline:  
-**
+**How To Show & Hide Audio Waveforms on the Timeline:**
 
 1.  Create a new Composition 
 2.  Add at least one layer with audio (sound)

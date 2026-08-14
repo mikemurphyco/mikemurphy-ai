@@ -42,22 +42,18 @@ seo:
 youtube: 
   - "https://youtu.be/4vXSbcUf-oQ"
 ---
-<https://youtu.be/4vXSbcUf-oQ>
 
 # Instagram Stories: How To Use Type Mode
 
-**Note:  
-**Type mode was released in Version 30.0 of Instagram. If you don not have it, be sure you have updated your phone and apps. You can also try force quitting the app and logging out and back in. Instagram does not roll out new features all at once, so you may just have to be patient and wait (I know, that is no fun).
+**Note:**
+Type mode was released in Version 30.0 of Instagram. If you don not have it, be sure you have updated your phone and apps. You can also try force quitting the app and logging out and back in. Instagram does not roll out new features all at once, so you may just have to be patient and wait (I know, that is no fun).
 
-**Also Note: **There are two options for using new Type Mode  
-**1. **You can start in Type Mode (tap Type in bottom left)…This method is more for designing with type
-
-**2.** To add type and use the new styles, take a photo or video in any mode (normal, boomerang, rewind…) and tap in center and start typing. Look for styles in top center (Classic, Modern, Strong, Neon, Typewriter)
-
- 
+**Also Note:**
+There are two options for using new Type Mode  
+1. You can start in Type Mode (tap Type in bottom left). This method is more for designing with type
+2. To add type and use the new styles, take a photo or video in any mode (normal, boomerang, rewind…) and tap in center and start typing. Look for styles in top center (Classic, Modern, Strong, Neon, Typewriter)
 
 ### Method 1: Using New Type Mode Screen
-
 Open Instagram Stories
 
 **When to use Method 1:**  
@@ -94,19 +90,3 @@ Normal, Boomerang, Rewind, Superzoom, Hands-free..
 - Add stickers, brushes, text, gifs, geo-tags, etc.
 - Save, Add To Story, Share or Tap X in upper left to start over…
 - Learn, Create, Move Forward.
-
- 
-
-### Tools & Resources:
-
-**Podcast Gear:**  
-[Click to View on Kit](https://mikemurphy.co/kit)
-
-**Adobe Creative Cloud:**  
-[Click for Free Trial of Adobe CC](HTTPS://MIKEMURPHY.CO/ADOBE)
-
-**Screenflow Screencasting Software:**  
-[Click To Try or Buy](HTTPS://MIKEMURPHY.CO/SCREENFLOW)
-
-**Camtasia Screencasting Software:**  
-[Click To Try or Buy](HTTPS://MIKEMURPHY.CO/Camtasia)

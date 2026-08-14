@@ -1,29 +1,29 @@
 ---
 title: "Apple Notes: How To Use Checklists"
 description: "The Quick Guide to Checklists How To Use Checklists in Apple Notes In this article: How To Create Checklists in Apple Notes How To Mark All Items As Checked How to Uncheck All Items How to Change Preference for Checked Items Moving to Bottom of Lists Note: Apple Notes & Checklists Work on Macs & iOS Devices […]"
-pubDate: "2020-03-04T02:52:22"
-updatedDate: "2024-01-20T05:06:05"
+pubDate: 2020-03-04T02:52:22
+updatedDate: 2024-01-20T05:06:05
 draft: false
-type: "post"
-slug: "applenoteschecklists"
-permalink: "/applenoteschecklists/"
-legacyPermalink: "https://www.mikemurphy.co/applenoteschecklists/"
-canonicalUrl: "https://mikemurphy.ai/tutorials/applenoteschecklists/"
-contentEra: "legacy"
-visibility: "search"
-author: "Mike Murphy"
-featuredImage: "/assets/media/2020/03/CHECKLISTS_HEADER.jpg"
-featuredImageSource: "https://www.mikemurphy.co/wp-content/uploads/2020/03/CHECKLISTS_HEADER.jpg"
-categories: 
-  - "Blog"
-  - "Macs & iOS"
-  - "Tutorials"
-tags: 
-  - "apple"
-  - "how-to"
-  - "Mac"
-  - "productivity"
-  - "tips"
+type: post
+slug: applenoteschecklists
+permalink: /applenoteschecklists/
+legacyPermalink: https://www.mikemurphy.co/applenoteschecklists/
+canonicalUrl: https://mikemurphy.ai/tutorials/applenoteschecklists/
+contentEra: legacy
+visibility: search
+author: Mike Murphy
+featuredImage: /assets/media/2020/03/CHECKLISTS_HEADER.jpg
+featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2020/03/CHECKLISTS_HEADER.jpg
+categories:
+  - Blog
+  - Macs & iOS
+  - Tutorials
+tags:
+  - apple
+  - how-to
+  - Mac
+  - productivity
+  - tips
 topics: []
 search:
   include: true
@@ -32,19 +32,20 @@ migration:
   dryRun: false
   prioritySample: false
   review: false
-  eraRule: "pubDate before 2025-01-01 is legacy; on/after is ai"
+  eraRule: pubDate before 2025-01-01 is legacy; on/after is ai
   source: wordpress-wxr
 wp:
   id: "31"
-  postType: "post"
+  postType: post
   rawWordCount: 376
 seo:
   legacyTitle: "Apple Notes: How To Use Checklists - Mike Murphy Co"
   legacyH1: "Apple Notes: How To Use Checklists"
-  legacyCanonical: "https://www.mikemurphy.co/applenoteschecklists/"
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  legacyCanonical: https://www.mikemurphy.co/applenoteschecklists/
+  robots: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   liveWordCount: 429
-youtube: []
+youtube:
+  - https://www.youtube.com/watch?v=GKWUy1x5gUE
 ---
 The Quick Guide to Checklists
 
@@ -107,10 +108,9 @@ Are checked items automatically sorting to the bottom? (The fix 👇)
 
 Turn off Preferences for Auto-Sort to Bottom
 
-### Video Tutorial
 
-<https://www.youtube.com/watch?v=GKWUy1x5gUE?feature=oembed>
+
+
 
 ------------------------------------------------------------------------
 
-**I Help People Figure Things Out** **-** My name is [Mike Murphy](https://mikemurphy.ai/), I’m a one-man-band and [podcaster](https://go.mikemurphy.ai/mmu). - I make podcasts and tutorials that teach people how to make better content. - @mikeunplugged on [X](https://x.com/mikemurphy.ai) or [Instagram](http://instagram.com/mikemurphyai) - I also work full-time as a product support specialist at [Simplecast](https://simplecast.com/)

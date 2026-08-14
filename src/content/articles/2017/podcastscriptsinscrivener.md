@@ -40,6 +40,16 @@ seo:
   legacyCanonical: "https://www.mikemurphy.co/podcastscriptsinscrivener/"
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   liveWordCount: 280
-youtube: []
+youtube: https://youtu.be/I7jEYP_k5gI
 ---
-https://youtu.be/I7jEYP_k5gI Scrivener is writing software for Macs or PCs and there is an app to sync across all iOS Devices Scrivener is what I use to write and organize all of my podcast scripts and articles I write and classes and tutorials. Scrivener is \$45 for Mac/PC \$20 for iOS Apps Syncs with Dropbox To purchase: http://mikemurphy.co/scrivener \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* ➜All Gear I Use: https://kit.co/mikemurphyco ➜Podcast Gear: https://www.mikemurphy.co/podgear ➜ Get Adobe Creative Cloud: http://mikemurphy.co/adobe ➜Tutorial Software: Screenflow: http://mikemurphy.co/screenflow Camtasia: http://mikemurphy.co/camtasia ---------------------------------------------------------------  SUBSCRIBE TO MY YOUTUBE CHANNEL: - http://mikemurphy.co/youtube VISIT MY WEBSITE: - http://mikemurphy.co SUBSCRIBE TO PODCAST -http://mikemurphy.co/itunes SOCIAL MEDIA: - Instagram: http://instagram.com/mikeunplugged - Facebook: http://mikemurphy.co/facebook - Twitter: http://twitter.com/mikeunplugged ---Affiliate Links: --- In order to support my work, I participate in affiliate programs for some of the tools I use and recommend. This simply means I get a commission from the company with no additional cost to you for recommending their products. I will not recommend anything I do not believe in 100%. \#Learn \#Create \#Move Forward If you need help help with the technical behind podcasting or content creation, or you just need a little help developing your voice and finding clarity, join my band.
+
+## What is Scrivener?
+- Scrivener is writing software for Macs or PCs and there is an app to sync across all iOS Devices
+- Scrivener is what I use to write and organize all of my podcast scripts and articles I write and classes and tutorials.
+- Scrivener is $45 for Mac/PC
+- $20 for iOS Apps
+- Syncs with Dropbox 
+
+**To learn more about Scrivener:**
+https://www.literatureandlatte.com/scrivener
+

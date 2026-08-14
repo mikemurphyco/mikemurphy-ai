@@ -42,6 +42,19 @@ seo:
   legacyCanonical: "https://www.mikemurphy.co/how-to-recover-deleted-apps-on-iphone/"
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   liveWordCount: 252
-youtube: []
+youtube: https://youtu.be/357RQZzkA4U
 ---
-Quick Tip: Recover Deleted Apps on iPhone To Delete Apps on iPhone: Press and Hold until they jiggle and press X in Upper left to delete To View History & Recover Deleted Apps: Go to App Store app Press Updates in Lower Right Corner Press Arrow Next to Purchased (up top) Press Tab that says Not on This iPhone All apps ever purchased or downloaded will be here. Press the cloud with down arrow to re-install \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* ➜All Gear I Use: https://kit.co/mikemurphyco ➜Podcast Gear: https://www.mikemurphy.co/podgear ➜ Get Adobe Creative Cloud: http://mikemurphy.co/adobe ➜Tutorial Software: Screenflow: http://mikemurphy.co/screenflow Camtasia: http://mikemurphy.co/camtasia  ---------------------------------------------------------------  SUBSCRIBE TO MY YOUTUBE CHANNEL:  - http://mikemurphy.co/youtube VISIT MY WEBSITE: - http://mikemurphy.co SUBSCRIBE TO PODCAST -http://mikemurphy.co/itunes  SOCIAL MEDIA:  - Instagram: http://instagram.com/mikeunplugged - Facebook: http://mikemurphy.co/facebook  - Twitter: http://twitter.com/mikeunplugged ---Affiliate Links: --- In order to support my work, I participate in affiliate programs for some of the tools I use and recommend. This simply means I get a commission from the company with no additional cost to you for recommending their products. I will not recommend anything I do not believe in 100%.
+## **UPDATE: 5.6.18:**
+This has changed since the tutorial was created.
+
+The current version of iOS: 11.3.1
+
+## **The updated way to recover deleted apps:**
+
+1. Open up App Store
+2. Click on your profile icon in the upper right corner
+3. Click All to see purchase history
+4. Click Not on this phone to recover deleted apps
+
+If you see 'Open' the app is installed
+If you see 'Cloud with Down Arrow' it can be re-installed.

@@ -41,8 +41,6 @@ seo:
 youtube: 
   - "https://youtu.be/xk6FDrGejmI"
 ---
-<https://youtu.be/xk6FDrGejmI>
-
 ## After Effects CC 2022: How To Place Videos in Shape Layers Using Alpha Mattes
 
 **Description:  

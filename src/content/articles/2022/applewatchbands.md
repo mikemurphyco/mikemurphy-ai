@@ -43,8 +43,6 @@ seo:
 youtube: 
   - "https://youtu.be/YPKZ9xBAFyo"
 ---
-<https://youtu.be/YPKZ9xBAFyo>
-
 ## How To Replace Apple Watch Bands
 
 **Description:  

@@ -41,12 +41,10 @@ seo:
 youtube: 
   - "https://youtu.be/QXQZPcSElmI?si=peGnJ4KKKCuK7m3v"
 ---
-<https://youtu.be/QXQZPcSElmI?si=peGnJ4KKKCuK7m3v>
-
 ## After Effects CC 2020: How To Use The Anchor Point
 
-**Description:  
-**This tutorial will show you how to use the Anchor Point in Adobe After Effects CC 2020. The anchor point is what a layer uses a reference point to scale or rotate from.
+**Description:**
+This tutorial will show you how to use the Anchor Point in Adobe After Effects CC 2020. The anchor point is what a layer uses a reference point to scale or rotate from.
 
 **Topics Covered:**
 
@@ -54,13 +52,10 @@ youtube:
 2.  How To Center the Anchor Point using a keyboard shortcut
 3.  How to change Preferences to center anchor point in New Shape Layers
 
-**  
-What is the Anchor Point?  
-**The reference point that layers or objects use to rotate, scale or move around.
+**What is the Anchor Point?**  
+The reference point that layers or objects use to rotate, scale or move around.
 
-**Keyboard Shortcuts:  
-**
-
+**Keyboard Shortcuts:**
 1.  Pan Behind Tool: Y
 2.  Shape Tool: Q
 3.  Selection Tool: V
@@ -68,17 +63,12 @@ What is the Anchor Point?
 5.  Center Anchor Point: 
     1.  Cmd/Ctrl + Double-Click on Pan Behind Tool Icon (Easy Way)
     2.  Cmd/Ctrl + Home (Center of Composition)
-    3.  Cmd/Ctrl + Option/Alt + Home (Center of Layer)
+    3.  Cmd/Ctrl + Option/Alt + Home (Center of Layer) 
+    4.  Cmd/Ctrl + Option/Alt + Home (Center of Layer)
 
-&nbsp;
 
-1.   
-2.  Cmd/Ctrl + Option/Alt + Home (Center of Layer)
-
- 
-
-**Chapters:  
-**00:05 Introduction: Topics covered in the tutorial     
+**Chapters:**
+00:05 Introduction: Topics covered in the tutorial     
 00:23 What exactly is the Anchor Point?  
 00:41 Create a Shape Layer (rectangle)  
 01:09 How To Move Anchor Point without moving Shape Layer     
@@ -86,8 +76,8 @@ What is the Anchor Point?
 01:31 Keyboard Shortcut: How To Move Anchor Point to Center  
 02:08 Shape Layers: How To Set Anchor Point To Always Center
 
-**Software Used:  
-**Adobe After Effects CC 2020 ([Click To Try or Buy](https://mikemurphy.co/adobe%20(affiliate%20link)))
+**Software Used:**
+Adobe After Effects CC 2020
 
 **How To Create A Shape Layer**
 

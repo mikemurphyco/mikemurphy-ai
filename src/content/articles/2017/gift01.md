@@ -39,6 +39,16 @@ seo:
   liveWordCount: 280
 youtube: []
 ---
-### **Gift 01: Manfrotto Lumimuse 8 LED Light**
+## Gift 01: Manfrotto Lumimuse 8 LED Light
 
-**Current Price:** \$103 on Amazon **Amazon Link:** http://amzn.to/2gNEVYk https://youtu.be/kbwLvXsF23k   **Description:** The Manfrotto Lumimuse 8 LED light has 8 individual LED bulbs. Very small and portable Built-in Rechargeable Batteries lasts a long time. Plug in via USB to computer or to any USB charging block 5600 K Daylight Balanced LED Light Mount to hot shoe of camera, Attach to cold shoe of DJI Osmo or iPhone cases 1/4 20 thread to attach to mini tripods and more 95% CRI which basically means the LED is accurate in color Included Accessories: USB Charging Cable Comes with a couple of warm gels and you can purchase a variety of interchangeable filters (that I always lose) [![](/assets/media/2017/11/Manfrotto-Lumimuse-300x274.png)](http://amzn.to/2gYrKUt)   There is a Lumimuse 6 (\$80) & Lumimuse 3 (\$40) **2017 Holiday Gift Guide Link (all gifts in one place):** https://mikemurphy.co/gifts2017 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* **Amazon Associates Disclosure:** Mike Murphy LLC is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com InstagramYoutubefacebookTwitterPinterest \#Learn \#Create \#Move Forward If you need help help with the technical behind podcasting or content creation, or you just need a little help developing your voice and finding clarity, join my band.
+[Buy on Amazon](https://go.mikemurphy.ai/lumimuse)
+
+**Description:** 
+- The Manfrotto Lumimuse 8 LED light has 8 individual LED bulbs. 
+- Very small and portable Built-in Rechargeable Batteries lasts a long time. 
+- Plug in via USB to computer or to any USB charging block 5600 K Daylight Balanced LED Light Mount to hot shoe of camera, 
+- Attach to cold shoe of DJI Osmo or iPhone cases 1/4 20 thread to attach to mini tripods and more 95% CRI which basically means the LED is accurate in color 
+- Included Accessories: USB Charging Cable Comes with a couple of warm gels and you can purchase a variety of interchangeable filters (that I always lose) 
+
+
+**Amazon Associates Disclosure:** Mike Murphy LLC is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com InstagramYoutubefacebookTwitterPinterest \#Learn \#Create \#Move Forward If you need help help with the technical behind podcasting or content creation, or you just need a little help developing your voice and finding clarity, join my band.

@@ -42,12 +42,10 @@ seo:
 youtube: 
   - "https://youtu.be/w5qcPi8HRPU"
 ---
-<https://youtu.be/w5qcPi8HRPU>
-
 ## Ecamm Live: How To Arrange All Windows
 
-**Description:  
-**This tutorial will show you how to clean up your Ecamm Live workspace by using ‘Arrange All Windows’ which will show all Utility Windows (except the Network Camera) and place them in the default position.
+**Description:**
+This tutorial will show you how to clean up your Ecamm Live workspace by using ‘Arrange All Windows’ which will show all Utility Windows (except the Network Camera) and place them in the default position.
 
 **Why use Arrange All Windows?**  
 It is a fast way to ‘reset’ and clean up your Ecamm Live production environment so you can improve your livestream experience by keeping your production clean and organized.

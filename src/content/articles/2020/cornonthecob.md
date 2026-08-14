@@ -48,7 +48,6 @@ youtube:
 ---
 
 
-
 ## How To Cook Easy & Perfect Corn on the Cob
 
 > I’m not sure how, but it comes out just right nearly every time.

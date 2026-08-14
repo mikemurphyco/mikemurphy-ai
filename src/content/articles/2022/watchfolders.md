@@ -41,7 +41,6 @@ seo:
 youtube: 
   - "https://youtu.be/oHZPW4qbuIg"
 ---
-<https://youtu.be/oHZPW4qbuIg>
 
 ## Adobe Media Encoder CC 2023: How To Use Watch Folders
 
@@ -50,13 +49,13 @@ youtube:
 **Description:  
 **This tutorial will show you how to create & use Watch Folders in Adobe Media Encoder CC 2023 so you can simply drag media files onto any folder and AME will automatically encode the files and output them to a folder.
 
-**Knowledge Base Article:  
-**[Adobe Media Encoder Getting Started Guide](https://helpx.adobe.com/media-encoder/get-started.html)
+**Knowledge Base Article:**
+[Adobe Media Encoder Getting Started Guide](https://helpx.adobe.com/media-encoder/get-started.html)
 
  
 
-**Chapters:  
-**00:00 Intro: About this tutorial  
+**Chapters:**
+00:00 Intro: About this tutorial  
 00:17 How To Create Watch Folders  
 00:32 Output Default Folder  
 00:53 Add Encoding Presets  
@@ -69,8 +68,8 @@ youtube:
 
 ** **
 
-**Software Used:  
-**Adobe Media Encoder CC 2023 ([Click To Try or Buy](https://mikemurphy.co/adobe%20(affiliate%20link)))
+**Software Used:**
+[Adobe Media Encoder CC 2023](https://go.mikemurphy.ai/adobe)
 
 **How To Create a Watch Folder in Adobe Media Encoder (AME) CC 2023:**
 
@@ -80,8 +79,6 @@ youtube:
 4.  Click on ‘New Folder’ and enter a name for Watch Folder (I.e. ‘Watch Folder’)
 5.  Change Format and Preset or drag an encoding preset on the output
 6.  Confirm the ‘Output Folder’ path
-
- 
 
 **How To Use Watch Folder in Adobe Media Encoder (AME) CC 2023:**
 

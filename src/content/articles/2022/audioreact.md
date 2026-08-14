@@ -41,15 +41,13 @@ seo:
 youtube: 
   - "https://youtu.be/5UkHJWcPVCo"
 ---
-<https://youtu.be/5UkHJWcPVCo>
-
 ## After Effects CC 2022: How To Convert Audio To Keyframes (Audio React)
 
-**Description:  
-**This tutorial will show you how to convert audio layers to keyframes in Adobe After Effects CC 2022 and how to make layers such as graphics or text react to the beats of the audio layer.
+**Description:**
+This tutorial will show you how to convert audio layers to keyframes in Adobe After Effects CC 2022 and how to make layers such as graphics or text react to the beats of the audio layer.
 
-**Software Used:  
-**Adobe After Effects CC 2022 ([Click To Try or Buy](https://mikemurphy.co/adobe%20(affiliate%20link)))
+**Software Used:**
+Adobe After Effects CC 2022
 
 **How To Convert Audio To Keyframes in Adobe After Effects CC 2022:**
 
