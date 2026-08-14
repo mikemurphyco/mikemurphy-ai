@@ -40,7 +40,8 @@ seo:
   legacyCanonical: "https://www.mikemurphy.co/samsonq2u/"
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   liveWordCount: 763
-youtube:https://youtu.be/1e5Bm0FukvE
+youtube:
+  - "https://youtu.be/1e5Bm0FukvE"
 ---
 ### The Product
 
