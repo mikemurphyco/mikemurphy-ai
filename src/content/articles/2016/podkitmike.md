@@ -41,4 +41,4 @@ seo:
   liveWordCount: 364
 youtube: []
 ---
-This is my main podcast setup. I also have an [Allen & Heath Zed 10 mixer](http://amzn.to/1VBFaWu), but I think the Focusrite 6i6 has slightly better preamps. This is a Pro Level setup and may be more than you need. I do have beginner and intermediate packages available. Let me know if you have questions on any of these products.   \[FreshBundle bundle_id="shure_sm7b_001" layout="featuredlist" featured="B0002E4Z8M" custom_title="Shure SM7b Podcast Kit" ribbon_text="Pro" custom_buy_button="" custom_cta="" target="blank" \]
+This is my main podcast setup. I also have an [Allen & Heath Zed 10 mixer](http://amzn.to/1VBFaWu), but I think the Focusrite 6i6 has slightly better preamps. This is a Pro Level setup and may be more than you need. I do have beginner and intermediate packages available. Let me know if you have questions on any of these products. 

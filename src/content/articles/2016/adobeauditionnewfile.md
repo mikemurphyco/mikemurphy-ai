@@ -41,8 +41,21 @@ seo:
 youtube: 
   - "https://youtu.be/5q4zMm026VQ"
 ---
-<https://youtu.be/5q4zMm026VQ>
 
-## **How To Create A New Audio File in Adobe Audition** (Settings I use for each new podcast episode recording)
 
-Here are the settings I use to record each new episode of my podcast, [Mike Murphy Unplugged.](http://mikemurphy.co/itunes) **Steps:** Preferences\>Audio Hardware (Select Input & Output) File\>New Audio File **Settings I use:** 44100 Mono 32-bit Float **For levels meter:** Option + i **To Record:** Shift + Spacebar **To Stop Record:** Spacebar **To Playback Recording:** Spacebar **For the Mike Russell video on 32bit float:** https://youtu.be/Rw8PcI5-IZ8 (this is on the Mike Russell VIP channel, which I highly recommend as it's only \$1.50/month and Mike is an awesome teacher if you are looking to get better at audio.) facebook Twitter Instagram Pinterest Youtube Google+
+## **How To Create A New Audio File in Adobe Audition** 
+
+Settings I use for each new podcast episode recording:
+
+**Podcast:**
+ [Mike Murphy Unplugged.](https://go.mikemurphy.ai/mmu)
+
+**Steps:** 
+1. Preferences\>Audio Hardware (Select Input & Output) 
+2. File\>New Audio File 
+3. Settings I use: 44100 Mono 32-bit Float
+4. **For levels meter:** Option + i 
+5. **To Record:** Shift + Spacebar 
+6. **To Stop Record:** Spacebar 
+7. **To Playback Recording:** Spacebar 
+

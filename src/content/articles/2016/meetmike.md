@@ -40,7 +40,7 @@ seo:
   liveWordCount: 1118
 youtube: []
 ---
-If you listen to more than 2 episodes of [Mike Murphy Unplugged](http://mikemurphy.co/itunes), there is a good chance you hear me say **done is better than perfect**. I say it often as much to motivate my listeners as I do to keep myself in check. While I do not consider myself a perfectionist (semi), I want everything I create to be at the highest quality it can be. I push myself to be better at everything I am passionate about. I have spent years studying technology and software programs so I can be better at creating.  I work in a high-end photography studio where we sell expensive artwork, so the quality has to be good. Quality takes time and that is okay, but the key is knowing when to stop. That is where most people struggle. We as creatives always want to fine tune and tweak and there is always room for improvement.
+If you listen to more than 2 episodes of [Mike Murphy Unplugged](https://go.mikemurphy.ai/mmu), there is a good chance you hear me say **done is better than perfect**. I say it often as much to motivate my listeners as I do to keep myself in check. While I do not consider myself a perfectionist (semi), I want everything I create to be at the highest quality it can be. I push myself to be better at everything I am passionate about. I have spent years studying technology and software programs so I can be better at creating.  I work in a high-end photography studio where we sell expensive artwork, so the quality has to be good. Quality takes time and that is okay, but the key is knowing when to stop. That is where most people struggle. We as creatives always want to fine tune and tweak and there is always room for improvement.
 
 #### Set Due Dates & Calendar Alerts
 

@@ -47,6 +47,6 @@ youtube:
 
 [Jeremy Cowart](http://jeremycowart.com) is making a dent in the universe. This video is powerful, inspiring and I hope it motivates you to do something great. \#moveforward
 
-<https://youtu.be/jC-rpAkfE2I>
 
-facebook Twitter Instagram Pinterest Google+
+
+

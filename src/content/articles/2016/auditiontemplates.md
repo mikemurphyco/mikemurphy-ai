@@ -44,8 +44,15 @@ seo:
 youtube: 
   - "https://youtu.be/jYFbLciTQEQ"
 ---
-<https://youtu.be/jYFbLciTQEQ>
+
 
 ## **How To Create Podcast Templates in Adobe Audition** (Speed up your podcast workflow)
 
-**In this video you will learn:** How to create templates in the Multitrack view of Abobe Audition so you can save the intro & outros of your podcast and every element that you use in every podcast. Session Templates are a major timesaver and very easy to do in Adobe Audition. **How To Create Template in Multi-Track in Adobe Audition:** File \> Export \> Session As Template **To use template:** Create New Multitrack Session Choose Template Select your Podcast Template Easy. Have a tutorial request or question ? facebook Twitter Instagram Pinterest Youtube Google+
+**In this video you will learn:** How to create templates in the Multitrack view of Abobe Audition so you can save the intro & outros of your podcast and every element that you use in every podcast. 
+
+Session Templates are a major timesaver and very easy to do in Adobe Audition. 
+
+**How To Create Template in Multi-Track in Adobe Audition:** 
+- File \> Export \> Session As Template 
+- **To use template:** Create New Multitrack Session 
+- Choose Template Select your Podcast Template Easy. 
