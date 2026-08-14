@@ -42,7 +42,8 @@ seo:
   legacyCanonical: "https://www.mikemurphy.co/how-to-recover-deleted-apps-on-iphone/"
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   liveWordCount: 252
-youtube: https://youtu.be/357RQZzkA4U?si=4jbKTuSo02PF2Jje
+youtube:
+  - "https://youtu.be/357RQZzkA4U?si=4jbKTuSo02PF2Jje"
 ---
 ## **UPDATE: 5.6.18:**
 This has changed since the tutorial was created.

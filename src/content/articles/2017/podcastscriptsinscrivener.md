@@ -40,7 +40,8 @@ seo:
   legacyCanonical: "https://www.mikemurphy.co/podcastscriptsinscrivener/"
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   liveWordCount: 280
-youtube: https://youtu.be/I7jEYP_k5gI
+youtube:
+  - "https://youtu.be/I7jEYP_k5gI?si=33WexZUySf_rFLIM"
 ---
 
 ## What is Scrivener?
