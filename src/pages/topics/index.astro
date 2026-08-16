@@ -19,9 +19,29 @@ const topics = getUnifiedTopicMap(articles, notes);
       </p>
     </header>
 
-    <section class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-10">
+      <form role="search" class="grid max-w-xl gap-2" onsubmit="return false">
+        <label for="topic-search" class="mm-eyebrow">Search topics</label>
+        <input
+          id="topic-search"
+          type="search"
+          placeholder={`Search ${topics.length} topics…`}
+          autocomplete="off"
+          aria-controls="topic-grid"
+          class="min-h-12 w-full rounded-[var(--radius-md)] border border-[var(--color-border-strong)] bg-[var(--color-bg-page)] px-3.5 text-base text-[var(--color-text-primary)] shadow-[2px_2px_0_var(--color-shadow-ink)] outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--mm-orange)]"
+        />
+      </form>
+      <p id="topic-search-status" class="mt-4 hidden font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-muted)]" aria-live="polite"></p>
+    </div>
+
+    <section id="topic-grid" class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {topics.map((topic) => (
-        <a href={`/topics/${topic.slug}/`} class="mm-card block p-5 transition-transform duration-150 hover:-translate-y-0.5">
+        <a
+          href={`/topics/${topic.slug}/`}
+          class="mm-card block p-5 transition-transform duration-150 hover:-translate-y-0.5"
+          data-topic-card
+          data-topic-name={topic.name}
+        >
           <span class="font-mono text-lg font-bold uppercase leading-tight">{topic.name}</span>
           <span class="mt-2 block font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-muted)]">
             {topic.articles.length + topic.notes.length} items
@@ -31,3 +51,34 @@ const topics = getUnifiedTopicMap(articles, notes);
     </section>
   </main>
 </Layout>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>('#topic-search');
+  const status = document.querySelector<HTMLElement>('#topic-search-status');
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-topic-card]')];
+
+  const filterTopics = () => {
+    if (!input || !status) return;
+
+    const term = input.value.trim().toLocaleLowerCase();
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const matches = !term || (card.dataset.topicName ?? '').toLocaleLowerCase().includes(term);
+      card.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    status.classList.toggle('hidden', !term);
+    status.textContent = term
+      ? `${visibleCount} ${visibleCount === 1 ? 'topic' : 'topics'} found`
+      : '';
+  };
+
+  input?.addEventListener('input', filterTopics);
+  input?.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    input.value = '';
+    filterTopics();
+  });
+</script>
