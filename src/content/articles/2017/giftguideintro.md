@@ -10,7 +10,7 @@ permalink: /giftguideintro/
 legacyPermalink: https://www.mikemurphy.co/giftguideintro/
 canonicalUrl: https://mikemurphy.ai/articles/giftguideintro/
 contentEra: legacy
-visibility: search
+visibility: "hidden"
 author: Mike Murphy
 featuredImage: /assets/media/2017/11/HOLIDAY-GEAR-GUIDE-2017_WIDE.jpg
 featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2017/11/HOLIDAY-GEAR-GUIDE-2017_WIDE.jpg

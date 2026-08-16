@@ -10,7 +10,7 @@ permalink: /podshed2016/
 legacyPermalink: https://www.mikemurphy.co/podshed2016/
 canonicalUrl: https://mikemurphy.ai/articles/podshed2016/
 contentEra: legacy
-visibility: search
+visibility: "hidden"
 author: Mike Murphy
 featuredImage: /assets/media/2016/12/podshed-2016.jpg
 featuredImageSource: ""

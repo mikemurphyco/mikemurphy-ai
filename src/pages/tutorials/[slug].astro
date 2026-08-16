@@ -3,13 +3,13 @@ import { getCollection, render } from 'astro:content';
 import SubscribeBand from '../../components/ai-unplugged/SubscribeBand.astro';
 import YouTubePlayer from '../../components/YouTubePlayer.astro';
 import Layout from '../../layouts/Layout.astro';
-import { articleMetaDescription, formatDate, getArticleTopicTerms, isDiscoverableArticle, isTutorial, slugifyTerm, tutorialUrl } from '../../lib/articles';
+import { articleMetaDescription, articleRobots, formatDate, getArticleTopicTerms, isDiscoverableArticle, isRoutableArticle, isTutorial, slugifyTerm, tutorialUrl } from '../../lib/articles';
 import { articleStructuredData, breadcrumbStructuredData } from '../../lib/structured-data';
 import { SITE_AUTHOR } from '../../lib/site';
 import { getYouTubeId } from '../../lib/youtube';
 
 export async function getStaticPaths() {
-  const articles = await getCollection('articles', (article) => isDiscoverableArticle(article) && isTutorial(article));
+  const articles = await getCollection('articles', (article) => isRoutableArticle(article) && isTutorial(article));
   return articles.map((article) => ({
     params: { slug: article.data.slug },
     props: { article },
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
-const terms = getArticleTopicTerms(article);
+const terms = isDiscoverableArticle(article) ? getArticleTopicTerms(article) : [];
 const metaDescription = articleMetaDescription(article);
 const canonicalPath = tutorialUrl(article);
 const structuredData = [
@@ -56,9 +56,9 @@ const videoUrls = primaryVideoUrl
 const embeddableVideoUrls = videoUrls.filter((url) => getYouTubeId(url));
 ---
 
-<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} markdown={`${canonicalPath.replace(/\/$/, '')}.md`} image={article.data.featuredImage || undefined} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} ogType="article" structuredData={structuredData}>
+<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} markdown={isDiscoverableArticle(article) ? `${canonicalPath.replace(/\/$/, '')}.md` : undefined} image={article.data.featuredImage || undefined} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} ogType="article" robots={articleRobots(article)} structuredData={structuredData}>
   <main>
-    <article class="mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
+    <article class:list={["mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10", terms.length > 0 && "lg:grid-cols-[minmax(0,1fr)_18rem]"]}>
       <div {...pagefindAttrs}>
         <a href="/tutorials/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to tutorials</a>
         <h1 class="mm-h1--article mt-5">{article.data.title}</h1>
@@ -85,16 +85,18 @@ const embeddableVideoUrls = videoUrls.filter((url) => getYouTubeId(url));
           <Content />
         </div>
       </div>
-      <aside class="lg:sticky lg:top-24 lg:h-fit">
-        <div class="mm-card p-5">
-          <p class="mm-eyebrow">Topics</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            {terms.slice(0, 10).map((term) => (
-              <a href={`/topics/${slugifyTerm(term)}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{term}</a>
-            ))}
+      {terms.length > 0 && (
+        <aside class="lg:sticky lg:top-24 lg:h-fit">
+          <div class="mm-card p-5">
+            <p class="mm-eyebrow">Topics</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {terms.slice(0, 10).map((term) => (
+                <a href={`/topics/${slugifyTerm(term)}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{term}</a>
+              ))}
+            </div>
           </div>
-        </div>
-      </aside>
+        </aside>
+      )}
     </article>
     <SubscribeBand compact />
   </main>

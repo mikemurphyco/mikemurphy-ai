@@ -186,7 +186,7 @@ if (sshAlias?.review === true) pass('sshalias remains flagged for migration body
 else fail('sshalias should keep migration.review: true until the body is verified');
 
 const searchVisibilityCount = articles.filter((article) => article.visibility === 'search').length;
-pass(`${searchVisibilityCount} search-visibility articles remain discoverable for launch sitemap/search`);
+pass(`${searchVisibilityCount} search-visibility articles remain available to local search as a noindex archive`);
 
 const redirectLines = readFileSync(redirectsPath, 'utf8')
   .split('\n')
@@ -197,6 +197,10 @@ const redirects = new Map(
     return [source, { destination, status }];
   }),
 );
+
+for (const retiredSource of ['/a-little-bit-of-everything/', '/articles/a-little-bit-of-everything/']) {
+  if (redirects.has(retiredSource)) fail(`Retired article still has a redirect: ${retiredSource}`);
+}
 
 for (const line of redirectLines) {
   const [source] = line.trim().split(/\s+/);

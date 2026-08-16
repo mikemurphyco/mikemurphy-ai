@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import ArticleCard from '../../components/ArticleCard.astro';
 import Layout from '../../layouts/Layout.astro';
-import { getUnifiedTopicMap, isDiscoverableArticle, sortArticlesByDate } from '../../lib/articles';
+import { getUnifiedTopicMap, isDiscoverableArticle, isPodcastEpisode, isStandardArticle, isTutorial, sortArticlesByDate } from '../../lib/articles';
 import { fieldNoteUrl, isPublishedNote, noteTypeLabel, sortNotesByDate } from '../../lib/field-notes';
 
 export async function getStaticPaths() {
@@ -18,6 +18,21 @@ export async function getStaticPaths() {
 
 const { topic } = Astro.props;
 const itemCount = topic.articles.length + topic.notes.length;
+const articles = topic.articles.filter(isStandardArticle);
+const podcastEpisodes = topic.articles.filter(isPodcastEpisode);
+const tutorials = topic.articles.filter(
+  (article) => !isPodcastEpisode(article) && isTutorial(article),
+);
+const countParts = [
+  articles.length > 0 ? `${articles.length} ${articles.length === 1 ? 'article' : 'articles'}` : null,
+  tutorials.length > 0 ? `${tutorials.length} ${tutorials.length === 1 ? 'tutorial' : 'tutorials'}` : null,
+  podcastEpisodes.length > 0
+    ? `${podcastEpisodes.length} podcast ${podcastEpisodes.length === 1 ? 'episode' : 'episodes'}`
+    : null,
+  topic.notes.length > 0
+    ? `${topic.notes.length} ${topic.notes.length === 1 ? 'field note' : 'field notes'}`
+    : null,
+].filter(Boolean);
 ---
 
 <Layout
@@ -30,16 +45,33 @@ const itemCount = topic.articles.length + topic.notes.length;
       <a href="/topics/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline">All topics</a>
       <h1 class="mm-h1 mt-4">{topic.name}</h1>
       <p class="mm-lede mt-4">
-        {topic.articles.length} {topic.articles.length === 1 ? 'article' : 'articles'}
-        {topic.notes.length > 0 && ` · ${topic.notes.length} ${topic.notes.length === 1 ? 'field note' : 'field notes'}`}
+        {countParts.join(' · ')}
       </p>
     </header>
 
-    {topic.articles.length > 0 && (
+    {articles.length > 0 && (
       <section class="mt-8">
-        <h2 class="mm-h2">Articles & Tutorials</h2>
+        <h2 class="mm-h2">Articles</h2>
         <div class="mt-4">
-          {topic.articles.map((article) => <ArticleCard article={article} />)}
+          {articles.map((article) => <ArticleCard article={article} />)}
+        </div>
+      </section>
+    )}
+
+    {tutorials.length > 0 && (
+      <section class="mt-10">
+        <h2 class="mm-h2">Tutorials</h2>
+        <div class="mt-4">
+          {tutorials.map((tutorial) => <ArticleCard article={tutorial} />)}
+        </div>
+      </section>
+    )}
+
+    {podcastEpisodes.length > 0 && (
+      <section class="mt-10">
+        <h2 class="mm-h2">Podcast Episodes</h2>
+        <div class="mt-4">
+          {podcastEpisodes.map((episode) => <ArticleCard article={episode} fallbackImage="/assets/brand/podcast-cover.jpg" aspectClass="aspect-square" />)}
         </div>
       </section>
     )}

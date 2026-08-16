@@ -10,7 +10,7 @@ permalink: /cornonthecob/
 legacyPermalink: https://www.mikemurphy.co/cornonthecob/
 canonicalUrl: https://mikemurphy.ai/articles/cornonthecob/
 contentEra: legacy
-visibility: search
+visibility: "public"
 author: Mike Murphy
 featuredImage: /assets/media/2023/12/CORN_HEADER.jpg
 featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2023/12/CORN_HEADER.jpg

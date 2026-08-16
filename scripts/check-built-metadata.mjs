@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { extname, join, relative, resolve, sep } from 'node:path';
 
 const distRoot = resolve('dist');
@@ -62,6 +62,7 @@ for (const file of walk(distRoot)) {
   const encodedDocumentTitle = html.match(/<title>([\s\S]*?)<\/title>/)?.[1]?.trim();
   const documentTitle = encodedDocumentTitle ? decodeHtmlEntities(encodedDocumentTitle) : undefined;
   const description = metaContent(html, 'description');
+  const robots = metaContent(html, 'robots');
   const structuredData = structuredDataForHtml(html, route);
   const types = new Set(structuredData.map((item) => item['@type']));
   const markdownAlternate = html.match(
@@ -133,11 +134,15 @@ for (const file of walk(distRoot)) {
     (route.startsWith('/ai-unplugged/issues/') && route !== '/ai-unplugged/issues/');
   const isPodcastEpisode = isDetailRoute(route, 'podcast');
   const hasAuthoredContent = isArticleLike || isPodcastEpisode;
-  const shouldHaveMarkdown = hasAuthoredContent || route === '/resources/';
+  const isNoindex = robots?.split(',').map((rule) => rule.trim()).includes('noindex') ?? false;
+  const shouldHaveMarkdown = (hasAuthoredContent && !isNoindex) || route === '/resources/';
   const needsBreadcrumb = hasAuthoredContent || route === '/about/';
 
   if (shouldHaveMarkdown && !markdownAlternate) {
     failures.push(`${route} is missing its Markdown alternate link`);
+  }
+  if (hasAuthoredContent && isNoindex && markdownAlternate) {
+    failures.push(`${route} is noindex but still advertises a Markdown alternate`);
   }
   if (markdownAlternate) {
     const markdownUrl = new URL(markdownAlternate);
@@ -180,6 +185,46 @@ for (const file of walk(distRoot)) {
   }
 }
 
+const sitemap = readFileSync(join(distRoot, 'sitemap.xml'), 'utf8');
+const visibilitySamples = [
+  { route: '/articles/updatecopyright/', visibility: 'public' },
+  { route: '/tutorials/googleplay/', visibility: 'search' },
+  { route: '/podcast/ep1/', visibility: 'search' },
+  { route: '/tutorials/anchorpoint/', visibility: 'public' },
+];
+
+for (const sample of visibilitySamples) {
+  const htmlFile = join(distRoot, sample.route.replace(/^\//, ''), 'index.html');
+  const markdownFile = join(distRoot, sample.route.replace(/^\//, '').replace(/\/$/, '.md'));
+  if (!existsSync(htmlFile)) {
+    failures.push(`${sample.route} HTML route is missing`);
+  } else {
+    const html = readFileSync(htmlFile, 'utf8');
+    const isNoindex = metaContent(html, 'robots')
+      ?.split(',')
+      .map((rule) => rule.trim())
+      .includes('noindex') ?? false;
+    const inSitemap = sitemap.includes(`<loc>https://mikemurphy.ai${sample.route}</loc>`);
+    const hasMarkdown = existsSync(markdownFile) && statSync(markdownFile).isFile();
+
+    if (sample.visibility === 'search' && (!isNoindex || inSitemap || hasMarkdown)) {
+      failures.push(`${sample.route} does not behave like a search-only page`);
+    }
+    if (sample.visibility === 'public' && (isNoindex || !inSitemap || !hasMarkdown)) {
+      failures.push(`${sample.route} does not behave like a public page`);
+    }
+  }
+}
+
+const absentRoutes = [
+  { route: '/tutorials/goldenpath/', reason: 'draft' },
+  { route: '/articles/a-little-bit-of-everything/', reason: 'hidden' },
+];
+for (const sample of absentRoutes) {
+  const file = join(distRoot, sample.route.replace(/^\//, ''), 'index.html');
+  if (existsSync(file)) failures.push(`${sample.route} ${sample.reason} route was emitted`);
+}
+
 const searchHtml = readFileSync(join(distRoot, 'search', 'index.html'), 'utf8');
 if (!/<meta name="robots" content="noindex,follow"\s*\/?>/.test(searchHtml)) {
   failures.push('/search/ is missing robots=noindex,follow');
@@ -193,9 +238,18 @@ if (!/<link rel="canonical" href="https:\/\/mikemurphy\.ai\/404\.html"\s*\/?>/.t
   failures.push('/404.html does not have a self-referencing canonical URL');
 }
 
-const sitemap = readFileSync(join(distRoot, 'sitemap.xml'), 'utf8');
 if (sitemap.includes('https://mikemurphy.ai/search/')) {
   failures.push('/search/ is still present in sitemap.xml');
+}
+
+for (const file of walk(distRoot)) {
+  const html = readFileSync(file, 'utf8');
+  const route = routeForFile(file);
+  const robots = metaContent(html, 'robots');
+  const isNoindex = robots?.split(',').map((rule) => rule.trim()).includes('noindex') ?? false;
+  if (isNoindex && sitemap.includes(`<loc>https://mikemurphy.ai${route}</loc>`)) {
+    failures.push(`${route} is noindex but still present in sitemap.xml`);
+  }
 }
 
 if (failures.length > 0) {

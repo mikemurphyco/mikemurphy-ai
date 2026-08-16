@@ -30,19 +30,22 @@ const archiveCount = sorted.filter((article) => article.data.contentEra === 'leg
             <dd class="mt-2 text-4xl font-bold">{sorted.length}</dd>
           </div>
           <div class="border-r border-[var(--mm-border)] p-5">
-            <dt class="mm-eyebrow">AI</dt>
+            <dt class="mm-eyebrow">AI Era</dt>
             <dd class="mt-2 text-4xl font-bold">{aiCount}</dd>
           </div>
           <div class="p-5">
-            <dt class="mm-eyebrow">Archive</dt>
+            <dt class="mm-eyebrow">Legacy</dt>
             <dd class="mt-2 text-4xl font-bold">{archiveCount}</dd>
           </div>
         </dl>
       </div>
-      <div class="mt-8 flex flex-wrap gap-2">
-        {topics.map((topic) => (
-          <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>
-        ))}
+      <div class="mt-8">
+        <p class="mm-eyebrow">Explore related topics</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          {topics.map((topic) => (
+            <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>
+          ))}
+        </div>
       </div>
     </header>
 

@@ -9,12 +9,30 @@ export const SITE_TITLE = 'Mike Murphy';
 export const SITE_DESCRIPTION =
   'AI, automation, creative tech, and media production tutorials by Mike Murphy.';
 
+/** Pages that should exist so direct links and local search results keep working. */
+export function isRoutableArticle(article: Article) {
+  return (
+    article.data.draft !== true &&
+    article.data.visibility !== 'hidden' &&
+    article.data.visibility !== 'draft'
+  );
+}
+
+/** Pages intentionally promoted through navigation, feeds, sitemaps, and search engines. */
 export function isDiscoverableArticle(article: Article) {
-  return article.data.draft !== true && article.data.visibility !== 'hidden';
+  return isRoutableArticle(article) && article.data.visibility === 'public';
 }
 
 export function isPublicArticle(article: Article) {
-  return isDiscoverableArticle(article) && article.data.visibility === 'public';
+  return isDiscoverableArticle(article);
+}
+
+export function isSearchOnlyArticle(article: Article) {
+  return isRoutableArticle(article) && article.data.visibility === 'search';
+}
+
+export function articleRobots(article: Article) {
+  return isSearchOnlyArticle(article) ? 'noindex,follow' : undefined;
 }
 
 export function sortArticlesByDate(articles: Article[]) {

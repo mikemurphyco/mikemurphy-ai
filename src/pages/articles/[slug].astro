@@ -2,13 +2,13 @@
 import { getCollection, render } from 'astro:content';
 import YouTubePlayer from '../../components/YouTubePlayer.astro';
 import Layout from '../../layouts/Layout.astro';
-import { articleMetaDescription, articleUrl, formatDate, getArticleTopicTerms, isDiscoverableArticle, isStandardArticle, slugifyTerm } from '../../lib/articles';
+import { articleMetaDescription, articleRobots, articleUrl, formatDate, getArticleTopicTerms, isDiscoverableArticle, isRoutableArticle, isStandardArticle, slugifyTerm } from '../../lib/articles';
 import { articleStructuredData, breadcrumbStructuredData } from '../../lib/structured-data';
 import { SITE_AUTHOR } from '../../lib/site';
 import { getYouTubeId } from '../../lib/youtube';
 
 export async function getStaticPaths() {
-  const articles = await getCollection('articles', (article) => isDiscoverableArticle(article) && isStandardArticle(article));
+  const articles = await getCollection('articles', (article) => isRoutableArticle(article) && isStandardArticle(article));
   return articles.map((article) => ({
     params: { slug: article.data.slug },
     props: { article },
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
-const terms = getArticleTopicTerms(article);
+const terms = isDiscoverableArticle(article) ? getArticleTopicTerms(article) : [];
 const metaDescription = articleMetaDescription(article);
 const canonicalPath = articleUrl(article);
 const structuredData = [
@@ -55,7 +55,7 @@ const videoUrls = primaryVideoUrl
 const embeddableVideoUrls = videoUrls.filter((url) => getYouTubeId(url));
 ---
 
-<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} markdown={`${canonicalPath.replace(/\/$/, '')}.md`} image={article.data.featuredImage || undefined} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} ogType="article" structuredData={structuredData}>
+<Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} markdown={isDiscoverableArticle(article) ? `${canonicalPath.replace(/\/$/, '')}.md` : undefined} image={article.data.featuredImage || undefined} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} ogType="article" robots={articleRobots(article)} structuredData={structuredData}>
   <main>
     <article class="mm-container max-w-3xl py-12" {...pagefindAttrs}>
       <a href="/articles/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to articles</a>

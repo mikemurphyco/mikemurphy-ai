@@ -10,7 +10,7 @@ permalink: /domestikabts/
 legacyPermalink: https://www.mikemurphy.co/domestikabts/
 canonicalUrl: https://mikemurphy.ai/articles/domestikabts/
 contentEra: legacy
-visibility: search
+visibility: "public"
 author: Mike Murphy
 featuredImage: /assets/media/2023/03/4919_Banner.jpg
 featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2023/03/4919_Banner.jpg

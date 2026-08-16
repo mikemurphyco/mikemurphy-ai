@@ -10,6 +10,7 @@
     "check:content-links": "node scripts/check-content-links.mjs",
     "check:built-links": "node scripts/check-built-links.mjs",
     "check:built-metadata": "node scripts/check-built-metadata.mjs",
+    "audit:content": "node scripts/generate-content-audit.mjs",
     "prebuild": "npm run check:content-links",
     "build": "astro build",
     "postbuild": "node scripts/copy-md-twins.mjs && pagefind --site dist && npm run check:built-links && npm run check:built-metadata",

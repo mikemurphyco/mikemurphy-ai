@@ -10,7 +10,7 @@ permalink: /gift02/
 legacyPermalink: https://www.mikemurphy.co/gift02/
 canonicalUrl: https://mikemurphy.ai/articles/gift02/
 contentEra: legacy
-visibility: search
+visibility: "hidden"
 author: Mike Murphy
 featuredImage: /assets/media/2017/11/02_C920_WIDE.jpg
 featuredImageSource: https://www.mikemurphy.co/wp-content/uploads/2017/11/02_C920_WIDE.jpg
