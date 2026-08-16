@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import YouTubePlayer from '../../components/YouTubePlayer.astro';
 import Layout from '../../layouts/Layout.astro';
-import { articleMetaDescription, articleRobots, articleUrl, formatDate, getArticleTopicTerms, isDiscoverableArticle, isRoutableArticle, isStandardArticle, slugifyTerm } from '../../lib/articles';
+import { articleMetaDescription, articleRobots, articleUrl, formatDate, getArticleTopicLinks, isDiscoverableArticle, isRoutableArticle, isStandardArticle } from '../../lib/articles';
 import { articleStructuredData, breadcrumbStructuredData } from '../../lib/structured-data';
 import { SITE_AUTHOR } from '../../lib/site';
 import { getYouTubeId } from '../../lib/youtube';
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
-const terms = isDiscoverableArticle(article) ? getArticleTopicTerms(article) : [];
+const topics = isDiscoverableArticle(article) ? getArticleTopicLinks(article) : [];
 const metaDescription = articleMetaDescription(article);
 const canonicalPath = articleUrl(article);
 const structuredData = [
@@ -64,10 +64,10 @@ const embeddableVideoUrls = videoUrls.filter((url) => getYouTubeId(url));
         {formatDate(article.data.pubDate)}
         {article.data.author && <> · <a href={SITE_AUTHOR.href} rel="author" class="hover:underline">{article.data.author}</a></>}
       </p>
-      {terms.length > 0 && (
+      {topics.length > 0 && (
         <div class="mt-6 flex flex-wrap gap-2">
-          {terms.slice(0, 8).map((term) => (
-            <a href={`/topics/${slugifyTerm(term)}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{term}</a>
+          {topics.slice(0, 8).map((topic) => (
+            <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>
           ))}
         </div>
       )}

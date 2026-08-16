@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import SubscribeBand from '../../components/ai-unplugged/SubscribeBand.astro';
 import YouTubePlayer from '../../components/YouTubePlayer.astro';
 import Layout from '../../layouts/Layout.astro';
-import { articleMetaDescription, articleRobots, formatDate, getArticleTopicTerms, isDiscoverableArticle, isRoutableArticle, isTutorial, slugifyTerm, tutorialUrl } from '../../lib/articles';
+import { articleMetaDescription, articleRobots, formatDate, getArticleTopicLinks, isDiscoverableArticle, isRoutableArticle, isTutorial, tutorialUrl } from '../../lib/articles';
 import { articleStructuredData, breadcrumbStructuredData } from '../../lib/structured-data';
 import { SITE_AUTHOR } from '../../lib/site';
 import { getYouTubeId } from '../../lib/youtube';
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
-const terms = isDiscoverableArticle(article) ? getArticleTopicTerms(article) : [];
+const topics = isDiscoverableArticle(article) ? getArticleTopicLinks(article) : [];
 const metaDescription = articleMetaDescription(article);
 const canonicalPath = tutorialUrl(article);
 const structuredData = [
@@ -58,7 +58,7 @@ const embeddableVideoUrls = videoUrls.filter((url) => getYouTubeId(url));
 
 <Layout title={article.data.title} description={metaDescription} canonical={canonicalPath} markdown={isDiscoverableArticle(article) ? `${canonicalPath.replace(/\/$/, '')}.md` : undefined} image={article.data.featuredImage || undefined} imageAlt={article.data.title} author={article.data.author} authorUrl={SITE_AUTHOR.href} ogType="article" robots={articleRobots(article)} structuredData={structuredData}>
   <main>
-    <article class:list={["mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10", terms.length > 0 && "lg:grid-cols-[minmax(0,1fr)_18rem]"]}>
+    <article class:list={["mm-container grid grid-cols-[minmax(0,1fr)] gap-10 py-10", topics.length > 0 && "lg:grid-cols-[minmax(0,1fr)_18rem]"]}>
       <div {...pagefindAttrs}>
         <a href="/tutorials/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to tutorials</a>
         <h1 class="mm-h1--article mt-5">{article.data.title}</h1>
@@ -85,13 +85,13 @@ const embeddableVideoUrls = videoUrls.filter((url) => getYouTubeId(url));
           <Content />
         </div>
       </div>
-      {terms.length > 0 && (
+      {topics.length > 0 && (
         <aside class="lg:sticky lg:top-24 lg:h-fit">
           <div class="mm-card p-5">
             <p class="mm-eyebrow">Topics</p>
             <div class="mt-4 flex flex-wrap gap-2">
-              {terms.slice(0, 10).map((term) => (
-                <a href={`/topics/${slugifyTerm(term)}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{term}</a>
+              {topics.slice(0, 10).map((topic) => (
+                <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>
               ))}
             </div>
           </div>

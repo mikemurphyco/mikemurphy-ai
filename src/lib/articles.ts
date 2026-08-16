@@ -1,4 +1,5 @@
 import type { CollectionEntry } from 'astro:content';
+import topicTaxonomy from '../data/topic-taxonomy.json';
 
 export type Article = CollectionEntry<'articles'>;
 export type AiUnpluggedIssue = CollectionEntry<'aiUnplugged'>;
@@ -169,6 +170,41 @@ export function slugifyTerm(term: string) {
     .replace(/^-+|-+$/g, '');
 }
 
+export type TopicLink = { name: string; slug: string };
+
+const excludedTopicSlugs = new Set(Object.keys(topicTaxonomy.excluded));
+const topicOverrides = topicTaxonomy.topics as Record<
+  string,
+  { name: string; slug?: string }
+>;
+
+/** Convert a source category/topic/tag into its public canonical topic. */
+export function canonicalTopic(term: string): TopicLink | null {
+  const sourceSlug = slugifyTerm(term);
+  if (!sourceSlug || excludedTopicSlugs.has(sourceSlug)) return null;
+
+  const override = topicOverrides[sourceSlug];
+  return {
+    name: override?.name ?? term,
+    slug: override?.slug ?? sourceSlug,
+  };
+}
+
+export function getTopicLinks(terms: string[]): TopicLink[] {
+  const links = new Map<string, TopicLink>();
+
+  for (const term of terms) {
+    const topic = canonicalTopic(term);
+    if (topic && !links.has(topic.slug)) links.set(topic.slug, topic);
+  }
+
+  return [...links.values()];
+}
+
+export function getArticleTopicLinks(article: Article): TopicLink[] {
+  return getTopicLinks(getArticleTopicTerms(article));
+}
+
 export function getTopicMap(articles: Article[]) {
   return getUnifiedTopicMap(articles, []);
 }
@@ -182,16 +218,15 @@ export function getUnifiedTopicMap(articles: Article[], notes: FieldNote[]) {
   for (const article of articles) {
     const articleTopicSlugs = new Set<string>();
 
-    for (const term of getArticleTopicTerms(article)) {
-      const slug = slugifyTerm(term);
-      if (!slug || articleTopicSlugs.has(slug)) continue;
-      articleTopicSlugs.add(slug);
+    for (const topic of getArticleTopicLinks(article)) {
+      if (articleTopicSlugs.has(topic.slug)) continue;
+      articleTopicSlugs.add(topic.slug);
 
-      const existing = topics.get(slug);
+      const existing = topics.get(topic.slug);
       if (existing) {
         existing.articles.push(article);
       } else {
-        topics.set(slug, { name: term, slug, articles: [article], notes: [] });
+        topics.set(topic.slug, { ...topic, articles: [article], notes: [] });
       }
     }
   }
@@ -199,16 +234,15 @@ export function getUnifiedTopicMap(articles: Article[], notes: FieldNote[]) {
   for (const note of notes) {
     const noteTopicSlugs = new Set<string>();
 
-    for (const term of note.data.tags) {
-      const slug = slugifyTerm(term);
-      if (!slug || noteTopicSlugs.has(slug)) continue;
-      noteTopicSlugs.add(slug);
+    for (const topic of getTopicLinks(note.data.tags)) {
+      if (noteTopicSlugs.has(topic.slug)) continue;
+      noteTopicSlugs.add(topic.slug);
 
-      const existing = topics.get(slug);
+      const existing = topics.get(topic.slug);
       if (existing) {
         existing.notes.push(note);
       } else {
-        topics.set(slug, { name: term, slug, articles: [], notes: [note] });
+        topics.set(topic.slug, { ...topic, articles: [], notes: [note] });
       }
     }
   }

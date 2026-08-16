@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { fieldNoteUrl, isPublishedNote, noteTypeLabel } from '../../lib/field-notes';
-import { slugifyTerm } from '../../lib/articles';
+import { getTopicLinks } from '../../lib/articles';
 import { articleStructuredData, breadcrumbStructuredData } from '../../lib/structured-data';
 import { SITE_AUTHOR } from '../../lib/site';
 
@@ -16,6 +16,7 @@ export async function getStaticPaths() {
 
 const { note } = Astro.props;
 const { Content } = await render(note);
+const topics = getTopicLinks(note.data.tags);
 const canonicalPath = fieldNoteUrl(note);
 const structuredData = [
   articleStructuredData({
@@ -67,10 +68,10 @@ const pagefindAttrs = {
 
       <h1 class="mm-h1 mt-4">{note.data.title}</h1>
 
-      {note.data.tags.length > 0 && (
+      {topics.length > 0 && (
         <div class="mt-6 flex flex-wrap gap-2">
-          {note.data.tags.map((tag) => (
-            <a href={`/topics/${slugifyTerm(tag)}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{tag}</a>
+          {topics.map((topic) => (
+            <a href={`/topics/${topic.slug}/`} class="mm-pill hover:border-[var(--color-border-strong)]">{topic.name}</a>
           ))}
         </div>
       )}

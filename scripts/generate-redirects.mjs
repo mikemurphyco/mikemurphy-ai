@@ -3,6 +3,7 @@ import { join } from 'node:path';
 
 const articleRoot = 'src/content/articles';
 const redirectFile = 'public/_redirects';
+const topicTaxonomyFile = 'src/data/topic-taxonomy.json';
 
 function walk(dir, files = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -95,6 +96,18 @@ const redirects = new Map([
   ['/ep151', '/podcast/ep151/'],
   ['/ep152', '/podcast/ep152/'],
 ]);
+
+const topicTaxonomy = JSON.parse(readFileSync(topicTaxonomyFile, 'utf8'));
+
+for (const [slug, destination] of Object.entries(topicTaxonomy.excluded)) {
+  redirects.set(`/topics/${slug}/`, destination);
+}
+
+for (const [sourceSlug, topic] of Object.entries(topicTaxonomy.topics)) {
+  if (topic.slug && topic.slug !== sourceSlug) {
+    redirects.set(`/topics/${sourceSlug}/`, `/topics/${topic.slug}/`);
+  }
+}
 
 for (const article of articles) {
   const destination = canonicalDestination(article);

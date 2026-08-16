@@ -44,7 +44,7 @@ const topics = getUnifiedTopicMap(articles, notes);
         >
           <span class="font-mono text-lg font-bold uppercase leading-tight">{topic.name}</span>
           <span class="mt-2 block font-mono text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-muted)]">
-            {topic.articles.length + topic.notes.length} items
+            {topic.articles.length + topic.notes.length} {topic.articles.length + topic.notes.length === 1 ? 'item' : 'items'}
           </span>
         </a>
       ))}

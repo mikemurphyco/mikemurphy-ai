@@ -1094,6 +1094,12 @@
 /timeremapping/ /tutorials/timeremapping/ 301
 /timestretch/ /tutorials/timestretch/ 301
 /toolcreatesmask/ /tutorials/toolcreatesmask/ 301
+/topics/blog/ /articles/ 301
+/topics/episodes/ /podcast/ 301
+/topics/misc/ /topics/ 301
+/topics/self-hosted/ /topics/self-hosting/ 301
+/topics/tutorials/ /tutorials/ 301
+/topics/vscode/ /topics/vs-code/ 301
 /tracepaths/ /tutorials/tracepaths/ 301
 /trackmattes/ /tutorials/trackmattes/ 301
 /trackvisibility/ /tutorials/trackvisibility/ 301

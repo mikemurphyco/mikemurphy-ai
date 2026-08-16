@@ -18,6 +18,9 @@ const requiredRoutes = [
   '/ai-unplugged/issues/',
   '/ai-unplugged/issues/001/',
   '/articles/',
+  '/topics/',
+  '/topics/vs-code/',
+  '/topics/self-hosting/',
   '/podcast/',
   '/podcast/ep1/',
   '/resources/',
@@ -52,6 +55,12 @@ const redirectSamples = new Map([
   ['/articles/adobeauditionnewfile/', '/tutorials/adobeauditionnewfile/'],
   ['/aiunplugged/', '/ai-unplugged/'],
   ['/ai-unplugged/issues/1/', '/ai-unplugged/issues/001/'],
+  ['/topics/vscode/', '/topics/vs-code/'],
+  ['/topics/self-hosted/', '/topics/self-hosting/'],
+  ['/topics/tutorials/', '/tutorials/'],
+  ['/topics/episodes/', '/podcast/'],
+  ['/topics/blog/', '/articles/'],
+  ['/topics/misc/', '/topics/'],
 ]);
 
 function walk(dir, files = []) {
