@@ -10,6 +10,7 @@
     "ai-agents": { "name": "AI Agents" },
     "ai-coding": { "name": "AI Coding" },
     "airtable-alternative": { "name": "Airtable Alternative" },
+    "agents": { "name": "AI Agents", "slug": "ai-agents" },
     "astro": { "name": "Astro" },
     "audition": { "name": "Adobe Audition" },
     "bulk-redirects": { "name": "Bulk Redirects" },

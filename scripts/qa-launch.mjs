@@ -57,6 +57,7 @@ const redirectSamples = new Map([
   ['/ai-unplugged/issues/1/', '/ai-unplugged/issues/001/'],
   ['/topics/vscode/', '/topics/vs-code/'],
   ['/topics/self-hosted/', '/topics/self-hosting/'],
+  ['/topics/agents/', '/topics/ai-agents/'],
   ['/topics/tutorials/', '/tutorials/'],
   ['/topics/episodes/', '/podcast/'],
   ['/topics/blog/', '/articles/'],
