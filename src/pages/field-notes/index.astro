@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import InlineSearch from '../../components/InlineSearch.astro';
 import Layout from '../../layouts/Layout.astro';
 import { fieldNoteUrl, isPublishedNote, noteTypeLabel, sortNotesByDate } from '../../lib/field-notes';
 
@@ -9,6 +10,7 @@ const allNotes = sortNotesByDate(await getCollection('fieldNotes', isPublishedNo
 // two notes are explicitly featured, so the layout is never half-empty.
 const featured = allNotes.filter((note) => note.data.featured);
 const featuredBoxes = (featured.length >= 2 ? featured : allNotes).slice(0, 2);
+const noteTypes = [...new Set(allNotes.map((note) => note.data.noteType).filter((type): type is string => Boolean(type)))];
 
 function formatDate(value: Date | null): string {
   if (!value) return '';
@@ -32,12 +34,47 @@ function formatDate(value: Date | null): string {
       </div>
     </section>
 
+    <section class="mm-container pt-10">
+      <InlineSearch
+        filterType="Field Note"
+        noun="note"
+        label="Search field notes"
+        placeholder={`Search ${allNotes.length} field notes…`}
+      />
+
+      {noteTypes.length > 0 && (
+        <div class="mt-7" data-inline-search-hide>
+          <p class="mm-eyebrow">Filter by type</p>
+          <div class="mt-3 flex flex-wrap gap-2" aria-label="Filter field notes by type">
+            <button
+              type="button"
+              class="mm-pill border-[var(--color-border-strong)] bg-[var(--mm-navy)] px-4 py-2 text-[var(--mm-cream)]"
+              data-note-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            {noteTypes.map((type) => (
+              <button type="button" class="mm-pill px-4 py-2" data-note-filter={type} aria-pressed="false">
+                {noteTypeLabel(type)}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+
     {featuredBoxes.length > 0 && (
-      <section class="mm-container py-10">
+      <section class="mm-container py-10" data-field-notes-featured data-inline-search-hide>
         <p class="mm-eyebrow">Featured</p>
         <div class="mt-5 grid gap-5 md:grid-cols-2">
           {featuredBoxes.map((note) => (
-            <a href={fieldNoteUrl(note)} class="mm-card group flex flex-col p-6 transition hover:border-[var(--color-border-strong)]">
+            <a
+              href={fieldNoteUrl(note)}
+              class="mm-card group flex flex-col p-6 transition hover:border-[var(--color-border-strong)]"
+              data-field-note
+              data-note-type={note.data.noteType ?? ''}
+            >
               {note.data.noteType && (
                 <span class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)]">
                   {noteTypeLabel(note.data.noteType)}
@@ -58,10 +95,10 @@ function formatDate(value: Date | null): string {
       </section>
     )}
 
-    <section class="mm-container pb-16">
+    <section class="mm-container pb-16" data-field-notes-list data-inline-search-hide>
       <div class="mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-[var(--color-border-strong)] pb-3">
         <h2 class="mm-h2">All Field Notes</h2>
-        <p class="font-mono text-sm font-bold uppercase tracking-[0.16em] text-[var(--mm-muted)]">
+        <p class="font-mono text-sm font-bold uppercase tracking-[0.16em] text-[var(--mm-muted)]" aria-live="polite" data-note-count>
           {allNotes.length} notes
         </p>
       </div>
@@ -71,10 +108,17 @@ function formatDate(value: Date | null): string {
       ) : (
         <div class="grid gap-4">
           {allNotes.map((note) => (
-            <article class="border-b border-[var(--mm-border)] pb-4">
+            <article class="border-b border-[var(--mm-border)] pb-4" data-field-note data-note-type={note.data.noteType ?? ''}>
               <div class="flex flex-wrap items-center gap-3">
                 {note.data.noteType && (
-                  <span class="mm-pill">{noteTypeLabel(note.data.noteType)}</span>
+                  <button
+                    type="button"
+                    class="mm-pill hover:border-[var(--color-border-strong)]"
+                    data-note-filter={note.data.noteType}
+                    aria-label={`Show all ${noteTypeLabel(note.data.noteType)} field notes`}
+                  >
+                    {noteTypeLabel(note.data.noteType)}
+                  </button>
                 )}
                 {note.data.datePublished && (
                   <span class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
@@ -94,4 +138,55 @@ function formatDate(value: Date | null): string {
       )}
     </section>
   </main>
+
+  <script>
+    const filterButtons = document.querySelectorAll<HTMLButtonElement>('[data-note-filter]');
+    const notes = document.querySelectorAll<HTMLElement>('[data-field-note]');
+    const featuredSection = document.querySelector<HTMLElement>('[data-field-notes-featured]');
+    const count = document.querySelector<HTMLElement>('[data-note-count]');
+    const total = document.querySelectorAll<HTMLElement>('[data-field-notes-list] [data-field-note]').length;
+
+    const setFilter = (filter: string, updateUrl = true) => {
+      notes.forEach((note) => {
+        note.toggleAttribute('hidden', filter !== 'all' && note.dataset.noteType !== filter);
+      });
+
+      filterButtons.forEach((button) => {
+        const active = button.dataset.noteFilter === filter;
+        button.setAttribute('aria-pressed', String(active));
+        button.classList.toggle('bg-[var(--mm-navy)]', active);
+        button.classList.toggle('text-[var(--mm-cream)]', active);
+        button.classList.toggle('border-[var(--color-border-strong)]', active);
+      });
+
+      const visibleCount = document.querySelectorAll('[data-field-notes-list] [data-field-note]:not([hidden])').length;
+      if (count) count.textContent = filter === 'all' ? `${total} notes` : `${visibleCount} of ${total} notes`;
+
+      if (featuredSection) {
+        const visibleFeatured = featuredSection.querySelector('[data-field-note]:not([hidden])');
+        featuredSection.toggleAttribute('hidden', !visibleFeatured);
+      }
+
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        if (filter === 'all') url.searchParams.delete('type');
+        else url.searchParams.set('type', filter);
+        history.replaceState({}, '', url);
+      }
+    };
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        setFilter(button.dataset.noteFilter ?? 'all');
+        if (button.closest('[data-field-notes-list]')) {
+          document.querySelector('[aria-label="Filter field notes by type"]')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
+
+    const initialFilter = new URL(window.location.href).searchParams.get('type');
+    if (initialFilter && [...filterButtons].some((button) => button.dataset.noteFilter === initialFilter)) {
+      setFilter(initialFilter, false);
+    }
+  </script>
 </Layout>

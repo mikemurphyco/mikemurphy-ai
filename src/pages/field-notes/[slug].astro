@@ -55,7 +55,15 @@ const pagefindAttrs = {
       <a href="/field-notes/" class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--mm-orange-deep)] hover:underline" data-pagefind-ignore>Back to field notes</a>
 
       <div class="mt-5 flex flex-wrap items-center gap-3">
-        {note.data.noteType && <span class="mm-pill">{noteTypeLabel(note.data.noteType)}</span>}
+        {note.data.noteType && (
+          <a
+            href={`/field-notes/?type=${encodeURIComponent(note.data.noteType)}`}
+            class="mm-pill hover:border-[var(--color-border-strong)]"
+            data-pagefind-ignore
+          >
+            {noteTypeLabel(note.data.noteType)}
+          </a>
+        )}
         {note.data.datePublished && (
           <span class="font-mono text-sm font-bold uppercase tracking-[0.12em] text-[var(--mm-muted)]">
             {formatDate(note.data.datePublished)}

@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { filterType, noun, label = 'Search', placeholder = 'Search…' } = Astro.props;
-const inputId = `inline-search-${filterType?.toLowerCase() ?? 'all'}`;
+const inputId = `inline-search-${filterType?.toLowerCase().replace(/\s+/g, '-') ?? 'all'}`;
 ---
 
 <div class="mm-inline-search" data-filter-type={filterType} data-noun={noun}>
@@ -31,7 +31,7 @@ const inputId = `inline-search-${filterType?.toLowerCase() ?? 'all'}`;
   // postbuild indexer), so the module is imported lazily on first focus and
   // dev mode degrades to a hint instead of an error.
   type Pagefind = {
-    init: () => void;
+    init: () => Promise<void>;
     debouncedSearch: (
       term: string,
       options?: { filters?: Record<string, string> },
@@ -63,6 +63,7 @@ const inputId = `inline-search-${filterType?.toLowerCase() ?? 'all'}`;
     const noun = root.dataset.noun ?? filterType?.toLowerCase() ?? 'result';
     const hideTargets = document.querySelectorAll<HTMLElement>('[data-inline-search-hide]');
     let pagefind: Pagefind | null = null;
+    let loadPromise: Promise<void> | null = null;
     let loadFailed = false;
 
     const setSearching = (active: boolean) => {
@@ -72,15 +73,23 @@ const inputId = `inline-search-${filterType?.toLowerCase() ?? 'all'}`;
 
     const loadPagefind = async () => {
       if (pagefind || loadFailed) return;
-      try {
-        // Path passed as a variable so Rollup doesn't try to resolve it at
-        // build time — the file only exists after the postbuild indexer runs.
-        const pagefindPath = '/pagefind/pagefind.js';
-        pagefind = (await import(/* @vite-ignore */ pagefindPath)) as Pagefind;
-        pagefind.init();
-      } catch {
-        loadFailed = true;
-      }
+      if (loadPromise) return loadPromise;
+
+      loadPromise = (async () => {
+        try {
+          // Keep this import outside Vite's transform — Pagefind creates the
+          // module only after Astro's build has finished.
+          const pagefindPath = `${window.location.origin}/pagefind/pagefind.js`;
+          const importPagefind = new Function('path', 'return import(path)') as (path: string) => Promise<Pagefind>;
+          const module = await importPagefind(pagefindPath);
+          await module.init();
+          pagefind = module;
+        } catch {
+          loadFailed = true;
+        }
+      })();
+
+      return loadPromise;
     };
 
     input.addEventListener('focus', loadPagefind, { once: true });
