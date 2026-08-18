@@ -154,6 +154,25 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 
 ## Changelog
 
+### 2026-08-18 — Restored the complete podcast to the public site
+
+**Context:** The quiet-archive pass left `/podcast/` showing only Episode 162.
+That understated an important part of Mike's body of work and brand history,
+especially for listeners who still know him through Mike Murphy Unplugged. The
+completed Astro → Buzzsprout show-note sync also means the legacy catalog now
+has clean, consistent descriptions across the website and podcast feed.
+
+**Shipped:** Changed Episodes 1–161 from `visibility: search` to
+`visibility: public`. All 162 episodes now appear on the Podcast hub and topic
+pages, remain available to Pagefind, and participate normally in sitemap, RSS,
+search-engine indexing, and agent-facing Markdown discovery. The 112 tutorials
+still marked `search` remain in the quiet archive; this change applies only to
+the podcast.
+
+**Audit:** Regenerated `reports/content-audit.csv`. The current classifications
+are 162 public podcasts, 288 public tutorials, 112 search-only tutorials, five
+public articles, 25 hidden articles, and one draft tutorial.
+
 ### 2026-08-18 — Astro → Buzzsprout → Directus show-note sync
 
 **Context:** Astro is the canonical source for all 162 Mike Murphy Unplugged
@@ -238,6 +257,37 @@ and exact comparison found zero Buzzsprout or Directus description mismatches.
 The RSS feed refreshed Episode 1 first and continued serving cached text for
 some later episodes immediately after completion; this is expected while
 Buzzsprout regenerates and distributes the feed.
+
+### 2026-08-16 — Content retirement, visibility model, and Topics cleanup
+
+**Context:** With the WordPress migration complete, the legacy archive needed a
+deliberate cleanup before Agent Evergreen begins adding a new stream of AI-era
+content. The goal was to preserve useful inbound paths and the body of work
+without continuing to promote thin, outdated, or irrelevant material.
+
+**Content decisions:** Retired 25 legacy articles by setting them to `hidden`;
+the five articles intentionally kept on the public Articles hub remain
+`public`. Classified 161 older podcast episodes and 112 tutorials as `search`
+(the site's quiet archive): their HTML URLs still work and remain available to
+Pagefind, but they emit `noindex,follow` and are excluded from public hubs,
+topic pages, sitemap/RSS, and agent-facing Markdown. One podcast episode and
+288 tutorials remain public. Removed the corresponding 25 old article rules
+from the external Bulk Redirects configuration once the articles were retired.
+
+**Visibility system:** Documented the `public`, `search`, `hidden`, and `draft`
+contract in `CONTENT_VISIBILITY.md`; updated article, tutorial, podcast, topic,
+redirect, and metadata behavior to enforce it consistently. Added a generated
+content-audit CSV and build checks so future cleanup decisions are visible and
+the indexing rules cannot silently drift.
+
+**Topics:** Added a client-side search field to `/topics/` that filters topic
+cards by name while preserving the item-count ordering. Centralized topic
+aliases in `src/data/topic-taxonomy.json`, consolidated duplicate and variant
+topics (including Agent/Agents), and generated permanent redirects for the old
+topic URLs.
+
+**Verified:** Full builds and launch QA passed across the cleanup commits.
+Commits: `d968aeb`, `2647a73`, `14599cf`, `e2ac6d4`.
 
 ### 2026-08-12 — Discoverable Markdown alternatives
 

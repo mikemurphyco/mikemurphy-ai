@@ -189,7 +189,7 @@ const sitemap = readFileSync(join(distRoot, 'sitemap.xml'), 'utf8');
 const visibilitySamples = [
   { route: '/articles/updatecopyright/', visibility: 'public' },
   { route: '/tutorials/googleplay/', visibility: 'search' },
-  { route: '/podcast/ep1/', visibility: 'search' },
+  { route: '/podcast/ep1/', visibility: 'public' },
   { route: '/tutorials/anchorpoint/', visibility: 'public' },
 ];
 
