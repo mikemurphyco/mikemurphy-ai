@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-08-12
+updated: 2026-08-18
 status: living-doc
 ---
 
@@ -153,6 +153,91 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-08-18 — Astro → Buzzsprout → Directus show-note sync
+
+**Context:** Astro is the canonical source for all 162 Mike Murphy Unplugged
+episode show notes. Buzzsprout, its RSS feed, and the Directus
+`podcast_episodes` collection had older descriptions. The sync tool keeps those
+downstream copies aligned without turning a normal site build into an external
+write operation.
+
+**Architecture:** Markdown in `src/content/articles/**/ep*.md` is rendered to
+basic RSS-safe HTML. Each file's `podcast.buzzsproutEpisodeId` is the stable
+matching key. The tool sends only changed descriptions to Buzzsprout, then
+upserts the complete episode object returned by Buzzsprout into Directus using
+`buzzsprout_id`. Buzzsprout remains responsible for regenerating the public RSS
+feed; podcast apps update on their own schedules.
+
+**Commands:**
+
+```bash
+# Local validation only: no credentials and no network writes
+npm run check:podcast-sync
+
+# Read Buzzsprout, create a backup/report, and show the proposed changes
+npm run sync:podcast:dry-run
+
+# Recommended first write: one episode, followed by another dry run
+npm run sync:podcast -- --episode=1
+npm run sync:podcast:dry-run
+
+# Apply every remaining changed episode and update Directus
+npm run sync:podcast
+```
+
+The connected dry-run report is `reports/podcast-sync/latest.json`; the local
+validator writes `reports/podcast-sync/offline-latest.json` so it cannot replace
+the connected comparison. Every connected run
+also writes the complete pre-change Buzzsprout catalog to
+`reports/podcast-sync/backups/`. Both paths are intentionally gitignored because
+they are operational artifacts.
+
+**Environment:** The ignored `.env` file uses 1Password references for the
+Buzzsprout API and dedicated `PODCAST_DIRECTUS_TOKEN` content-bot credentials.
+The separate token avoids changing the website's existing Directus access.
+Sign in with `op signin` before
+the connected commands; `npm run sync:podcast:dry-run` and
+`npm run sync:podcast` inject the resolved values through `op run`. The podcast
+ID defaults to `1973705`. The Directus token needs read, create, and update
+permission on `podcast_episodes`. See `.env.example` for the complete list.
+Never expose these tokens in Astro client code or commit `.env`.
+
+**Length and formatting:** Buzzsprout descriptions are limited to 4,000
+characters including footer content. The tool deliberately caps generated HTML
+at 3,400 characters, leaving room for Buzzsprout's episode footer. Longer Astro
+pages get a deterministic shortened RSS version plus a canonical link to the
+complete website notes. Basic paragraphs, emphasis, links, lists, blockquotes,
+and code are retained; relative links become absolute URLs.
+
+**Safety and recovery:** The default command is a dry run. Remote writes require
+the explicit `--apply` embedded in `npm run sync:podcast`; Buzzsprout is updated
+before Directus, and a Directus permission check occurs before any Buzzsprout
+write. Updates are serial and paced to respect Buzzsprout's rate limit, retry
+transient failures and `429` responses, and are idempotent, so the same command
+can be rerun after a partial failure. After Buzzsprout completes, all selected
+records are refreshed in Directus; this also repairs a run that stopped before
+its Directus phase. Use the timestamped backup to
+recover an earlier description through the Buzzsprout dashboard or API, then
+rerun the Directus sync. `--skip-directus` is available only when Buzzsprout must
+be repaired independently.
+
+**Verification:** `npm run check:podcast-sync` validates all 162 unique episode
+IDs, generated length limits, link normalization, safe truncation, and the
+Buzzsprout-to-Directus field mapping. After a live run, inspect Episode 1 in
+Buzzsprout and Directus, open `https://feeds.buzzsprout.com/1973705.rss`, and
+allow up to 24 hours for listening apps to refresh.
+
+**Initial migration result:** The Episode 1 pilot passed in Astro, Buzzsprout,
+RSS, and Directus. The first bulk attempt hit Buzzsprout's rate limit after 59
+additional episodes; the idempotent resume correctly skipped those accepted
+descriptions. Request pacing was increased to 1.1 seconds, `429` backoff was
+added, and the completed run refreshed all 162 Directus records from the final
+Buzzsprout catalog. The post-run dry run reported `0 changed / 162 unchanged`,
+and exact comparison found zero Buzzsprout or Directus description mismatches.
+The RSS feed refreshed Episode 1 first and continued serving cached text for
+some later episodes immediately after completion; this is expected while
+Buzzsprout regenerates and distributes the feed.
 
 ### 2026-08-12 — Discoverable Markdown alternatives
 

@@ -11,6 +11,9 @@
     "check:built-links": "node scripts/check-built-links.mjs",
     "check:built-metadata": "node scripts/check-built-metadata.mjs",
     "audit:content": "node scripts/generate-content-audit.mjs",
+    "check:podcast-sync": "node --test test/podcast-sync.test.mjs && node scripts/sync-podcast-show-notes.mjs --offline",
+    "sync:podcast:dry-run": "op run --env-file=.env -- node scripts/sync-podcast-show-notes.mjs",
+    "sync:podcast": "op run --env-file=.env -- node scripts/sync-podcast-show-notes.mjs --apply",
     "prebuild": "npm run check:content-links",
     "build": "astro build",
     "postbuild": "node scripts/copy-md-twins.mjs && pagefind --site dist && npm run check:built-links && npm run check:built-metadata",
@@ -26,6 +29,8 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^7.2.1",
+    "marked": "^18.0.10",
+    "sanitize-html": "^2.17.7",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {

@@ -21,6 +21,9 @@ pnpm-debug.log*
 # generated redirect exports (uploaded to Cloudflare, not needed by the build)
 cloudflare/*.csv
 
+# podcast sync reports and pre-write Buzzsprout backups
+reports/podcast-sync/
+
 # macOS-specific files
 .DS_Store
 
