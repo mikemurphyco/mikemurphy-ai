@@ -33,7 +33,7 @@
   font-display: swap;
 }
 
-/* Design System v2026.3 — brand layer → semantic layer.
+/* Design System v2026.5 — brand layer → semantic layer.
    Components consume semantic tokens only. */
 :root {
   /* Brand */
