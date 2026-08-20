@@ -1,0 +1,169 @@
+---
+import EvergreenWaitlistForm from '../../components/EvergreenWaitlistForm.astro';
+import Layout from '../../layouts/Layout.astro';
+import { breadcrumbStructuredData } from '../../lib/structured-data';
+
+const canonicalPath = '/evergreen/';
+const description = 'Agent Evergreen is a living library of complete, forkable AI systems that stay current as the tools change.';
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://mikemurphy.ai${canonicalPath}#webpage`,
+    url: `https://mikemurphy.ai${canonicalPath}`,
+    name: 'Agent Evergreen',
+    description,
+    inLanguage: 'en-US',
+  },
+  breadcrumbStructuredData([
+    { name: 'Home', url: '/' },
+    { name: 'Agent Evergreen', url: canonicalPath },
+  ], canonicalPath),
+];
+
+const systemPieces = [
+  ['01', 'Forkable repo', 'The real code, workflows, configs, and prompts. Clone it and run it.'],
+  ['02', 'Build guide', 'Clear, concise, plain-English instructions with the why included.'],
+  ['03', 'Walkthrough video', 'A short, practical tour with Mike on camera and the microphone.'],
+  ['04', 'Adaptation notes', 'Honest answers for the inevitable “but my stack is different.”'],
+  ['05', 'Public freshness stamp', 'A dated verification, visible changelog, and no hiding when something is stale.'],
+];
+---
+
+<Layout
+  title="Agent Evergreen"
+  description={description}
+  canonical={canonicalPath}
+  image="/assets/evergreen/og-agent-evergreen.png"
+  imageAlt="Agent Evergreen — working systems built to stay alive"
+  structuredData={structuredData}
+>
+  <main>
+    <section class="evergreen-hero border-b border-[var(--mm-border)]">
+      <div class="mm-container grid gap-12 py-14 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-center lg:py-20">
+        <div>
+          <p class="mm-eyebrow">Agent Evergreen · Programmatic Knowledge</p>
+          <h1 class="mm-display mt-5 max-w-4xl">Working systems.<br /><span>Built to stay alive.</span></h1>
+          <p class="mm-lede mt-6 max-w-3xl">Stop stitching together outdated tutorials. Agent Evergreen is a living library of complete AI systems you can fork, run, and keep—maintained by a fleet of agents and personally verified by me.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#join" class="mm-button">Join the founding waitlist</a>
+            <a href="#how-it-works" class="mm-button mm-button-secondary">See how it works</a>
+          </div>
+          <dl class="mt-10 grid max-w-3xl gap-4 sm:grid-cols-3">
+            <div class="evergreen-stat"><dt>Breaking changes</dt><dd>Fixed in 7 days</dd></div>
+            <div class="evergreen-stat"><dt>Every system</dt><dd>Checked monthly</dd></div>
+            <div class="evergreen-stat"><dt>Everything cloned</dt><dd>Yours to keep</dd></div>
+          </dl>
+        </div>
+
+        <aside id="join" class="mm-card scroll-mt-28 p-6 sm:p-8" aria-labelledby="waitlist-title">
+          <div class="flex items-center gap-4">
+            <img src="/assets/evergreen/agent-evergreen.svg" alt="" width="76" height="76" class="evergreen-mark" />
+            <div>
+              <p class="evergreen-status">Building in public</p>
+              <p class="mt-1 font-mono text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-text-muted)]">Opens September 11, 2026</p>
+            </div>
+          </div>
+          <h2 id="waitlist-title" class="mt-7 font-mono text-2xl font-bold uppercase leading-tight">Get first access to the Founding 100.</h2>
+          <p class="mt-3 text-base leading-7 text-[var(--color-text-muted)]">No launch-day scramble. I’ll email the waitlist before the doors open publicly.</p>
+          <div class="mt-6"><EvergreenWaitlistForm source="evergreen-page" /></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="scroll-mt-24 border-b border-[var(--mm-border)]">
+      <div class="mm-container py-14 lg:py-20">
+        <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p class="mm-eyebrow">The broken tutorial model</p>
+            <h2 class="mm-h2 mt-3">Build once.<br />Keep it alive.</h2>
+          </div>
+          <div class="mm-prose text-lg">
+            <p>A menu changes. An API updates. A model gets replaced. A tutorial that worked when it was published can be outdated within weeks.</p>
+            <p><strong>Agent Evergreen changes the unit of learning.</strong> It isn’t a video or a course. It’s a working system you own, with agents watching the tools it depends on and me verifying the updates before the freshness stamp changes.</p>
+            <blockquote><p>The agents draft. I decide. Programmatic Knowledge handles the grind without outsourcing the judgment.</p></blockquote>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {systemPieces.map(([number, title, copy], index) => (
+            <article class:list={['evergreen-piece', index === systemPieces.length - 1 && 'lg:col-span-2']}>
+              <p class="piece-number">{number}</p>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-[var(--mm-border)] bg-[var(--mm-navy)] text-[var(--mm-cream)]">
+      <div class="mm-container grid gap-10 py-14 lg:grid-cols-2 lg:items-center lg:py-20">
+        <div>
+          <p class="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[var(--mm-teal)]">System 001 · Built in public</p>
+          <h2 class="mt-4 font-mono text-4xl font-bold uppercase leading-none sm:text-5xl">The Content Factory</h2>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-[rgba(252,250,246,0.72)]">The exact agent-run publishing pipeline behind this business: the capture habit, the agent fleet, and the automation that turns raw work into tutorials, newsletters, and posts.</p>
+          <p class="mt-6 font-mono text-sm font-bold uppercase tracking-[0.1em] text-[var(--mm-orange)]">You’ll watch me build it. Then you’ll fork it.</p>
+        </div>
+        <div class="evergreen-receipt">
+          <p class="receipt-label">The honest launch inventory</p>
+          <p class="mt-4 text-2xl font-semibold leading-snug">One complete system.</p>
+          <p class="mt-3 leading-7 text-[rgba(252,250,246,0.72)]">The library opens one system deep. A new system ships every month after that, and founding members vote on what comes next.</p>
+          <div class="mt-6 border-t border-[rgba(252,250,246,0.2)] pt-5">
+            <p class="font-mono text-xs font-bold uppercase tracking-[0.14em] text-[var(--mm-teal)]">Verified</p>
+            <p class="mt-2 font-mono text-sm">Public date · tool versions · changelog</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mm-container py-14 lg:py-20">
+      <div class="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+        <div>
+          <p class="mm-eyebrow">The Founding 100</p>
+          <p class="founding-price mt-3"><span>$149</span><small>/ year</small></p>
+          <p class="mt-2 font-mono text-sm font-bold uppercase tracking-[0.1em]">Locked for life.</p>
+        </div>
+        <div>
+          <h2 class="mm-h2">Back it before it’s obvious.</h2>
+          <p class="mm-lede mt-5 max-w-3xl">Founding members get every system, every future system, the freshness guarantee, a vote on what gets built next, and a place on the Founding Wall.</p>
+          <div class="mt-8 grid gap-5 sm:grid-cols-2">
+            <div class="mm-card p-6">
+              <p class="mm-eyebrow">20-hour guarantee</p>
+              <p class="mt-3 leading-7">If any system doesn’t save you at least 20 hours, email me and I’ll refund your year. No forms. No friction.</p>
+            </div>
+            <div class="mm-card p-6">
+              <p class="mm-eyebrow">Keep what you build</p>
+              <p class="mt-3 leading-7">Cancel whenever you want. Everything you’ve cloned is still yours. Membership buys the living part.</p>
+            </div>
+          </div>
+          <div class="mt-8 flex flex-wrap items-center gap-5">
+            <a href="#join" class="mm-button">Join the founding waitlist</a>
+            <p class="max-w-sm text-sm leading-6 text-[var(--color-text-muted)]">After the first 100 spots, membership becomes $200/year or $20/month.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .evergreen-hero { background-image: linear-gradient(color-mix(in srgb, var(--color-border-default) 45%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--color-border-default) 45%, transparent) 1px, transparent 1px); background-size: 32px 32px; }
+  .mm-display span { color: var(--mm-orange); }
+  .evergreen-stat { border-top: 1px solid var(--color-border-default); padding-top: var(--space-3); }
+  .evergreen-stat dt { color: var(--color-text-muted); font-family: var(--font-mono); font-size: .68rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+  .evergreen-stat dd { font-family: var(--font-mono); font-size: .95rem; font-weight: 700; margin-top: .35rem; text-transform: uppercase; }
+  .evergreen-mark { background: var(--mm-cream); border: 1px solid var(--mm-navy); border-radius: var(--radius-md); flex: none; padding: .55rem; }
+  .evergreen-status { color: var(--mm-teal); font-family: var(--font-mono); font-size: var(--fs-mono-label); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .evergreen-status::before { background: currentColor; border-radius: 50%; content: ''; display: inline-block; height: .55rem; margin-right: .45rem; width: .55rem; }
+  .evergreen-piece { background: var(--color-bg-surface); border: 1px solid var(--color-border-default); border-left: 4px solid var(--mm-orange); padding: var(--space-6); }
+  .piece-number { color: var(--mm-teal); font-family: var(--font-mono); font-size: var(--fs-mono-label); font-weight: 700; letter-spacing: var(--ls-label); }
+  .evergreen-piece h3 { font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700; margin-top: var(--space-3); text-transform: uppercase; }
+  .evergreen-piece > p:last-child { color: var(--color-text-muted); line-height: 1.6; margin-top: var(--space-3); }
+  .evergreen-receipt { border: 1px solid rgba(252,250,246,.42); box-shadow: 5px 5px 0 var(--mm-orange); padding: clamp(1.5rem, 4vw, 2.5rem); }
+  .receipt-label { color: var(--mm-orange); font-family: var(--font-mono); font-size: var(--fs-mono-label); font-weight: 700; letter-spacing: var(--ls-label); text-transform: uppercase; }
+  .founding-price { align-items: baseline; display: flex; gap: .5rem; }
+  .founding-price span { color: var(--mm-orange); font-family: var(--font-mono); font-size: clamp(4rem, 9vw, 6.5rem); font-weight: 700; line-height: .9; }
+  .founding-price small { color: var(--color-text-muted); font-family: var(--font-mono); font-size: 1rem; font-weight: 700; text-transform: uppercase; }
+  @media (max-width: 640px) { .evergreen-hero { background-size: 24px 24px; } .mm-display br { display: none; } }
+</style>

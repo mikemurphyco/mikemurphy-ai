@@ -1,0 +1,81 @@
+---
+interface Props { source?: string; }
+
+const endpoint = import.meta.env.PUBLIC_WAITLIST_ENDPOINT
+  ?? 'https://flow.imurph.com/webhook/evergreen-waitlist';
+const { source = 'evergreen-page' } = Astro.props;
+---
+
+<form id="evergreen-waitlist" class="evergreen-waitlist" data-endpoint={endpoint} data-source={source}>
+  <div class="field">
+    <label for="evergreen-email">Email address</label>
+    <input id="evergreen-email" type="email" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" />
+  </div>
+  <div class="field">
+    <label for="evergreen-name">First name <span>(optional)</span></label>
+    <input id="evergreen-name" type="text" name="name" autocomplete="given-name" maxlength="100" />
+  </div>
+  <div class="ew-hp" aria-hidden="true">
+    <label for="evergreen-website">Website</label>
+    <input id="evergreen-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+  <button class="mm-button" type="submit">Join the founding waitlist</button>
+  <p class="ew-note">Waitlist members get first crack at the 100 founding spots.</p>
+  <p class="ew-status" role="status" aria-live="polite"></p>
+</form>
+
+<style>
+  .evergreen-waitlist { display: grid; gap: var(--space-4); }
+  .field { display: grid; gap: var(--space-2); }
+  label { font-family: var(--font-mono); font-size: var(--fs-mono-label); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  label span { color: var(--color-text-muted); font-weight: 400; letter-spacing: 0; text-transform: none; }
+  input { background: var(--color-bg-page); border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); color: var(--color-text-primary); font: inherit; min-height: 3rem; padding: .7rem .8rem; width: 100%; }
+  input::placeholder { color: var(--color-text-muted); }
+  input:focus-visible, button:focus-visible { outline: 2px solid var(--mm-orange); outline-offset: 3px; }
+  button:disabled { cursor: wait; opacity: .7; }
+  .ew-hp { height: 1px; left: -9999px; overflow: hidden; position: absolute; width: 1px; }
+  .ew-note, .ew-status { font-size: .875rem; line-height: 1.5; margin: 0; }
+  .ew-note { color: var(--color-text-muted); }
+  .ew-status { min-height: 1.5em; }
+  .ew-status.ok { color: var(--mm-teal); font-weight: 700; }
+  .ew-status.err { color: var(--color-action-primary-hover); font-weight: 700; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('.evergreen-waitlist').forEach((form) => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const status = form.querySelector<HTMLElement>('.ew-status');
+      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      const endpoint = form.dataset.endpoint;
+      if (!status || !button) return;
+      if (!endpoint) {
+        status.textContent = 'The waitlist is being connected. Please try again soon.';
+        status.className = 'ew-status err';
+        return;
+      }
+      const data = Object.fromEntries(new FormData(form).entries());
+      data.source = form.dataset.source ?? 'evergreen-page';
+      button.disabled = true;
+      status.textContent = 'Adding you…';
+      status.className = 'ew-status';
+      try {
+        const response = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+        const json = await response.json().catch(() => ({}));
+        if (response.ok && json.ok) {
+          status.textContent = "You're on the list. Watch your inbox on launch day.";
+          status.classList.add('ok');
+          form.querySelectorAll<HTMLInputElement>('input').forEach((input) => { input.disabled = true; });
+        } else {
+          status.textContent = json.message || 'Something went wrong — try again?';
+          status.classList.add('err');
+          button.disabled = false;
+        }
+      } catch {
+        status.textContent = 'Network hiccup — try again in a moment.';
+        status.classList.add('err');
+        button.disabled = false;
+      }
+    });
+  });
+</script>
