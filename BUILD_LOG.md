@@ -1,7 +1,7 @@
 ---
 title: mikemurphy.ai Site Build Log
 created: 2026-07-11
-updated: 2026-08-18
+updated: 2026-08-20
 status: living-doc
 ---
 
@@ -75,6 +75,7 @@ public/assets/                     # media + brand
 | Home | `/` | Hub + inline search |
 | Tutorials | `/tutorials/` | Flagship |
 | AI Unplugged | `/ai-unplugged/` | Newsletter archive + subscribe |
+| Agent Evergreen | `/evergreen/` | Founding waitlist + living-systems offer |
 | Articles | `/articles/` | Long-form / archive |
 | Podcast | `/podcast/` | MMU episodes (on-site hub) |
 | Search | `/search/` | Full Pagefind UI |
@@ -153,6 +154,32 @@ Every page also gets `<link rel="alternate" type="application/rss+xml">` for bot
 ---
 
 ## Changelog
+
+### 2026-08-20 — Agent Evergreen founding waitlist page launched
+
+**Context:** Agent Evergreen needed an owned landing page ahead of the public
+manifesto and 30-day build-in-public launch. The page introduces the living
+library, explains the five-part system contract, sets honest expectations for
+System 001, and presents the Founding 100 offer before membership opens on
+September 11, 2026.
+
+**Shipped:** Published [`/evergreen/`](https://mikemurphy.ai/evergreen/) with a
+responsive Agent Evergreen campaign design, the official Evergreen mark, a
+page-specific social preview image, canonical metadata, and structured data.
+The page covers the freshness promise, The Content Factory launch inventory,
+the $149/year founding rate, the 20-hour guarantee, and what members keep if
+they cancel.
+
+**Waitlist:** Added an accessible email and optional first-name form with a
+honeypot, inline status messages, duplicate-safe responses, and acquisition
+source tracking. Signups post to the owned n8n intake webhook at
+`flow.imurph.com`, which validates the request before writing to the dedicated
+Directus waitlist collection. `PUBLIC_WAITLIST_ENDPOINT` can override the
+production endpoint at build time.
+
+**Verified:** The production build passed content-link, generated-link, and
+metadata checks. The live route is
+<https://mikemurphy.ai/evergreen/>. Commit: `1011646`.
 
 ### 2026-08-18 — Restored the complete podcast to the public site
 
