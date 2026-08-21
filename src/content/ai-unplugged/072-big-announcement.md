@@ -2,7 +2,7 @@
 issue: 72
 slug: "072"
 subject: "Big Announcement! 🥁🥁🥁"
-lede: "Mike is launching Agent Evergreen: a living AI knowledge library of forkable, continuously-verified systems built to replace tutorials that go stale within weeks."
+lede: "I'm launching Agent Evergreen: a living AI knowledge library of forkable, continuously-verified systems built to replace tutorials that go stale within weeks."
 summary: "This special issue introduces Agent Evergreen and Programmatic Knowledge: forkable repos, build guides, and monthly freshness stamps. Founding members get $149/year for life, capped at 100 spots. Plus the first Agent Evergreen Build Log, tracking the new Content Factory project."
 publishedAt: "2026-08-21T09:50:08+00:00"
 sentAt: "2026-08-21T09:50:08+00:00"
@@ -16,17 +16,16 @@ source:
   url: "https://aiunplug.io/p/issue-72-big-announcement"
   postId: "post_2d460f2d-d62f-489f-9ee4-9e88ab478943"
 agentReadable:
-  summary120: "Mike launches Agent Evergreen, a living AI knowledge library replacing static tutorials with verified, evolving systems."
+  summary120: "I'm launching Agent Evergreen, a living AI knowledge library replacing static tutorials with verified, evolving systems."
   keyClaims:
-    - "Mike Murphy is launching Agent Evergreen, a living AI knowledge library where each system ships as a forkable repo, build guide, and walkthrough video"
+    - "I'm launching Agent Evergreen, a living AI knowledge library where each system ships as a forkable repo, build guide, and walkthrough video"
     - "Every system in Agent Evergreen carries a public change log and a 'Verified' stamp showing the tool, version, and date it was last checked"
     - "Breaking changes are fixed within seven days, and every system is re-checked monthly to keep it current as underlying tools change"
-    - "A small fleet of AI agents drafts updates by monitoring release notes, but Mike personally reviews and verifies every guide before it ships"
+    - "A small fleet of AI agents drafts updates by monitoring release notes, but I personally review and verify every guide before it ships"
     - "The first 100 founding members get $149/year locked for life; after that the price rises to $200/year"
     - "The first public system, The Content Factory, launches Friday, September 11, 2026, alongside the Agent Evergreen library"
   entities:
     - "Agent Evergreen"
-    - "Mike Murphy"
     - "Programmatic Knowledge"
     - "The Content Factory"
 isDraft: false
