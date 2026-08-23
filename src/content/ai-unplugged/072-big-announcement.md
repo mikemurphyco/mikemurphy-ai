@@ -2,8 +2,8 @@
 issue: 72
 slug: "072"
 subject: "Big Announcement! 🥁🥁🥁"
-lede: "I'm launching Agent Evergreen: a living AI knowledge library of forkable, continuously-verified systems built to replace tutorials that go stale within weeks."
-summary: "This special issue introduces Agent Evergreen and Programmatic Knowledge: forkable repos, build guides, and monthly freshness stamps. Founding members get $149/year for life, capped at 100 spots. Plus the first Agent Evergreen Build Log, tracking the new Content Factory project."
+lede: "I'm launching Agent Evergreen: a living AI knowledge library of member-owned, continuously-verified systems built to replace tutorials that go stale within weeks."
+summary: "This special issue introduces Agent Evergreen and Programmatic Knowledge: member-owned working repos, build guides, and monthly freshness stamps. Founding members get $149/year for life, capped at 100 spots. Plus the first Agent Evergreen Build Log, tracking the new Content Factory project."
 publishedAt: "2026-08-21T09:50:08+00:00"
 sentAt: "2026-08-21T09:50:08+00:00"
 tags: []
@@ -18,9 +18,9 @@ source:
 agentReadable:
   summary120: "I'm launching Agent Evergreen, a living AI knowledge library replacing static tutorials with verified, evolving systems."
   keyClaims:
-    - "I'm launching Agent Evergreen, a living AI knowledge library where each system ships as a forkable repo, build guide, and walkthrough video"
+    - "I'm launching Agent Evergreen, a living AI knowledge library where each system ships with a member-owned working repo, build guide, and walkthrough video"
     - "Every system in Agent Evergreen carries a public change log and a 'Verified' stamp showing the tool, version, and date it was last checked"
-    - "Breaking changes are fixed within seven days, and every system is re-checked monthly to keep it current as underlying tools change"
+    - "Every active system is checked monthly; supported breakage gets a fix, workaround, or clear status within seven days"
     - "A small fleet of AI agents drafts updates by monitoring release notes, but I personally review and verify every guide before it ships"
     - "The first 100 founding members get $149/year locked for life; after that the price rises to $200/year"
     - "The first public system, The Content Factory, launches Friday, September 11, 2026, alongside the Agent Evergreen library"
@@ -59,7 +59,7 @@ That's always been true with software tutorials, but AI put it on fast-forward. 
 
 ### Every System Ships Complete
 
-- **A forkable repo:** the actual code, workflows, configs, and prompts. Clone it and run it.
+- **A member-owned working repo:** the actual code, workflows, configs, and prompts. Make an independent copy in your own account and run it.
 - **A build guide:** written the way I teach: clear, plain English, the why included.
 - **A short walkthrough video** from me. Some habits are worth keeping.
 - **Adaptation notes:** "but my stack is different," answered honestly.
@@ -67,7 +67,7 @@ That's always been true with software tutorials, but AI put it on fast-forward. 
 
 That last one is the whole ballgame.
 
-When the tools change, the system gets updated, and you can see exactly when it was last verified. Breaking changes fixed within seven days. Every system re-checked every month. The stamp is public, so if something's stale, you'll know, and so will everyone else. I can't hide from it.
+When the tools change, the system gets maintained, and you can see exactly when it was last verified. Every active system is checked monthly. If a supported dependency breaks it, I publish a fix, workaround, or clear status within seven days. The stamp is public, so if something's stale, you'll know, and so will everyone else. I can't hide from it.
 
 ### How Can One Person Promise That?
 
@@ -84,8 +84,8 @@ Starting now, I'm building the first system in public: The Content Factory, the 
 
 - The first 100 members get founding terms:
 - $149/year, locked for life.
-- Every system, every future system, the freshness guarantee, and a vote on what gets built next.
-- If any system doesn't save you at least 20 hours, I refund your year. After 100 members, it's $200/year.
+- Every system, every future system, a meaningful library release every month, the freshness guarantee, and a vote on what gets built next.
+- Every system publishes its own conservative time-saved estimate. If Agent Evergreen isn't worth the founding price to you during your first 30 days, I refund your year. After 100 members, it's $200/year.
 
 👉 [Join the founding waitlist](https://mikemurphy.ai/evergreen/) (waitlist members get first crack at the 100 spots on September 11)
 

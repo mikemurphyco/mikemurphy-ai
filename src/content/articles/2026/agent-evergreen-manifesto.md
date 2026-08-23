@@ -49,7 +49,7 @@ I'm building Agent Evergreen: a living library where the unit isn't a video or c
 
 **Every system in the library ships complete with:**
 
-1. **A forkable repo** — the actual code, workflows, configs, and prompts. Clone it and run it.
+1. **A member-owned working repo** — the actual code, workflows, configs, and prompts. Make an independent copy in your own account and run it.
 2. **A build guide** — written the way I teach: clear, concise, no-fluff, plain English, the *why* included.
 3. **A walkthrough video** — short video from me. Some habits are worth keeping.
 4. **Adaptation notes** — "but my stack is different," answered honestly.
@@ -57,7 +57,7 @@ I'm building Agent Evergreen: a living library where the unit isn't a video or c
 
 That last one is the whole ballgame. Here's the promise no tutorial has ever made you:
 
-**When the tools change, the system gets updated — and you can see exactly when it was last verified.** Breaking changes fixed within seven days. Every system re-checked every month. The stamp is public. If something's stale, you'll know and so will everyone else, which means I can't hide from it.
+**When the tools change, the system gets maintained — and you can see exactly when it was last verified.** Every active system is re-checked monthly. If a supported dependency breaks it, I publish a fix, workaround, or clear status within seven days. The stamp is public. If something's stale, you'll know and so will everyone else, which means I can't hide from it.
 
 ## How one person can possibly promise that
 
@@ -90,11 +90,11 @@ It's the most honest first product I can think of, because it's the machine this
 When it opens, the first 100 members get founding terms:
 
 - **$149/year, locked for life.** 
-- Every system, every future system (one ships every month)
+- Every system, every future system, and a meaningful library release every month — a new system or a substantial expansion
 - The freshness guarantee
 - Vote on what gets built next. 
-- If any system doesn't save you at least 20 hours, I refund your year — one email, no friction.
-- Cancel whenever; everything you've cloned is yours to keep.
+- Every system publishes its own conservative time-saved estimate. If Agent Evergreen isn't worth the founding price to you during your first 30 days, I refund your year — one email, no friction.
+- Cancel whenever; member-owned working copies and downloaded releases remain yours under the usage license.
 
 **After 100 founding members, it goes up to $200/year.** The founding price never changes for founding members. That's the thank-you for backing this when the library is one system deep.
 
@@ -108,5 +108,4 @@ I've spent 10+ years teaching people that this stuff is learnable. This is the n
 
 Let's build.
 — Mike
-
 
