@@ -151,7 +151,7 @@ To stop the dev server, press **Control** and **C** in the terminal.
 
 ## What This Unlocks Next
 
-Right now, this site only exists on your own computer. The next steps are pushing the project to GitHub and deploying it to Cloudflare Pages so the rest of the world can see it, which I will cover in an upcoming tutorial (TODO: link once published).
+Right now, this site only exists on your own computer. The next steps are pushing the project to GitHub and deploying it to Cloudflare Workers so the rest of the world can see it, which I cover in [How To Deploy an Astro Website to Cloudflare Workers From GitHub](/tutorials/astrocloudflare/).
 
 If you are migrating an existing site onto Astro rather than starting fresh, my [WordPress to Astro migration tutorial](/tutorials/wordpresstoastro/) covers the domain cutover and SEO side of that move once your new site is ready to go live.
 
