@@ -83,6 +83,8 @@ I call this approach **Programmatic Knowledge**. I build once. The agents keep i
 
 Over the next 30 days, I'm building the first system in the library live, in public: **The Content Factory**. This is the exact agent-run pipeline that operates my entire business. The capture habits, the agent fleet, the automation that turns raw work into published tutorials and newsletters.
 
+> **September 3 update:** Building the real pipeline exposed a more useful center for System 001: **Build Your Own Content Agent Fleet**. I'm still opening up my actual Evergreen implementation, but the product will teach you how to build an understandable agent team around your own creator business—not require you to copy my Directus, Astro, Beehiiv, Stripe, or VPS stack. That infrastructure is the case study. The transferable agent method is the product.
+
 It's the most honest first product I can think of, because it's the machine this whole thing runs on. You'll watch me build it here and in [AI Unplugged](/ai-unplugged/) every Friday. Then on **Friday, September 11**, it becomes the first system in the library — and Agent Evergreen opens.
 
 ## The Founding 100
@@ -108,4 +110,3 @@ I've spent 10+ years teaching people that this stuff is learnable. This is the n
 
 Let's build.
 — Mike
-
