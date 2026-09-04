@@ -39,7 +39,6 @@ export function buildIssueAgentDocument(issue: AiUnpluggedIssue) {
     topics: issue.data.topics,
     tags: issue.data.tags,
     url: absoluteUrl(issueUrl(issue)),
-    sourceUrl: issue.data.source?.url || null,
     agentReadable,
   };
 }
