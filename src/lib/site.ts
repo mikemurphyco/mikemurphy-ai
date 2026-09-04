@@ -26,7 +26,7 @@ export const SITE_SOCIAL = [
   { id: 'x', label: 'X', href: 'https://x.com/mikemurphyai' },
   { id: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/mikemurphyai/' },
   { id: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/mikemurphyai/' },
-  { id: 'github', label: 'GitHub', href: 'https://github.com/mikemurphyco' },
+  { id: 'github', label: 'GitHub', href: 'https://github.com/mikemurphyai' },
 ] as const;
 
 export type SocialId = (typeof SITE_SOCIAL)[number]['id'];
