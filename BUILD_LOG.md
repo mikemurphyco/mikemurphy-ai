@@ -754,8 +754,10 @@ Podcast) had no home in the nav at all.
   not a translucent orange fill. Orange over navy muddies to brown; this was
   settled during design review and is worth not re-litigating.
 - **Loop mark stays orange in both themes** (matches BRAND-CANON v2026.4, where
-  the lockup mark is always `--mm-orange` regardless of scheme). The mobile
-  sheet is the one exception — it uses the chalk Loop on the navy ground.
+  the lockup mark is always `--mm-orange` regardless of scheme). Correction
+  (2026-10-03): the mobile sheet also uses the orange Loop on its navy ground,
+  matching the header and footer in both themes; the earlier chalk exception
+  was stale documentation.
 - **New token `--mm-navy-raised` (`#06263F`)** for dark-mode elevated surfaces,
   exposed semantically as `--color-bg-raised`. The dropdown needed to sit above
   `--color-bg-surface` in dark mode and there was no token for that lift. In
