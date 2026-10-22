@@ -1,6 +1,6 @@
 # mikemurphy.ai Post-Launch Handoff
 
-Status: Post-launch migration validation completed July 23, 2026. SiteGround hosting remains active temporarily for observation and final backup.
+Status: Post-launch migration validation completed July 23, 2026. On October 21, 2026, Mike confirmed SiteGround is closed and no websites or services remain there.
 
 ## Current State
 
@@ -8,11 +8,11 @@ Status: Post-launch migration validation completed July 23, 2026. SiteGround hos
 - GitHub `main` deploys to Cloudflare.
 - Repo is expected to be clean and synced after launch.
 - `mikemurphy.co` is now a legacy redirect domain managed at Cloudflare.
-- SiteGround hosting remains active temporarily, but normal apex and `www` traffic is handled at Cloudflare before reaching SiteGround.
+- SiteGround hosting is closed. Apex and `www` traffic is handled at Cloudflare.
 - Targeted historical redirects are managed with Cloudflare Bulk Redirects.
 - Unmatched apex and `www` requests return a true `404` through the `mikemurphy-co-404` Cloudflare Worker.
 - Shortlinks are managed in Shlink at `go.mikemurphy.ai`.
-- Keep the `mikemurphy.co` domain registration active and renewing. Cancel hosting only when ready.
+- Keep the `mikemurphy.co` domain registration active and renewing. SiteGround hosting has already been closed.
 
 ## Launch Validation Completed
 
@@ -139,13 +139,9 @@ The Worker is a controlled 404 catch-all, not a redirect catch-all. It does not 
 - The Astro content contains 533 old `featuredImageSource` values pointing at WordPress media. These are migration provenance metadata and are not used by runtime components.
 - One non-metadata old media reference remains in `src/content/articles/2017/ep75.md`. It is a visible legacy shortcode/link and should be cleaned up later, but it is not an active media embed or hosting-shutdown blocker.
 
-### Remaining SiteGround steps
+### SiteGround closure
 
-1. Observe the redirects and Shlinks for as long as desired; there is no need to cancel immediately.
-2. Download and retain a final complete SiteGround backup before cancellation. The backup should include files and the WordPress database.
-3. Cancel the **SiteGround hosting plan only** when ready.
-4. Keep `mikemurphy.co` registered and renewing.
-5. After hosting is shut down, rerun the known-redirect and random-404 live checks.
+Mike confirmed on October 21, 2026 that SiteGround is closed and no websites or services remain there. No SiteGround patching or cancellation work remains. Keep `mikemurphy.co` registered and renewing for the Cloudflare redirects.
 
 ### Audit artifacts
 

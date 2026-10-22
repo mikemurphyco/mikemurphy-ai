@@ -2,7 +2,7 @@
 
 Personal website for Mike Murphy, built with Astro, Tailwind CSS, and MDX.
 
-The Astro site is live at `https://mikemurphy.ai`. The legacy WordPress site at `mikemurphy.co` remains active during the post-launch transition so existing Pretty Links and legacy URLs keep working.
+The Astro site is live at `https://mikemurphy.ai`. The legacy domain `mikemurphy.co` uses Cloudflare redirects. SiteGround hosting is closed; no websites or services remain there.
 
 ## Stack
 
@@ -12,6 +12,8 @@ The Astro site is live at `https://mikemurphy.ai`. The legacy WordPress site at 
 - Cloudflare Workers & Pages — hosting and deployment
 
 ## Development
+
+Use Node.js 22.23.4, pinned in `.node-version`. With `fnm` installed, run `fnm install` and `fnm use` from this directory. GitHub CI reads the same version file. Cloudflare builds also support it; remove any stale `NODE_VERSION` build override or set it to `22.23.4`.
 
 ```sh
 npm install       # Install dependencies
@@ -65,7 +67,7 @@ Use public asset paths in Markdown:
 
 - `LAUNCH.md` contains the launch checklist and deployment plan.
 - `POST_LAUNCH.md` contains the current post-launch handoff and cleanup list.
-- Do not add broad redirects from `mikemurphy.co` yet. WordPress remains active for the transition period.
+- `mikemurphy.co` redirects and unmatched-URL 404 handling are managed at Cloudflare; WordPress hosting is closed.
 
 ## Resource Shelves (planned, not yet built)
 
