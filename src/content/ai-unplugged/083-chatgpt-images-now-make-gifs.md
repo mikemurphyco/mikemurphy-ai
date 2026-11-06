@@ -29,7 +29,7 @@ agentReadable:
     - "OpenAI"
     - "Images 2.6"
     - "Heartbeat"
-    - "Mark Mazur"
+    - "Kurt Lewin"
     - "Zen Browser"
     - "Remotion"
     - "Claude Code"
@@ -73,8 +73,8 @@ It's an alarm that reminds your helper to look around and see whether you need a
 
 ## 💬 Quote of the Week
 
-> "If you really want to learn how something works, try to change it."
-> — Mark Mazur
+> "If you want truly to understand something, try to change it."
+> — Often attributed to Kurt Lewin
 
 ## 🧰 AI Tool of The Week: Zen Browser
 
