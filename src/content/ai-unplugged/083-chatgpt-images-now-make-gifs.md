@@ -35,6 +35,8 @@ agentReadable:
     - "Claude Code"
     - "Agent Evergreen"
 isDraft: false
+og:
+  image: "/assets/media/2026/11/issue-083-1.png"
 ---
 
 ## 🌲 Agent Evergreen Build Log
