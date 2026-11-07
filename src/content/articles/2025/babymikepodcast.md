@@ -1,9 +1,9 @@
 ---
-title: "How I Made a Viral Baby Podcast Video Using AI (Feat. Jerry Garcia & Hedra)"
-description: "This tutorial will show you how I created a viral-style baby podcast animation using AI tools like Sora by OpenAI, ElevenLabs, Adobe Podcast, and Hedra.
+title: "How I Made a Viral Baby Podcast Video Using AI (Feat. Jerry Garcia)"
+description: "This tutorial will show you how I created a viral-style baby podcast animation using AI tools like Sora by OpenAI, ElevenLabs, Adobe Podcast, and an AI animation tool.
 Inspired by the Theo Von and Joe Rogan baby podcast trend, I used a photo of myself to generate “Baby Mike,” then brought him to life with voiceover and animation — including a surprise guest appearance by AI Jerry Garcia."
 pubDate: "2025-05-28T06:30:01"
-updatedDate: "2025-07-29T06:24:56"
+updatedDate: "2026-11-07"
 draft: false
 type: "post"
 slug: "babymikepodcast"
@@ -20,7 +20,6 @@ categories:
   - "AI"
   - "Chat GPT"
   - "Eleven Labs"
-  - "Hedra"
   - "Sora"
   - "Tutorials"
 tags: []
@@ -39,8 +38,8 @@ wp:
   postType: "post"
   rawWordCount: 676
 seo:
-  legacyTitle: "How I Made a Viral Baby Podcast Video Using AI (Feat. Jerry Garcia & Hedra) - Mike Murphy Co"
-  legacyH1: "How I Made a Viral Baby Podcast Video Using AI (Feat. Jerry Garcia & Hedra)"
+  legacyTitle: "How I Made a Viral Baby Podcast Video Using AI (Feat. Jerry Garcia) - Mike Murphy Co"
+  legacyH1: "How I Made a Viral Baby Podcast Video Using AI (Feat. Jerry Garcia)"
   legacyCanonical: "https://www.mikemurphy.co/babymikepodcast/"
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   liveWordCount: 730
@@ -50,28 +49,26 @@ youtube:
 
 ## Description
 
-This tutorial will show you how I created a viral-style baby podcast animation using AI tools like Sora by OpenAI, ElevenLabs, Adobe Podcast, and Hedra.  
-I
-nspired by the Theo Von and Joe Rogan baby podcast trend, I used a photo of myself to generate “**Baby Mike,” then brought him to life with voiceover and animation — including a surprise guest appearance by AI Jerry Garcia.
+This tutorial will show you how I created a viral-style baby podcast animation using AI tools like Sora by OpenAI, ElevenLabs, Adobe Podcast, and an AI animation tool.  
+Inspired by the Theo Von and Joe Rogan baby podcast trend, I used a photo of myself to generate “**Baby Mike**,” then brought him to life with voiceover and animation — including a surprise guest appearance by AI Jerry Garcia.
 
-**Baby Prompt:  
+**Baby Prompt:**  
 Generate A toddler version of Mike sitting at a podcast desk, wearing large over-ear headphones and a trucker hat, speaking into a professional podcast microphone (like Shure SM7B), stylized like a real podcast set with moody lighting, wood paneling in the background, and a neon sign that says "MIKECAST”. Hyper-realistic photo style. Comedic and charming.
 
-**Hedra Prompt:  
+**Animation Prompt:**  
 Make the character look natural and relaxed, like they’re casually speaking into a podcast mic. Add subtle eye movement, occasional slow blinks, and slight head nods to match a confident, chill podcast host. Keep the mouth synced to the audio, with realistic speech motion but not overly animated.
 
-**Tools used:  
-**🧠 ChatGPT: <https://chatgpt.com>  
+**Tools used:**  
+🧠 ChatGPT: <https://chatgpt.com>  
 🎨 Sora (OpenAI): <https://sora.chatgpt.com/explore>  
 🎤 ElevenLabs: <https://try.elevenlabs.io/kuhb3vjoi7gw>  
 🗣️ Adobe Podcast: <https://prf.hn/l/7A1xx3g/>  
-🤖 Hedra: <https://hedra.com>
 
 **Here’s what you’ll learn:**  
 ✅ How to write an AI prompt using ChatGPT  
 ✅ How to use Sora to generate realistic baby images  
 ✅ How to clone voices and generate speech with ElevenLabs  
-✅ How to animate still images using Hedra  
+✅ How to animate still images with AI  
 ✅ Tips for making funny, short-form podcast clips that go viral
 
 ———————
@@ -100,12 +97,12 @@ https://mikemurphy.co/domestika
 01:58 Download Audio + Transcript  
 02:18 Eleven Labs: Text to Speech + Voice Clone  
 02:46 Ready for Animation  
-02:59 Hedra: Sign Up For Account  
-03:17 Hedra: Video Creation  
+02:59 Animation Tool: Sign Up For Account  
+03:17 Animation Tool: Video Creation  
 03:30 Prompt Bar & Settings  
 03:46 Upload Audio Recording  
-04:20 Hedra: Start Frame (Upload Image)  
-04:41 Hedra Credits + Upgrade  
+04:20 Start Frame (Upload Image)  
+04:41 Animation Credits + Upgrade  
 05:17 Submit Prompt & Create Animation
 
 ——————
@@ -126,10 +123,10 @@ https://mikemurphy.co/domestika
 8. Used Adobe Podcast to record voiceovers for Baby Mike  
 9. Used Eleven Labs Text to Clone Jerry Garcias voice by uploading sample interview of Jerry  
 10. Used Text To Speech to generate Jerry dialogue and then selected cloned voice  
-11. Created free account on Hedra.com  
+11. Created a free account with an AI animation tool  
 12. Uploaded Baby Mike Image  
 13. Upload Baby Mike audio voiceover  
-14. Pasted Hedra Prompt Created by ChatGPT  
+14. Pasted Animation Prompt Created by ChatGPT  
 15. 9:16 Aspect Ratio, 720P  
 16. Submit  
 17. Received error due to high volume.  
